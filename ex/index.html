@@ -2,17 +2,19 @@
 <html>
 <head>
 	<title>Test</title>
-	<link rel="stylesheet" type="text/css" href="styles/style1.css" id="SelectedStyle">
-	<script src="jquery-3.5.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="" id="SelectedStyle">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script type="text/javascript" src="script/script.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
 </head>
 <body>
 	<var>Style1<var>
 <p>test</p>
 <p id="1">Test</p>
-<form>
-	<input type="radio" name="Style1" value="styles/style1.css" onselect="Select()" checked>
-	<input type="radio" name="Style2" value="styles/style2.css" onselect="Select()">
+<form name="Selection">
+	<label><input type="radio" name="Style" value="styles/style1.css" class="radio">Style 1</label>
+	<label><input type="radio" name="Style" value="styles/style2.css" class="radio">Style 2</label>
 </form>
 </body>
 </html>
