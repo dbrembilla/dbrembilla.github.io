@@ -1,0 +1,566 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://dbrembilla.github.io/TravelOntology/trv#"
+     xml:base="https://dbrembilla.github.io/TravelOntology/trv"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://dbrembilla.github.io/TravelOntology/trv#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#commissioned -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#commissioned">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#isInvolvedWith"/>
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#commissioner"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#travel"/>
+        <rdfs:comment>Property describing the commission of a travel by a person</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasContext -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasContext">
+        <rdfs:comment>Property describing the context of an event</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasCoordinates -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasCoordinates">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <rdfs:comment>Connects a travel to a blank node for the temporal and spatial coordinates of a travel</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasDestination -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasDestination">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasPlace"/>
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#travel"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#destination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasEndPlace -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasEndPlace">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasPlace"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasEndTime -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasEndTime">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasTime"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasHistoricalContext -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasHistoricalContext">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#historicalContext"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasObjective -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasObjective">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#objective"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasPlace -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasPlace">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#place"/>
+        <rdfs:comment>Property that connecting to a place</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasRole -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasStartPlace -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasStartPlace">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasPlace"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasStartTime -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasStartTime">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasTime"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasTime -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasTime">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasTimespan -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasTimespan">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasTime"/>
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#time"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#isDisputed -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isDisputed">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:comment>Property describing a disputed element</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#isInvolvedWith -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isInvolvedWith">
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agent"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <rdfs:comment>Generic property describing an involvement of a person with an event</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isPartOf">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
+        <rdfs:comment>Property describing an event which is part of a bigger one.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#narratedIn -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#narratedIn">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#relatesTo -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#relatesTo">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <rdfs:comment>Describes a relation between two events</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#travelsIn -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#travelsIn">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#isInvolvedWith"/>
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#traveller"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#travel"/>
+        <rdfs:comment>Property describing in which travel a traveller partecipates</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#usesVehicle -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#usesVehicle">
+        <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#travel"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#vehicle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#agency -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#agency">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#groupOfPeople"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#agent -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#agent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#isInvolvedWith"/>
+                <owl:someValuesFrom rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Class defining generic agents</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#airTravel -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#airTravel">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#travel"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#airVehicle -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#airVehicle">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#commissioner -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#commissioner">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#role"/>
+        <rdfs:comment>An agent who is commissioning an event</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#company -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#company">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#groupOfPeople"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#context -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#context">
+        <rdfs:comment>Class defining the contextual information of an event</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#destination -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#destination">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#place"/>
+        <rdfs:comment>Class defining the supposed destination of a travel</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#endPlace -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#endPlace">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#place"/>
+        <rdfs:comment>Place where a travel ended</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#endTime -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#endTime">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#time"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#event -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
+                <owl:someValuesFrom rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#context"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Class defining an event</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#explorer -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#explorer">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#traveller"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#groupOfPeople -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#groupOfPeople">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#typeOfAgent"/>
+        <rdfs:comment>Class defining any group of individuals</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#historicalContext -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#historicalContext">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#context"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasTimespan"/>
+                <owl:someValuesFrom rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#timespan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Class defining the historical context in which a travel happened</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#landTravel -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#landTravel">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#travel"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#landVehicle -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#landVehicle">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#maritimeTravel -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#maritimeTravel">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#spaceTravel"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#maritimeVehicle -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#maritimeVehicle">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#merchant -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#merchant">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#traveller"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#objective -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#objective">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#context"/>
+        <rdfs:comment>Class defining a generic objective</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#person -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#person">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#typeOfAgent"/>
+        <rdfs:comment>Class describing a generic person</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#place -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#place">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#context"/>
+        <rdfs:comment>A class defining a generic place</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#preparation -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#preparation">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <rdfs:comment>Class defining the preparation for a travel</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#role -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#role">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agent"/>
+        <rdfs:comment>Property that describes the role of an agent</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#scientist -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#scientist">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#traveller"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#source -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#source">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#context"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#spaceTravel -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#spaceTravel">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#travel"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#spaceVehicle -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#spaceVehicle">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#startPlace -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#startPlace">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#place"/>
+        <rdfs:comment>Place where a travel started</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#startTime -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#startTime">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#time"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#time -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#time">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#context"/>
+        <rdfs:comment>Class identifying a place in time</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#timespan -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#timespan">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#time"/>
+        <rdfs:comment>timespan</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#travel -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#travel">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasHistoricalContext"/>
+                <owl:someValuesFrom rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#historicalContext"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Class defining a generic travel</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#traveller -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#traveller">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#role"/>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#typeOfAgent -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#typeOfAgent">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agent"/>
+        <rdfs:comment>Class describing the kind of agent</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#vehicle -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#vehicle">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#context"/>
+        <rdfs:comment>Class defining the vehicle used in a travel. Individuals in this class should need the kind of vehicle specified in name (e.g. nina_caravel or hindenburg_zeppelin)</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Travel Ontology</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@500&display=swap');
+		body {
+		    background-image: url("assets/background3.jpg");
+		    background-repeat: no-repeat;
+  			background-attachment: fixed;
+  			font-family: 'Open Sans', serif;
+  			background-size: 100% 100%;
+;
+			}
+		.container {
+			border-top-left-radius: 25px;
+			border-top-right-radius: 25px;
+			text-align: center;
+			display:flex;
+			justify-content:center;
+			align-items:flex-end;
+			max-width: 90%;
+		}
+		.container-noflex {
+			align-items:center;
+		  border-top-left-radius: 25px;
+			border-top-right-radius: 25px;
+			text-align: center;
+			background: #FFFFFF;
+			margin-bottom: 60px;
+			margin-top: 60px;
+			margin-left: 15%;
+			margin-right: 15%;
+		}
+		.container-flex {
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			background: #FFFFFF;
+			margin-bottom: 60px;
+			margin-top: 60px;
+		}
+		
+		h1{
+			font-size: 40px;
+			font-family: 'Playfair Display', serif;
+
+		}
+		h2{
+			font-size: 20px;
+		}
+		.center {
+	  display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+		  width: 50%;
+		  margin-bottom: 20px;
+	}
+
+
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Travel
+	          </a>
+          	<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            	<li><a class="dropdown-item" href="#title">Home</a></li>
+            	<li><a class="dropdown-item" href="#description">Project Description</a></li>
+            	<li><a class="dropdown-item" href="#centre">Core</a></li>
+            	<li><a class="dropdown-item" href="#story1">First Story</a></li>
+            	<li><a class="dropdown-item" href="#story2">Second Story</a></li>
+
+            	<li><a class="dropdown-item" href="trv.xml">Ontology</a></li>
+
+          	</ul>
+	        </li>
+      	</ul>
+	    </div>
+  	</div>
+	</nav>
+	<div class="container-flex">
+		<div class="container" id="title"><h1>Travel Relational View. A travel centred ontology.</h1></div>
+		<div class="container"><h2>Knowledge Representation and Extraction exam. By Davide Brembilla.</h2></div>
+	</div>
+	<div id="description" class="container-noflex">
+		<div class="container">
+			<h2>Project description</h2>
+		</div>
+		<div class="container">
+			<p>The objective of this project is the definition of an ontology about travels.
+			To define the ontology, first the core concepts of the ontology was defined; then the <a href="https://karlhammar.com/downloads/blomqvist2016engineering.pdf">eXtreme Design (XD)</a> was followed (with the exception of the customer involvement part). This means that the design will be requirements-driven, test-driven and iterative. It will start from a series of stories, from which Competency Questions (CQs) will follow; the answers to this can be either Contextual Statements (CSs), inserting new constraints or notions to the ontology, or Reasoning Requirements (RRs), which one can get from inferences from known elements. This methodology also employs Ontology Design Patterns (ODPs), that are specialised for the ontology in use. <br>
+			This ontology aims at describing historical events, thus should allow for maximum flexibility.</p></div>
+	</div>
+	<div id="centre" class="container-noflex">
+			<div class="container">
+				<h2>Ontology Foundation</h2>
+			</div>
+			<div class="container">
+				<p>The centre of the ontology are the event, agent and context classes (these concepts were similarly defined in the <a href="http://wit.istc.cnr.it/arco/lode/extract?url=https://raw.githubusercontent.com/ICCD-MiBACT/ArCo/master/ArCo-release/ontologie/cultural-event/cultural-event.owl">ArCo ontology for cultural events</a> and in the <a href="http://ontologydesignpatterns.org/wiki/Submissions:Nary_Participation">Nary participation ODP</a>).
+			</p>			
+			</div>
+		</div>
+	<img src="assets/AgentEventContext.png" class="center" alt="Visual description of the central elements of the ontology">			
+		
+	<div id="centre" class="container-noflex">
+		<dl>
+			<dt>trv:event</dt> 
+		<dd>Central to the ontology. It represents a generic event in history. All events have at least one contextual information in which they happen.</dd>
+		<dt>trv:agent</dt> 
+		<dd>Describes an active agent that acts within an event. All agents have an event within which they act.</dd>
+		<dt>trv:context</dt> 
+		<dd>describes in a generic way the context in which an event happens.</dd>
+		<dt>trv:hasContext</dt> 
+		<dd>connects an event with the context in which it happens.</dd>
+		<dt>trv:isInvolvedWith</dt>
+		<dd>Defines the involvement of an agent with an event.</dd></dl>
+	</div>
+	<div id="story1" class="container-noflex" style="margin: 5%;">
+		<h2>Story-led Design</h2>
+		<div style="text-align: justify;">
+			<p>Having described these core elements of the ontology, I proceeded to apply the XD methodology to further develop it.</p>
+		<p>
+			The explorer John Cabot travelled by boat under the commission of Henry VII of England. He explored North America, landing in Newfoundland, in multiple travels, in particular during his first travel he started in May 1497 from Bristol, landed in today's Newfoundland on June 24 1497 and returned to Bristol in August 1497. This travel can be inserted in the historical context of XV-XVI century colonisation of America. His objective was to arrive to the Indies.
+		</p>
+	</div>
+	<table class="table table-hover">
+  <thead>
+  	<tr>
+      <th>CQ</th>
+      <th>Answer</th>
+      <th>Classes and Properties</th>
+     </tr>
+  </thead>
+  <tbody>
+  	<tr>
+  		<th>
+  			What is a travel? What constitutes it?
+  		</th>
+  		<td>
+  			A travel is an event. All known travels happen in an historical context. Travels can happen in different mediums, in particular it might be a maritime, air, land or space travels.
+  		</td>
+  		<td>
+  			<tt>trv:travel</tt>, subclass of <tt>trv:event</tt> and superclass of <tt>trv:maritimeTravel</tt> and of the other kinds of travel; <tt>trv:historicalContext</tt>. All travels must have a <tt>trv:hasHistoricalContext trv:historicalContext</tt> property.
+  		</td>
+  	</tr>
+  	<tr>
+  		<th>
+  			Who participates in the travel? What role can they have?
+  		</th>
+  		<td>
+  			Agents could be individuals or groups. All agents act in some event. Within travels, I identified the role of the traveller (who might be a merchant or an explorer) and the commissioner. Existing ODPs are the <a href="http://ontologydesignpatterns.org/wiki/Submissions:Objectrole">Objectrole</a> and the <a href="http://ontologydesignpatterns.org/wiki/Submissions:ParticipantRole">ParticipationRole</a> ODPs
+  		</td>
+  		<td>
+  			<tt>trv:typeOfAgent</tt> and <tt>trv:role</tt>, subclasses of <tt>trv:agent</tt>; they are superclass of <tt>trv:person</tt>, <tt>trv:group</tt> and of <tt>trv:commissioner</tt>, <tt>trv:traveller</tt> and relative subclasses respectively.  All agents must have a <tt>trv:isInvolvedWith  trv:historicalContext</tt> property.
+  		</td>
+  	</tr>
+  	<tr>
+  		<th>In which context an event happen? When did an event happen? Which places did the event took place in?
+  		</th>
+  		<td>Within the context, we can distinguish historical context, destination, time and places. Travels happen within a certain timespan, during which they might touch different places in different times.
+  		</td>
+  		<td>Subclasses of <tt>trv:context</tt> are <tt>trv:time</tt>, <tt>trv:place</tt>, <tt>trv:objective</tt>. All events have a <tt>trv:historicalContext</tt>, which has a <tt>trv:hasTimespan trv:timespan</tt> property. Travels can have a <tt>trv:destination</tt>, a supposed destination for the travel which might differ from the place of arrival (e.g. Asia would be the destination for this story). In order to represent place and time during an event, a blank node connected with <tt>trv:hasCoordinates</tt> is used. 
+  		</td>
+  	</tr>
+  </tbody>
+  </table>
+</div>
+	<img src="assets/FirstStory.jpg" class="center" alt="Visual description of the central elements of the ontology">			
+	<img src="assets/FirstStory2.jpg" class="center" alt="Visual description of the central elements of the ontology">			
+	<img src="assets/FirstStory3.jpg" class="center" alt="Visual description of the central elements of the ontology">			
+	<div id="story2" class="container-noflex" style="margin: 5%;">
+		<div style="text-align: justify;">
+		<p>
+			The explorer John Cabot travelled by boat under the commission of Henry VII of England. He explored North America, landing in Newfoundland, in multiple travels, in particular during his first travel he started in May 1497 from Bristol, landed in today's Newfoundland on June 24 1497 and returned to Bristol in August 1497. This travel can be inserted in the historical context of XV-XVI century colonisation of America. His objective was to arrive to the Indies.
+		</p>
+	</div>
+
+		<table class="table table-hover">
+			<thead>
+				
+			</thead>
+			<tbody>
+			<tr>
+  			<th>
+  			</th>
+  			<td>
+  			</td>
+  			<td>
+  			</td>
+  		</tr>
+  		</tbody>
+  	</table>
+</body>
+</html>
