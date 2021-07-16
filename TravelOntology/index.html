@@ -310,11 +310,11 @@
   			</dd>
   			<dt>
   				<tt>
-  					<pre>
-  					@prefix trv: &lt;https://dbrembilla.github.io/TravelOntology/trv#&gt;.
-  					?select ?travel where {?travel a trv:travel;
-  					trv:hasDestination ?asia.
-  					?asia owl:sameAs https://viaf.org/viaf/315526119/}</pre>
+  					<pre>@prefix trv: &lt;https://dbrembilla.github.io/TravelOntology/trv#&gt;.
+?select ?travel where {?travel a trv:travel;
+trv:hasDestination ?asia.
+?asia owl:sameAs https://viaf.org/viaf/315526119/
+}</pre>
   				</tt>
   			</dt>
   			<dd>
@@ -322,14 +322,12 @@
   			</dd>
   			<dt>
   				<tt>
-  					<pre>
-  					@prefix trv: &lt;https://dbrembilla.github.io/TravelOntology/trv#&gt;.
-  					?select ?explorer, ?typeoftravel where {?explorer trv:travelsIn ?travel.
-  					?kingmanuel owl:sameAs https://viaf.org/viaf/27055008/;
-  					 trv:commissioned ?travel.
-  					 ?travel rdf:type ?typeoftravel
-
-  					}</pre>
+  					<pre>@prefix trv: &lt;https://dbrembilla.github.io/TravelOntology/trv#&gt;.
+?select ?explorer, ?typeoftravel where {?explorer trv:travelsIn ?travel.
+?kingmanuel owl:sameAs https://viaf.org/viaf/27055008/;
+trv:commissioned ?travel.
+?travel rdf:type ?typeoftravel
+}</pre>
   				</tt>
   			</dt>
   		</dl>
