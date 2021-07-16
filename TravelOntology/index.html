@@ -51,7 +51,7 @@
 
 		}
 		h2{
-			font-size: 20px;
+			font-size: 30px;
 		}
 		.center {
 	  display: block;
@@ -83,9 +83,10 @@
             	<li><a class="dropdown-item" href="#centre">Core</a></li>
             	<li><a class="dropdown-item" href="#story1">First Story</a></li>
             	<li><a class="dropdown-item" href="#story2">Second Story</a></li>
-
+            	<li><a class="dropdown-item" href="#story3">Third Story</a></li>
+            	<li><a class="dropdown-item" href="#story4">Fourth Story</a></li>
             	<li><a class="dropdown-item" href="trv.xml">Ontology</a></li>
-
+            	<li><a class="dropdown-item" href="#aboutme">About Me</a></li>
           	</ul>
 	        </li>
       	</ul>
@@ -131,6 +132,7 @@
 	</div>
 	<div id="story1" class="container-noflex" style="margin: 5%;">
 		<h2>Story-led Design</h2>
+		<h3>First Story</h3>
 		<div style="text-align: justify;">
 			<p>Having described these core elements of the ontology, I proceeded to apply the XD methodology to further develop it.</p>
 		<p>
@@ -179,34 +181,134 @@
   </tbody>
   </table>
 </div>
-	<img src="assets/FirstStory.jpg" class="center" alt="Visual description of the central elements of the ontology">			
-	<img src="assets/FirstStory2.jpg" class="center" alt="Visual description of the central elements of the ontology">			
-	<img src="assets/FirstStory3.jpg" class="center" alt="Visual description of the central elements of the ontology">			
+	<img src="assets/FirstStory.jpg" class="center" alt="Visual description of elements of the ontology">			
+	<img src="assets/FirstStory2.jpg" class="center" alt="Visual description of elements of the ontology">			
+	<img src="assets/FirstStory3.jpg" class="center" alt="Visual description of elements of the ontology">			
 	<div id="story2" class="container-noflex" style="margin: 5%;">
+		<h3>Second Story</h3>
 		<div style="text-align: justify;">
 		<p>
-			The explorer John Cabot travelled by boat under the commission of Henry VII of England. He explored North America, landing in Newfoundland, in multiple travels, in particular during his first travel he started in May 1497 from Bristol, landed in today's Newfoundland on June 24 1497 and returned to Bristol in August 1497. This travel can be inserted in the historical context of XV-XVI century colonisation of America. His objective was to arrive to the Indies.
-		</p>
-	</div>
+		The Apollo 11 spaceflight expedition, part of the Apollo Space Project flights, led to the first Moon Landing. The expedition took flight by using the Saturn V rocket.		</p>
+		</div>
 
 		<table class="table table-hover">
 			<thead>
-				
-			</thead>
+		  	<tr>
+		      <th>CQ</th>
+		      <th>Answer</th>
+		      <th>Classes and Properties</th>
+		     </tr>
+		  </thead>
 			<tbody>
 			<tr>
-  			<th>
+  			<th>Is the event part of a bigger series of events? What is its objective?
   			</th>
-  			<td>
+  			<td>An event could be part of a bigger series of events. An ODP in this sense would be <a href="http://ontologydesignpatterns.org/wiki/Submissions:RecurrentEventSeries">RecurrentEventSeries</a>; I simplified this pattern for this ontology for more flexibility within this ontology. The objective of an event may or may not be explicit, but it can be informative to add to a model of an event.
   			</td>
-  			<td>
+  			<td><tt>trv:isPartOf</tt> is a transitive property that can connect events with super-events and <tt>trv:relatesTo</tt> to connect events with relevant ones. <tt>trv:hasObjective trv:objective</tt> can be used to highlight the objective of an event.
   			</td>
+  		</tr>
+  		<tr>
+  			<th>Was a vehicle used in the event?
+  			</th>
+  			<td>An event, such as a travel, might use a vehicle. This can be useful as some vehicles became famous.
+  			</td>
+  			<td><tt>trv:vehicle</tt> can be used in this case, along with its subclasses like <tt>trv:spaceVehicle</tt>.
+  			</td>
+  		</tr>
+  		
+  		</tbody>
+  	</table>
+  </div>
+ <img src="assets/SecondStory.jpg" class="center">
+  <div id="story3" class="container-noflex" style="margin: 5%;">
+		<h3>Third Story</h3>
+		<div style="text-align: justify;">
+		<p>
+		Marco Polo’s travels are reported in the book "Il Milione". Whether or not the travel happened is disputed.</p>
+		</div>
+
+		<table class="table table-hover">
+			<thead>
+		  	<tr>
+		      <th>CQ</th>
+		      <th>Answer</th>
+		      <th>Classes and Properties</th>
+		     </tr>
+		  </thead>
+			<tbody>
+			<tr>
+  			<th>What is the source of information about the travel?
+  			</th>
+  			<td>Travels can have a limited amount of sources, thus it can be useful to represent them.
+  			</td>
+  			<td>The <tt>trv:source</tt> class represents the source of a narration of an event. The <tt>trv:narratedIn</tt> property describes where an event is narrated in.
+  			</td>
+  		</tr>
+  		<tr>
+  			<th>Is the fact that an event happened disputed?
+  			</th>
+  			<td>A fact, within a travel, might be disputed by scholars.
+  			</td>
+  			<td>The reflexive property <tt>trv:isDisputed</tt> can be used to highlighy a disputed fact.
+  			</td>
+  		</tr>
+  		
+  		</tbody>
+  	</table>
+  </div>
+   <img src="assets/ThirdStory.jpg" class="center">
+   <div id="story4" class="container-noflex" style="margin: 5%;">
+		<h3>Third Story</h3>
+		<div style="text-align: justify;">
+		<p>
+		In this last story, I will look at Negative Competency Questions (NCQs), meaning questions that my ontology won't answer. <br>
+		The Fellowship of the Ring’s travels are part of the fantasy book “The Lord of the Rings”, a piece of fiction. Their travels were inherently good, as they tried to defeat evil. The Fellowship split up multiple times throughout the journey.</p>
+		</div>
+
+		<table class="table table-hover">
+			<thead>
+		  	<tr>
+		      <th>NCQ</th>
+		      <th>Answer</th>
+		     </tr>
+		  </thead>
+			<tbody>
+			<tr>
+  			<th>Is the event just fiction?
+  			</th>
+  			<td>This ontology can be used for events narrated in fiction without being considered disputed.
+  			</td>
+  			
+  		</tr>
+  		<tr>
+  			<th>Are the consequences of an event good or evil? Are the people in the event evil?
+  			</th>
+  			<td>This ontology will abstain from value judgements about events.
+  			</td>
+  			
+  		</tr>
+  		<tr>
+  			<th>Is an agent involved in an event for its entire length?
+  			</th>
+  			<td>This ontology will consider agents who are involved in an event indipendently from the duration of their partecipation.
+  			</td>
+  			
   		</tr>
   		</tbody>
   	</table>
   </div>
+  <div class="container-noflex" id="aboutme">
+  	<img src="assets/DB.jpg" class="center" style="width: 200px;">
+  	<div class="container">
+  		<p>
+  			Davide Brembilla is a student of Digital Humanities and Digital Knowledge at the University of Bologna. He is fascinated by the possibilities given by technology in the humanities, especially for teaching and research, but also for the exploration of new fields of knowledge. Contact me at davide.brembilla(at)studio.unibo.it
+  		</p>
+  	</div>
+  </div>
   <footer>
-  	Website by Davide Brembilla. All rights to the background image to its creator. Contact me at davide.brembilla(at)studio.unibo.it
+  	<p>
+  	Website by Davide Brembilla. All rights to the background image to its creator. Contact me at davide.brembilla(at)studio.unibo.it</p>
   </footer>
 </body>
 </html>
