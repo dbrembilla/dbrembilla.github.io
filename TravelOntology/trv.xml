@@ -5,6 +5,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:trv="https://dbrembilla.github.io/TravelOntology/trv#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://dbrembilla.github.io/TravelOntology/trv#"/>
     
@@ -607,12 +608,14 @@
         <hasCoordinates rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#t_1"/>
         <hasCoordinates rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#t_2"/>
         <hasCoordinates rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#t_3"/>
+        <hasDestination rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#Asia"/>
         <hasObjective rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#EuropeanColonisationOfAmerica"/>
         <hasObjective rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#FindRouteToAsia"/>
         <hasTimespan rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#May_August1497"/>
         <isPartOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#CabotTravels"/>
         <isPartOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#XV_XVICenturyEuropeanExplorations"/>
         <narratedIn rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#FirstPatentFromHenryVIIToCabot"/>
+        <usesVehicle rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#MatthewShip"/>
     </owl:NamedIndividual>
     
 
@@ -647,7 +650,6 @@
 
     <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#FirstPatentFromHenryVIIToCabot">
         <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#source"/>
-        <hasDestination rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#Asia"/>
     </owl:NamedIndividual>
     
 
@@ -677,6 +679,14 @@
 
     <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#June24_1497">
         <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#MatthewShip -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#MatthewShip">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#maritimeVehicle"/>
     </owl:NamedIndividual>
     
 
