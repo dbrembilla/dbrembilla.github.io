@@ -156,7 +156,6 @@
     <!-- https://dbrembilla.github.io/TravelOntology/trv#isDisputed -->
 
     <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isDisputed">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
         <rdfs:comment>Property describing a disputed element</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -186,6 +185,7 @@
 
     <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#narratedIn">
         <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
+        <rdfs:comment>Describes where a travel has its source for our knowledge</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -558,6 +558,225 @@
         <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#context"/>
         <rdfs:comment>Class defining the vehicle used in a travel. Individuals in this class should need the kind of vehicle specified in name (e.g. nina_caravel or hindenburg_zeppelin)</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#Asia -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#Asia">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#destination"/>
+        <owl:sameAs rdf:resource="https://viaf.org/viaf/315526119"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#August1497 -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#August1497">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#endTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#Bristol -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#Bristol">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#endPlace"/>
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#startPlace"/>
+        <owl:sameAs rdf:resource="https://viaf.org/viaf/142803650"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#CabotFirstTravel -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#CabotFirstTravel">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#travel"/>
+        <hasContext rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#EuropeanColonisationOfAmerica"/>
+        <hasCoordinates rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#t_1"/>
+        <hasCoordinates rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#t_2"/>
+        <hasCoordinates rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#t_3"/>
+        <hasObjective rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#EuropeanColonisationOfAmerica"/>
+        <hasObjective rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#FindRouteToAsia"/>
+        <hasTimespan rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#May_August1497"/>
+        <isPartOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#CabotTravels"/>
+        <isPartOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#XV_XVICenturyEuropeanExplorations"/>
+        <narratedIn rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#FirstPatentFromHenryVIIToCabot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#CabotTravels -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#CabotTravels">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#travel"/>
+        <isPartOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#XV_XVICenturyEuropeanExplorations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#EuropeanColonisationOfAmerica -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#EuropeanColonisationOfAmerica">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#historicalContext"/>
+        <owl:sameAs rdf:resource="https://kbpedia.org/knowledge-graph/reference-concept/?uri=ColonizationOfTheAmericas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#FindRouteToAsia -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#FindRouteToAsia">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#objective"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#FirstPatentFromHenryVIIToCabot -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#FirstPatentFromHenryVIIToCabot">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#source"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#HenryVII -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#HenryVII">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#commissioner"/>
+        <owl:sameAs rdf:resource="https://viaf.org/viaf/268547728/268537728"/>
+        <commissioned rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#CabotFirstTravel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#JohnCabot -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#JohnCabot">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#explorer"/>
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#person"/>
+        <owl:sameAs rdf:resource="https://viaf.org/viaf/1256051/1256051"/>
+        <travelsIn rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#CabotFirstTravel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#June24_1497 -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#June24_1497">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#May1497 -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#May1497">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#startTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#May_August1497 -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#May_August1497">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#timespan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#Newfoundland -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#Newfoundland">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#place"/>
+        <owl:sameAs rdf:resource="https://viaf.org/viaf/134766632/134766632"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#XV_XVICenturyEuropeanExplorations -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#XV_XVICenturyEuropeanExplorations">
+        <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#t_1 -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#t_1">
+        <hasStartPlace rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#Bristol"/>
+        <hasStartTime rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#May1497"/>
+        <rdfs:label xml:lang="it">BristolStart</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#t_2 -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#t_2">
+        <hasEndPlace rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#Bristol"/>
+        <hasEndTime rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#August1497"/>
+        <rdfs:label xml:lang="it">BristolArrival</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#t_3 -->
+
+    <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#t_3">
+        <hasPlace rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#Newfoundland"/>
+        <hasTime rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#June24_1497"/>
+        <isDisputed rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#Newfoundland"/>
+        <rdfs:label xml:lang="it">NewfoundlandApproach</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://kbpedia.org/knowledge-graph/reference-concept/?uri=ColonizationOfTheAmericas -->
+
+    <owl:NamedIndividual rdf:about="https://kbpedia.org/knowledge-graph/reference-concept/?uri=ColonizationOfTheAmericas"/>
+    
+
+
+    <!-- https://viaf.org/viaf/1256051/1256051 -->
+
+    <owl:NamedIndividual rdf:about="https://viaf.org/viaf/1256051/1256051"/>
+    
+
+
+    <!-- https://viaf.org/viaf/134766632/134766632 -->
+
+    <owl:NamedIndividual rdf:about="https://viaf.org/viaf/134766632/134766632"/>
+    
+
+
+    <!-- https://viaf.org/viaf/142803650 -->
+
+    <owl:NamedIndividual rdf:about="https://viaf.org/viaf/142803650"/>
+    
+
+
+    <!-- https://viaf.org/viaf/268547728/268537728 -->
+
+    <owl:NamedIndividual rdf:about="https://viaf.org/viaf/268547728/268537728"/>
+    
+
+
+    <!-- https://viaf.org/viaf/315526119 -->
+
+    <owl:NamedIndividual rdf:about="https://viaf.org/viaf/315526119"/>
 </rdf:RDF>
 
 
