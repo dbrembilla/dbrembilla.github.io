@@ -310,17 +310,17 @@
 <polygon fill="black" stroke="black" points="1769.96,-1087.8 1779.98,-1084.37 1770,-1080.8 1769.96,-1087.8"/>
 <text text-anchor="middle" x="1441.54" y="-1105.8" font-family="Times,serif" font-size="14.00">hasStartTime</text>
 </g>
-<!-- LBristolStart|Language: en -->
-<g id="node42" class="node"><title>LBristolStart|Language: en</title>
-<polygon fill="none" stroke="black" points="1778.06,-1160 1778.06,-1206 1891.06,-1206 1891.06,-1160 1778.06,-1160"/>
+<!-- LBristolStart|Language: it -->
+<g id="node42" class="node"><title>LBristolStart|Language: it</title>
+<polygon fill="none" stroke="black" points="1781.06,-1160 1781.06,-1206 1888.06,-1206 1888.06,-1160 1781.06,-1160"/>
 <text text-anchor="middle" x="1834.56" y="-1190.8" font-family="Times,serif" font-size="14.00">BristolStart</text>
-<polyline fill="none" stroke="black" points="1778.06,-1183 1891.06,-1183 "/>
-<text text-anchor="middle" x="1834.56" y="-1167.8" font-family="Times,serif" font-size="14.00">Language: en</text>
+<polyline fill="none" stroke="black" points="1781.06,-1183 1888.06,-1183 "/>
+<text text-anchor="middle" x="1834.56" y="-1167.8" font-family="Times,serif" font-size="14.00">Language: it</text>
 </g>
-<!-- Rt_1&#45;&gt;LBristolStart|Language: en -->
-<g id="edge55" class="edge"><title>Rt_1&#45;&gt;LBristolStart|Language: en</title>
-<path fill="none" stroke="black" d="M1092.91,-1133C1129.13,-1135.78 1197.07,-1140.94 1255.01,-1145 1440.8,-1158.02 1660.26,-1172.07 1767.66,-1178.86"/>
-<polygon fill="black" stroke="black" points="1767.49,-1182.36 1777.69,-1179.49 1767.94,-1175.37 1767.49,-1182.36"/>
+<!-- Rt_1&#45;&gt;LBristolStart|Language: it -->
+<g id="edge55" class="edge"><title>Rt_1&#45;&gt;LBristolStart|Language: it</title>
+<path fill="none" stroke="black" d="M1092.91,-1133C1129.13,-1135.78 1197.07,-1140.94 1255.01,-1145 1442.56,-1158.14 1664.41,-1172.34 1770.67,-1179.05"/>
+<polygon fill="black" stroke="black" points="1770.7,-1182.56 1780.9,-1179.7 1771.14,-1175.57 1770.7,-1182.56"/>
 <text text-anchor="middle" x="1441.54" y="-1173.8" font-family="Times,serif" font-size="14.00">rdfs:label</text>
 </g>
 <!-- Rt_2&#45;&gt;Rowl:NamedIndividual -->
@@ -341,15 +341,15 @@
 <polygon fill="black" stroke="black" points="1785.25,-1351.17 1794.58,-1346.15 1784.16,-1344.25 1785.25,-1351.17"/>
 <text text-anchor="middle" x="1441.54" y="-1434.8" font-family="Times,serif" font-size="14.00">hasEndPlace</text>
 </g>
-<!-- LBristolArrival|Language: en -->
-<g id="node43" class="node"><title>LBristolArrival|Language: en</title>
+<!-- LBristolArrival|Language: it -->
+<g id="node43" class="node"><title>LBristolArrival|Language: it</title>
 <polygon fill="none" stroke="black" points="1777.56,-1498 1777.56,-1544 1891.56,-1544 1891.56,-1498 1777.56,-1498"/>
 <text text-anchor="middle" x="1834.56" y="-1528.8" font-family="Times,serif" font-size="14.00">BristolArrival</text>
 <polyline fill="none" stroke="black" points="1777.56,-1521 1891.56,-1521 "/>
-<text text-anchor="middle" x="1834.56" y="-1505.8" font-family="Times,serif" font-size="14.00">Language: en</text>
+<text text-anchor="middle" x="1834.56" y="-1505.8" font-family="Times,serif" font-size="14.00">Language: it</text>
 </g>
-<!-- Rt_2&#45;&gt;LBristolArrival|Language: en -->
-<g id="edge59" class="edge"><title>Rt_2&#45;&gt;LBristolArrival|Language: en</title>
+<!-- Rt_2&#45;&gt;LBristolArrival|Language: it -->
+<g id="edge59" class="edge"><title>Rt_2&#45;&gt;LBristolArrival|Language: it</title>
 <path fill="none" stroke="black" d="M1092.89,-1463.86C1129.09,-1467.81 1197.01,-1475.01 1255.01,-1480 1440.39,-1495.94 1659.59,-1510.23 1767.2,-1516.95"/>
 <polygon fill="black" stroke="black" points="1767.06,-1520.45 1777.26,-1517.57 1767.49,-1513.46 1767.06,-1520.45"/>
 <text text-anchor="middle" x="1441.54" y="-1511.8" font-family="Times,serif" font-size="14.00">rdfs:label</text>
@@ -388,15 +388,15 @@
 <polygon fill="black" stroke="black" points="1770.2,-727.016 1780.73,-725.854 1771.77,-720.195 1770.2,-727.016"/>
 <text text-anchor="middle" x="1441.54" y="-701.8" font-family="Times,serif" font-size="14.00">isDisputed</text>
 </g>
-<!-- LNewfoundlandApproach|Language: en -->
-<g id="node44" class="node"><title>LNewfoundlandApproach|Language: en</title>
+<!-- LNewfoundlandApproach|Language: it -->
+<g id="node44" class="node"><title>LNewfoundlandApproach|Language: it</title>
 <polygon fill="none" stroke="black" points="1739.56,-539 1739.56,-585 1929.56,-585 1929.56,-539 1739.56,-539"/>
 <text text-anchor="middle" x="1834.56" y="-569.8" font-family="Times,serif" font-size="14.00">NewfoundlandApproach</text>
 <polyline fill="none" stroke="black" points="1739.56,-562 1929.56,-562 "/>
-<text text-anchor="middle" x="1834.56" y="-546.8" font-family="Times,serif" font-size="14.00">Language: en</text>
+<text text-anchor="middle" x="1834.56" y="-546.8" font-family="Times,serif" font-size="14.00">Language: it</text>
 </g>
-<!-- Rt_3&#45;&gt;LNewfoundlandApproach|Language: en -->
-<g id="edge64" class="edge"><title>Rt_3&#45;&gt;LNewfoundlandApproach|Language: en</title>
+<!-- Rt_3&#45;&gt;LNewfoundlandApproach|Language: it -->
+<g id="edge64" class="edge"><title>Rt_3&#45;&gt;LNewfoundlandApproach|Language: it</title>
 <path fill="none" stroke="black" d="M1086.78,-672.179C1120.08,-652.884 1190.2,-615.154 1255.01,-599 1417.15,-558.578 1612.34,-555.025 1729.5,-557.521"/>
 <polygon fill="black" stroke="black" points="1729.46,-561.021 1739.54,-557.753 1729.63,-554.022 1729.46,-561.021"/>
 <text text-anchor="middle" x="1441.54" y="-602.8" font-family="Times,serif" font-size="14.00">rdfs:label</text>

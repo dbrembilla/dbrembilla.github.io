@@ -301,8 +301,38 @@
   	</table>
   </div>
   <div class="container-noflex" id="cabotrep">
-  	<div class="container">
+  	<div class="container" style="text-align: justify;">
   	<p>
+  		Here are some possible SPARQL queries for this ontology: <br>
+  		<dl>
+  			<dd>
+  				Which travels had Asia as their destination?
+  			</dd>
+  			<dt>
+  				<tt>
+  					<pre>
+  					@prefix trv: &lt;https://dbrembilla.github.io/TravelOntology/trv#&gt;.
+  					?select ?travel where {?travel a trv:travel;
+  					trv:hasDestination ?asia.
+  					?asia owl:sameAs https://viaf.org/viaf/315526119/}</pre>
+  				</tt>
+  			</dt>
+  			<dd>
+  				Which explorers were commissioned by king Manuel I of Portugal? Which kind of travel were they in?
+  			</dd>
+  			<dt>
+  				<tt>
+  					<pre>
+  					@prefix trv: &lt;https://dbrembilla.github.io/TravelOntology/trv#&gt;.
+  					?select ?explorer, ?typeoftravel where {?explorer trv:travelsIn ?travel.
+  					?kingmanuel owl:sameAs https://viaf.org/viaf/27055008/;
+  					 trv:commissioned ?travel.
+  					 ?travel rdf:type ?typeoftravel
+
+  					}</pre>
+  				</tt>
+  			</dt>
+  		</dl>
   		Here is a visual representation of the ontology applied to John Cabot's first travel. Click <a href="assets/JohnCabot.svg">here</a> to view it fullscreen.
   	</p>  	</div></div>
   	<iframe src="assets/JohnCabot.svg" style="height: 500px; width: 100%;"></iframe>

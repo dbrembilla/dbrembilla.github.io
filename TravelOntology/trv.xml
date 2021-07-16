@@ -647,6 +647,7 @@
 
     <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#FirstPatentFromHenryVIIToCabot">
         <rdf:type rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#source"/>
+        <hasDestination rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#Asia"/>
     </owl:NamedIndividual>
     
 
@@ -718,7 +719,7 @@
     <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#t_1">
         <hasStartPlace rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#Bristol"/>
         <hasStartTime rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#May1497"/>
-        <rdfs:label xml:lang="it">BristolStart</rdfs:label>
+        <rdfs:label xml:lang="en">BristolStart</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -728,7 +729,7 @@
     <owl:NamedIndividual rdf:about="https://dbrembilla.github.io/TravelOntology/trv#t_2">
         <hasEndPlace rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#Bristol"/>
         <hasEndTime rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#August1497"/>
-        <rdfs:label xml:lang="it">BristolArrival</rdfs:label>
+        <rdfs:label xml:lang="en">BristolArrival</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -739,7 +740,7 @@
         <hasPlace rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#Newfoundland"/>
         <hasTime rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#June24_1497"/>
         <isDisputed rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#Newfoundland"/>
-        <rdfs:label xml:lang="it">NewfoundlandApproach</rdfs:label>
+        <rdfs:label xml:lang="en">NewfoundlandApproach</rdfs:label>
     </owl:NamedIndividual>
     
 
