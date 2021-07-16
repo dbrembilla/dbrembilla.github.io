@@ -176,6 +176,7 @@
 
     <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isPartOf">
         <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:comment>Property describing an event which is part of a bigger one.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -193,7 +194,6 @@
 
     <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#relatesTo">
         <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
         <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
         <rdfs:comment>Describes a relation between two events</rdfs:comment>
