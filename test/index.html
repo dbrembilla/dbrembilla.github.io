@@ -148,7 +148,6 @@ function fillInfo(from, where) {
 
             var title = $(from + ' h1')[0].innerText //sceglie elementi h1 nell'elemento indicato
             var author = $(from + ' .auth')[0].innerText //sceglie elemento con byline con autore
-            var headingList = $(from + ' h2') //le h2 sono considerate headings
             
             $(where).append(item.tpl( {
                 author: author,
