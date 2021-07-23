@@ -122,7 +122,6 @@
             var elements = $(what); 
             $(where+' ul').empty(); 
             for (var i=0; i<elements.length; i++) {
-                console.log(where)
                 $(where).append(list.tpl({
                     place: '#'+elements[i].id,
                     content: elements[i].innerHTML
