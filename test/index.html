@@ -131,7 +131,7 @@
             for (var i=0; i<elements.length; i++) {
                 var referenceClass = elements[i].getAttribute("class");
                 referenceClass.replace(" ", "-");
-                if (seenClasses.contains(referenceClass)) {
+                if (seenClasses.includes(referenceClass)) {
                     $("#" + referenceClass).id = "tmp" ;
                     $("tmp").after(listSecond.tpl({
                     place: '#'+elements[i].id,
