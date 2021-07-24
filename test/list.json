@@ -1,10 +1,14 @@
 [
 	{
-		"label":"The empty office",
+		"label":"The empty office: what we lose when we work from home",
 		"url":"guardian.html"
 		},
 	{
 		"label":"Why introverts excelled at work from home",
 		"url":"bbc.html"
+	},
+	{
+		"label":"What we learned about wellness while working from home, and how to use those insights",
+		"url":"washingtonpost.html"
 	}
 ]
