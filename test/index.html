@@ -170,7 +170,7 @@
                 referenceClass = referenceClass.replace(/\s/g, "-");
                 if (seenClasses.includes(referenceClass)) {
                     console.log($("#" + referenceClass))
-                    $("#" + referenceClass).id = "tmp" ;
+                    $("#" + referenceClass).attr("id", "tmp");
                     $("tmp").after(listSecond.tpl({
                     place: '#'+elements[i].id,
                     content: elements[i].innerHTML,
