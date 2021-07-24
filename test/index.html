@@ -169,6 +169,7 @@
                 referenceClass = elements[i].getAttribute("class").toString();
                 referenceClass = referenceClass.replace(/\s/g, "-");
                 if (seenClasses.includes(referenceClass)) {
+                    console.log("#" + referenceClass)
                     $("#" + referenceClass).id = "tmp" ;
                     $("tmp").after(listSecond.tpl({
                     place: '#'+elements[i].id,
@@ -187,7 +188,6 @@
                 }
             
             }
-            console.log(seenClasses)
         }
         
         function goto(id) {
