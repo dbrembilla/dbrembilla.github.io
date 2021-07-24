@@ -160,18 +160,18 @@
 
 
         function filltab(what,where) { //questo riempie le tabelle del metadata viewer
-            var listFirst = `<br><a id="$thisclass" href="$place">$content</a>`;
-            var listSecond = ', <a id="$thisclass" href="#$place">$content</a>';
+            var listFirst = `<br><a id="$thisclass" href="$place">$content</a>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
+            var listSecond = ', <a id="$thisclass" href="#$place">$content</a>'; //dal secondo elemento si pone a fianco di quello presente
             var elements = $(what); 
-            seenClasses = [];
+            seenClasses = []; //array che contiene le classi già note
             $(where).empty(); 
             for (var i=0; i<elements.length; i++) {
-                referenceClass = elements[i].getAttribute("class").toString();
+                referenceClass = elements[i].getAttribute("class").toString(); //prende le classi dell'elemento e le converte a stringa e poi sostituisce gli spazi con -
                 referenceClass = referenceClass.replace(/\s/g, "-");
                 if (seenClasses.includes(referenceClass)) {
-                    $("#" + referenceClass).attr("id", "tmp");
+                    $("#" + referenceClass).attr("id", "tmp"); //assegna nome temporaneo all'oggetto noto per aggiungere l'elemento successivo dopo di esso
                     $("#tmp").after(listSecond.tpl({
-                    place: '#'+elements[i].id,
+                    place: elements[i].id, //qui non c'è # perché ha automaticamente id # e quindi veniva ##ref
                     content: elements[i].innerHTML,
                     thisclass: referenceClass
                 }))
@@ -189,15 +189,7 @@
             }
         }
         
-        function goto(id) {
-            var t = $(id)[0].offsetTop; //sposta la vista all'elemento
-            $('body').animate({ scrollTop: t }, 200);
-            $(id).addClass('animate');
-            setTimeout(function(){
-                $(id).removeClass('animate');
-            },5000);
-        }
-
+      
 function fillInfo(from, where) {
             var item = `
                 <p class="list title"><b>Title: </b> $title</p>
