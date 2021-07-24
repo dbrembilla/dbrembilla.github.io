@@ -163,7 +163,7 @@
             $(where).empty(); 
             for (var i=0; i<elements.length; i++) {
                 var myClass = elements[i].getAttribute("class").toString();
-                var referenceClass = myClass.replace("\s", "-");
+                var referenceClass = myClass.replace("/[\s\uFEFF\xA0]/g", "-");
                 if (seenClasses.includes(referenceClass)) {
                     $("#" + referenceClass).id = "tmp" ;
                     $("tmp").after(listSecond.tpl({
