@@ -162,8 +162,8 @@
             seenClasses = [];
             $(where).empty(); 
             for (var i=0; i<elements.length; i++) {
-                var referenceClass = elements[i].getAttribute("class").toString();
-                referenceClass.replace("\s", "-");
+                var myClass = elements[i].getAttribute("class").toString();
+                var referenceClass = myClass.replace("\s", "-");
                 if (seenClasses.includes(referenceClass)) {
                     $("#" + referenceClass).id = "tmp" ;
                     $("tmp").after(listSecond.tpl({
