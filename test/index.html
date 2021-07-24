@@ -166,9 +166,8 @@
             seenClasses = [];
             $(where).empty(); 
             for (var i=0; i<elements.length; i++) {
-                var myClass = elements[i].getAttribute("class").toString();
-                console.log(myClass)
-                var referenceClass = myClass.replace("/\s/g", "-");
+                myClass = elements[i].getAttribute("class").toString();
+                referenceClass = myClass.replace("/\s/g", "-");
                 console.log(referenceClass)
                 if (seenClasses.includes(referenceClass)) {
                     $("#" + referenceClass).id = "tmp" ;
