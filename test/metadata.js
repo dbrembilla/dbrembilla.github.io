@@ -6,26 +6,39 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
             return r 
         }
         
-        var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>` //elemento che serve ad aggiungere documenti. label è la descrizione del doc e url la cipolla
-        
+          //elemento che serve ad aggiungere documenti. label è la descrizione del doc e url la cipolla
+        var listItemTpl =`<div class="form-check">
+          <input class="form-check-input" type="checkbox" value="$url">
+          <label class="form-check-label" for="flexCheckDefault">
+            $label
+          </label>
+        </div>`
         $(document).ready(main); //al caricamento del documento esegui main
-
+        $(".form-check-input").click(function() {
+              if ($(this).is(':checked')) {
+                load(this.value)
+                // Do stuff
+              }
+            });
         function main() { //recupera gli html
+            getArticles("list.json". "#topic1") 
+        }
+
+        function getArticles(url, ref){
             $.ajax({
                 method: 'GET',
-                url: 'list.json',
+                url: url,
                 success: function(d) { //ciascun elemento nel json viene recuperato
+                    article_checkboxlist = ""
                     for (var i=0; i<d.length; i++) {
-                        $('#article-choice').append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
+                         article_checkboxlist += listItemTpl.tpl({url:d[i].url, label: d[i].label})
                     }   
+                    $(ref).attr("data-content", article_checkboxlist)
                 },
                 error: function() {
                     alert('No document to show')
                 }
             });
-            
-            
-            
         }
         
         function load(file) { //carica il file html del documento desiderato. es. articolo.html viene caricato. 
