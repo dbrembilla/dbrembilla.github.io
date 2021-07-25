@@ -7,9 +7,9 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
         }
         
           //elemento che serve ad aggiungere documenti. label è la descrizione del doc e url la cipolla
-        var listItemTpl =`<div class="form-check">
-          <input class="form-check-input" type="checkbox" value="$url">
-          <label class="form-check-label" for="flexCheckDefault">
+        var listItemTpl =`<div class='form-check'>
+          <input class='form-check-input' type='checkbox' value='$url'>
+          <label class='form-check-label' for='flexCheckDefault'>
             $label
           </label>
         </div>`
