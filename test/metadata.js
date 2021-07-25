@@ -21,7 +21,7 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
               }
             });
         function main() { //recupera gli html
-            getArticles("list.json". "#topic1") 
+            getArticles("list.json", "#topic1") 
         }
 
         function getArticles(url, ref){
