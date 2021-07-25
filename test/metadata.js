@@ -6,34 +6,21 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
             return r 
         }
         
-          //elemento che serve ad aggiungere documenti. label è la descrizione del doc e url la cipolla
-        var listItemTpl =`<div class='form-check'>
-          <input class='form-check-input' type='checkbox' value='$url'>
-          <label class='form-check-label' for='flexCheckDefault'>
-            $label
-          </label>
-        </div>`
+        var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>` //elemento che serve ad aggiungere documenti. label è la descrizione del doc e url la cipolla
+        
         $(document).ready(main); //al caricamento del documento esegui main
-        $(".form-check-input").click(function() {
-              if ($(this).is(':checked')) {
-                load(this.value)
-                // Do stuff
-              }
-            });
-        function main() { //recupera gli html
-            getArticles("list.json", "#topic1") 
-        }
 
+        function main() { //recupera gli html
+            getArticles("list.json". "#topic1") 
+        }
         function getArticles(url, ref){
             $.ajax({
                 method: 'GET',
                 url: url,
                 success: function(d) { //ciascun elemento nel json viene recuperato
-                    article_checkboxlist = ''
                     for (var i=0; i<d.length; i++) {
-                         article_checkboxlist += listItemTpl.tpl({url:d[i].url, label: d[i].label})
+                        $(ref).append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
                     }   
-                    $(ref).attr("data-bs-content", article_checkboxlist);
                 },
                 error: function() {
                     alert('No document to show')
@@ -46,7 +33,7 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
                 method: 'GET',
                 url: file,
                 success: function(d) {
-                    $('#file').html(d) //aggiunge un div con id file (il documento)
+                    $('#topic1').html(d) //aggiunge un div con id file (il documento)
                     $('#title').html($('#file h1')) //aggiunge un div con id title scegliendo l'elemento h1 nel div con id file
                     //$('.show').prop("checked", false)
                     addIds()
