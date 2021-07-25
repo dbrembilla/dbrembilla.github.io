@@ -124,7 +124,6 @@ function fillInfo(from, where) {
                           
                 ` ; //meta con le keyword
             $(where).empty(); 
-
             var title = $(from + ' h1')[0].innerText //sceglie elementi h1 nell'elemento indicato
             var author = $(from + ' .auth')[0].innerText //sceglie elemento con byline con autore
             var pub = $(from + ' .pub')[0].innerText
