@@ -67,6 +67,7 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
             filltab("#file .place","#place-view")
             filltab("#file .institution","#institution-view")
             filltab("#file .event","#event-view")
+            filltab("#file .event","#date-view")
 
             basefilltab("#file .quote","#quotations")
         }
