@@ -29,7 +29,7 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
                 method: 'GET',
                 url: url,
                 success: function(d) { //ciascun elemento nel json viene recuperato
-                    article_checkboxlist = ""
+                    article_checkboxlist = ''
                     for (var i=0; i<d.length; i++) {
                          article_checkboxlist += listItemTpl.tpl({url:d[i].url, label: d[i].label})
                     }   
