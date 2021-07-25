@@ -15,6 +15,7 @@
 body {
     height: 100vh;
     width: 100vw;
+    font-size: 20px;
 }
 	
 
@@ -29,6 +30,15 @@ nav{
 	padding-top: 0px!important;
 }
 	
+a{
+text-decoration: none;
+}
+
+a.cover{
+font-size: 1.25em;
+}
+
+
 #main-row{
 	height: 89%;
 	width: 100%;
@@ -47,16 +57,27 @@ nav{
 	height: 100%;
 	padding-left: 20px;
 }
+
 	
 header{
 	text-align: center;
 	height: 10%;
+	font-size: 2.8em;
+	margin-bottom:5%;
+}
+
+div.col-4{
+margin-bottom: 5%;
 }
 	
 aside, section{
 	height: 100%
 }
-	
+
+
+
+
+	/* meta, article da mettere come class*/
 #metaview{
 	height: 20%;
 	padding: .25em .5em;
@@ -79,7 +100,17 @@ footer{
 	text-align: center;
 }
 	
+span.metaTitle{
+font-size: .8em;
+}
 
+div.col-7.meta{
+border: 1px solid;
+
+}
+	
+	
+	
 	
 	/*Style flip card*/
 	
@@ -184,7 +215,47 @@ height: 15%;
 	padding-top:5%;
 	}
 	
+/*modal documentation*/
 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 90%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
    	
    	</style>
     <!--Scripts-->
@@ -194,7 +265,7 @@ height: 15%;
 	<script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
 
 
-	<head>
+	</head>
 	
 	<body>
 	
@@ -202,10 +273,13 @@ height: 15%;
 		<nav class="navbar navbar-light bg-light">
   			<div class="container-fluid">
   				<span>
-    				<a class="navbar-brand">Cover Page</a>
+    				<a class="cover">Cover Page</a>
 				</span>
     			<span class="d-flex">
-    				<a class="navbar-brand">Documentation</a>
+    				<a class="navbar-brand" id="myBtn">Documentation</a>
+    					
+					
+
     				<!--About us toggler offcanvasTop-->     	 		
      	 			<a class="navbar-brand" data-bs-toggle="offcanvas" type="button" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">About us</a>
 						<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
@@ -300,14 +374,14 @@ height: 15%;
 							<form>
 					
 							</form>
-							<button id="flip-card-btn-turn-to-front"><lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover" colors="primary:#121331,secondary:#1663c7" stroke="82" style="width:50px;height:50px"></lord-icon></button>
+							<button id="flip-card-btn-turn-to-front"><lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover" colors="primary:#121331,secondary:#1663c7" stroke="82" style="width:50px;height:50px" "></lord-icon></button>
 						</div>
 					</div>
 				</div>
 				<!--Topics-->		
 				<div class="card" id="topics">
 		
-			<div class="container"><a href="#" data-toggle="popover" id="topic1" title="Popover Header" data-bs-content='none' data-html="true"><h3>Topic 1</h3></a></div>				
+			<div class="container"><a class href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover"><h3>Topic 1</h3></a></div>				
   			<div class="container"><a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover"><h3>Topic 2</h3></a></div>
   			<div class="container"><a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover"><h3>Topic 3</h3></a></div>
 		</div>
@@ -318,32 +392,32 @@ height: 15%;
 			<section class="col-md-10">		
 	
 			<header>
-			<h1> ISSUE </h1>
+			ISSUE 
 			</header>
 			<!-- Start section with articles-->
 			<span class="row" id="row-article">
 				<div class="col-4">
-					<div class="card" id="metaview">
-						<h2>Metadata</h2>
+					<div class="row" id="metaview">
+						<div class="col-5"><span class="metaTitle">Metadata</span></div>
+						<div class="col-7 meta"><span>List</span></div>
 					</div>
 					<div class="card" id="article">
 						<h2>Art</h2>
-						<div id="file">
-							
-						</div>
 					</div>
 				</div>
-				<div  class="col-4">
-					<div class="card" id="metaview">
-						<h2>Metadata</h2>
+				<div  class="col-4 middle">
+					<div class="row" id="metaview">
+						<div class="col-5"><span class="metaTitle">Metadata</span></div>
+						<div class="col-7 meta"><span>List</span></div>
 					</div>
 					<div class="card" id="article">
 						<h2>Art</h2>
 					</div>
 				</div>
 				<div class="col-4">
-					<div class="card" id="metaview">
-						<h2>Metadata</h2>
+					<div class="row" id="metaview">
+						<div class="col-5"><span class="metaTitle">Metadata</span></div>
+						<div class="col-7 meta"><span>List</span></div>
 					</div>
 					<div class="card" id="article">
 						<h2>Art</h2>
@@ -359,9 +433,24 @@ height: 15%;
 		<footer>
 	Footer
 	</footer>
+	
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+  			<!-- Modal content -->
+  			<div class="modal-content">
+    			<span class="close">&times;</span>
+				<div class="row">
+					<div class="col-3"><span>Index</span></div>
+					<div class="col-9"><span>document</span></div>
+				</div>  
+			</div>	
+		</div>
+		
+		
 
 		<!--Scripts-->	
-		<script type="text/javascript" src="metadata.js"></script>
 		<script>
 
 
@@ -388,7 +477,35 @@ document.addEventListener('DOMContentLoaded', function(event) {
   };
 
 });
-   		
+
+
+//Modal documentation 
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 		</script>
 
