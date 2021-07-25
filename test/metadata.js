@@ -33,7 +33,7 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
                     for (var i=0; i<d.length; i++) {
                          article_checkboxlist += listItemTpl.tpl({url:d[i].url, label: d[i].label})
                     }   
-                    $(ref).attr("data-content", article_checkboxlist).data('bs.popover').setContent();
+                    $(ref).attr("data-bs-content", article_checkboxlist);
                 },
                 error: function() {
                     alert('No document to show')
