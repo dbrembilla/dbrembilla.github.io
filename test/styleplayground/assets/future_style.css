@@ -30,12 +30,6 @@
 }
 @font-face {
 	font-family: Metropolis;
-	src: url("future/metropolis/Metropolis-ExtraBoldItalic.ttf");
-	font-weight: 900 ;
-	font-style: italic ;
-}
-@font-face {
-	font-family: Metropolis;
 	src: url("future/metropolis/Metropolis-Light.ttf");
 	font-weight: 200;
 }
