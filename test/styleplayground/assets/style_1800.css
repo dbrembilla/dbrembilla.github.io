@@ -61,5 +61,7 @@ h4, figcaption {
 }
 p, ul {
 	font-family: JMHLegajo;
-	justify-content: center;
+	text-align: justify;
+	text-justify: inter-word;
+
 }
