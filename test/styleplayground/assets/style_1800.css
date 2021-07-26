@@ -1,0 +1,61 @@
+@font-face {
+	font-family: JDCarnivalBlack;
+  src: url("1800/jd-carnival-black/jd_carnival_black.ttf");
+}
+@font-face {
+	font-family: Essays1743;
+	src: url("1800/essays1743/Essays1743.ttf");
+}
+@font-face {
+	font-family: Essays1743;
+	src: url("1800/essays1743/Essays1743-Bold.ttf");
+	font-weight: bold ;
+}
+@font-face {
+	font-family: Essays1743;
+	src: url("1800/essays1743/Essays1743-BoldItalic.ttf");
+	font-weight: bold ;
+	font-style: italic ;
+}
+@font-face {
+	font-family: Essays1743;
+	src: url("1800/essays1743/Essays1743-Italic.ttf");
+	font-style: italic;
+}
+@font-face {
+	font-family: JMHLegajo;
+	src: url("1800/JMHLegajo/JMH_Legajo.otf");
+}
+@font-face {
+	font-family: JMHLegajo;
+	src: url("1800/JMHLegajo/JMH_Legajo_Bold.otf");
+	font-weight: bold;
+}
+@font-face {
+	font-family: JMHLegajo;
+	src: url("1800/JMHLegajo/JMH_Legajo_Bold_Italic.otf");
+	font-style: italic;
+	font-weight: bold;
+}
+@font-face {
+	font-family: JMHLegajo;
+	src: url("1800/JMHLegajo/JMH_Legajo_Italic.otf");
+	font-style: italic;
+}
+body {
+	background-color:  #e3ceb9;
+}
+h1 {
+	font-family: JDCarnivalBlack;
+}
+h2, h3 {
+	font-family: Essays1743;
+	font-weight: bold;
+}
+h4 {
+	font-family: Essays1743;
+	font-style: italic;
+}
+p {
+	font-family: JMHLegajo;
+}
