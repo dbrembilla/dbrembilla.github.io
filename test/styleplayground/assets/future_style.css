@@ -1,63 +1,63 @@
 @font-face {
 	font-family: Metropolis;
-	src: url("assets/future/metropolis/Metropolis-Regular.ttf");
+	src: url("future/metropolis/Metropolis-Regular.ttf");
 }
 @font-face {
 	font-family: Metropolis;
-	src: url("assets/future/metropolis/Metropolis-Bold.ttf");
+	src: url("future/metropolis/Metropolis-Bold.ttf");
 	font-weight: bold ;
 }
 @font-face {
 	font-family: Metropolis;
-	src: url("assets/future/metropolis/Metropolis-BoldItalic.ttf");
+	src: url("future/metropolis/Metropolis-BoldItalic.ttf");
 	font-weight: bold ;
 	font-style: italic ;
 }
 @font-face {
 	font-family: Metropolis;
-	src: url("assets/future/metropolis/Metropolis-Italic.ttf");
+	src: url("future/metropolis/Metropolis-Italic.ttf");
 	font-style: italic;
 }
 @font-face {
 	font-family: Metropolis;
-	src: url("assets/future/metropolis/Metropolis-Medium.ttf");
+	src: url("future/metropolis/Metropolis-Medium.ttf");
 	font-weight: medium;
 }
 @font-face {
 	font-family: Metropolis;
-	src: url("assets/future/metropolis/Metropolis-ExtraBold.ttf");
+	src: url("future/metropolis/Metropolis-ExtraBold.ttf");
 	font-weight: 900 ;
 }
 @font-face {
 	font-family: Metropolis;
-	src: url("assets/future/metropolis/Metropolis-ExtraBoldItalic.ttf");
+	src: url("future/metropolis/Metropolis-ExtraBoldItalic.ttf");
 	font-weight: 900 ;
 	font-style: italic ;
 }
 @font-face {
 	font-family: Metropolis;
-	src: url("assets/future/metropolis/Metropolis-Light.ttf");
+	src: url("future/metropolis/Metropolis-Light.ttf");
 	font-weight: 200;
 }
 @font-face {
 	font-family: Metropolis;
-	src: url("assets/future/metropolis/Metropolis-LightItalic.ttf");
+	src: url("future/metropolis/Metropolis-LightItalic.ttf");
 	font-style: italic;
 	font-weight: 200;
 }
 @font-face {
 	font-family: GlacialIndifference;
-	src: url("assets/future/glacial-indifference/GlacialIndifference-Regular.otf");
+	src: url("future/glacial-indifference/GlacialIndifference-Regular.otf");
 }
 @font-face {
 	font-family: GlacialIndifference;
-	src: url("assets/future/glacial-indifference/GlacialIndifference-Bold.otf");
+	src: url("future/glacial-indifference/GlacialIndifference-Bold.otf");
 	font-weight: bold;
 }
 
 @font-face {
 	font-family: Assistant;
-	src: url("assets/future/assistant/Assistant-VariableFont_wght.ttf");
+	src: url("future/assistant/Assistant-VariableFont_wght.ttf");
 }
 
 h1 {
