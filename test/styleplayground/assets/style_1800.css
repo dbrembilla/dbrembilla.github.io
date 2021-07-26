@@ -47,15 +47,19 @@ body {
 }
 h1 {
 	font-family: JDCarnivalBlack;
+	text-align: center;
 }
 h2, h3 {
 	font-family: Essays1743;
 	font-weight: bold;
+	text-align: center;
 }
 h4 {
 	font-family: Essays1743;
 	font-style: italic;
+	text-align: center;
 }
 p, ul {
 	font-family: JMHLegajo;
+	justify-content: center;
 }
