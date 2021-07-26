@@ -45,3 +45,37 @@
 	font-style: italic;
 	font-weight: 200;
 }
+@font-face {
+	font-family: GlacialIndifference;
+	src: url("future/glacial-indifference/GlacialIndifference-Regular.otf");
+}
+@font-face {
+	font-family: GlacialIndifference;
+	src: url("future/glacial-indifference/GlacialIndifference-Bold.otf");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Assistant;
+	src: url("assets/Assistant-VariableFont_wght.ttf");
+}
+
+h1 {
+	font-family: GlacialIndifference;
+	font-weight: bold;
+}
+
+h2 {
+	font-family: Metropolis;
+	font-style: italic;
+	font-weight: 900;
+}
+h3 {
+	font-family: Metropolis;
+	font-style: italic;
+	font-weight: bold;
+}
+h4 {
+	font-family: Metropolis;
+	font-style: italic;
+}
