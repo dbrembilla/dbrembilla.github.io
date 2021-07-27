@@ -85,12 +85,12 @@ figcaption {
 	font-family: Assistant;
 	font-weight: 200;
 }
-.person {
+.person:hover {
 	cursor: url("assets/personicon.png") ;
 }
-.event {
+.event:hover {
 	cursor: url("assets/eventicon.png");
 }
-.institution {
+.institution:hover {
 	cursor: url("assets/companyicon.png");
 }
