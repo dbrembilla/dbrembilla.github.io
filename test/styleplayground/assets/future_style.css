@@ -86,11 +86,11 @@ figcaption {
 	font-weight: 200;
 }
 .person:hover {
-	cursor: url("assets/personicon.png") ;
+	cursor: url("assets/personicon.png"), auto ;
 }
 .event:hover {
-	cursor: url("assets/eventicon.png");
+	cursor: url("assets/eventicon.png"), auto;
 }
 .institution:hover {
-	cursor: url("assets/companyicon.png");
+	cursor: url("assets/companyicon.png"), auto;
 }
