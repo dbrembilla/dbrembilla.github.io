@@ -15,6 +15,11 @@
 }
 @font-face {
 	font-family: Metropolis;
+	src: url("future/metropolis/Metropolis-RegularItalic.otf");
+	font-style: italic;
+}
+@font-face {
+	font-family: Metropolis;
 	src: url("future/metropolis/Metropolis-Medium.otf");
 	font-weight: medium;
 }
