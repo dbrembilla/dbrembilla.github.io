@@ -86,11 +86,11 @@ figcaption {
 	font-weight: 200;
 }
 .person {
-	cursor: url("personicon.png"), 4, 12, auto ;
+	cursor: url("personicon.cur"), 4, 12, auto ;
 }
 .event {
-	cursor: url("eventicon.png"), 4, 12, auto;
+	cursor: url("eventicon.cur"), 4, 12, auto;
 }
 .institution {
-	cursor: url("companyicon.png"), 4, 12, auto;
+	cursor: url("companyicon.cur"), 4, 12, auto;
 }
