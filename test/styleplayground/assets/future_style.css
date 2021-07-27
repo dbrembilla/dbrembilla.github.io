@@ -85,3 +85,12 @@ figcaption {
 	font-family: Assistant;
 	font-weight: 200;
 }
+.person {
+	cursor: url("assets/personicon.png") ;
+}
+.event {
+	cursor: url("assets/eventicon.png");
+}
+.institution {
+	cursor: url("assets/companyicon.png");
+}

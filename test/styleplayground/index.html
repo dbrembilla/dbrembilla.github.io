@@ -88,13 +88,6 @@
             $("#main").attr("href", target)
 
         }
-        $('.person').popover({
-          html: true,
-          trigger: 'hover',
-          content: function () {
-            return '<img src="assets/personicon.png" />';
-          }
-        });
         String.prototype.tpl = function(o) { //funzione che serve a inserire gli elementi nella lista dei documenti
             var r = this ; 
             for (var i in o) { 
