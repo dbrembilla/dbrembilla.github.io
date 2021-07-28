@@ -350,8 +350,8 @@ height:-webkit-fill-available;
     								colors="primary:#3080e8,secondary:#c71f16"
     								style="width:100px;height:100px">
 								</lord-icon>
-							</div onclick="changeStyle('#none')">
-		 					<div class="icon">
+							</div>
+		 					<div class="icon" onclick="changeStyle('#none')">
 		 						<lord-icon
     								src="https://cdn.lordicon.com/gxulgxck.json"
 								    trigger="hover"
@@ -402,9 +402,9 @@ height:-webkit-fill-available;
 		 			Topic 1
 				</button>
 				<ul class="dropdown-menu">
-    				<li><a class="dropdown-item" href="#">Menu item</a></li>
-			    	<li><a class="dropdown-item" href="#">Menu item</a></li>
-				    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 1')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 1')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 1')">Menu item</a></li>
   				</ul>
   			</div>
   					<div class="btn-group dropend">
@@ -412,9 +412,9 @@ height:-webkit-fill-available;
 		 			Topic 2
 				</button>
 				<ul class="dropdown-menu">
-    				<li><a class="dropdown-item" href="#">Menu item</a></li>
-			    	<li><a class="dropdown-item" href="#">Menu item</a></li>
-				    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 2')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 2')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 2')">Menu item</a></li>
   				</ul>
   			</div>
   					<div class="btn-group dropend">
@@ -422,9 +422,9 @@ height:-webkit-fill-available;
 		 			Topic 3
 				</button>
 				<ul class="dropdown-menu">
-    				<li><a class="dropdown-item" href="#">Menu item</a></li>
-			    	<li><a class="dropdown-item" href="#">Menu item</a></li>
-				    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 3')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 3')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 3')">Menu item</a></li>
   				</ul>
   			</div>			
   	  		</div>
@@ -549,7 +549,13 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
+String.prototype.tpl = function(o) { //funzione che serve a inserire gli elementi nella lista dei documenti
+            var r = this ; 
+            for (var i in o) { 
+                r = r.replace(new RegExp("\\$"+i, 'g'),o[i])  
+            } 
+            return r 
+        }
 // Style changer
 
   
@@ -558,6 +564,43 @@ function changeStyle(ref){
             $("#main").attr("href", target)
 
         }
+// Adding topics and columns
+
+function addTopic(topic){
+	$("header").replaceWith("<header>" + topic + "</header>");
+}
+var column = `
+			<div class="col$colwidth" id = col-num-$colnum>
+					<div class="row" id="metaview">
+						<div class="col-5"><span class="metaTitle">Metadata</span></div>
+						<div class="col-7 meta"><span>List</span></div>
+					</div>
+					<div class="card" id="article">
+						<h2>Art</h2>
+					</div>
+				</div>`
+columnListener = {}
+function columnSetting(topic){
+	if (!(topic in columnListener)){
+		Object.keys(columnListener).forEach(key => {
+  	delete object[key];
+		});
+		columnListener[topic] = 1;
+		$("#row-article").replaceWith(column.tpl(colnum : 1
+			colwidth: ""));
+	}
+	else {
+		switch (columnListener[topic]) {
+			case 1:
+			$("#col-num-1").attr("class", "col-6") ;
+			let mycol = column.tpl(colwidth: "-6", colnum=2);
+			$("#row-article").append(mycol);
+			columnListener[topic] = 2;
+			break
+
+		}
+	}
+}
 
 		</script>
 

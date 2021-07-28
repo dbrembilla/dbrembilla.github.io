@@ -45,9 +45,15 @@
 body {
 	background-color:  #e3ceb9 !important;
 }
+header {
+	font-family: JDCarnivalBlack;
+	text-align: center;
+	text-transform: uppercase;
+}
 h1 {
 	font-family: JDCarnivalBlack;
 	text-align: center;
+	text-transform: uppercase;
 }
 h2, h3 {
 	font-family: Essays1743;
