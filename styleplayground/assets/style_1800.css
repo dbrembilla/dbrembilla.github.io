@@ -43,7 +43,7 @@
 	font-style: italic;
 }
 body {
-	background-color:  #e3ceb9;
+	background-color:  #e3ceb9 !important;
 }
 h1 {
 	font-family: JDCarnivalBlack;
