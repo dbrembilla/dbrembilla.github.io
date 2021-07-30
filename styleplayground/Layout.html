@@ -402,9 +402,9 @@ height:-webkit-fill-available;
 		 			Topic 1
 				</button>
 				<ul class="dropdown-menu">
-    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 1')">Menu item</a></li>
-    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 1')">Menu item</a></li>
-    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 1')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 1')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 1')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 1')">Menu item</a></li>
   				</ul>
   			</div>
   					<div class="btn-group dropend">
@@ -412,9 +412,9 @@ height:-webkit-fill-available;
 		 			Topic 2
 				</button>
 				<ul class="dropdown-menu">
-    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 2')">Menu item</a></li>
-    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 2')">Menu item</a></li>
-    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 2')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 2')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 2')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 2')">Menu item</a></li>
   				</ul>
   			</div>
   					<div class="btn-group dropend">
@@ -422,9 +422,9 @@ height:-webkit-fill-available;
 		 			Topic 3
 				</button>
 				<ul class="dropdown-menu">
-    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 3')">Menu item</a></li>
-    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 3')">Menu item</a></li>
-    				<li><a class="dropdown-item" href="#" onclick="addTopic('Topic 3')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 3')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 3')">Menu item</a></li>
+    				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 3')">Menu item</a></li>
   				</ul>
   			</div>			
   	  		</div>
@@ -438,7 +438,7 @@ height:-webkit-fill-available;
 			ISSUE 
 			</header>
 			<!-- Start section with articles-->
-			<span class="row" id="row-article">
+			<div class="row" id="row-article">
 				<div class="col-4">
 					<div class="row" id="metaview">
 						<div class="col-5"><span class="metaTitle">Metadata</span></div>
@@ -466,7 +466,7 @@ height:-webkit-fill-available;
 						<h2>Art</h2>
 					</div>
 				</div>
-			</span>
+			</div>
 			
 		</section>
 	
@@ -549,7 +549,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-String.prototype.tpl = function(o) { //funzione che serve a inserire gli elementi nella lista dei documenti
+String.prototype.sub = function(o) { //funzione che serve a inserire gli elementi nella lista dei documenti
             var r = this ; 
             for (var i in o) { 
                 r = r.replace(new RegExp("\\$"+i, 'g'),o[i])  
@@ -558,46 +558,52 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
         }
 // Style changer
 
-  
+
 function changeStyle(ref){
             target=$(ref).attr("href");
-            $("#main").attr("href", target)
+            $("#main").attr("href", target);
 
         }
 // Adding topics and columns
-
+function topicManager(topic){
+	addTopic(topic);
+	columnSetting(topic);
+}
 function addTopic(topic){
 	$("header").replaceWith("<header>" + topic + "</header>");
 }
 var column = `
-			<div class="col$colwidth" id = col-num-$colnum>
-					<div class="row" id="metaview">
+			<div class="col$colwidth" id = col-num$colnum>
+					<div class="row" id="metaview$colnum">
 						<div class="col-5"><span class="metaTitle">Metadata</span></div>
 						<div class="col-7 meta"><span>List</span></div>
 					</div>
-					<div class="card" id="article">
+					<div class="card" id="article$colnum">
 						<h2>Art</h2>
 					</div>
 				</div>`
 columnListener = {}
 function columnSetting(topic){
 	if (!(topic in columnListener)){
-		Object.keys(columnListener).forEach(key => {
-  	delete object[key];
-		});
-		columnListener[topic] = 1;
-		$("#row-article").replaceWith(column.tpl(colnum : 1
-			colwidth: ""));
-	}
-	else {
+		Object.keys(columnListener).forEach(key => {delete columnListener[key];});
+		$("#row-article").empty();
+		$("#row-article").append(column.sub({colwidth: "-10", colnum : "-1"}));
+		columnListener[topic] = "1";
+	} else {
 		switch (columnListener[topic]) {
-			case 1:
+			case "1":
 			$("#col-num-1").attr("class", "col-6") ;
-			let mycol = column.tpl(colwidth: "-6", colnum=2);
-			$("#row-article").append(mycol);
-			columnListener[topic] = 2;
+			$("#row-article").append(column.sub({colwidth: "-6", colnum: "-2"}));
+			columnListener[topic] = "2";
 			break
-
+			case "2":
+			$("#col-num-1").attr("class", "col-4") ;
+			$("#col-num-2").attr("class", "col-4") ;
+			$("#row-article").append(column.sub({colwidth: "-4", colnum: "-3"}));
+			columnListener[topic] = "3";
+			break
+			default:
+			console.log("No columns or 3 columns; impossible to add more")
 		}
 	}
 }
