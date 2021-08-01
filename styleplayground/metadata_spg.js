@@ -6,21 +6,21 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             return r 
         }
         
-        var listItemTpl = `<li><a href='#' onclick='load("$url")'>$label</a></li>` //elemento che serve ad aggiungere documenti. label è la descrizione del doc e url la cipolla
+        var listItemTpl = `<li><a href='#' onclick='topicManager("$topic","$url")'>$label</a></li>` //elemento che serve ad aggiungere documenti. label è la descrizione del doc e url la cipolla
         
         $(document).ready(main); //al caricamento del documento esegui main
 
         function main() { //recupera gli html
-            getArticles("list_workfromhome.json", "#topic1") 
+            getArticles("list_workfromhome.json", "#topic1", "topic1") 
 
         }
-        function getArticles(url, ref){
+        function getArticles(url, ref, mytopic){
             $.ajax({
                 method: 'GET',
                 url: url,
                 success: function(d) { //ciascun elemento nel json viene recuperato
                     for (var i=0; i<d.length; i++) {
-                        $(ref).append(listItemTpl.sub({url:d[i].url, label: d[i].label}))
+                        $(ref).append(listItemTpl.sub({url:d[i].url, label: d[i].label, topic: mytopic}))
                     }   
                 },
                 error: function() {

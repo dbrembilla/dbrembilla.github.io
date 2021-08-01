@@ -398,7 +398,7 @@ height:-webkit-fill-available;
 				<!--Topics-->		
 				<div class="card" id="topics">  			
   					<div class="btn-group dropend">
-  				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+  				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic1-title">
 		 			Topic 1
 				</button>
 				<ul class="dropdown-menu" id="topic1">
@@ -408,7 +408,7 @@ height:-webkit-fill-available;
   				</ul>
   			</div>
   					<div class="btn-group dropend">
-  				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+  				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic2-title">
 		 			Topic 2
 				</button>
 				<ul class="dropdown-menu" id="topic2">
@@ -417,7 +417,7 @@ height:-webkit-fill-available;
     				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 2')">Menu item</a></li>
   				</ul>
   			</div>
-  					<div class="btn-group dropend">
+  					<div class="btn-group dropend" id="topic3_title">
   				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 		 			Topic 3
 				</button>
@@ -568,9 +568,10 @@ function changeStyle(ref){
 function topicManager(topic, ref){
 	addTopic(topic);
 	columnSetting(topic, ref);
+
 }
 function addTopic(topic){
-	$("header").replaceWith("<header>" + topic + "</header>");
+	$("header").replaceWith("<header>" + $(topic + "-title") + "</header>");
 }
 
 var column = `
