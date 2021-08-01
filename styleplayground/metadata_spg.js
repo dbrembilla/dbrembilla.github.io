@@ -11,7 +11,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
         $(document).ready(main); //al caricamento del documento esegui main
 
         function main() { //recupera gli html
-            getArticles("list_workfromhome.json", "#topic1", "topic1") 
+            getArticles("list.json", "#topic1", "topic1") 
 
         }
         function getArticles(url, ref, mytopic){
