@@ -29,7 +29,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             });
         }
         
-        function load(file, topic) { //carica il file html del documento desiderato. es. articolo.html viene caricato. 
+        function load(topic, file) { //carica il file html del documento desiderato. es. articolo.html viene caricato. 
             $.ajax({
                 method: 'GET',
                 url: file,

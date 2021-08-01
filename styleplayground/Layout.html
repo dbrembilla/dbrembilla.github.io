@@ -571,7 +571,7 @@ function topicManager(topic, ref){
 
 }
 function addTopic(topic){
-	$("header").replaceWith("<header>" + $(topic + "-title") + "</header>");
+	$("header").replaceWith("<header>" + $(topic + "-title").text() + "</header>");
 }
 
 var column = `
