@@ -1,4 +1,4 @@
-String.prototype.tpl = function(o) { //funzione che serve a inserire gli elementi nella lista dei documenti
+String.prototype.sub = function(o) { //funzione che serve a inserire gli elementi nella lista dei documenti
             var r = this ; 
             for (var i in o) { 
                 r = r.replace(new RegExp("\\$"+i, 'g'),o[i])  
@@ -20,7 +20,7 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
                 url: url,
                 success: function(d) { //ciascun elemento nel json viene recuperato
                     for (var i=0; i<d.length; i++) {
-                        $(ref).append(listItemTpl.tpl({url:d[i].url, label: d[i].label}))
+                        $(ref).append(listItemTpl.sub({url:d[i].url, label: d[i].label}))
                     }   
                 },
                 error: function() {
@@ -29,16 +29,16 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
             });
         }
         
-        function load(file) { //carica il file html del documento desiderato. es. articolo.html viene caricato. 
+        function load(file, topic) { //carica il file html del documento desiderato. es. articolo.html viene caricato. 
             $.ajax({
                 method: 'GET',
                 url: file,
                 success: function(d) {
-                    $('#topic1').html(d) //aggiunge un div con id file (il documento)
-                    $('#title').html($('#file h1')) //aggiunge un div con id title scegliendo l'elemento h1 nel div con id file
+                    $(topic).html(d) //aggiunge un div con id file (il documento)
+                    $('#title-'+ columnListener[topic]).html($("col-num-" + columnListener[topic] + " h1")) //aggiunge un div con id title scegliendo l'elemento h1 nel div con id file
                     //$('.show').prop("checked", false)
                     addIds()
-                    filltabs()
+                    filltabs(topic)
                 },
                 error: function() {
                     alert('Could not load file '+file)
@@ -62,15 +62,15 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
             }
         }
 
-        function filltabs(){
-            fillInfo("#file", "#info")
-            filltab("#file .person","#person-view")
-            filltab("#file .place","#place-view")
-            filltab("#file .institution","#institution-view")
-            filltab("#file .event","#event-view")
-            filltab("#file .event","#date-view")
+        function filltabs(topic){
+            fillInfo("#file-" +columnListener[topic], "#info-" + columnListener[topic])
+            filltab("#file-" + columnListener[topic] + " .person","#person-view-"+columnListener[topic])
+            filltab("#file-" +columnListener[topic] +" .place","#place-view-"+columnListener[topic])
+            filltab("#file-" +columnListener[topic] +" .institution","#institution-view-"+columnListener[topic])
+            filltab("#file- "+ columnListener[topic] +" .event","#event-view-" + columnListener[topic])
+            filltab("#file- " + columnListener[topic] +" .event","#date-view" + columnListener[topic])
 
-            basefilltab("#file .quote","#quotations")
+            basefilltab("#file-"+columnListener[topic] " .quote","#quotations-" + columnListener[topic])
         }
         
 
@@ -86,7 +86,7 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
                 referenceClass = referenceClass.replace(/\s/g, "-");
                 if (seenClasses.includes(referenceClass)) {
                     $("#" + referenceClass).attr("id", "tmp"); //assegna nome temporaneo all'oggetto noto per aggiungere l'elemento successivo dopo di esso
-                    $("#tmp").after(listSecond.tpl({
+                    $("#tmp").after(listSecond.sub({
                     place: elements[i].id, //qui non c'è # perché ha automaticamente id # e quindi veniva ##ref
                     content: elements[i].innerHTML,
                     thisclass: referenceClass
@@ -94,7 +94,7 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
                     $("#tmp").removeAttr("id");
                 }
                 else {
-                    $(where).append(listFirst.tpl({
+                    $(where).append(listFirst.sub({
                     place: '#'+elements[i].id,
                     content: elements[i].innerHTML,
                     thisclass: referenceClass
@@ -109,7 +109,7 @@ String.prototype.tpl = function(o) { //funzione che serve a inserire gli element
             var elements = $(what); 
             $(where).empty(); 
             for (var i=0; i<elements.length; i++) {
-                $(where).append(list.tpl({
+                $(where).append(list.sub({
                     place: elements[i].id,
                     content: elements[i].innerHTML
                 }) )
@@ -129,7 +129,7 @@ function fillInfo(from, where) {
             var author = $(from + ' .auth')[0].innerText //sceglie elemento con byline con autore
             var pub = $(from + ' .pub')[0].innerText
 
-            $(where).append(item.tpl( {
+            $(where).append(item.sub( {
                 author: author,
                 title: title,
                 pub: pub

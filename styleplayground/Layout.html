@@ -401,7 +401,7 @@ height:-webkit-fill-available;
   				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 		 			Topic 1
 				</button>
-				<ul class="dropdown-menu">
+				<ul class="dropdown-menu" id="topic1">
     				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 1')">Menu item</a></li>
     				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 1')">Menu item</a></li>
     				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 1')">Menu item</a></li>
@@ -411,7 +411,7 @@ height:-webkit-fill-available;
   				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 		 			Topic 2
 				</button>
-				<ul class="dropdown-menu">
+				<ul class="dropdown-menu" id="topic2">
     				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 2')">Menu item</a></li>
     				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 2')">Menu item</a></li>
     				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 2')">Menu item</a></li>
@@ -421,7 +421,7 @@ height:-webkit-fill-available;
   				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 		 			Topic 3
 				</button>
-				<ul class="dropdown-menu">
+				<ul class="dropdown-menu" id="topic3">
     				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 3')">Menu item</a></li>
     				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 3')">Menu item</a></li>
     				<li><a class="dropdown-item" href="#" onclick="topicManager('Topic 3')">Menu item</a></li>
@@ -565,9 +565,9 @@ function changeStyle(ref){
 
         }
 // Adding topics and columns
-function topicManager(topic){
+function topicManager(topic, ref){
 	addTopic(topic);
-	columnSetting(topic);
+	columnSetting(topic, ref);
 }
 function addTopic(topic){
 	$("header").replaceWith("<header>" + topic + "</header>");
@@ -576,7 +576,10 @@ function addTopic(topic){
 var column = `
 			<div class="col$colwidth" id = col-num$colnum>
 					<div class="row" id="metaview$colnum">
-						<div class="col-5"><span class="metaTitle">Metadata</span></div>
+						<div class="col-5"><span class="metaTitle">Metadata</span>
+						<ul id="info-$colnum"> 
+						</ul>
+						</div>
 						<div class="col-7 meta"><span>List</span></div>
 					</div>
 					<div class="card" id="article$colnum">
@@ -584,12 +587,13 @@ var column = `
 					</div>
 				</div>`
 columnListener = {}
-function columnSetting(topic){
+function columnSetting(topic, ref){
 	if (!(topic in columnListener)){
 		Object.keys(columnListener).forEach(key => {delete columnListener[key];});
 		$("#row-article").empty();
 		$("#row-article").append(column.sub({colwidth: "-10", colnum : "-1"}));
 		columnListener[topic] = "1";
+		load(topic, ref)
 	} else {
 		switch (columnListener[topic]) {
 			case "1":
