@@ -62,28 +62,35 @@
 h1 {
 	font-family: GlacialIndifference;
 	font-weight: bold;
+	font-size: 30px;
 }
 
 h2 {
 	font-family: Metropolis;
 	font-style: italic;
 	font-weight: 900;
+	font-size: 0.618em;
 }
 h3 {
 	font-family: Metropolis;
 	font-style: italic;
 	font-weight: bold;
+	font-size: 0.618em;
 }
 h4 {
 	font-family: Metropolis;
 	font-style: italic;
+	font-size: 0.618em;
 }
 p, ul {
 	font-family: Assistant;
+	margin: 10px;
+	font-size: 0.618em;
 }
 figcaption {
 	font-family: Assistant;
 	font-weight: 200;
+	font-size: 0.618em;
 }
 .person {
 	cursor: url("personicon.cur"), 4, 12, auto ;
