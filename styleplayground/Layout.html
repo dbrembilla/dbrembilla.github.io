@@ -592,19 +592,21 @@ function columnSetting(topic, ref){
 		$("#row-article").empty();
 		$("#row-article").append(column.sub({colwidth: "-10", colnum : "-1"}));
 		columnListener[topic] = "1";
-		load(topic, ref)
+		load(topic, ref);
 	} else {
 		switch (columnListener[topic]) {
 			case "1":
 			$("#col-num-1").attr("class", "col-6") ;
 			$("#row-article").append(column.sub({colwidth: "-6", colnum: "-2"}));
 			columnListener[topic] = "2";
+			load(topic, ref);
 			break
 			case "2":
 			$("#col-num-1").attr("class", "col-4") ;
 			$("#col-num-2").attr("class", "col-4") ;
 			$("#row-article").append(column.sub({colwidth: "-4", colnum: "-3"}));
 			columnListener[topic] = "3";
+			load(topic, ref);
 			break
 			default:
 			console.log("No columns or 3 columns; impossible to add more")

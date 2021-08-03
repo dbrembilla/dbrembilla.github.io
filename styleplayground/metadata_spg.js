@@ -34,7 +34,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 method: 'GET',
                 url: file,
                 success: function(d) {
-                    $(topic).html(d) //aggiunge un div con id file (il documento)
+                    $("#"+topic).html(d) //aggiunge un div con id file (il documento)
                     $('#title-'+ columnListener[topic]).html($("col-num-" + columnListener[topic] + " h1")) //aggiunge un div con id title scegliendo l'elemento h1 nel div con id file
                     //$('.show').prop("checked", false)
                     addIds()
