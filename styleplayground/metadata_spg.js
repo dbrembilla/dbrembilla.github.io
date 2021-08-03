@@ -63,7 +63,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
         }
 
         function filltabs(topic){
-            fillInfo("#file-" +columnListener[topic], "#info-" + columnListener[topic]);
+            fillInfo("#article-" +columnListener[topic], "#info-" + columnListener[topic]);
             filltab("#file-" + columnListener[topic] + " .person","#person-view-"+columnListener[topic]);
             filltab("#file-" +columnListener[topic] +" .place","#place-view-"+columnListener[topic]);
             filltab("#file-" +columnListener[topic] +" .institution","#institution-view-"+columnListener[topic]);
