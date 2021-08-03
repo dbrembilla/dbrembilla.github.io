@@ -69,18 +69,18 @@ h2 {
 	font-family: Metropolis;
 	font-style: italic;
 	font-weight: 900;
-	font-size: 0.618em;
+	font-size: 24px;
 }
 h3 {
 	font-family: Metropolis;
 	font-style: italic;
 	font-weight: bold;
-	font-size: 0.618em;
+	font-size: 20px;
 }
 h4 {
 	font-family: Metropolis;
 	font-style: italic;
-	font-size: 0.618em;
+	font-size: 18px;
 }
 p, ul {
 	font-family: Assistant;
