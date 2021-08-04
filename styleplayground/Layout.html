@@ -453,8 +453,7 @@ height:-webkit-fill-available;
 				</div>
 				<div class="col-4">
 					<div class="row" id="metaview">
-						<div class="col-5"><span class="metaTitle">Metadata</span></div>
-						<div class="col-7 meta"><span>List</span></div>
+	
 					</div>
 					<div class="card" id="article">
 						<h2>Art</h2>
@@ -571,11 +570,9 @@ function addTopic(topic){
 var column = `
 			<div class="col$colwidth" id = col-num$colnum>
 					<div class="row" id="metaview$colnum">
-						<div class="col-5"><span class="metaTitle">Metadata</span>
-						<ul id="info$colnum"> 
-						</ul>
-						</div>
-						<div class="col-7 meta"><span>List</span></div>
+						<div class="row"><h1 id="title$colnum"></h1></div>
+						<div class="row"><span>List</span></div>
+						<div class="row"> <p><span id="auth$colnum"></span>, <span id="pub$colnum"></span></p></div>
 					</div>
 					<div class="card" id="article$colnum">
 						<h2>Art</h2>
@@ -586,7 +583,7 @@ function columnSetting(topic, ref){
 	if (!(topic in columnListener)){
 		Object.keys(columnListener).forEach(key => {delete columnListener[key];});
 		$("#row-article").empty();
-		$("#row-article").append(column.sub({colwidth: "-10", colnum : "-1"}));
+		$("#row-article").append(column.sub({colwidth: "-12", colnum : "-1"}));
 		columnListener[topic] = "1";
 		load(topic, ref);
 	} else {
