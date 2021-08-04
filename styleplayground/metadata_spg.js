@@ -117,15 +117,14 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             }
         }
         
-      
 function fillInfo(from, where, wherelse, wherever) {
             var title =`
-                Title: $title
+                $title
                 `
             var auth = `
-                Author: $author`
+                $author`
             var pub = `
-                Publication: $pub
+                $pub
                           
                 ` ; //meta con le keyword
             $(where).empty(); 
@@ -135,13 +134,13 @@ function fillInfo(from, where, wherelse, wherever) {
             var authorfill = $(from + ' .auth')[0].innerText //sceglie elemento con byline con autore
             var pubfill = $(from + ' .pub')[0].innerText
 
-            $(where).append(auth.sub( {
+            $(wherelse).append(auth.sub( {
                 author: authorfill}));
             
             $(wherever).append(pub.sub( {
                 pub: pubfill}));
             
-             $(wherelse).append(title.sub( {
+             $(where).append(title.sub( {
                 title: titlefill
             }))
         }
