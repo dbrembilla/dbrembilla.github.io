@@ -15,18 +15,19 @@
 
    	<style>
 
-#article-1.card, #article-2.card, #article-3.card{
+.overflow{
 overflow-y:scroll;
 overflow-x:hidden;
 height: 100%!important;
+		}	
 
 #col-num-1, #col-num-2, #col-num-3{
 height:100%;
 	}
 
 
-		
-		}   	
+
+	
    	
    	/*generale*/
 body {
@@ -586,7 +587,7 @@ var column = `
 						<div class="row"><span>List</span></div>
 						<div class="row"> <p><span id="auth$colnum"></span>, <span id="pub$colnum"></span></p></div>
 					</div>
-					<div class="card" id="article$colnum">
+					<div class="card overflow" id="article$colnum">
 						<h2>Art</h2>
 					</div>
 				</div>`
