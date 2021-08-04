@@ -65,7 +65,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
         }
 
         function filltabs(topic){
-            fillInfo("#article-" +columnListener[topic], "#info-" + columnListener[topic]);
+            fillInfo("#article-" +columnListener[topic], "#title-" + columnListener[topic], "#auth-" + columnListener[topic],  "#pub-" + columnListener[topic] );                    
             filltab("#file-" + columnListener[topic] + " .person","#person-view-"+columnListener[topic]);
             filltab("#file-" +columnListener[topic] +" .place","#place-view-"+columnListener[topic]);
             filltab("#file-" +columnListener[topic] +" .institution","#institution-view-"+columnListener[topic]);
@@ -118,22 +118,31 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
         }
         
       
-function fillInfo(from, where) {
-            var item = `
-                <p class="list title"><b>Title: </b> $title</p>
-                <p class="list author"><b>Author: </b> $author</p>
-                <p class="list publication"><b>Publication: </b> $pub</p>
+function fillInfo(from, where, wherelse, wherever) {
+            var title =`
+                Title: $title
+                `
+            var auth = `
+                Author: $author`
+            var pub = `
+                Publication: $pub
                           
                 ` ; //meta con le keyword
             $(where).empty(); 
-            var title = $(from + ' h1')[0].innerText //sceglie elementi h1 nell'elemento indicato
-            var author = $(from + ' .auth')[0].innerText //sceglie elemento con byline con autore
-            var pub = $(from + ' .pub')[0].innerText
+            $(wherelse).empty();
+            $(wherever).empty();
+            var titlefill = $(from + ' h1')[0].innerText //sceglie elementi h1 nell'elemento indicato
+            var authorfill = $(from + ' .auth')[0].innerText //sceglie elemento con byline con autore
+            var pubfill = $(from + ' .pub')[0].innerText
 
-            $(where).append(item.sub( {
-                author: author,
-                title: title,
-                pub: pub
+            $(where).append(auth.sub( {
+                author: authorfill}));
+            
+            $(wherever).append(pub.sub( {
+                pub: pubfill}));
+            
+             $(wherelse).append(title.sub( {
+                title: titlefill
             }))
         }
         $(function(){
