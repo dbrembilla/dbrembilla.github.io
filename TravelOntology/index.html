@@ -158,7 +158,7 @@
   			A travel is an event. All known travels happen in an historical context. Travels can happen in different mediums, in particular it might be a maritime, air, land or space travels.
   		</td>
   		<td>
-  			<tt>trv:travel</tt>, subclass of <tt>trv:event</tt> and superclass of <tt>trv:maritimeTravel</tt> and of the other kinds of travel; <tt>trv:historicalContext</tt>. All travels must have a <tt>trv:hasHistoricalContext trv:historicalContext</tt> property.
+  			<tt>trv:travel</tt>, subclass of <tt>trv:event</tt> and superclass of <tt>trv:maritimeTravel</tt> and of the other kinds of travel; <tt>trv:historicalContext</tt>. All travels must have a <tt>trv:hasHistoricalContext trv:historicalContext</tt> property. Another relevant event for a travel is <tt>trv:preparation</tt>, which is the preparation for another event; since the preparation for a travel could be important for the travel itself.
   		</td>
   	</tr>
   	<tr>
@@ -166,10 +166,10 @@
   			Who participates in the travel? What role can they have?
   		</th>
   		<td>
-  			Agents could be individuals or groups. All agents act in some event. Within travels, I identified the role of the traveller (who might be a merchant or an explorer) and the commissioner. Existing ODPs are the <a href="http://ontologydesignpatterns.org/wiki/Submissions:Objectrole">Objectrole</a> and the <a href="http://ontologydesignpatterns.org/wiki/Submissions:ParticipantRole">ParticipationRole</a> ODPs
+  			Agents could be individuals or groups. All agents act in some event. Agents have a role, which is a distinct class for which individuals can be created to define new roles. Existing ODPs are the <a href="http://ontologydesignpatterns.org/wiki/Submissions:Objectrole">Objectrole</a> and the <a href="http://ontologydesignpatterns.org/wiki/Submissions:ParticipantRole">ParticipationRole</a> ODPs.
   		</td>
   		<td>
-  			<tt>trv:typeOfAgent</tt> and <tt>trv:role</tt>, subclasses of <tt>trv:agent</tt>; they are superclass of <tt>trv:person</tt>, <tt>trv:group</tt> and of <tt>trv:commissioner</tt>, <tt>trv:traveller</tt> and relative subclasses respectively.  All agents must have a <tt>trv:isInvolvedWith  trv:historicalContext</tt> property.
+  			<tt>trv:agent</tt> has <tt>trv:person</tt> and <tt>trv:groupOfPeople</tt> as subclasses to identify different cases for identifying different agents. Agents must have <tt>trv:isInvolvedWith  trv:historicalContext</tt> property and <tt>trv:hasRole a trv:role</tt>; agents are different than their role. <tt>trv:role</tt> are <tt>trv:traveller</tt>, defining the role of a traveller, such as an explorer, or <tt>trv:preparationRole</tt> for other roles, such as commissioner, involved with the organization of the travel.
   		</td>
   	</tr>
   	<tr>
