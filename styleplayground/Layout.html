@@ -17,6 +17,10 @@
 /*stile schermi telefoni*/
 @media (max-width: 840px) { 
 	
+	dropdown {
+  		display: inline-block!important;
+	}
+	
 	#aside{
 		display:none!important;
 	}
@@ -83,7 +87,35 @@
 	
 	}
 	
-/*stile per schermi pc*/
+/*per tutti gli schermi*/
+	dropdown {
+  		display: none;
+	}
+
+	.dropdown-content {
+  		display: none;
+  		position: absolute;
+  		background-color: #f9f9f9;
+  		min-width: 160px;
+  		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  		z-index: 1;
+	}
+
+	.dropdown-content a {
+  		color: black;
+  		padding: 12px 16px;
+  		text-decoration: none;
+  		display: block;
+  		text-align: left;
+	}
+
+	.dropdown-content a:hover {
+		background-color: #f1f1f1;
+	}
+
+	.dropdown:hover .dropdown-content {
+  	display: block;
+	}
 	
 	#sugg{
 		height:100%;
@@ -381,7 +413,13 @@
 		<nav class="navbar navbar-light bg-light">
   			<div class="container-fluid">
   				<span>
-    				<a class="cover">Cover Page</a>
+    				<a class="cover">Home</a>
+				<a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    					<div class="dropdown-content">
+      						<a href="#">Link 1</a>
+      						<a href="#">Link 2</a>
+      						<a href="#">Link 3</a>
+    					</div>
 				</span>
     			<span class="d-flex">
     				<a class="navbar-brand" id="myBtn">Documentation</a>
