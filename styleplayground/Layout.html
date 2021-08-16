@@ -470,26 +470,26 @@
     									<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       										<div class="accordion-body">
         										<div class="dropend">
-  												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic4-title">
+  												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic1-title">
 		 											Work from Home
 												</button>
-												<ul class="dropdown-menu" id="topic4">
+												<ul class="dropdown-menu" id="topic1">
 					
 												</ul>
   											</div>
   											<div class="dropend">
-  												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic5-title">
+  												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic2-title">
 		 											Space Tourism		
 												</button>
-												<ul class="dropdown-menu" id="topic5">
+												<ul class="dropdown-menu" id="topic2">
     				
   												</ul>
   											</div>
   											<div class="dropend" >
-  												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic6-title">
+  												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic2-title">
 		 											Inclusive Language
 												</button>
-												<ul class="dropdown-menu" id="topic6">
+												<ul class="dropdown-menu" id="topic2">
     				
   												</ul>
   											</div>			
@@ -779,7 +779,7 @@ var column = `
 columnListener = {}
 function columnSetting(topic, ref){
 	if (!(topic in columnListener)){
-		Object.keys(columnListener).forEach(key => {delete columnListener[key];});
+		Object.keys(columnListener).forEach(key => {delete columnListener[key];};
 		$("#row-article").empty();
 		$("#row-article").append(column.sub({colwidth: "-12", colnum : "-1"}));
 		columnListener[topic] = "1";
@@ -804,7 +804,7 @@ function columnSetting(topic, ref){
 		}
 	}
 }
-
+/*aggiungere closing button oer le colonne*/
 		</script>
 
 
