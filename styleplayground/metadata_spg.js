@@ -16,7 +16,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             getArticles("list_space.json", "#topic2", "topic2")
             getArticles("list_space.json", "#topic2s", "topic2")
             getArticles("list_inclusivelanguage.json", "#topic3", "topic3")
-            getArticles("list_space.json", "#topic3s", "topic3")
+            getArticles("list_inclusivelanguage.json", "#topic3s", "topic3")
 
         }
         function getArticles(url, ref, mytopic){
