@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<link rel="stylesheet alternate" href="colliers.css" id="collier" >  esemopio richiamo tema-->
+	<link rel="stylesheet" type="text/css" href="" id="main">
+	<link rel="stylesheet alternate" href="assets/style_1800.css" id="1800" >
+	<link rel="stylesheet alternate" href="assets/future_style.css" id="future" >
+	<link rel="stylesheet alternate" href="" id="none" >
+
+    <!-- Styleshets-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+<style>
+/*stile schermi telefoni*/
+@media (max-width: 840px) { 
+	
+	#topic1-title, #topic2-title, #topic3-title{
+		font-size: medium!important;
+	}
+		
+	.dropdown {
+  		display: inline-block!important;
+	}
+	
+	#aside{
+		display:none!important;
+	}
+	
+	.cover{
+		display:none;
+	}
+	
+	.sugg_col {
+		display:none!important;
+	}
+	
+	section{
+		width:100%!important;
+	}
+	
+	#col-num-1, #col-num-2, #col-num-3 {
+    		height: 30%;
+   		width: 100%;
+	}
+	
+	.col-6 {
+    		flex: 0 0 auto;
+    		width: 100%;
+    		height: 50%!important;
+	}
+	.col-4 {
+    		height: 33%!important;
+    		width: 100%;
+	}
+	
+	
+	#article-1, #article-2, #article-3 {
+    		height: 100%!important;
+    		width: 70%;
+    		float: right;
+	}
+	#metaview-1, #metaview-2, #metaview-3 {
+    		height: 100%!important;
+    		width: 30%;
+		float: left;
+	}
+	
+	}
+	
+@media (max-width: 991.98px) {
+	#topic1-title, #topic2-title, #topic3-title{
+		font-size: x-small;
+	}
+	
+	}
+	
+@media (min-width: 991.98px) and (max-width: 1199.98px) { 
+	#topic1-title, #topic2-title, #topic3-title{
+		font-size: small;
+	}
+	
+	}
+
+@media (min-width:  1199.98px) { 
+	#topic1-title, #topic2-title, #topic3-title{
+		font-size: medium;
+	}
+	
+	}
+	
+/*per tutti gli schermi*/
+	.dropdown {
+  		display: none;
+	}
+
+	.dropdown-content {
+		width:600%;
+  		display: none;
+  		position: absolute;
+  		background-color: #f9f9f9;
+  		min-width: 160px;
+  		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  		z-index: 1;
+	}
+
+	.dropdown-content a {
+  		color: black;
+  		padding: 12px 16px;
+  		text-decoration: none;
+  		display: block;
+  		text-align: left;
+	}
+
+	.dropdown-content a:hover {
+		background-color: #f1f1f1;
+	}
+
+	.dropdown:hover .dropdown-content {
+  	display: block;
+	}
+	
+	#sugg{
+		height:100%;
+		padding: .25em .5em;
+	}
+	
+	#desc{
+		height:100%;
+		padding: .25em .5em;
+	}
+	
+	.overflow{
+		overflow-y:scroll;
+		overflow-x:hidden;
+		}	
+
+	#col-num-1, #col-num-2, #col-num-3{
+		height:100%;
+		}
+
+	#metaview-1, #metaview-2, #metaview-3{
+		height: 30%;		
+		}
+		
+	#article-1, #article-2, #article-3{
+		height: 70%;
+		}
+
+	#title-1, #title-2, #title-3{
+		margin-bottom: 0px;
+		font-size: 2.5ex;
+  		  padding-top: 1ex;
+		} 		
+
+	.list{
+		height:60%;
+		}
+	
+   	/*generale*/
+	body {
+   		height: 100vh;
+   		width: 100vw;
+   		font-size: 20px;
+		}
+	
+
+	.container{
+		height: 33%;;
+		}
+	
+	
+	nav{
+		height: 5%;
+		padding-bottom: 0px!important;
+		padding-top: 0px!important;
+		}
+	
+	a{
+		text-decoration: none
+		color: black;
+		}
+
+	.cover{
+		font-size: 1.25em;	
+		}
+
+
+	#main-row{
+		height: 89%;
+		width: 100%;
+		padding-left: 20px;
+		}
+	
+	#row-article{
+		height: 90%;
+		}
+	
+	.bg-light{
+		background-color: unset!important;
+		}
+	
+	.container-fluid{
+		height: 100%;
+		padding-left: 20px;
+		}
+
+	
+	header{
+		text-align: center;
+		height: 10%;
+		font-size: 2.8em;
+		}
+
+	aside, section{
+		height: 100%
+		}
+
+
+
+
+	/* meta, article da mettere come class*/
+	
+	
+	#aside{
+		height: 100%;
+		padding-top: 9px;
+		}
+
+	footer{
+		height: 5%;
+		padding-top: 1%;
+		text-align: center;
+		}
+	
+	span.metaTitle{
+		font-size: .8em;
+		}
+
+	div.col-7.meta{
+		border: 1px solid
+		}
+	
+	/*Style flip card*/
+	
+	*, *:after, *:before {
+  		-webkit-box-sizing: border-box;
+  		-moz-box-sizing: border-box;
+  		box-sizing: border-box;
+		}
+
+	.flip-card-3D-wrapper {
+		height: 80%;
+  		position: relative;
+  		-o-perspective: 900px;
+  		-webkit-perspective: 900px;
+  		-ms-perspective: 900px;
+  		perspective: 900px;
+  		margin: 0;
+		}
+	
+	#flip-card {
+		width: 100%;
+  		height: 100%;
+  		position: absolute;
+  		-o-transition: all 1s ease-in-out;
+  		-webkit-transition: all 1s ease-in-out;
+  		-ms-transition: all 1s ease-in-out;
+  		transition: all 1s ease-in-out;
+  		-o-transform-style: preserve-3d;
+  		-webkit-transform-style: preserve-3d;
+  		-ms-transform-style: preserve-3d;
+  		transform-style: preserve-3d;
+		}
+	
+	.do-flip {
+  		-o-transform: rotateY(-180deg);
+  		-webkit-transform: rotateY(-180deg);
+  		-ms-transform: rotateY(-180deg);
+  		transform: rotateY(-180deg);
+		}
+	
+	#flip-card-btn-turn-to-back, #flip-card-btn-turn-to-front {
+  		position: absolute;
+  		top: 8px;
+  		right: 8px;
+  		width: 50px;
+  		height: 50px;
+  		background: none;
+  		cursor: pointer;
+  		visibility: hidden;
+  		font-family: 'Open Sans', sans-serif;
+  		font-weight: 600;
+  		font-size: .7em;
+  		padding: 0;
+  		color: grey;
+  		border: 0px;
+		}
+	
+	#flip-card .flip-card-front, #flip-card .flip-card-back{
+  		width: 100%;
+  		height: 100%;
+  		position: absolute;
+  		-o-backface-visibility: hidden;
+  		-webkit-backface-visibility: hidden;
+  		-ms-backface-visibility: hidden;
+  		backface-visibility: hidden;
+  		z-index: 2;
+  		padding-top:30%;
+		}
+	
+	#flip-card .flip-card-front {
+		border:1px solid rgba(0,0,0,.125);
+		border-radius: .25rem;
+		}
+	
+	#flip-card .flip-card-back {
+	    	border:1px solid rgba(0,0,0,.125);
+    		border-radius: .25rem;
+    		-o-transform: rotateY(180deg);
+    		-webkit-transform: rotateY(180deg);
+    		-ms-transform: rotateY(180deg);
+    		transform: rotateY(180deg);
+    		padding-left: 1em;
+		}
+	
+	#flip-card .flip-card-front p, #flip-card .flip-card-back p {
+  		color: grey;
+  		display: block;
+  		position: absolute;
+  		top: 40%;
+  		width: 100%;
+		}
+
+		.icon{
+		height: 15%;
+		}
+
+	#themes{
+		height: 80%;
+		}
+	
+	#lens{
+		height: 80%;
+		}
+	
+	#topics{
+	height: 20%;
+	}
+	
+	
+	.btn-secondary, .btn-secondary:hover{
+		color: black!important;
+		background: none;
+		Border: 0px!important;
+		font-size: 1.2em;
+		}
+
+	/*modal documentation*/
+
+	/* The Modal (background) */
+	.modal {
+ 		display: none; /* Hidden by default */
+  		position: fixed; /* Stay in place */
+  		z-index: 1; /* Sit on top */
+  		padding-top: 100px; /* Location of the box */
+  		left: 0;
+  		top: 0;
+  		width: 100%; /* Full width */
+  		height: 100%; /* Full height */
+  		overflow: auto; /* Enable scroll if needed */
+  		background-color: rgb(0,0,0); /* Fallback color */
+  		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+
+	/* Modal Content */
+	.modal-content {
+  		background-color: #fefefe;
+  		margin: auto;
+  		padding: 20px;
+  		border: 1px solid #888;
+  		width: 80%;
+  		height: 90%;
+		}
+	
+	/* The Close Button */
+	.close {
+  		color: #aaaaaa;
+  		float: right;
+  		font-size: 28px;
+  		font-weight: bold;
+		}
+
+	.close:hover, .close:focus {
+  		color: #000;
+  		text-decoration: none;
+  		cursor: pointer;
+		}
+
+</style>
+    <!--Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+
+
+	</head>
+	
+	<body>
+	
+		<!-- Navbar-->
+		<nav class="navbar navbar-light bg-light">
+  			<div class="container-fluid">
+  				<span>
+    				<a class="cover">Home</a>
+					<div class="dropdown">
+						<a href="javascript:void(0)" class="dropbtn">Menu</a>
+    						<div class="dropdown-content">
+      							<div class="accordion" id="accordionExample">
+  								<div class="accordion-item">
+    									<h2 class="accordion-header" id="headingOne">
+      										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+       											Themes
+      										</button>
+    									</h2>
+    									<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      										<div class="accordion-body">
+        										<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+  												<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+ 												<label class="btn" for="btnradio1">Theme 1</label>
+
+  												<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+  												<label class="btn" for="btnradio2">Theme 2</label>
+
+  												<input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+  												<label class="btn" for="btnradio3">Theme 3</label>
+											</div>
+        										<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+  												<input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+ 												<label class="btn" for="btnradio4">Theme 4</label>
+
+  												<input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+  												<label class="btn" for="btnradio5">Theme 5</label>
+
+  												<input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+  												<label class="btn" for="btnradio6">Theme 6</label>
+											</div>
+											<!--da vedere se tenerlo come radio button-->
+											<input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" checked>
+											<label class="btn btn-link" for="btnradio7">Reset</label>
+      										</div>
+    									</div>
+  								</div>
+							</div>
+							
+							
+							
+							
+							
+							<div class="accordion" id="accordionExample">
+  								<div class="accordion-item">
+    									<h2 class="accordion-header" id="headingTwo">
+      										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+       											Topics
+      										</button>
+    									</h2>
+    									<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      										<div class="accordion-body">
+        										<div class="dropend">
+  												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic1-title">
+		 											Work from Home
+												</button>
+												<ul class="dropdown-menu" id="topic1">
+					
+												</ul>
+  											</div>
+  											<div class="dropend">
+  												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic2-title">
+		 											Space Tourism		
+												</button>
+												<ul class="dropdown-menu" id="topic2">
+    				
+  												</ul>
+  											</div>
+  											<div class="dropend" >
+  												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic3-title">
+		 											Inclusive Language
+												</button>
+												<ul class="dropdown-menu" id="topic3">
+    				
+  												</ul>
+  											</div>			
+      										</div>
+    									</div>
+  								</div>
+							</div>
+							
+							
+							
+							
+							
+							
+      							<a href="#">Link 2</a>
+      							<a href="#">Link 3</a>
+    						</div>
+					</div>
+				</span>
+    			<span class="d-flex">
+    				<a class="navbar-brand" id="myBtn">Documentation</a>
+    					
+					
+
+    				<!--About us toggler offcanvasTop-->     	 		
+     	 			<a class="navbar-brand" data-bs-toggle="offcanvas" type="button" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">About us</a>
+						<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+  						<div class="offcanvas-header">
+    						<h5 id="offcanvasTopLabel">The Team</h5>
+    						<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  						</div>
+  						<div class="offcanvas-body">
+  							...
+  						</div>
+					</div>	
+					<!--Disclaimer toggler offcanvasBottom--> 
+					<a class="navbar-brand" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Disclaimer</a>
+						<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  						<div class="offcanvas-header">
+    						<h5 class="offcanvas-title" id="offcanvasBottomLabel">Disclaimer</h5>
+    						<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  						</div>
+  						<div class="offcanvas-body small">
+    						...
+ 						</div>
+					</div>	
+				</span>	
+  			</div>
+		</nav>
+	
+		<!--Central body-->
+		<div class="row" id="main-row">
+	
+	
+			<!--Aside-->
+			<div class="col-md-2" id="aside">
+		
+				<!--Flip card-->
+				<div class="flip-card-3D-wrapper">
+					<div id="flip-card">
+						<!--themes-->
+						<div class="flip-card-front">
+							<div class="icon" onclick="changeStyle('#future')">
+								<lord-icon
+    								src="https://cdn.lordicon.com/gxulgxck.json"
+    								trigger="hover"
+    								colors="primary:#3080e8,secondary:#c71f16"
+    								style="width:100px;height:100px">
+								</lord-icon>
+							</div> 
+		 					<div class="icon" onclick="changeStyle('#1800')">
+		 						<lord-icon
+    								src="https://cdn.lordicon.com/gxulgxck.json"
+    								trigger="hover"
+    								colors="primary:#3080e8,secondary:#c71f16"
+    								style="width:100px;height:100px">
+								</lord-icon>
+							</div>
+		 					<div class="icon" onclick="changeStyle('#none')">
+		 						<lord-icon
+    								src="https://cdn.lordicon.com/gxulgxck.json"
+								    trigger="hover"
+								    colors="primary:#3080e8,secondary:#c71f16"
+								    style="width:100px;height:100px">
+								</lord-icon>
+							</div><!--esempio stile aggiunto>
+		 					<div class="icon">
+		 						<lord-icon
+    								src="https://cdn.lordicon.com/gxulgxck.json"
+								    trigger="hover"
+								    colors="primary:#3080e8,secondary:#c71f16"
+							    	style="width:100px;height:100px">
+								</lord-icon>
+							</div>
+		 					<div class="icon">
+		 						<lord-icon
+ 									src="https://cdn.lordicon.com/gxulgxck.json"
+  									trigger="hover"
+								    colors="primary:#3080e8,secondary:#c71f16"
+								    style="width:100px;height:100px">
+								</lord-icon>
+							</div>
+		 					<div class="icon">	
+		 						<lord-icon
+    								src="https://cdn.lordicon.com/gxulgxck.json"
+								    trigger="hover"
+								    colors="primary:#3080e8,secondary:#c71f16"
+							    	style="width:100px;height:100px">
+								</lord-icon>
+							</div>-->
+							<button id="flip-card-btn-turn-to-back"><lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover" colors="primary:#121331,secondary:#1663c7" stroke="82" style="width:50px;height:50px"></lord-icon></button>
+						</div> 
+						<!--Lens-->
+						<div class="flip-card-back">
+							<h3>Lens</h3>
+							<form>
+					
+							</form>
+							<button id="flip-card-btn-turn-to-front"><lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover" colors="primary:#121331,secondary:#1663c7" stroke="82" style="width:50px;height:50px"></lord-icon></button>
+						</div>
+					</div>
+				</div>
+				<!--Topics-->		
+				<div class="card" id="topics">  			
+  					<div class="btn-group dropend">
+	  				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic1-title">
+			 			Work from Home
+					</button>
+					<ul class="dropdown-menu" id="topic1">
+						
+				</ul>
+  			</div>
+  					<div class="btn-group dropend">
+  				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic2-title">
+		 			Space Tourism
+				</button>
+				<ul class="dropdown-menu" id="topic2">
+    				
+  				</ul>
+  			</div>
+  					<div class="btn-group dropend" >
+  				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic3-title">
+		 			Inclusive Language
+				</button>
+				<ul class="dropdown-menu" id="topic3">
+    				
+  				</ul>
+  			</div>			
+  	  		</div>
+			
+			</div>
+
+			<!--Section-->
+			<section class="col-10">		
+	
+			<header>
+			THE MAGAZINE 
+			</header>
+			<!-- Start section with articles-->
+			<div class="row" id="row-article">
+				<div class="col">
+					<div class="card overflow" id="desc">
+						<h2>Brief description of the magazine</h2>
+					</div>
+				</div>
+				<div class="col-4 sugg_col">
+					<div class="card overflow" id="sugg">
+						<h2>Suggested readings</h2>
+					</div>
+				</div>
+			</div>
+			
+			</section>
+	
+		</div>
+		
+		<!--Footer-->
+		<footer>
+	Footer
+	</footer>
+	
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+  			<!-- Modal content -->
+  			<div class="modal-content">
+    			<span class="close">&times;</span>
+				<div class="row">
+					<div class="col-3"><span>Index</span></div>
+					<div class="col-9"><span>document</span></div>
+				</div>  
+			</div>	
+		</div>
+		
+		
+<script type="text/javascript" src="metadata_spg.js"></script>
+		<!--Scripts-->	
+		<script>
+
+
+
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+
+
+//flipping card 
+
+
+document.addEventListener('DOMContentLoaded', function(event) {
+
+  document.getElementById('flip-card-btn-turn-to-back').style.visibility = 'visible';
+  document.getElementById('flip-card-btn-turn-to-front').style.visibility = 'visible';
+
+  document.getElementById('flip-card-btn-turn-to-back').onclick = function() {
+  document.getElementById('flip-card').classList.toggle('do-flip');
+  };
+
+  document.getElementById('flip-card-btn-turn-to-front').onclick = function() {
+  document.getElementById('flip-card').classList.toggle('do-flip');
+  };
+
+});
+
+
+//Modal documentation 
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+String.prototype.sub = function(o) { //funzione che serve a inserire gli elementi nella lista dei documenti
+            var r = this ; 
+            for (var i in o) { 
+                r = r.replace(new RegExp("\\$"+i, 'g'),o[i])  
+            } 
+            return r 
+        }
+// Style changer
+
+
+function changeStyle(ref){
+            target=$(ref).attr("href");
+            $("#main").attr("href", target);
+
+        }
+// Adding topics and columns
+function topicManager(topic, ref){
+	addTopic(topic);
+	columnSetting(topic, ref);
+
+}
+function addTopic(topic){
+	$("header").replaceWith("<header>" + $("#" + topic + "-title").text() + "</header>");
+}
+
+var column = `
+			<div class="col$colwidth" id = col-num$colnum>
+					<div class="row" id="metaview$colnum">
+						<div class="row list"><h3>Metaviewer</h3></div> 
+					</div> 
+					<div class="card overflow" id="article$colnum">
+						<h2>Art</h2>
+					</div>
+				</div>`
+columnListener = {}
+function columnSetting(topic, ref){
+	if (!(topic in columnListener)){
+		Object.keys(columnListener).forEach(key => {delete columnListener[key];});
+		$("#row-article").empty();
+		$("#row-article").append(column.sub({colwidth: "-12", colnum : "-1"}));
+		columnListener[topic] = "1";
+		load(topic, ref);
+	} else {
+		switch (columnListener[topic]) {
+			case "1":
+			$("#col-num-1").attr("class", "col-6") ;
+			$("#row-article").append(column.sub({colwidth: "-6", colnum: "-2"}));
+			columnListener[topic] = "2";
+			load(topic, ref);
+			break
+			case "2":
+			$("#col-num-1").attr("class", "col-4") ;
+			$("#col-num-2").attr("class", "col-4") ;
+			$("#row-article").append(column.sub({colwidth: "-4", colnum: "-3"}));
+			columnListener[topic] = "3";
+			load(topic, ref);
+			break
+			default:
+			console.log("No columns or 3 columns; impossible to add more")
+		}
+	}
+}
+
+		</script>
+
+
+	</body>
+</html>
+
+
+
+
