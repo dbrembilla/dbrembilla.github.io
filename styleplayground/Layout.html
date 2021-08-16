@@ -402,6 +402,7 @@
 </style>
     <!--Scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
 
@@ -468,34 +469,32 @@
     									</h2>
     									<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       										<div class="accordion-body">
-											
-
-        										<div class="btn-group dropend">
-	  											<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >
-			 										Work from Home
+        										<div class="dropend">
+  												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic1-title">
+		 											Work from Home
 												</button>
-												<ul class="dropdown-menu" id="topic4">
-						
+												<ul class="dropdown-menu" id="topic1">
+					
 												</ul>
   											</div>
-  											<div class="btn-group dropend">
+  											<div class="dropend">
   												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic2-title">
-		 											Space Tourism
+		 											Space Tourism		
 												</button>
-												<ul class="dropdown-menu" id="topic5">
+												<ul class="dropdown-menu" id="topic2">
     				
   												</ul>
   											</div>
-  											<div class="btn-group dropend" >
+  											<div class="dropend" >
   												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic3-title">
 		 											Inclusive Language
 												</button>
-												<ul class="dropdown-menu" id="topic6">
+												<ul class="dropdown-menu" id="topic3">
     				
   												</ul>
-  											</div>
-										</div>
-    									</div>					
+  											</div>			
+      										</div>
+    									</div>
   								</div>
 							</div>
 							
@@ -780,7 +779,7 @@ var column = `
 columnListener = {}
 function columnSetting(topic, ref){
 	if (!(topic in columnListener)){
-		Object.keys(columnListener).forEach(key => {delete columnListener[key];};
+		Object.keys(columnListener).forEach(key => {delete columnListener[key];});
 		$("#row-article").empty();
 		$("#row-article").append(column.sub({colwidth: "-12", colnum : "-1"}));
 		columnListener[topic] = "1";
@@ -805,15 +804,9 @@ function columnSetting(topic, ref){
 		}
 	}
 }
-/*aggiungere closing button oer le colonne*/
+
 		</script>
 
 
 	</body>
 </html>
-
-
-
-
-
-
