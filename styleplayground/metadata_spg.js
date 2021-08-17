@@ -1,3 +1,61 @@
+
+// Style changer
+
+
+function changeStyle(ref){
+            target=$(ref).attr("href");
+            $("#main").attr("href", target);
+
+        }
+// Adding topics and columns
+function topicManager(topic, ref){
+    addTopic(topic);
+    columnSetting(topic, ref);
+
+}
+function addTopic(topic){
+    $("header").replaceWith("<header>" + $("#" + topic + "-title").text() + "</header>");
+}
+
+var column = `
+            <div class="col$colwidth" id = col-num$colnum>
+                    <div class="row" id="metaview$colnum">
+                        <div class="row list"><h3>Metaviewer</h3></div> 
+                    </div> 
+                    <div class="card overflow" id="article$colnum">
+                        <h2>Art</h2>
+                    </div>
+                </div>`
+columnListener = {}
+function columnSetting(topic, ref){
+    if (!(topic in columnListener)){
+        Object.keys(columnListener).forEach(key => {delete columnListener[key];});
+        $("#row-article").empty();
+        $("#row-article").append(column.sub({colwidth: "-12", colnum : "-1"}));
+        columnListener[topic] = "1";
+        load(topic, ref);
+    } else {
+        switch (columnListener[topic]) {
+            case "1":
+            $("#col-num-1").attr("class", "col-6") ;
+            $("#row-article").append(column.sub({colwidth: "-6", colnum: "-2"}));
+            columnListener[topic] = "2";
+            load(topic, ref);
+            break
+            case "2":
+            $("#col-num-1").attr("class", "col-4") ;
+            $("#col-num-2").attr("class", "col-4") ;
+            $("#row-article").append(column.sub({colwidth: "-4", colnum: "-3"}));
+            columnListener[topic] = "3";
+            load(topic, ref);
+            break
+            default:
+            console.log("No columns or 3 columns; impossible to add more")
+        }
+    }
+}
+
+
 String.prototype.sub = function(o) { //funzione che serve a inserire gli elementi nella lista dei documenti
             var r = this ; 
             for (var i in o) { 
