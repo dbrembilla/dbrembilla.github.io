@@ -169,7 +169,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 content: key,
                 links: value
               }));
-            }
+                };
 
             } 
 
