@@ -824,10 +824,7 @@ $(":checkbox").change(function(){
 	if (this.checked){
 		for (i=1; i <= Object.values(columnListener)[0]; i++){
 					filltab("#article-"+i+this.value,"#metaview-"+i)
-				}
-	else {
-		console.log('add delete');
-	}
+				} 
 	}
 })
 $(function(){
