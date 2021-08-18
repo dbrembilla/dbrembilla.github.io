@@ -69,6 +69,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
         $(document).ready(main); //al caricamento del documento esegui main
 
         function main() { //recupera gli html
+            console.log("main")
             getArticles("list_workfromhome.json", "#topic1"||"#topic1s", "topic1") 
             getArticles("list_workfromhome.json","#topic1s", "topic1")
             getArticles("list_space.json", "#topic2", "topic2")
