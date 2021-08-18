@@ -82,7 +82,7 @@ h4 {
 	font-style: italic;
 	font-size: 26em;
 }
-p, ul {
+p, ul, .navbar {
 	font-family: Assistant;
 	margin: 10px;
 	font-size: 0.618em;
