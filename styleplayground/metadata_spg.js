@@ -142,7 +142,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             var listContent = '<a id="$thisclass" href="#$place">$number</a>,'; //dal secondo elemento si pone a fianco di quello presente
             var elements = $(what); 
             seenClasses = {}; //array che contiene le classi già note
-            $(where).empty(); 
+            //$(where).empty(); 
             for (var i=0; i<elements.length; i++) {
                 referenceClass = elements[i].getAttribute("class").toString(); //prende le classi dell'elemento e le converte a stringa e poi sostituisce gli spazi con -
                 referenceClass = referenceClass.replace(/\s/g, "-");
@@ -162,7 +162,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                     thisclass: referenceClass,
                     number: 1
                 }) ]
-                }
+                }}
             
             for (const [key, value] of Object.entries(seenClasses)) {
               $(where).append(listFirst.sub({
