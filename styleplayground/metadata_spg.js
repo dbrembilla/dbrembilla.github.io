@@ -214,10 +214,3 @@ function fillInfo(from, where, wherelse, wherever) {
                 title: titlefill
             }))
         }
-        $(function(){
-       $("a").each(function(){
-               if ($(this).attr("href") == window.location.pathname){
-                       $(this).addClass("pulsate-fwd");
-               }
-       });
-});

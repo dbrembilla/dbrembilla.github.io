@@ -793,6 +793,13 @@ $(":checkbox").change(function(){
 		filltab("#article-"+i+this.value,"#metaview-"+i)
 	}
 })
+$(function(){
+       $("a").each(function(){
+               if ($(this).attr("href") == window.location.pathname){
+                       $(this).addClass("pulsate-fwd");
+               }
+       });
+});
 		</script>
 
 
