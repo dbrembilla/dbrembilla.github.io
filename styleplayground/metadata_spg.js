@@ -15,7 +15,7 @@ function topicManager(topic, ref){
 }
 function addTopic(topic){
     $("header").replaceWith("<header>" + $("#" + topic + "-title").text() + "</header>");
-}
+
 
 var column = `
             <div class="col$colwidth" id = col-num$colnum>
@@ -125,7 +125,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             }
         }
 
-        function filltabs(topic){
+        function filltabs(topic){ //da eliminare
             fillInfo("#article-" +columnListener[topic], "#title-" + columnListener[topic], "#auth-" + columnListener[topic],  "#pub-" + columnListener[topic] );                    
             filltab("#file-" + columnListener[topic] + " .person","#person-view-"+columnListener[topic]);
             filltab("#file-" +columnListener[topic] +" .place","#place-view-"+columnListener[topic]);
@@ -138,33 +138,42 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
 
 
         function filltab(what,where) { //questo riempie le tabelle del metadata viewer
-            var listFirst = `<br><a id="$thisclass" href="$place">$content</a>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
-            var listSecond = ', <a id="$thisclass" href="#$place">$content</a>'; //dal secondo elemento si pone a fianco di quello presente
+            var listFirst = `<br>$content[$links]`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
+            var listContent = '<a id="$thisclass" href="#$place">$number</a>,'; //dal secondo elemento si pone a fianco di quello presente
             var elements = $(what); 
-            seenClasses = []; //array che contiene le classi già note
+            seenClasses = {}; //array che contiene le classi già note
             $(where).empty(); 
             for (var i=0; i<elements.length; i++) {
                 referenceClass = elements[i].getAttribute("class").toString(); //prende le classi dell'elemento e le converte a stringa e poi sostituisce gli spazi con -
                 referenceClass = referenceClass.replace(/\s/g, "-");
-                if (seenClasses.includes(referenceClass)) {
-                    $("#" + referenceClass).attr("id", "tmp"); //assegna nome temporaneo all'oggetto noto per aggiungere l'elemento successivo dopo di esso
-                    $("#tmp").after(listSecond.sub({
+                if (referenceClass in seenClasses) { //questo algoritmo crea un array contenente un elenco di numeri che si riferiscono a quando un elemento è citato
+                    len = seenClasses[referenceClass] +1
+                    seenClasses[referenceClass].append(
+                    listContent.sub({
                     place: elements[i].id, //qui non c'è # perché ha automaticamente id # e quindi veniva ##ref
-                    content: elements[i].innerHTML,
-                    thisclass: referenceClass
+                    thisclass: referenceClass,
+                    number:  len
                 }))
-                    $("#tmp").removeAttr("id");
+                    seenClasses[referenceClass] ++ ;
                 }
                 else {
-                    $(where).append(listFirst.sub({
+                    seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
                     place: '#'+elements[i].id,
-                    content: elements[i].innerHTML,
-                    thisclass: referenceClass
-                }) )
-                    seenClasses.push(referenceClass)
+                    thisclass: referenceClass,
+                    number: 1
+                }) ]
                 }
             
+            for (const [key, value] of Object.entries(seenClasses)) {
+              $(where).append(listFirst.sub{
+                content: key,
+                links: value
+              });
             }
+
+            } 
+
+            //content: elements[i].innerHTML
         }
         function basefilltab(what,where) { //questo riempie le tabelle del metadata viewer
             var list = `<li class="list quote"><a href="#$place">$content</a></li>`
