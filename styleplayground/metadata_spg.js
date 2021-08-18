@@ -168,7 +168,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
               $(where).append(listFirst.sub({
                 content: key,
                 links: value
-              });
+              }));
             }
 
             } 
