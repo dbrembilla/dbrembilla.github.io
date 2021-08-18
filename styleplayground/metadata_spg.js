@@ -66,9 +66,9 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
         
         var listItemTpl = `<li><a href='#' onclick='topicManager("$topic","$url")'>$label</a></li>` //elemento che serve ad aggiungere documenti. label è la descrizione del doc e url la cipolla
         
+        $(document).ready(main); //al caricamento del documento esegui main
 
         function main() { //recupera gli html
-            console.log("main")
             getArticles("list_workfromhome.json", "#topic1"||"#topic1s", "topic1") 
             getArticles("list_workfromhome.json","#topic1s", "topic1")
             getArticles("list_space.json", "#topic2", "topic2")
@@ -142,7 +142,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             var listContent = '<a id="$thisclass" href="#$place">$number</a>,'; //dal secondo elemento si pone a fianco di quello presente
             var elements = $(what); 
             seenClasses = {}; //array che contiene le classi già note
-            //$(where).empty(); 
+            $(where).empty(); 
             for (var i=0; i<elements.length; i++) {
                 referenceClass = elements[i].getAttribute("class").toString(); //prende le classi dell'elemento e le converte a stringa e poi sostituisce gli spazi con -
                 referenceClass = referenceClass.replace(/\s/g, "-");
@@ -162,14 +162,14 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                     thisclass: referenceClass,
                     number: 1
                 }) ]
-                }}
+                }
             
             for (const [key, value] of Object.entries(seenClasses)) {
               $(where).append(listFirst.sub({
                 content: key,
                 links: value
               }));
-                };
+            }
 
             } 
 
@@ -214,3 +214,10 @@ function fillInfo(from, where, wherelse, wherever) {
                 title: titlefill
             }))
         }
+        $(function(){
+       $("a").each(function(){
+               if ($(this).attr("href") == window.location.pathname){
+                       $(this).addClass("pulsate-fwd");
+               }
+       });
+});
