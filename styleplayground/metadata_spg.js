@@ -142,7 +142,6 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             var elements = $(what); 
             seenClasses = {}; //array che contiene le classi già note
             $(where).empty(); 
-            console.log('pass');
             for (var i=0; i<elements.length; i++) {
                 referenceClass = elements[i].getAttribute("class").toString(); //prende le classi dell'elemento e le converte a stringa e poi sostituisce gli spazi con -
                 referenceClass = referenceClass.replace(/\s/g, "-");
