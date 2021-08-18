@@ -147,14 +147,14 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 referenceClass = elements[i].getAttribute("class").toString(); //prende le classi dell'elemento e le converte a stringa e poi sostituisce gli spazi con -
                 referenceClass = referenceClass.replace(/\s/g, "-");
                 if (referenceClass in seenClasses) { //questo algoritmo crea un array contenente un elenco di numeri che si riferiscono a quando un elemento è citato
-                    len = seenClasses[referenceClass] +1
+                    len = seenClasses[referenceClass] +1;
                     seenClasses[referenceClass].append(
                     listContent.sub({
                     place: elements[i].id, //qui non c'è # perché ha automaticamente id # e quindi veniva ##ref
                     thisclass: referenceClass,
                     number:  len
                 }))
-                    seenClasses[referenceClass] ++ ;
+                    seenClasses[referenceClass] += 1 ;
                 }
                 else {
                     seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
