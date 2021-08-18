@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--<link rel="stylesheet alternate" href="colliers.css" id="collier" >  esemopio richiamo tema-->
-	<link rel="stylesheet" type="text/css" href="" id="main">
+	<link rel="stylesheet" type="text/css" href="" id="default">
 	<link rel="stylesheet alternate" href="assets/style_1800.css" id="1800" >
 	<link rel="stylesheet alternate" href="assets/future_style.css" id="future" >
 	<link rel="stylesheet alternate" href="" id="none" >
@@ -516,21 +516,21 @@
 									<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
     										<div class="accordion-body">
 											<div class="form-check form-check-inline">
-  												<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  												<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="place">
 	  											<label class="form-check-label" for="inlineCheckbox1">Places</label>
 											</div>
 											<div class="form-check form-check-inline">
-  												<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  												<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="date">
   												<label class="form-check-label" for="inlineCheckbox2">Dates</label>
 											</div>
 										</div>
 										<div class="accordion-body">
 											<div class="form-check form-check-inline">
-  												<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option3">
+  												<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="person">
 	  											<label class="form-check-label" for="inlineCheckbox1">People</label>
 											</div>
 											<div class="form-check form-check-inline">
-  												<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4">
+  												<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="event">
   												<label class="form-check-label" for="inlineCheckbox2">Events</label>
 											</div>
 										</div>
@@ -789,8 +789,20 @@ window.onclick = function(event) {
 }
 
 $(":checkbox").change(function(){
-	console.log("change!")
+	for (i=1; i <= Object.values(columnListener)[0]; i++){
+		filltab("#article-"+i+this.value,"#metaview-"+i)
+	}
 })
+$(function(){
+       $("a").each(function(){
+               if ($(this).attr("href") == window.location.pathname){
+                       $(this).addClass("pulsate-fwd");
+               }
+       });
+});
+        $(document).ready(main; //al caricamento del documento esegui main
+
+
 		</script>
 
 

@@ -4,7 +4,7 @@
 
 function changeStyle(ref){
             target=$(ref).attr("href");
-            $("#main").attr("href", target);
+            $("#default").attr("href", target);
 
         }
 // Adding topics and columns
