@@ -66,7 +66,6 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
         
         var listItemTpl = `<li><a href='#' onclick='topicManager("$topic","$url")'>$label</a></li>` //elemento che serve ad aggiungere documenti. label è la descrizione del doc e url la cipolla
         
-        $(document).ready(main); //al caricamento del documento esegui main
 
         function main() { //recupera gli html
             getArticles("list_workfromhome.json", "#topic1"||"#topic1s", "topic1") 
