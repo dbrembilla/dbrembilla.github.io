@@ -139,7 +139,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
 
 
         function filltab(what,where) { //questo riempie le tabelle del metadata viewer
-            var listFirst = `$content[$links]`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
+            var listFirst = `<li>$content[$links]</li>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
             var listContent = '<a id="$thisclass" href="#$place">$number</a>,'; //dal secondo elemento si pone a fianco di quello presente
             var elements = $(what); 
             seenClasses = {}; //array che contiene le classi già note
@@ -167,6 +167,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             
 
             } 
+            console.log(seenClasses);
             for (const [key, value] of Object.entries(seenClasses)) {
               $(where).append(listFirst.sub({
                 content: key,
