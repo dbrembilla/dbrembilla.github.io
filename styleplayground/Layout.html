@@ -858,7 +858,11 @@ $(function(){
        });
 });
         $(document).ready(main); //al caricamento del documento esegui main
-
+        $(document).ready(function(){
+        	$(":checkbox").each(function(){
+        		this.checked = false
+        	})
+        })
 
 		</script>
 
