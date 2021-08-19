@@ -80,12 +80,12 @@ h3 {
 h4 {
 	font-family: Metropolis;
 	font-style: italic;
-	font-size: 28px;
+	font-size: 1.618em;
 }
 p, ul, .navbar {
 	font-family: Assistant;
 	margin: 10px;
-	font-size: 0.618em;
+	font-size: 28px;
 }
 figcaption {
 	font-family: Assistant;
