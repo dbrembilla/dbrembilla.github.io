@@ -167,7 +167,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             
 
             } 
-            console.log(seenClasses);
+            console.log(seenClasses.entries);
             for (const [key, value] of Object.entries(seenClasses)) {
               $(where).append(listFirst.sub({
                 content: key,
