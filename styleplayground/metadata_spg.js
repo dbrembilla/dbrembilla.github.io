@@ -151,14 +151,14 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                     len = seenClasses[referenceClass].length + 1;
                     seenClasses[referenceClass].push(
                     listContent.sub({
-                    place: elements[i].id, //qui non c'è # perché ha automaticamente id # e quindi veniva ##ref
+                    place: "#" + elements[i].id, //qui non c'è # perché ha automaticamente id # e quindi veniva ##ref
                     thisclass: referenceClass,
                     number:  len
                 }))
                 }
                 else {
                     seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
-                    place: elements[i].id,
+                    place: "#" + elements[i].id,
                     thisclass: referenceClass,
                     number: 1
                 }) ]
