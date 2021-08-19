@@ -163,15 +163,14 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 }) ]
                 }
             
+
+            } 
             for (const [key, value] of Object.entries(seenClasses)) {
               $(where).append(listFirst.sub({
                 content: key,
                 links: value
               }));
             }
-
-            } 
-
             //content: elements[i].innerHTML
         }
         function basefilltab(what,where) { //questo riempie le tabelle del metadata viewer
