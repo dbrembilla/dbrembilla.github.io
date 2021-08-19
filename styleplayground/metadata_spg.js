@@ -20,8 +20,8 @@ function addTopic(topic){
 var column = `
             <div class="col$colwidth" id = col-num$colnum>
                     <div class="row">
-                        <div class="row list"><h3>Metaviewer</h3>
-                        <ul id="metaview$colnum"></ul></div> 
+                        <div class="row list" id="metaview$colnum"><h3>Metaviewer</h3>
+                        <ul id="metadata-list$colnum"></ul></div> 
 
                     </div> 
                     <div class="card overflow" id="article$colnum">
