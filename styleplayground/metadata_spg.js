@@ -158,7 +158,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 }
                 else {
                     seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
-                    place: '#'+elements[i].id,
+                    place: elements[i].id,
                     thisclass: referenceClass,
                     number: 1
                 }) ]
