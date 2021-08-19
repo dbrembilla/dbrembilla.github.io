@@ -19,8 +19,10 @@ function addTopic(topic){
 
 var column = `
             <div class="col$colwidth" id = col-num$colnum>
-                    <div class="row" id="metaview$colnum">
-                        <div class="row list"><h3>Metaviewer</h3></div> 
+                    <div class="row">
+                        <div class="row list"><h3>Metaviewer</h3>
+                        <ul id="metaview$colnum"></ul></div> 
+
                     </div> 
                     <div class="card overflow" id="article$colnum">
                         <h2>Art</h2>
@@ -137,7 +139,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
 
 
         function filltab(what,where) { //questo riempie le tabelle del metadata viewer
-            var listFirst = `<br>$content[$links]`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
+            var listFirst = `$content[$links]`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
             var listContent = '<a id="$thisclass" href="#$place">$number</a>,'; //dal secondo elemento si pone a fianco di quello presente
             var elements = $(what); 
             seenClasses = {}; //array che contiene le classi già note
