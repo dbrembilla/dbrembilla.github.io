@@ -166,7 +166,6 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             
 
             } 
-            console.log(seenClasses.entries);
             for (const [key, value] of Object.entries(seenClasses)) {
               $(where).append(listFirst.sub({
                 content: key,
@@ -188,7 +187,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             }
         }
         
-function fillInfo(from, where, wherelse, wherever) {
+function fillInfo(from, where, wherelse, wherever) { //ritornare a solo 1 where
             var title =`
                 $title
                 `
@@ -215,10 +214,4 @@ function fillInfo(from, where, wherelse, wherever) {
                 title: titlefill
             }))
         }
-        $(function(){
-       $("a").each(function(){
-               if ($(this).attr("href") == window.location.pathname){
-                       $(this).addClass("pulsate-fwd");
-               }
-       });
-});
+        
