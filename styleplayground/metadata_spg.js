@@ -17,7 +17,7 @@ function addTopic(topic){
     $("header").replaceWith("<header>" + $("#" + topic + "-title").text() + "</header>");}
 
 function close(id){
-    $(id).remove();
+    $("#"+ id).remove();
     switch(Object.values(columnListener)[0]){
         case "2":
         $("#col-num-1").attr("class", "col-12") ;
