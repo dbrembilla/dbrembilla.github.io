@@ -873,14 +873,14 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
 						filltab("#article-"+i+this.value,"#metadata-list-"+i)
 					} 
-		}} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
+		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
 						var classToDelete = "#article-"+i+this.value;
 						console.log(classToDelete);
 						classToDelete = classToDelete.replace(/\s/g, "-");
 						$(classToDelete).remove()
 					} 
-		} else { if (this.checked){ 
+		}} else { if (this.checked){ 
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
 						fillInfo("#article-"+i+this.value,"#metadata-list-"+i)
 					} 
@@ -893,7 +893,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 					} 
 
 		}
-}}
+}})
 $(function(){
        $("a").each(function(){
                if ($(this).attr("href") == window.location.pathname){
