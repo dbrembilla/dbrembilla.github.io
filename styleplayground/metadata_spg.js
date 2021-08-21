@@ -16,48 +16,7 @@ function topicManager(topic, ref){
 function addTopic(topic){
     $("header").replaceWith("<header>" + $("#" + topic + "-title").text() + "</header>");}
 
-function close(id){
-    console.log(id);
-    $("#"+ id).empty();
-    $("#"+ id).remove();
-    switch(Object.values(columnListener)[0]){
-        case "2":
-        $("#col-num-1").attr("class", "col-12") ;
-        break
-        case "3":
-        $("#col-num-1").attr("class", "col-6")
-        $("#col-num-2").attr("class", "col-6")
-        break
-        default:
-        $("#row-article").empty();
-        $("#row-article").append(`
-                <section class="col-10">        
-            
-                    <header>
-                    THE MAGAZINE 
-                    </header>
-                    <!-- Start section with articles-->
-                    <div class="row" id="row-article">
-                        <div class="col">
-                            <div class="card overflow" id="desc">
-                                <h2>Brief description of the magazine</h2>
-                                <p>
-                                    Magazine good. Very good.
-                                </p>    
-                            </div>
-                        </div>
-                        <div class="col-4 sugg_col">
-                            <div class="card overflow" id="sugg">
-                                <h2>Suggested readings</h2>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    </section>
-            
-                </div>`)
-    }
-}
+
 
 var column = `
             <div class="col$colwidth" id = "col-num$colnum">
