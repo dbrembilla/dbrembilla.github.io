@@ -62,7 +62,7 @@ function close(id){
 var column = `
             <div class="col$colwidth" id = "col-num$colnum">
                     <div class="row">
-                    <img src="assets/close.png" title="Close" style="height: 10px; width: auto; cursor: pointer;" onclick="console.log("press"); close('col-num$colnum');">
+                    <img src="assets/close.png" title="Close" style="height: 10px; width: auto; cursor: pointer;" onclick="console.log('press'); close('col-num$colnum');">
                         <div class="row list" id="metaview$colnum"><h3>Metaviewer</h3>
                         <ul id="metadata-list$colnum"></ul></div> 
 
