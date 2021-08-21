@@ -878,7 +878,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 					} 
 		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
-						var classToDelete = "#article-"+i+this.value;
+						var classToDelete = ".#article-"+i+this.value;
 						classToDelete = classToDelete.replace(/\s/g, "-");
 						console.log(classToDelete);
 
@@ -890,7 +890,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 					} 
 		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
-						var classToDelete = "#article-"+i+this.value
+						var classToDelete = ".#article-"+i+this.value
 						console.log(classToDelete);
 						classToDelete = classToDelete.replace(/\s/g, "-")
 						$(classToDelete).remove()
