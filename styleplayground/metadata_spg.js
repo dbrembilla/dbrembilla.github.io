@@ -18,6 +18,7 @@ function addTopic(topic){
 
 function close(id){
     console.log(id);
+    $("#"+ id).empty();
     $("#"+ id).remove();
     switch(Object.values(columnListener)[0]){
         case "2":
