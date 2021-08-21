@@ -187,14 +187,14 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             }
         }
         
-function fillInfo(from, where, wherelse, wherever) { //ritornare a solo 1 where
+function fillInfo(from, where) { //ritornare a solo 1 where
             var title =`
-                $title
+                <li class=$from>$title</li>
                 `
             var auth = `
-                $author`
+                <li class=$from>$author</li>`
             var pub = `
-                $pub
+                <li class=$from>$pub</li>
                           
                 ` ; //meta con le keyword
             $(where).empty(); 
@@ -204,14 +204,17 @@ function fillInfo(from, where, wherelse, wherever) { //ritornare a solo 1 where
             var authorfill = $(from + ' .auth')[0].innerText //sceglie elemento con byline con autore
             var pubfill = $(from + ' .pub')[0].innerText
 
-            $(wherelse).append(auth.sub( {
-                author: authorfill}));
+            $(where).append(auth.sub( {
+                author: authorfill,
+                from: from}));
             
-            $(wherever).append(pub.sub( {
-                pub: pubfill}));
+            $(where).append(pub.sub( {
+                pub: pubfill,
+                from: from}));
             
              $(where).append(title.sub( {
-                title: titlefill
+                pub: pubfill,
+                from: from
             }))
         }
         
