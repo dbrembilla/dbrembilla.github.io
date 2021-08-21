@@ -39,6 +39,9 @@ function close(id){
                         <div class="col">
                             <div class="card overflow" id="desc">
                                 <h2>Brief description of the magazine</h2>
+                                <p>
+                                    Magazine good. Very good.
+                                </p>    
                             </div>
                         </div>
                         <div class="col-4 sugg_col">
