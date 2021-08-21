@@ -17,6 +17,7 @@ function addTopic(topic){
     $("header").replaceWith("<header>" + $("#" + topic + "-title").text() + "</header>");}
 
 function close(id){
+    console.log(id);
     $("#"+ id).remove();
     switch(Object.values(columnListener)[0]){
         case "2":
