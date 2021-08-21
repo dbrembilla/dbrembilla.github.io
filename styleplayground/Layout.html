@@ -912,9 +912,8 @@ $(function(){
         	})
         })
 function close(id){
-    console.log(id);
-    $("#"+ id).empty();
-    $("#"+ id).remove();
+    $(id).empty();
+    $(id).remove();
     switch(Object.values(columnListener)[0]){
         case "2":
         $("#col-num-1").attr("class", "col-12") ;
