@@ -868,7 +868,7 @@ window.onclick = function(event) {
 }
 
 $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è checkato; se sì, esegue la funzione per inserire gli elementi nel viewer
-	if (this.value != "info"){
+	if (this.value != "info") {
 		if (this.checked){ 
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
 						filltab("#article-"+i+this.value,"#metadata-list-"+i)
@@ -879,8 +879,8 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 						console.log(classToDelete);
 						classToDelete = classToDelete.replace(/\s/g, "-")
 						$(classToDelete).remove()
-					} 
-		}} else {if (this.checked){ 
+					} }
+		} else { if (this.checked){ 
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
 						fillInfo("#article-"+i+this.value,"#metadata-list-"+i)
 					} 
@@ -893,7 +893,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 					} 
 
 		}
-}
+}}
 $(function(){
        $("a").each(function(){
                if ($(this).attr("href") == window.location.pathname){
