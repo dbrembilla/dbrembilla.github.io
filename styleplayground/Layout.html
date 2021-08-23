@@ -890,9 +890,12 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 					} 
 		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
-						var classToDelete = ".#article-"+i+this.value
+						var whatToDelete = this.value
+						whatToDelete = whatToDelete.replace(" ", "-")
+						whatToDelete = whatToDelete.replace(".", "")
+
+						var classToDelete = ".article-"+i + whatToDelete
 						console.log(classToDelete);
-						classToDelete = classToDelete.replace(/\s/g, "-")
 						$(classToDelete).remove()
 					} 
 
