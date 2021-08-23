@@ -911,19 +911,25 @@ $(function(){
         		this.checked = false
         	})
         })
-function close(id){
+function closeArticle(id){
     $(id).empty();
     $(id).remove();
     switch(Object.values(columnListener)[0]){
         case "2":
         $("#col-num-1").attr("class", "col-12") ;
+        thisKey = Object.keys(columnListener)[0]
+        columnListener[thisKey] = "1"
         break
         case "3":
         $("#col-num-1").attr("class", "col-6")
         $("#col-num-2").attr("class", "col-6")
+        thisKey = Object.keys(columnListener)[0]
+        columnListener[thisKey] = "2"
         break
         default:
         $("#row-article").empty();
+        thisKey = Object.keys(columnListener)[0]
+        columnListener[thisKey] = "0"
         $("#row-article").append(`
                 <section class="col-10">        
             
