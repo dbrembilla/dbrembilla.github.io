@@ -32,7 +32,7 @@ var column = `
                 </div>`
 columnListener = {}
 function columnSetting(topic, ref){
-    if (!(topic in columnListener)){
+    if (!(topic in columnListener) || columnListener[topic] == "0"){
         Object.keys(columnListener).forEach(key => {delete columnListener[key];});
         $("#row-article").empty();
         $("#row-article").append(column.sub({colwidth: "-12", colnum : "-1"}));
