@@ -881,7 +881,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 						var whatToDelete = this.value
 						whatToDelete = whatToDelete.replace(" ", "-")
 						whatToDelete = whatToDelete.replace(".", "")
-
+						console.log("delete:" + whatToDelete);
 						var classToDelete = ".article"+i + whatToDelete
 						$(classToDelete).remove()
 					} 
