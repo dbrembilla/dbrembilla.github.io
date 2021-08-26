@@ -874,7 +874,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 	if (this.value != "info") {
 		if (this.checked){ 
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
-						filltab("#article-"+i+this.value,"#metadata-list-"+i)
+						filltab("article-"+i+this.value,"#metadata-list-"+i)
 					} 
 		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
@@ -891,7 +891,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 					} 
 		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
-						var classToDelete = ".#article-"+i+this.value;
+						var classToDelete = ".article-"+i+this.value;
 						classToDelete = classToDelete.replace(/\s/g, "-");
 						console.log(classToDelete);
 
