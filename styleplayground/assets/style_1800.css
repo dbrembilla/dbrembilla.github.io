@@ -81,10 +81,9 @@ img {
   background-image: 
       radial-gradient(ellipse, #0000, #0007),
       linear-gradient(0deg, #9725, #9725),
-      url(https://i.ibb.co/vJt5HSh/noisy-texture-300x300-o10-d10-c-a82851-t1.png),
-      url(https://i.ibb.co/m4sGRmK/pexels-pixabay-247431.jpg);
-  background-size: auto, auto, auto, cover;
+      url(https://i.imgur.com/4rKVgAQ.png)
+      background-size: auto, auto, auto, cover;
   background-repeat: repeat;
   background-position: center;
-  filter: blur(0.05em) saturate(0.7) contrast(1.5) brightness(1.2);
+  filter: saturate(0%) sepia(100%) contrast(150%) saturate(150%);;
 }
