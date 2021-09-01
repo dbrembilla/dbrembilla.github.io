@@ -901,9 +901,9 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 
 						filltab("article-"+i+this.value,"#metadata-list-"+i)
 						var stringValue = ":checkbox[value='$value']"
-						$(stringValue.sub({
+						$(stringValue.sub({ //faccio in modo che anche l'altro checkbox sia checkato
 											value: this.value
-												})).checked = true;
+												})).each($(this).checked = true)
 					} 
 		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
@@ -915,14 +915,14 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 						$(classToDelete).remove()
 						$(stringValue.sub({
 											value: this.value
-												})).checked = false;
+												})).each($(this).checked = false)
 					} 
 		}} else { if (this.checked){ 
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
 						fillInfo("#article-"+i,"#metadata-list-"+i)
 						$(stringValue.sub({
 											value: this.value
-												})).checked = true;
+												})).each($(this).checked = true)
 					} 
 		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
@@ -930,7 +930,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 						classToDelete = classToDelete.replace(/\s/g, "-");
 						$(stringValue.sub({
 											value: this.value
-												})).checked = true;
+												})).each($(this).checked = false)
 
 						$(classToDelete).remove()
 					} 
