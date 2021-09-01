@@ -217,7 +217,7 @@ function fillInfo(from, where) { //ritornare a solo 1 where
                 from: from}));
             
              $(where).append(title.sub( {
-                pub: pubfill,
+                title: titlefill,
                 from: from
             }))
         }
