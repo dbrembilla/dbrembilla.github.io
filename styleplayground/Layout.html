@@ -447,7 +447,7 @@ label { /*diminuisce size di label secondo bootstrap*/
 		<nav class="navbar navbar-light bg-light">
   			<div class="container-fluid">
   				<span>
-    				<a class="cover">Home</a>
+    				<a class="cover" onclick="resetArticles();">Home</a>
 					<div class="dropdown">
 						<a href="javascript:void(0)" class="dropbtn">Menu</a>
     						<div class="dropdown-content">
@@ -920,6 +920,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 		}} else { if (this.checked){ 
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
 						fillInfo("#article-"+i,"#metadata-list-"+i)
+						var stringValue = ":checkbox[value='$value']"
 						$(stringValue.sub({
 											value: this.value
 												})).each($(this).checked = true)
@@ -1019,6 +1020,37 @@ function closeArticle(id){
                 </div>`)
     }
 }
+function resetArticles(){
+	$("#row-article").empty();
+    thisKey = Object.keys(columnListener)[0]
+    columnListener[thisKey] = "0"
+    $("#row-article").append(`
+                <section class="col-10">        
+            
+                    <header>
+                    THE MAGAZINE 
+                    </header>
+                    <!-- Start section with articles-->
+                    <div class="row" id="row-article">
+                        <div class="col">
+                            <div class="card overflow" id="desc">
+                                <h2>Brief description of the magazine</h2>
+                                <p>
+                                    Magazine good. Very good.
+                                </p>    
+                            </div>
+                        </div>
+                        <div class="col-4 sugg_col">
+                            <div class="card overflow" id="sugg">
+                                <h2>Suggested readings</h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </section>
+            
+                </div>`}
+
 		</script>
 
 

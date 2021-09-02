@@ -22,7 +22,7 @@ var column = `
             <div class="col$colwidth" id = "col-num$colnum">
                     <div class="row">
                     <img src="assets/close.png" title="Close" style="height: 10px; width: auto; cursor: pointer;" onclick="closeArticle('#col-num$colnum');">
-                        <div class="row list" id="metaview$colnum"><h3>Metaviewer</h3>
+                        <div class="row list overflow" id="metaview$colnum"><h3>Metaviewer</h3>
                         <ul id="metadata-list$colnum"></ul></div> 
 
                     </div> 
