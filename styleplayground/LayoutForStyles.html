@@ -1179,7 +1179,11 @@ window.onclick = function(event) {
   }
 }
 
+function changeStyle(ref){
+            target=$(ref).attr("href");
+            $("#default").attr("href", target);
 
+        }
 $(function(){
        $("a").each(function(){
                if ($(this).attr("href") == window.location.pathname){
@@ -1193,9 +1197,4 @@ $(function(){
         		this.checked = false
         	})
         })
-
-
-
-	
-
-</body>
+</script></body></html>
