@@ -1,0 +1,1201 @@
+<html>
+<head>
+	<title>The Magazine</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<link rel="stylesheet alternate" href="colliers.css" id="collier" >  esemopio richiamo tema-->
+	<link rel="stylesheet" type="text/css" href="" id="default">
+	<link rel="stylesheet alternate" href="assets/style_1800.css" id="1800">
+	<link rel="stylesheet alternate" href="assets/future_style.css" id="future">
+	<link rel="stylesheet alternate" href="" id="none">
+
+    <!-- Styleshets-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+		
+
+    <!--Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+		
+
+		
+<style>
+	
+/*Generale*/
+
+body {
+   	height: 100vh;
+   	width: 100vw;
+   	font-size: 20px;
+	}
+footer{
+	height: 5%;
+	padding-top: 1%;
+	text-align: center;
+	}
+	
+		
+header{
+	text-align: center;
+	height: 10%;
+	font-size: 2.8em;
+	}
+	
+.container-fluid{
+	height: 100%;
+	padding-left: 20px;
+	}
+	
+a{
+	text-decoration: none
+	color: black;
+	}
+
+form-check-inline { /*allinea checkbox e label*/
+    	display: flex;
+	}
+
+label { /*diminuisce size di label secondo bootstrap*/
+	    display: inline-block;
+	    font-size: .75em;
+	}
+
+.overflow{/*classe creata per fare lo scroll degli aticoli, ecc.*/
+		overflow-y:scroll;
+		overflow-x:hidden;
+		}
+	
+	
+	/*navbar*/
+	.cover{
+		font-size: 1.25em;	
+		}
+		
+	nav{
+		height: 5%;
+		padding-bottom: 0px!important;
+		padding-top: 0px!important;
+		}
+		
+			
+	.bg-light{ /*fa la navbar bella trasparente*/
+		background-color: unset!important;
+		}
+	
+	
+	/*corpo centrale*/
+	#main-row{
+		height: 89%;
+		width: 100%;
+		padding-left: 20px;
+		}
+	
+	
+	#aside, section{
+		height: 100%
+		}
+	
+		/*specifici per Aside*/
+		li.form-check{
+			padding-left:0px!important;
+			}
+
+		.icon{
+			padding-left: 0.5em;
+			}
+			
+			
+	
+		#aside{
+			padding-top: 9px;
+			}
+
+	
+	
+		/*specifici row articoli*/
+		
+		#row-article{
+			height: 90%;
+			padding-top:1em;
+			}
+
+		#sugg{ /*colonna suggested readings in home*/
+			height:100%;
+			padding: .25em .5em;
+			}
+
+		#desc{/*colonna description in home*/
+			height:100%;
+			padding: .25em .5em;
+			}
+
+		#col-num-1, #col-num-2, #col-num-3{
+			height:100%;
+			}
+
+		#metaview-1, #metaview-2, #metaview-3{
+			height: 30%;		
+			}
+
+		#article-1, #article-2, #article-3{
+			height: 70%;
+			}
+
+		#title-1, #title-2, #title-3{
+			margin-bottom: 0px;
+			font-size: 2.5ex;
+			  padding-top: 1ex;
+			} 
+		
+
+	
+	
+/*max size schermo tablet portrait (toglie aside e suggested readings, trasforma 
+	le colonne in tre blocchi uno sopra l'altro ed attiva il munù a tendina che sostituisce l'aside)*/
+@media (max-width: 840px) { 
+	
+	#topic1-title, #topic2-title, #topic3-title{
+		font-size: medium!important;
+	}
+		
+	.dropdown {
+  		display: inline-block!important;
+	}
+	
+	#aside{
+		display:none!important;
+	}
+	
+	.cover{
+		display:none;
+	}
+	
+	.sugg_col {
+		display:none!important;
+	}
+	
+	section{
+		width:100%!important;
+	}
+	
+	#col-num-1, #col-num-2, #col-num-3 {
+    		height: 30%;
+   		width: 100%;
+	}
+	
+	.col-6 {
+    		flex: 0 0 auto;
+    		width: 100%;
+    		height: 50%!important;
+	}
+	.col-4 {
+    		height: 33%!important;
+    		width: 100%;
+	}
+	
+	
+	#article-1, #article-2, #article-3 {
+    		height: 100%!important;
+    		width: 70%;
+    		float: right;
+	}
+	#metaview-1, #metaview-2, #metaview-3 {
+    		height: 100%!important;
+    		width: 30%;
+		float: left;
+	}
+	
+	}
+
+
+
+	/* Regole dropdown (attenzione che stanno fuori dal selector @840px, ma sono vitali per quello*/
+
+	.dropdown {
+		display: none;
+		}
+
+	.dropdown-content {
+		width:auto;
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+		}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+		}
+
+	.dropdown-content a:hover {
+		background-color: #f1f1f1;
+		}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+		}
+
+	
+/*responsiveness testi*/
+@media (max-width: 991.98px) {
+	#topic1-title, #topic2-title, #topic3-title{
+		font-size: x-small;
+	}
+	
+	}
+	
+@media (min-width: 991.98px) and (max-width: 1199.98px) { 
+	#topic1-title, #topic2-title, #topic3-title{
+		font-size: small;
+	}
+	
+	}
+
+@media (min-width:  1199.98px) { 
+	#topic1-title, #topic2-title, #topic3-title{
+		font-size: medium;
+	}
+	
+	}
+	
+
+	
+	
+/*IMPORTANTE PER LA FLIP CARD DELL'ASIDE E I MODALS, NON VANNO TOCCATI PER ORA*/	
+	
+	/*Style flip card*/
+	
+	*, *:after, *:before {
+  		-webkit-box-sizing: border-box;
+  		-moz-box-sizing: border-box;
+  		box-sizing: border-box;
+		}
+
+	.flip-card-3D-wrapper {
+		height: 80%;
+  		position: relative;
+  		-o-perspective: 900px;
+  		-webkit-perspective: 900px;
+  		-ms-perspective: 900px;
+  		perspective: 900px;
+  		margin: 0;
+		}
+	
+	#flip-card {
+		width: 100%;
+  		height: 100%;
+  		position: absolute;
+  		-o-transition: all 1s ease-in-out;
+  		-webkit-transition: all 1s ease-in-out;
+  		-ms-transition: all 1s ease-in-out;
+  		transition: all 1s ease-in-out;
+  		-o-transform-style: preserve-3d;
+  		-webkit-transform-style: preserve-3d;
+  		-ms-transform-style: preserve-3d;
+  		transform-style: preserve-3d;
+		
+		}
+	
+	.do-flip {
+  		-o-transform: rotateY(-180deg);
+  		-webkit-transform: rotateY(-180deg);
+  		-ms-transform: rotateY(-180deg);
+  		transform: rotateY(-180deg);
+		}
+	
+	#flip-card-btn-turn-to-back, #flip-card-btn-turn-to-front {
+  		position: absolute;
+  		top: 8px;
+  		right: 8px;
+  		width: 50px;
+  		height: 50px;
+  		background: none;
+  		cursor: pointer;
+  		visibility: hidden;
+  		font-family: 'Open Sans', sans-serif;
+  		font-weight: 600;
+  		font-size: .7em;
+  		padding: 0;
+  		color: grey;
+  		border: 0px;
+		}
+	
+	#flip-card .flip-card-front, #flip-card .flip-card-back{
+  		width: 100%;
+  		height: 100%;
+  		position: absolute;
+  		-o-backface-visibility: hidden;
+  		-webkit-backface-visibility: hidden;
+  		-ms-backface-visibility: hidden;
+  		backface-visibility: hidden;
+  		z-index: 2;
+  		padding-top: 3em;
+		}
+	
+	#flip-card .flip-card-front {
+		border:1px solid rgba(0,0,0,.125);
+		border-radius: .25rem;
+		}
+	
+	#flip-card .flip-card-back {
+	    	border:1px solid rgba(0,0,0,.125);
+    		border-radius: .25rem;
+    		-o-transform: rotateY(180deg);
+    		-webkit-transform: rotateY(180deg);
+    		-ms-transform: rotateY(180deg);
+    		transform: rotateY(180deg);
+    		
+		}
+	
+	#flip-card .flip-card-front p, #flip-card .flip-card-back p {
+  		color: grey;
+  		display: block;
+  		position: absolute;
+  		top: 40%;
+  		width: 100%;
+		}
+
+		.icon{
+		height: 15%;
+		}
+	.flip-card-back{
+		padding-left:1em;
+	}
+
+	#themes{
+		height: 80%;
+		}
+	
+	#lens{
+		height: 80%;
+		}
+	
+	#topics{
+	height: 20%;
+	}
+	
+	.btn-group.dropend{
+	height: -webkit-fill-available;
+	}
+	
+	.btn-secondary, .btn-secondary:hover{
+		color: black!important;
+		background: none;
+		Border: 0px!important;
+		font-size: 1.2em;
+		}
+	
+	/*MODALI*/
+
+	/* The Modal (background) */
+	.modal {
+ 		display: none; /* Hidden by default */
+  		position: fixed; /* Stay in place */
+  		z-index: 1; /* Sit on top */
+  		padding-top: 100px; /* Location of the box */
+  		left: 0;
+  		top: 0;
+  		width: 100%; /* Full width */
+  		height: 100%; /* Full height */
+  		overflow: auto; /* Enable scroll if needed */
+  		background-color: rgb(0,0,0); /* Fallback color */
+  		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+
+	/* Modal Content */
+	.modal-content {
+  		background-color: #fefefe;
+  		margin: auto;
+  		padding: 20px;
+  		border: 1px solid #888;
+  		width: 80%;
+  		height: 90%;
+		}
+	
+	/* The Close Button */
+	.close {
+  		color: #aaaaaa;
+  		float: right;
+  		font-size: 28px;
+  		font-weight: bold;
+		}
+
+	.close:hover, .close:focus {
+  		color: #000;
+  		text-decoration: none;
+  		cursor: pointer;
+		}
+
+</style>
+
+
+	</head>
+<body>
+	
+		<!-- Navbar-->
+		<nav class="navbar navbar-light bg-light">
+  			<div class="container-fluid">
+  				<span>
+    				<a class="cover">Home</a>
+					<div class="dropdown">
+						<a href="javascript:void(0)" class="dropbtn">Menu</a>
+    						<div class="dropdown-content">
+							<!--Themes-->
+      							<div class="accordion" id="accordionExample">
+  								<div class="accordion-item">
+    									<h2 class="accordion-header" id="headingOne">
+      										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+       											Themes
+      										</button>
+    									</h2>
+    									<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      										<div class="accordion-body">
+        										<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+  												<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" onclick="changeStyle('#future')">
+ 												<label class="btn" for="btnradio1">		 					
+													<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="4em" viewBox="0 0 24 24" width="4em" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"></path></g><g><g><path d="M6,13c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1S6.55,13,6,13z M6,17c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1 S6.55,17,6,17z M6,9c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1S6.55,9,6,9z M3,9.5c-0.28,0-0.5,0.22-0.5,0.5s0.22,0.5,0.5,0.5 s0.5-0.22,0.5-0.5S3.28,9.5,3,9.5z M6,5C5.45,5,5,5.45,5,6s0.45,1,1,1s1-0.45,1-1S6.55,5,6,5z M21,10.5c0.28,0,0.5-0.22,0.5-0.5 S21.28,9.5,21,9.5s-0.5,0.22-0.5,0.5S20.72,10.5,21,10.5z M14,7c0.55,0,1-0.45,1-1s-0.45-1-1-1s-1,0.45-1,1S13.45,7,14,7z M14,3.5 c0.28,0,0.5-0.22,0.5-0.5S14.28,2.5,14,2.5S13.5,2.72,13.5,3S13.72,3.5,14,3.5z M3,13.5c-0.28,0-0.5,0.22-0.5,0.5 s0.22,0.5,0.5,0.5s0.5-0.22,0.5-0.5S3.28,13.5,3,13.5z M10,20.5c-0.28,0-0.5,0.22-0.5,0.5s0.22,0.5,0.5,0.5s0.5-0.22,0.5-0.5 S10.28,20.5,10,20.5z M10,3.5c0.28,0,0.5-0.22,0.5-0.5S10.28,2.5,10,2.5S9.5,2.72,9.5,3S9.72,3.5,10,3.5z M10,7c0.55,0,1-0.45,1-1 s-0.45-1-1-1S9,5.45,9,6S9.45,7,10,7z M10,12.5c-0.83,0-1.5,0.67-1.5,1.5s0.67,1.5,1.5,1.5s1.5-0.67,1.5-1.5S10.83,12.5,10,12.5z M18,13c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1S18.55,13,18,13z M18,17c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1 S18.55,17,18,17z M18,9c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1S18.55,9,18,9z M18,5c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1 S18.55,5,18,5z M21,13.5c-0.28,0-0.5,0.22-0.5,0.5s0.22,0.5,0.5,0.5s0.5-0.22,0.5-0.5S21.28,13.5,21,13.5z M14,17 c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1S14.55,17,14,17z M14,20.5c-0.28,0-0.5,0.22-0.5,0.5s0.22,0.5,0.5,0.5s0.5-0.22,0.5-0.5 S14.28,20.5,14,20.5z M10,8.5c-0.83,0-1.5,0.67-1.5,1.5s0.67,1.5,1.5,1.5s1.5-0.67,1.5-1.5S10.83,8.5,10,8.5z M10,17 c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1S10.55,17,10,17z M14,12.5c-0.83,0-1.5,0.67-1.5,1.5s0.67,1.5,1.5,1.5s1.5-0.67,1.5-1.5 S14.83,12.5,14,12.5z M14,8.5c-0.83,0-1.5,0.67-1.5,1.5s0.67,1.5,1.5,1.5s1.5-0.67,1.5-1.5S14.83,8.5,14,8.5z"></path></g></g></svg>	
+												</label>
+
+  												<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="changeStyle('#1800')">
+  												<label class="btn" for="btnradio2">		 						
+												       <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="4em" viewBox="0 0 24 24" width="4em" fill="#000000"><g><rect fill="none" height="24" width="24"></rect></g><g><g><path d="M9,4v1.38c-0.83-0.33-1.72-0.5-2.61-0.5c-1.79,0-3.58,0.68-4.95,2.05l3.33,3.33h1.11v1.11c0.86,0.86,1.98,1.31,3.11,1.36 V15H6v3c0,1.1,0.9,2,2,2h10c1.66,0,3-1.34,3-3V4H9z M7.89,10.41V8.26H5.61L4.57,7.22C5.14,7,5.76,6.88,6.39,6.88 c1.34,0,2.59,0.52,3.54,1.46l1.41,1.41l-0.2,0.2c-0.51,0.51-1.19,0.8-1.92,0.8C8.75,10.75,8.29,10.63,7.89,10.41z M19,17 c0,0.55-0.45,1-1,1s-1-0.45-1-1v-2h-6v-2.59c0.57-0.23,1.1-0.57,1.56-1.03l0.2-0.2L15.59,14H17v-1.41l-6-5.97V6h8V17z"></path></g></g></svg>
+												</label>
+
+  												<input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+  												<label class="btn" for="btnradio3">Theme 3</label>
+											</div>
+        										<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+  												<input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+ 												<label class="btn" for="btnradio4">Theme 4</label>
+
+  												<input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+  												<label class="btn" for="btnradio5">Theme 5</label>
+
+  												<input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+  												<label class="btn" for="btnradio6">Theme 6</label>
+											</div>
+											<!--da vedere se tenerlo come radio button-->
+											<input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" checked="">
+											<label class="btn btn-link" for="btnradio7" onclick="changeStyle('#none')">Reset</label>
+      										</div>
+    									</div>
+  								</div>
+							</div>
+							
+							
+							
+							<!--Topics-->
+							
+							<div class="accordion" id="accordionExample">
+  								<div class="accordion-item">
+    									<h2 class="accordion-header" id="headingTwo">
+      										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+       											Topics
+      										</button>
+    									</h2>
+    									<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      										<div class="accordion-body">
+        										<div class="dropend">
+  												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic1-title">
+		 											Work from Home
+												</button>
+												<ul class="dropdown-menu" id="topic1s">
+					
+												<li><a href="#" onclick="topicManager(&quot;topic1&quot;,&quot;guardian.html&quot;)">The empty office: what we lose when we work from home</a></li><li><a href="#" onclick="topicManager(&quot;topic1&quot;,&quot;bbc.html&quot;)">Why introverts excelled at work from home</a></li><li><a href="#" onclick="topicManager(&quot;topic1&quot;,&quot;washingtonpost.html&quot;)">What we learned about wellness while working from home, and how to use those insights</a></li></ul>
+  											</div>
+  											<div class="dropend">
+  												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic2-title">
+		 											Space Tourism		
+												</button>
+												<ul class="dropdown-menu" id="topic2s">
+    				
+  												<li><a href="#" onclick="topicManager(&quot;topic2&quot;,&quot;nationalg.html&quot;)">Fiery crash of SpaceX's Starship rocket ignites dreams of future spaceflight</a></li><li><a href="#" onclick="topicManager(&quot;topic2&quot;,&quot;theatlantic-02.html&quot;)">Jeff Bezos Knows Who Paid for Him to Go to Space</a></li><li><a href="#" onclick="topicManager(&quot;topic2&quot;,&quot;CNBC.html&quot;)">How SpaceX, Virgin Galactic, Blue Origin and others compete in the growing space tourism market</a></li></ul>
+  											</div>
+  											<div class="dropend">
+  												<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic3-title">
+		 											Inclusive Language
+												</button>
+												<ul class="dropdown-menu" id="topic3s">
+    				
+  												<li><a href="#" onclick="topicManager(&quot;topic3&quot;,&quot;atlantic_0.html&quot;)">Call Them What They Wants</a></li><li><a href="#" onclick="topicManager(&quot;topic3&quot;,&quot;bbc_0.html&quot;)">The subtle ways language shapes us</a></li><li><a href="#" onclick="topicManager(&quot;topic3&quot;,&quot;independent_0.html&quot;)">In a multilingual world, gendered language is the last stronghold of binarism</a></li></ul>
+  											</div>			
+      										</div>
+    									</div>
+  								</div>
+							</div>
+							
+							
+							<!--Lens-->
+							<div class="accordion" id="accordionExample">
+  								<div class="accordion-item">
+    									<h2 class="accordion-header" id="headingThree">
+      										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+       											Lens
+      										</button>
+    									</h2>
+									<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+    										<div class="accordion-body">
+											<div class="form-check form-check-inline">
+  												<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .place">
+	  											<label class="form-check-label" for="inlineCheckbox1">Places</label>
+											</div>
+											<div class="form-check form-check-inline">
+  												<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .date">
+  												<label class="form-check-label" for="inlineCheckbox2">Dates</label>
+											</div>
+										</div>
+										<div class="accordion-body">
+											<div class="form-check form-check-inline">
+  												<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .person">
+	  											<label class="form-check-label" for="inlineCheckbox1">People</label>
+											</div>
+											<div class="form-check form-check-inline">
+  												<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .event">
+  												<label class="form-check-label" for="inlineCheckbox2">Events</label>
+											</div>
+											<div class="form-check form-check-inline">
+  												<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .institution">
+  												<label class="form-check-label" for="inlineCheckbox2">Institutions and Companies</label>
+											</div>
+											<div class="form-check form-check-inline">
+  												<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="info">
+  												<label class="form-check-label" for="inlineCheckbox2">Info</label> <!-- da finire -->
+											</div>
+											<div class="form-check form-check-inline">
+  												<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="quote">
+  												<label class="form-check-label" for="inlineCheckbox2">Quote</label> <!-- da finire -->
+											</div>
+										</div>
+									</div>
+  								</div>
+							</div>
+							
+							
+    						</div>
+					</div>
+				</span>
+    			<span class="d-flex">
+    				<a class="navbar-brand" id="myBtn">Documentation</a>
+    					
+					
+
+    				<!--About us toggler offcanvasTop-->     	 		
+     	 			<a class="navbar-brand" data-bs-toggle="offcanvas" type="button" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">About us</a>
+						<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+  						<div class="offcanvas-header">
+    						<h5 id="offcanvasTopLabel">The Team</h5>
+    						<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  						</div>
+  						<div class="offcanvas-body">
+  							...
+  						</div>
+					</div>	
+					<!--Disclaimer toggler offcanvasBottom--> 
+					<a class="navbar-brand" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Disclaimer</a>
+						<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  						<div class="offcanvas-header">
+    						<h5 class="offcanvas-title" id="offcanvasBottomLabel">Disclaimer</h5>
+    						<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  						</div>
+  						<div class="offcanvas-body small">
+    						<p>
+    							The purpose of this web site is to explore various types of typographic and layout
+								style for text documents, as an end-of-course project for the "Information Modeling
+								and Web technologies" course of the Master Degree in Digital Humanities and
+								Digital Knowledge of the University of Bologna, under prof. Fabio Vitali.
+								The documents contained in this web site have been selected for their length and
+								complexity. Their publication here is not intended to be an alternative or
+								replace their original locations:
+    						</p>
+    						<ul>
+    							<li><a href="https://www.washingtonpost.com/lifestyle/wellness/working-from-home-office-benefits/2021/06/24/d1f92d86-d077-11eb-8014-2f3926ca24d9_story.html">What we learned about wellness while working from home, and how to use those insights</a></li>
+    							<li><a href="https://www.theguardian.com/science/2021/jun/03/the-empty-office-what-we-lose-when-we-work-from-home">The empty office: what we lose when we work from home</a></li>
+    							<li><a href="https://www.bbc.com/worklife/article/20210713-why-introverts-excelled-at-working-from-home">Why introverts excelled at working from home</a></li>
+    							<li><a href=""></a></li>
+    						</ul>
+    						<p>All copyrights and related rights on the content remain with their original owners.
+								All copyright on the typographic and layout choices are 2021 © Chiara Catizone, Elia Rizzetto, Davide Brembilla</p>
+ 						</div>
+					</div>	
+				</span>	
+  			</div>
+		</nav>
+	
+		<!--Central body-->
+		<div class="row" id="main-row">
+	
+	
+			<!--Aside-->
+			<div class="col-md-2" id="aside">
+		
+				<!--Flip card-->
+				<div class="flip-card-3D-wrapper">
+					<div id="flip-card">
+						<!--themes-->
+						<div class="flip-card-front">
+							<div class="icon" onclick="changeStyle('#1800')">
+		 						<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="4em" viewBox="0 0 24 24" width="4em" fill="#000000"><g><rect fill="none" height="24" width="24"></rect></g><g><g><path d="M9,4v1.38c-0.83-0.33-1.72-0.5-2.61-0.5c-1.79,0-3.58,0.68-4.95,2.05l3.33,3.33h1.11v1.11c0.86,0.86,1.98,1.31,3.11,1.36 V15H6v3c0,1.1,0.9,2,2,2h10c1.66,0,3-1.34,3-3V4H9z M7.89,10.41V8.26H5.61L4.57,7.22C5.14,7,5.76,6.88,6.39,6.88 c1.34,0,2.59,0.52,3.54,1.46l1.41,1.41l-0.2,0.2c-0.51,0.51-1.19,0.8-1.92,0.8C8.75,10.75,8.29,10.63,7.89,10.41z M19,17 c0,0.55-0.45,1-1,1s-1-0.45-1-1v-2h-6v-2.59c0.57-0.23,1.1-0.57,1.56-1.03l0.2-0.2L15.59,14H17v-1.41l-6-5.97V6h8V17z"></path></g>1800's</g></svg>
+							</div> 
+							
+							<div class="icon" onclick="changeStyle('#future')">
+								<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="4em" viewBox="0 0 24 24" width="4em" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"></path></g><g><g><path d="M6,13c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1S6.55,13,6,13z M6,17c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1 S6.55,17,6,17z M6,9c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1S6.55,9,6,9z M3,9.5c-0.28,0-0.5,0.22-0.5,0.5s0.22,0.5,0.5,0.5 s0.5-0.22,0.5-0.5S3.28,9.5,3,9.5z M6,5C5.45,5,5,5.45,5,6s0.45,1,1,1s1-0.45,1-1S6.55,5,6,5z M21,10.5c0.28,0,0.5-0.22,0.5-0.5 S21.28,9.5,21,9.5s-0.5,0.22-0.5,0.5S20.72,10.5,21,10.5z M14,7c0.55,0,1-0.45,1-1s-0.45-1-1-1s-1,0.45-1,1S13.45,7,14,7z M14,3.5 c0.28,0,0.5-0.22,0.5-0.5S14.28,2.5,14,2.5S13.5,2.72,13.5,3S13.72,3.5,14,3.5z M3,13.5c-0.28,0-0.5,0.22-0.5,0.5 s0.22,0.5,0.5,0.5s0.5-0.22,0.5-0.5S3.28,13.5,3,13.5z M10,20.5c-0.28,0-0.5,0.22-0.5,0.5s0.22,0.5,0.5,0.5s0.5-0.22,0.5-0.5 S10.28,20.5,10,20.5z M10,3.5c0.28,0,0.5-0.22,0.5-0.5S10.28,2.5,10,2.5S9.5,2.72,9.5,3S9.72,3.5,10,3.5z M10,7c0.55,0,1-0.45,1-1 s-0.45-1-1-1S9,5.45,9,6S9.45,7,10,7z M10,12.5c-0.83,0-1.5,0.67-1.5,1.5s0.67,1.5,1.5,1.5s1.5-0.67,1.5-1.5S10.83,12.5,10,12.5z M18,13c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1S18.55,13,18,13z M18,17c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1 S18.55,17,18,17z M18,9c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1S18.55,9,18,9z M18,5c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1 S18.55,5,18,5z M21,13.5c-0.28,0-0.5,0.22-0.5,0.5s0.22,0.5,0.5,0.5s0.5-0.22,0.5-0.5S21.28,13.5,21,13.5z M14,17 c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1S14.55,17,14,17z M14,20.5c-0.28,0-0.5,0.22-0.5,0.5s0.22,0.5,0.5,0.5s0.5-0.22,0.5-0.5 S14.28,20.5,14,20.5z M10,8.5c-0.83,0-1.5,0.67-1.5,1.5s0.67,1.5,1.5,1.5s1.5-0.67,1.5-1.5S10.83,8.5,10,8.5z M10,17 c-0.55,0-1,0.45-1,1s0.45,1,1,1s1-0.45,1-1S10.55,17,10,17z M14,12.5c-0.83,0-1.5,0.67-1.5,1.5s0.67,1.5,1.5,1.5s1.5-0.67,1.5-1.5 S14.83,12.5,14,12.5z M14,8.5c-0.83,0-1.5,0.67-1.5,1.5s0.67,1.5,1.5,1.5s1.5-0.67,1.5-1.5S14.83,8.5,14,8.5z"></path></g></g></svg>	
+							</div>
+							
+							<div class="icon" onclick="changeStyle('#1800')">
+							<svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 24 24" width="4em" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M3 5H1v16c0 1.1.9 2 2 2h16v-2H3V5zm18-4H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 16H7V3h14v14z"></path></svg>
+							</div> 
+							
+							<div class="icon" onclick="changeStyle('#1800')">
+							<svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 24 24" width="4em" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M3 5H1v16c0 1.1.9 2 2 2h16v-2H3V5zm18-4H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 16H7V3h14v14z"></path></svg>
+							</div> 
+						
+							<div class="icon" onclick="changeStyle('#1800')">
+							<svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 24 24" width="4em" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M3 5H1v16c0 1.1.9 2 2 2h16v-2H3V5zm18-4H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 16H7V3h14v14z"></path></svg>
+							</div> 
+							
+							<div class="icon" onclick="changeStyle('#1800')">
+							<svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 24 24" width="4em" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M3 5H1v16c0 1.1.9 2 2 2h16v-2H3V5zm18-4H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 16H7V3h14v14z"></path></svg>
+							</div> 
+							
+							<div class="card-footer">
+								<button type="button" class="btn btn-link" onclick="changeStyle('#none')">Reset</button>
+							</div>
+								<!--esempio stile aggiunto
+		 					<div class="icon">
+		 						<lord-icon
+    								src="https://cdn.lordicon.com/gxulgxck.json"
+								    trigger="hover"
+								    colors="primary:#3080e8,secondary:#c71f16"
+							    	style="width:100px;height:100px">
+								</lord-icon>
+							</div>
+		 					<div class="icon">
+		 						<lord-icon
+ 									src="https://cdn.lordicon.com/gxulgxck.json"
+  									trigger="hover"
+								    colors="primary:#3080e8,secondary:#c71f16"
+								    style="width:100px;height:100px">
+								</lord-icon>
+							</div>
+		 					<div class="icon">	
+		 						<lord-icon
+    								src="https://cdn.lordicon.com/gxulgxck.json"
+								    trigger="hover"
+								    colors="primary:#3080e8,secondary:#c71f16"
+							    	style="width:100px;height:100px">
+								</lord-icon>
+							</div>-->
+							<button id="flip-card-btn-turn-to-back" style="visibility: visible;"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 24 24" width="2em" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8 3.59-8 8-8m0-2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path></svg></button>
+						</div> 
+						<!--Lens-->
+						<div class="flip-card-back">
+							<h3>Lens</h3>
+							<ul>
+								<li class="form-check">
+  									<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .place">
+	  								<label class="form-check-label" for="inlineCheckbox1" onchange="">Places</label>
+								</li>
+						
+								<li class="form-check">
+  									<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .date">
+  									<label class="form-check-label" for="inlineCheckbox2">Dates</label>
+								</li>
+							
+								<li class="form-check">
+  									<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .person">
+	  								<label class="form-check-label" for="inlineCheckbox1">People</label>
+								</li>
+					
+								<li class="form-check">
+  									<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .event">
+  									<label class="form-check-label" for="inlineCheckbox2">Events</label>
+								</li>
+								<li class="form-check">
+  									<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .institution">
+  									<label class="form-check-label" for="inlineCheckbox2">Institutions and Companies</label>
+								</li>
+								<li class="form-check">
+  									<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="info">
+  									<label class="form-check-label" for="inlineCheckbox2">Info</label> <!-- da finire -->
+								</li>
+								<li class="form-check">
+  									<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="quote">
+  									<label class="form-check-label" for="inlineCheckbox2">Quote</label> <!-- da finire -->
+								</li>
+							</ul>
+							<button id="flip-card-btn-turn-to-front" style="visibility: visible;"><lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover" colors="primary:#121331,secondary:#1663c7" stroke="82" style="width:50px;height:50px"></lord-icon></button>
+						</div>
+					</div>
+				</div>
+				<!--Topics-->		
+				<div class="card" id="topics">  			
+  					<div class="btn-group dropend">
+	  				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic1-title">
+			 			Work from Home
+					</button>
+					<ul class="dropdown-menu" id="topic1" style="">
+						
+				<li><a href="#" onclick="topicManager(&quot;topic1&quot;,&quot;guardian.html&quot;)">The empty office: what we lose when we work from home</a></li><li><a href="#" onclick="topicManager(&quot;topic1&quot;,&quot;bbc.html&quot;)">Why introverts excelled at work from home</a></li><li><a href="#" onclick="topicManager(&quot;topic1&quot;,&quot;washingtonpost.html&quot;)">What we learned about wellness while working from home, and how to use those insights</a></li></ul>
+  			</div>
+  					<div class="btn-group dropend">
+  				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic2-title">
+		 			Space Tourism
+				</button>
+				<ul class="dropdown-menu" id="topic2">
+    				
+  				<li><a href="#" onclick="topicManager(&quot;topic2&quot;,&quot;nationalg.html&quot;)">Fiery crash of SpaceX's Starship rocket ignites dreams of future spaceflight</a></li><li><a href="#" onclick="topicManager(&quot;topic2&quot;,&quot;theatlantic-02.html&quot;)">Jeff Bezos Knows Who Paid for Him to Go to Space</a></li><li><a href="#" onclick="topicManager(&quot;topic2&quot;,&quot;CNBC.html&quot;)">How SpaceX, Virgin Galactic, Blue Origin and others compete in the growing space tourism market</a></li></ul>
+  			</div>
+  					<div class="btn-group dropend">
+  				<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic3-title">
+		 			Inclusive Language
+				</button>
+				<ul class="dropdown-menu" id="topic3">
+    				
+  				<li><a href="#" onclick="topicManager(&quot;topic3&quot;,&quot;atlantic_0.html&quot;)">Call Them What They Wants</a></li><li><a href="#" onclick="topicManager(&quot;topic3&quot;,&quot;bbc_0.html&quot;)">The subtle ways language shapes us</a></li><li><a href="#" onclick="topicManager(&quot;topic3&quot;,&quot;independent_0.html&quot;)">In a multilingual world, gendered language is the last stronghold of binarism</a></li></ul>
+  			</div>			
+  	  		</div>
+			
+			</div>
+
+			<!--Section-->
+			<section class="col-10">		
+	
+			<header>
+		 											Work from Home
+												</header>
+			<!-- Start section with articles-->
+			<div class="row" id="row-article">
+            <div class="col-4" id="col-num-1">
+                    <div class="row">
+                    <img src="assets/close.png" title="Close" style="height: 10px; width: auto; cursor: pointer;" onclick="closeArticle('#col-num-1');">
+                        <div class="row list" id="metaview-1"><h3>Metaviewer</h3>
+                        <ul id="metadata-list-1"></ul></div> 
+
+                    </div> 
+                    <div class="card overflow" id="article-1">
+
+
+	<meta charset="utf-8">
+	<title>The empty office: what we lose when we work from home</title>
+
+
+	<h1>The empty office: what we lose when we work from home</h1>
+	<h2>For decades, anthropologists have been telling us that it’s often the informal, unplanned interactions and rituals that matter most in any work environment. So how much are we missing by giving them up?</h2>
+	<h3 class="auth">by <a href="https://www.theguardian.com/profile/gillian-tett">Gillian Tett</a></h3>
+	<h3 class="pub"> 3rd June 2021</h3>
+		<p>In the summer of <span class="date 2020">2020</span>, Daniel<span class="person beunza" id="person-0">Beunza</span>, a voluble Spanish social scientist who taught at <span class="institution cass" id="institution-0">Cass business school</span> in <span class="place london" id="place-0">London</span>, organised a stream of video calls with a dozen senior bankers in the <span class="place usa" id="place-1">US</span> and <span class="place europe" id="place-2">Europe</span>.<span class="person beunza" id="person-1">Beunza</span> wanted to know how they had run a trading desk while working from home. Did finance require flesh-and-blood humans?</p>
+
+		<p><span class="person beunza" id="person-2">Beunza</span> had studied bank trading floors for two decades, and had noticed a paradox. Digital technologies had entered finance in the late <span class="date 20th-century">20th century</span>, pushing markets into cyberspace and enabling most financial work to be done outside the office – in theory. <span class="quote" id="quote-0">“For $1,400 a month you can have the [<span class="institution bloomberg" id="institution-1">Bloomberg</span>] machine at home. You can have the best information, all the data at your disposal,”</span> <span class="person beunza" id="person-3">Beunza</span> was told in <span class="date 2000">2000</span> by the head of one <span class="institution wall-street" id="institution-2">Wall Street</span> trading desk, whom he called <span class="person bob" id="person-4">“Bob”</span>. But the digital revolution had not caused banks’ offices and trading rooms to disappear. <span class="quote" id="quote-1">“The tendency is the reverse,” Bob said. “Banks are building bigger and bigger trading rooms.”</span> </p>
+
+		<p>Why? <span class="person beunza" id="person-5">Beunza</span> had spent years watching financiers like <span class="person bob" id="person-6">Bob</span> to find the answer. Now, during lockdown, many executives and HR departments found themselves dealing with the same issue: what is gained and what is lost when everyone is working from home? But while most finance companies focused on immediate questions such as whether employees working remotely would have still access to information, feel part of a team and be able to communicate with colleagues, <span class="person beunza" id="person-7">Beunza</span> thought more attention should be paid to different kinds of questions: how do people act as groups? How do they use rituals and symbols to forge a common worldview? To address practical concerns about the costs and benefits of remote working, we first need to understand these deeper issues.</p>
+
+		<p>Office workers make decisions not just by using models and manuals or rational, sequential logic – but by pulling in information, as groups, from multiple sources. That is why the rituals, symbols and space matter. <span class="quote" id="quote-2">“What we do in offices is not usually what people think we do,” <span class="person beunza" id="person-8">Beunza</span> told me. “It is about how we navigate the world.”</span> And these navigation practices are poorly understood by participants like financiers – especially in a digital age.</p>
+
+		<p>The engineers who <span class="event internet-creation">created the internet</span> have always recognised that people and their rituals matter. Since it was founded in <span class="date 1986">1986</span>, the <a href="https://www.ietf.org/about/participate/tao/">Internet Engineering Task Force (<span class="institution ietf" id="institution-3">IETF</span>)</a> has provided a place for people to meet and collectively design the architecture of the web. Its members wanted to make design decisions using “rough consensus”, since they believed the internet should be an egalitarian community where anybody could participate, without hierarchies or coercion. <span class="quote" id="quote-3">“We reject: kings, presidents and voting. We believe in: rough consensus and running code”</span> was, and still is, one of its key mantras.</p>
+
+		<p>To cultivate “rough consensus”,  <span class="institution ietf" id="institution-4">IETF</span> members devised a distinctive ritual: <a href="https://hackcur.io/please-hum-now/">humming</a>. When they needed to make a crucial decision, the group asked everyone to hum to indicate “yay” or “nay” – and proceeded on the basis of which was loudest. The engineers considered this less divisive than voting.</p>
+
+		<p>Some of the biggest decisions about how the internet works have been made using this ritual. In <span class="date march-2018">March 2018</span>, in a bland room of the <span class="place hilton-metropole" id="place-3">Hilton Metropole</span> on <span class="place london" id="place-4">London’s Edgware Road</span>, representatives from <span class="institution google" id="institution-5">Google</span>, <span class="institution intel" id="institution-6">Intel</span>, <span class="institution amazon" id="institution-7">Amazon</span>, <span class="institution qualcomm" id="institution-8">Qualcomm</span> and others were gathered for an <span class="institution ietf" id="institution-9">IETF</span> meeting. They were debating a controversial issue: whether or not to adopt the “draft-rhrd-tls-tls13-visibility-01” protocol. To anybody outside the room, it might sound like gobbledegook, but this protocol was important. Measures were being introduced to make it harder for hackers to attack crucial infrastructure such as utility networks, healthcare systems and retail groups. This was a mounting concern at the time – a year or so earlier, <span class="event russian-power-shutdown">hackers seemingly from <span class="place russia" id="place-5">Russia</span> <a href="https://www.wired.com/story/russia-ukraine-cyberattack-power-grid-blackout-destruction/">had shut down</a> the <span class="place ukraine" id="place-6">Ukrainian</span> power system</span>. The proposed “visibility” protocol would signal to internet users whether or not anti-hacking tools had been installed.</p>
+		<p>For an hour the engineers debated the protocol. Some opposed telling users the tools had been installed; others insisted on it. <span class="quote" id="quote-4">“There are privacy issues,” one said. “It’s about nation states,” another argued. “We cannot do this without consensus.”</span> So a man named Sean <span class="person turner" id="person-9">Turner</span> – who looked like a garden gnome, with a long, snowy-white beard, bald head, glasses and checked lumberjack shirt – invoked the  <span class="institution ietf" id="institution-10">IETF</span> ritual.</p>
+		<p><span class="quote" id="quote-5">“We are going to hum,” he said. “Please hum now if you support adoption.”</span> A moan rose up, akin to a Tibetan chant, bouncing off the walls of the <span class="place hilton-metropole" id="place-7">Metropole</span>. <span class="quote" id="quote-6">“Thanks. Please hum now if you oppose.”</span> There was a much louder collective hum. <span class="quote" id="quote-7">“So at this point there is no consensus to adopt this,”</span> <span class="person turner" id="person-10">Turner</span> declared. The protocol was put on ice.</p>
+		<p>Most people do not even know that the  <span class="institution ietf" id="institution-11">IETF</span> exists, much less that computer engineers design the web by humming. That is not because the  <span class="institution ietf" id="institution-12">IETF</span> hides its work. On the contrary, its meetings are open to anyone and <a href="https://www.ietf.org/how/meetings/">posted online</a>. But phrases like “draft-rhrd-tls-tls1.3” mean most people instinctively look away, just as they did with derivatives before the <span class="event 2008-crisis"><span class="date 2008">2008</span> financial crisis</span>. And, as with finance, this lack of external scrutiny – and understanding – is alarming, particularly given the accelerating effects of innovations such as AI. Many of the engineers who build the technologies on which we rely are well-meaning. But they – like financiers – are prone to tunnel vision, and often fail to see that others may not share their mentality. <span class="quote" id="quote-8">“In a community of technological producers, the very process of designing, crafting, manufacturing and maintaining technology acts as a template and makes technology itself the lens through which the world is seen and defined,”</span> observes <span class="person english-lueck" id="person-11">Jan English-Lueck</span>, an anthropologist who has studied <span class="place silicon-valley" id="place-8">Silicon Valley</span>.</p>
+		<p>When the  <span class="institution ietf" id="institution-13">IETF</span> members use humming, they are reflecting and reinforcing a distinctive worldview – their desperate hope that the internet should remain egalitarian and inclusive. That is their creation myth. But they are also signalling that human contact and context matter deeply, even in a world of computing. Humming enables them to collectively demonstrate the power of that idea. It also helps them navigate the currents of shifting opinion in their tribe and make decisions by reading a range of signals.</p>
+		<p>Humming does not sit easily with the way we imagine technology, but it highlights a crucial truth about how humans navigate the world of work, in offices, online or anywhere else: even if we think we are rational, logical creatures, we make decisions in social groups by absorbing a wide range of signals. And perhaps the best way to understand this is to employ an idea popularised by anthropologists working at companies such as <span class="institution xerox" id="institution-14">Xerox</span> during the late <span class="date 20th-century">2020</span>, and since used by <span class="person beunza" id="person-12">Beunza</span> and others on <span class="institution wall-street" id="institution-15">Wall Street</span>: “Sense-making”.</p>
+		<p>One of the first thinkers to develop the concept of sense-making was a man named <span class="person jsb" id="person-13">John Seely Brown</span>. <span class="person jsb" id="person-14">JSB</span>, as he was usually known, was not trained as an anthropologist. He studied maths and physics in the early <span class="date 60s">60s</span>, and finished a PhD in computer science in <span class="date 1970">1970</span>, just as the idea of the internet was emerging, and then taught advanced computing science at the <span class="institution ucl" id="institution-16">University of California</span>, with a particular interest in AI. Around this time, after meeting some sociologists and anthropologists, he became fascinated by the question of how social patterns influence the development of digital tools, too.</p>
+		<p>He applied for a research post at <span class="institution xerox" id="institution-17">Xerox</span>’s <span class="institution parc" id="institution-18">Palo Alto Research Center (Parc</span>), a research arm that the <span class="place connecticut" id="place-9">Connecticut</span>-based company set up in<span class="place silicon-valley" id="place-10">Silicon Valley</span>in <span class="date 1969">1969</span>. <span class="institution xerox" id="institution-19">Xerox</span> was famous for developing the photocopier, but it also produced many other digital innovations. The authors of Fumbling the Future, a book about the history of the company, credits it with inventing <span class="quote" id="quote-9">“the first computer ever designed and built for the dedicated use of a single person … the first graphics-oriented monitor, the first handheld ‘mouse’ simple enough for a child, the first word-processing programme for non-expert users, the first local area communications network … and the first laser printer.”</span></p>
+		<p>During his application process to <span class="institution parc" id="institution-20">Parc</span>, <span class="person jsb" id="person-15">JSB</span> met <span class="person goldman" id="person-16">Jack Goldman</span>, its chief scientist. The two men discussed <span class="institution xerox" id="institution-21">Xerox</span>’s research and development work, and its pioneering experiments with AI. Then <span class="person jsb" id="person-17">JSB</span> pointed to <span class="person goldman" id="person-18">Goldman</span>’s desk. “Jack, why two phones?” he asked. The desk contained both a “simple” phone and a newer, more sophisticated model.</p>
+		<p><span class="quote" id="quote-10">“Oh my God, who the hell can use this phone?”</span> <span class="person goldman" id="person-19">Goldman</span> said, referring to the new phone. <span class="quote" id="quote-11">“I have it on my desk because everyone has to have one, but when real work gets done I’ve got to use a regular one.”</span></p>
+		<p>That was exactly the kind of thing, <span class="person jsb" id="person-20">Seely Brown</span> said, that scientists at <span class="institution xerox" id="institution-22">Xerox</span> should also be researching: how humans were (or were not) using the dazzling innovations that<span class="place silicon-valley" id="place-11">Silicon Valley</span>companies kept creating. Having started steeped in “hard” computing science, <span class="person jsb" id="person-21">JSB</span> realised that it paid to be a “softie” when looking at social science, or – to employ the buzzwords that were later popularised in<span class="place silicon-valley" id="place-12">Silicon Valley</span> by the writer Scott <span class="person hartley" id="person-22">Hartley</span> – to be a techie and a “fuzzy”.</p>
+		<p><span class="person jsb" id="person-23">JSB</span> joined <span class="institution parc" id="institution-23">Parc</span> and put his new theories to work. Although the research centre had initially been dominated by scientists, by the time <span class="person jsb" id="person-24">JSB</span> arrived, a collection of anthropologists, psychologists and sociologists were also there. One of these anthropologists was a man named Julian <span class="person orr" id="person-25">Orr</span>, who was studying the “tribe” of technical repair teams at <span class="institution xerox" id="institution-24">Xerox</span>.</p>
+		<figure>
+			<img src="assets/tradingtables.jpg">
+			<figcaption>The <span class="institution xerox" id="institution-25">Xerox</span> Palo Alto research design team in 1993. Photograph: San Francisco Chronicle/Hearst Newspapers/Getty Images</figcaption>
+		</figure>
+		<p>By the late <span class="date 2020">2020</span>, copy machines were ubiquitous in offices. Work could collapse if one of these machines broke down. <span class="institution xerox" id="institution-26">Xerox</span> employed numerous people whose only job was to travel between offices, servicing and fixing machines. These technicians were routinely ignored, partly because the managers assumed that they knew what they did. But <span class="person orr" id="person-26">Orr</span> and <span class="person jsb" id="person-27">JSB</span> suspected this was a big mistake, and that the technicians did not always think or behave as their bosses thought they should.</p>
+		<p><span class="person jsb" id="person-28">JSB</span> first noticed it early in his time at <span class="institution xerox" id="institution-27">Xerox</span>, when he met a repairman known as “Mr Troubleshooter”, who said to him: <span class="quote" id="quote-12">“Well, Mr PhD, suppose this photocopier sitting here had an intermittent image quality fault, how would you go about troubleshooting it?”</span></p>
+		<p><span class="person jsb" id="person-29">JSB</span> knew there was an “official” answer in the office handbook: technicians were supposed to <span class="quote" id="quote-13">“print out 1,000 copies, sort through the output, find a few bad ones, and compare them to the diagnostic”</span>. It sounded logical – to an engineer.</p>
+		<p>“Here is what I do,” Mr Troubleshooter told <span class="person jsb" id="person-30">JSB</span>, with a “disgusted” look on his face. <span class="quote" id="quote-14">“I walk to the trash can, tip it upside down, and look at all the copies that have been thrown away. The trash can is a filter – people keep the good copies and throw the bad ones away. So just go to the trash can … and from scanning all the bad ones, interpret what connects them all.” In short, the engineers were ignoring protocols and using a solution that worked – but one that was “invisible … and outside [the] cognitive modelling lens”</span> of the people running the company, <span class="person jsb" id="person-31">JSB</span> ruefully concluded.</p>
+		<p>How common was this kind of subversive approach? <span class="person orr" id="person-32">Orr</span> set off to find out. He first enrolled in technical training school. Then he shadowed the repair teams out on service calls, at the parts depot, eating lunch and just hanging out when there was not much work to do. The fact that <span class="person orr" id="person-33">Orr</span> had once worked as a technician himself helped in some respects: the repair crews welcomed him in. But it also created a trap: he sometimes had the same blind spots as the people he was studying. “I had a tendency to regard certain phenomena as unremarkable which are not really so to outsiders,” he later wrote in a report. He had to perform mental gymnastics to make “familiar” seem “strange”. So, like many other anthropologists before him, he tried to get that sense of distance by looking at the group rituals, symbols and spatial patterns that the technicians used in their everyday life.</p>
+		<p><span class="person orr" id="person-34">Orr</span> quickly realised that many of the most important interactions took place in diners. “I drive to meet the members of the customer support team for breakfast at a chain restaurant in a small city on the east side,” <span class="person orr" id="person-35">Orr</span> observed in one of his field notes. <span class="quote" id="quote-15">“Alice has a problem: her machine reports a self-test error, but she suspects there is some other problem … [so] we are going to lunch at a restaurant where many of [Alice’s] colleagues eat, to try to persuade Fred, the most experienced [technician], to go to look at the machine with her … Fred tells her there is another component that she needs to change, according to his interpretation of the logs.”</span> The repair teams were doing collective problem solving over coffee in those diners, using a rich body of shared narrative about the <span class="institution xerox" id="institution-28">Xerox</span> machines, and almost every other part of their lives. Their “gossip” was weaving a wide tapestry of group knowledge, and tapping into the collective views of the group – like the  <span class="institution ietf" id="institution-29">IETF</span> humming.</p>
+		<p>This knowledge mattered. The company protocols assumed that <span class="quote" id="quote-16">“the work of technicians was the rote repair of identical broken machines,”</span> as Lucy <span class="person suchman" id="person-36">Suchman</span>, another anthropologist at <span class="institution parc" id="institution-30">Parc</span>, noted. But that was a fallacy: even if the machines seemed identical when they emerged from the <span class="institution xerox" id="institution-31">Xerox</span> factory, by the time repairmen encountered the machines they had histories shaped by humans. What engineers shared at the diner was this history and context. <span class="quote" id="quote-17">“Diagnosis is a narrative process,”</span> <span class="person orr" id="person-37">Orr</span> said.</p>
+		<p>The <span class="institution xerox" id="institution-32">Xerox</span> scientists eventually listened to the anthropologists – to some degree. After <span class="person orr" id="person-38">Orr</span> issued his report on the technicians, the company introduced systems to make it easier for repair people to talk to one another in the field and share knowledge – even outside diners. A two-way radio system allowed tech reps in different regions to call on each other’s expertise. <span class="institution xerox" id="institution-33">Xerox</span> later supplemented these radios with a rudimentary messaging platform on the internet known as Eureka, where technicians could share tips. <span class="person jsb" id="person-39">JSB</span> viewed this as “an early model for social media platforms”.</p>
+		<p>Other<span class="place silicon-valley" id="place-13">Silicon Valley</span>entrepreneurs became increasingly fascinated by what <span class="institution parc" id="institution-34">Parc</span> was doing, and tried to emulate its ideas. Steve <span class="person jobs" id="person-40">Jobs</span>, a co-founder of <span class="institution apple" id="institution-35">Apple</span>, toured <span class="institution parc" id="institution-36">Parc</span> in <span class="date 1979">1979</span>, saw the group’s efforts to build a personal computer, and then developed something similar at <span class="institution apple" id="institution-37">Apple</span>, hiring away a key <span class="institution parc" id="institution-38">Parc</span> researcher. Other <span class="institution parc" id="institution-39">Parc</span> ideas were echoed at <span class="institution apple" id="institution-40">Apple</span> and other<span class="place silicon-valley" id="place-14">Silicon Valley</span>companies. But <span class="institution xerox" id="institution-41">Xerox</span>’s managers were not nearly as adept as <span class="person jobs" id="person-41">Jobs</span> in terms of turning brilliant ideas into lucrative gadgets, and in subsequent decades <span class="institution xerox" id="institution-42">Xerox</span>’s fortunes ailed. That was partly because the company culture was conservative and slow-moving, but also because <span class="institution parc" id="institution-43">Parc</span> was based on the west coast, while the main headquarters and manufacturing centres were on the other side of the country. Good ideas often fell between the cracks, to the frustration of <span class="institution parc" id="institution-44">Parc</span> staff.</p>
+		<p>Still, as the years passed, <span class="institution parc" id="institution-45">Parc</span>’s ideas had a big impact on social science and<span class="place silicon-valley" id="place-15">Silicon Valley</span>.<!--. Their work helped to spawn the development of the “user experience” (UX) movement, prodding companies such as <span class="institution microsoft"-->Microsoft and <span class="institution intel" id="institution-46">Intel</span> to create similar teams. Their ideas about “sense-making” spread into the consumer goods world, and from there to an unlikely sphere: <span class="institution wall-street" id="institution-47">Wall Street</span>.</p>
+		<p>A social scientist named <span class="person ensworth" id="person-42">Patricia Ensworth</span> was one of the first to use sense-making in finance. Starting in the <span class="date 80s">80s</span>, she decided to use social science to help explain why IT issues tended to generate such angst in finance. Her research quickly showed that the issues were social and cultural as much as technical. In one early project she found that American software coders were completely baffled as to why their internally developed software programmes kept malfunctioning – until she explained that office customs in other locations were different. In the early <span class="date 90s">90s</span>, <span class="person ensworth" id="person-43">Ensworth</span> joined Moody’s Investors Service, and eventually became director of quality assurance for its IT systems. It sounded like a technical job. However, her key role was pulling together different tribes – software coders, IT infrastructure technicians, analysts, salespeople and external customers. Then she formed a consultancy to advise on “project management, risk analysis, quality assurance and other business issues”, combining cultural awareness with engineering.</p>
+		<figure>
+			<img src="assets/xerox.jpg">
+			<figcaption>The <span class="institution xerox" id="institution-48">Xerox</span> Palo Alto research design team in 1993. Photograph: San Francisco Chronicle/Hearst Newspapers/Getty Images</figcaption>
+		</figure>
+		<p>In <span class="date 2005">2005</span>, <span class="person ensworth" id="person-44">Ensworth</span> received an urgent message from a managing director at a major investment bank. <span class="quote" id="quote-18">“We need a consultant to help us get some projects back on track!”</span> the manager said. <span class="person ensworth" id="person-45">Ensworth</span> was used to such appeals: she had spent more than a decade using techniques pioneered by the likes of <span class="person orr" id="person-46">Orr</span> and <span class="person jsb" id="person-47">Seely Brown</span> in order to study how finance and tech intersected with humans.</p>
+		<p>The investment bank project was typical. Like many of its rivals, this bank had been racing to move its operations online. But by <span class="date 2005">2005</span> it was facing a crisis. Before<span class="date 2000">2000</span> it had outsourced much of its trading IT platform to <span class="place india" id="place-16">India</span>, since it was cheaper than hiring IT experts in the <span class="place usa" id="place-17">US</span>. But while the Indian coders and testers were skilled at handling traditional investment products, they struggled to cope with a new derivatives business that the bank was building, since the Indian coders had formal, bureaucratic engineering methods. So the bank started to use other suppliers in <span class="place ukraine" id="place-18">Ukraine</span> and <span class="place canada" id="place-19">Canada</span> who had a more flexible style and were used to collaborating with creative mathematicians. But this made the problems even worse: deadlines were missed, defects emerged and expensive disputes erupted.</p>
+		<p><span class="quote" id="quote-19">“In the <span class="place new-york" id="place-20">New York</span> office, tensions were running high between the onsite employees of rival outsourcing vendors,” <span class="person ensworth" id="person-48">Ensworth</span> later wrote. “The pivot point occurred when a fight broke out: a male Canadian tester insulted a female Indian tester with X-rated profanity and she threw hot coffee in his face. Since this legally constituted a workplace assault, the female tester was immediately fired and deported. Debates about the fairness of the punishment divided the office … [and] at the same time auditors uncovered some serious operational and security violations in the outsourced IT infrastructures and processes.”</span></p>
+		<p>Many employees blamed the issues on inter-ethnic clashes. But <span class="person ensworth" id="person-49">Ensworth</span> suspected another, more subtle problem. Almost all the coders at the bank, whether they were in <span class="place india" id="place-21">India</span>, <span class="place new-york" id="place-22">New York</span>, <span class="place kyiv" id="place-23">Kyiv</span> or <span class="place toronto" id="place-24">Toronto</span>, had been trained to think in one-directional sequences, driven by sequential logic, without much lateral vision. The binary nature of the software they developed also meant that they tended to have an “I’m-right-you’re-wrong” mentality. Although the coders could produce algorithms to solve specific problems, they struggled to see the whole picture or collaborate to adapt as conditions changed. <span class="quote" id="quote-20">“The [coders] document their research in the form of use cases, flowcharts and system architecture designs,” <span class="person ensworth" id="person-50">Ensworth</span> observed. “These documents work well enough for version 1.0, because the cyberspace model matches the user community’s lived experience. But over time, the model and the reality increasingly diverge.”</span></p>
+		<p>The coders often seemed unaware of the gap between their initial plan and subsequent reality. <span class="person ensworth" id="person-51">Ensworth</span> persuaded the suppliers in <span class="place india" id="place-25">India</span> to provide training about American office rules and customs, and tried to teach the suppliers in <span class="place ukraine" id="place-26">Ukraine</span> and <span class="place canada" id="place-27">Canada</span> about the dangers of taking an excessively freewheeling approach to IT. She showed coders videos of the noisy and chaotic conditions on bank trading floors; that was a shock, since coders typically toiled in library-like silence and calm. She explained to managers at the bank that coders felt angry that they could not access important proprietary databases and tools. The goal was to teach all “sides” to copy the most basic precept of anthropology: seeing the world from another point of view.</p>
+		<p><span class="person ensworth" id="person-52">Ensworth</span> did not harbour any illusions about changing the bank’s overall culture. When the <span class="event 2008-crisis">financial crisis</span> erupted in <span class="date 2008">2008</span>, the project was wound down and she moved on. However, she was thrilled to see that during the 18 months that she worked at the bank, some of the anthropology lessons stuck. <span class="quote" id="quote-21">“Delivery schedules and error rates were occasionally troublesome, but no longer a constant, pervasive worry,”</span> she later wrote. Better still, the workers stopped throwing coffee around the office.</p>
+		<p>But what would happen to the business of sense-making at work if humans were suddenly prevented from working face to face? As he hovered like a fly on the wall of trading rooms on <span class="institution wall-street" id="institution-49">Wall Street</span> and in the City of <span class="place london" id="place-28">London</span> in the early <span class="date 2000s">2000s</span>, <span class="person beunza" id="person-53">Beunza</span> often asked himself that question. Then, in the spring of  <span class="date 2020">2020</span>, he was unexpectedly presented with a natural experiment. As <span class="event pandemic">Covid-19 spread</span>, financial institutions suddenly did what <span class="person bob" id="person-54">Bob</span> had said they never would – they sent traders home with their <span class="institution bloomberg" id="institution-50">Bloomberg</span> terminals. So, over the course of the summer, <span class="person beunza" id="person-55">Beunza</span> contacted his old <span class="institution wall-street" id="institution-51">Wall Street</span> contacts to ask a key question: what happened?</p>
+		<p>It was not easy to do the research. Anthropology is a discipline that prizes first-hand observations. Conducting research via video calls seemed to fly in the face of that. <span class="quote" id="quote-22">“A lot of my work depends on speaking to people face to face, understanding how they live their lives on their own terms and in their own spaces,”</span> said Chloe <span class="person evans" id="person-56">Evans</span>, an anthropologist at Spotify, to <a href="https://www.epicpeople.org/ethnographic-research-in-remote-spaces-overcoming-practical-obstacles-and-embracing-change/">a conference</a> convened in  <span class="date 2020">2020</span> to discuss the challenge. <span class="quote" id="quote-23">“Being in the same space is vital for us to understand how people use products and services for the companies we work for.”</span></p>
+		<p>However, ethnographers realised there were benefits to the new world, too: they could reach people around the world on a more equal footing, and sometimes with more intimacy. <span class="quote" id="quote-24">“We see people in contexts not available to us in lab situations,”</span> <a href="https://www.epicpeople.org/recalibrating-ux-labs-in-the-covid-19-era/">observed</a> an ethnographer named Stuart <span class="person henshall" id="person-57">Henshall</span>, who was doing research among poor communities in <span class="place india" id="place-29">India</span>. Before the pandemic, most of the Indian people he interviewed were so ashamed of their domestic spaces that they preferred to meet in a research office, he explained. But after lockdown, his interviewees started talking to him via video calls from their homes and rickshaws, which enabled him to gain insight into a whole new aspect of their lives. <span class="quote" id="quote-25">“Participants are simply more comfortable at home in their environment. They feel more in control,”</span> he observed. It was a new of type of ethnography.</p>
+		<figure>
+			<img src="assets/traders.jpg" alt="traders">
+			<figcaption>Traders in front of Bloomberg terminals at the New York Stock Exchange. Photograph: Brendan McDermid / Reuters/Reuters</figcaption>
+		</figure>
+		<p>When <span class="person beunza" id="person-58">Beunza</span> interviewed bankers remotely, he found echoes of this pattern: respondents were more eager to engage with him from home than in the office, and it felt more intimate. The financiers told him that they had found it relatively simple to do some parts of their job remotely, at least in the short term: working from home was easy if you were writing computer code or scanning legal documents. Teams that had already been working together for a long time also could interact well through video links.</p>
+		<p>The really big problem was incidental information exchange. <span class="quote" id="quote-26">“The bit that’s very hard to replicate is the information you didn’t know you needed,”</span> <a href="https://www.systemicrisk.ac.uk/events/market-stability-social-distancing-and-future-trading-floors-after-covid-19">observed</a> Charles <span class="person bristow" id="person-59">Bristow</span>, a senior trader at <span class="institution jp" id="institution-52">JP Morgan</span>. <span class="quote" id="quote-27">“[It’s] where you hear some noise from a desk a corridor away, or you hear a word that triggers a thought. If you’re working from home, you don’t know that you need that information.”</span> Working from home also made it hard to teach younger bankers how to think and behave; physical experiences were crucial for conveying the habits of finance or being an apprentice.</p>
+		<p><span class="person beunza" id="person-60">Beunza</span> was not surprised to hear that the financiers were eager to get traders back to the office as soon as they could; nor that most had quietly kept some teams working in the office throughout the crisis. Nor was he surprised that when banks such as <span class="institution jp" id="institution-53">JP Morgan</span> started to bring some people back in – initially at 50% capacity – they spent a huge amount of time devising systems to “rotate” people; the trick seemed not to be bringing in entire teams, but people from different groups. This was the best way to get that all-important incidental information exchange when the office was half-full.</p>
+		<p>But one of the most revealing details from <span class="person beunza" id="person-61">Beunza</span>’s interviews concerned performance. When he asked the financiers at the biggest American and European banks how they had fared during the wild market turmoil of spring  <span class="date 2020">2020</span>, <span class="quote" id="quote-28">“the bankers said that their trading teams in the office did much, much better than those at home,”</span> <span class="person beunza" id="person-62">Beunza</span> told me in the autumn of  <span class="date 2020">2020</span>. <span class="quote" id="quote-29">“The <span class="institution wall-street" id="institution-54">Wall Street</span> banks kept more teams in the office, so they seem to have done a lot better than Europeans.”</span> That may have been due to malfunctions on home-based tech platforms. But <span class="person beunza" id="person-63">Beunza</span> attributed it to something else: in-person teams had more incidental information exchange and sense-making, and at times of stress this seemed doubly important.</p>
+		<p>The bankers that <span class="person beunza" id="person-64">Beunza</span> observed were not the only ones to realise the value of being together in the same physical space. The same pattern was playing out at the  <span class="institution ietf" id="institution-55">IETF</span>. When the pandemic hit, the  <span class="institution ietf" id="institution-56">IETF</span> organisers decided to replace in-person conventions with virtual summits. A few months later they polled about 600 members to see <a href="https://www.ietf.org/media/documents/survey-planning-possible-online-meetings-responses.pdf">how they felt</a> about this switch. More than half said they considered online meetings less productive than in-person, and only 7% preferred meeting online. Again, they missed the peripheral vision and incidental information exchange that happened with in-person meetings. “[Online] doesn’t work. In person is NOT just about the meeting sessions – it is about meeting people outside the meetings, at social events,” complained one member. <span class="quote" id="quote-30">“The lack of serendipitous meetings and chats is a significant difference,” said another. Or as one of them put it: “We need to meet in person to get meaningful work done.”</span></p>
+		<p>They also missed their humming rituals. As the meetings moved online, two-thirds of the respondents said they wanted to explore new ways to create rough consensus. <span class="quote" id="quote-31">“We need to figure out how to ‘hum’ online,”</span> said one member. So the  <span class="institution ietf" id="institution-57">IETF</span> organisers experimented with holding online polls. But members complained that virtual polls were too crude and one-dimensional; they crave a more nuanced, three-dimensional way to judge the mood of their tribe. <span class="quote" id="quote-32">“The most important thing to me about a hum is some idea of how many people present hummed at all, or how loudly. Exact numbers don’t matter, proportionality does,”</span> said one.</p>
+		<p>Adapted from Anthro-Vision: How Anthropology Can Explain Business and Life by Gillian Tett, which will be published by <span class="institution rhb" id="institution-58">Random House Business</span> on <span class="date 8-june-2021">8 June</span>. To order a copy, go to the <span class="institution guardian" id="institution-59">Guardian</span> bookshop.</p>
+
+
+</div>
+                </div>
+            <div class="col-4" id="col-num-2">
+                    <div class="row">
+                    <img src="assets/close.png" title="Close" style="height: 10px; width: auto; cursor: pointer;" onclick="closeArticle('#col-num-2');">
+                        <div class="row list" id="metaview-2"><h3>Metaviewer</h3>
+                        <ul id="metadata-list-2"></ul></div> 
+
+                    </div> 
+                    <div class="card overflow" id="article-2">
+
+
+	<meta charset="utf-8">
+	<title>Why introverts excelled at working from home</title>
+
+
+	<figure>
+		<img src="assets/titleimage.webp">
+	</figure>
+<h1>Why introverts excelled at working from home</h1>
+<h2 class="auth">By Kate Morgan</h2>
+<h2 class="pub">16th July 2021</h2>
+
+<h2>Remote work offered 'quiet deliverers' who flew under the radar in the office a chance to really stand out.</h2>
+
+<p>When thes<span class="event pandemic">pandemic</span> closed her office and forced Veronica <span class="person wortman-ploetz" id="person-65">Wortman Ploetz</span> and her whole team to work from home, she became more productive, almost right away. <span class="person wortman-ploetz" id="person-66">Wortman Ploetz</span>, a senior manager in a leadership training organisation, considers herself an introvert.</p>
+
+<p><span class="quote" id="quote-33">“I get my energy from being alone and recharging,”</span> she says. In the early morning hours, when her house was quiet, she was suddenly able to accomplish more than she typically could in a busy – and for her, draining – office environment.</p>
+
+<p><span class="quote" id="quote-34">“I’d get up at 5 a.m. and instead of having to go through the rigamarole of getting ready, feeding the dogs, the laundry list of things to get out the door and do the 45-minute commute, I was just in the zone,” says <span class="person wortman-ploetz" id="person-67">Wortman Ploetz</span>. “I got everything done when I felt energised in that quiet time.”</span></p>
+
+<p>While the transition to remote work in early  <span class="date 2020">2020</span> was abrupt for everyone, some found themselves thriving more than others – in many cases, thanks to their personality type. Many introverted workers found working from a distraction-free environment preferable. Client needs also changed in ways that benefited introverts’ skillsets, while virtual communication offered introverts more opportunities to share their thoughts. For ‘quiet deliverers’ who may once have flown under the radar, remote work offered not only a less taxing day-to-day, but also an opportunity to combine that extra energy with new ways of working – and really stand out. </p>
+
+<h4>An introvert’s moment to shine</h4>
+
+<p>In the uncertain days at the outset of thes<span class="event pandemic">pandemic</span>, the needs of companies and their clients experienced a shift, and workers who could meet them stood out.</p>
+
+<p><span class="quote" id="quote-35">“While extroverts are celebrated for being outgoing, action-oriented and enthusiastic, introverts bring analytical thought and empathy,”</span> says Richard <span class="person etienne" id="person-68">Etienne</span>, a <span class="place surrey" id="place-30">Surrey</span>-based branding expert who lectures on introverts at work. <span class="quote" id="quote-36">“During thes<span class="event pandemic">pandemic</span>, those skills immediately became incredibly sought after. Introverts are reliable; people who take one project at a time and do it thoroughly. They’re good at deep thought and forming personal connection. That was really important during the period when companies were trying to hold onto clients.”</span></p>
+
+<p>In a recent <a href="https://www.bloomberg.com/opinion/articles/2021-06-13/the-big-question-as-pandemic-subsides-is-remote-work-here-to-stay"><span class="institution bloomberg" id="institution-60">Bloomberg</span> interview</a>, Patty <span class="person mccord" id="person-69">McCord</span>, former head of HR at <span class="institution netflix" id="institution-61">Netflix</span>, said it was clear managers were newly aware of the skills of employees who didn’t command attention before. She referenced a senior executive at a Fortune 100 company who had a “matrix of skills” she once used to identify a great salesperson: <span class="quote" id="quote-37">“able to control a room, a lot of energy and charisma, confident, blah, blah, blah. And it completely flipped during thes<span class="event pandemic">pandemic</span>,” said <span class="person mccord" id="person-70">McCord</span>.  Suddenly, that company’s best employees were <span class="quote" id="quote-38">“the quiet ones who would just get on a call with a client and listen”</span>.</span></p>
+
+<p>Empathy and a propensity toward more thoughtful communication made introverts shine, adds Beth <span class="person buelow" id="person-71">Buelow</span>, a career coach and author of The Introvert Entrepreneur. <span class="quote" id="quote-39">“That tendency to put others in the spotlight, to hold up the team and be that silent partner, is a strength,” she says. “That is part of what managers and leaders witnessed coming through. They needed the empathetic listener. The person who was willing to step back and be like, ‘I hope you’re doing OK; how can we help?’”</span></p>
+
+<h4>A refreshing change of pace</h4>
+
+<p>On top of having the right innate skill set, many introverts benefited from the move away from a physical office environment. That because the traditional office, in many ways, really did not suit workers with more introverted personalities.</p>
+
+<p><span class="quote" id="quote-40">“The workplace was created by extroverts, for extroverts,”</span> says <span class="person etienne" id="person-72">Etienne</span>. Open-concept offices are the worst offenders, he explains. <span class="quote" id="quote-41">“The ease with which people can access your space without invitation can be intense.” In one role, <span class="person etienne" id="person-73">Etienne</span> recalls, “I had a desk by the lifts – the elevators. I couldn’t get 15 minutes of peace.”</span></p>
+
+<p>That’s tough on someone with an introverted personality, since constant conversation can be draining. While extroverts, in contrast, are energised by social interaction, says <span class="person etienne" id="person-74">Etienne</span>,<span class="quote" id="quote-42"> “at the end of the day, the introvert is spent”</span>.</p>
+
+<figure>
+	<img src="assets/womanpc.webp">
+	<figcaption>In a workplace setting, introverts are often reliable, thoroughly shepherding one project to completion (Credit: Getty Images)
+
+</figcaption>
+</figure>
+
+<p><span class="person wortman-ploetz" id="person-75">Wortman Ploetz</span> says many who know her might be surprised that she describes herself as an introvert. She spends a lot of time in meetings and hands-on training sessions, but ultimately, she says, <span class="quote" id="quote-43">“where I draw my energy from is being in a quiet place, alone”</span>.</p>
+
+<p>Neuroscience helps back up the theory. Studies show <a href="https://www.medicaldaily.com/brain-introvert-compared-extrovert-are-they-really-different-299064">extroverts are less sensitive to dopamine</a>, and thus require a lot of stimulation to be sufficiently energised. Introverts are far more sensitive to the brain chemical, and over-stimulation can quickly become tiring.</p>
+
+<p>In general, adds <span class="person buelow" id="person-76">Buelow</span>, introverts pay a price for each social interaction throughout the day. That cost dipped considerably with the shift to remote work. <span class="quote" id="quote-44">“They’re not recharging when they’re in the office and stimulated all the time,” she says. “Just by virtue of having the solitude at home, you have more opportunities, more balance. Your alone to social time ratio is much healthier.”</span></p>
+
+<p><span class="person etienne" id="person-77">Etienne</span> considers himself a more introverted person. Like <span class="person wortman-ploetz" id="person-78">Wortman Ploetz</span>, he says he’s ultimately become more productive while working from home.</p>
+
+<p><span class="quote" id="quote-45">“I felt more in control of the management of my time,” he says. “For example, I think we’ve all been through this: you finish a meeting and you’re walking back to your desk and someone spots you and you have a conversation. And you lose the time to process the meeting you’ve just finished, and reset. That doesn’t happen anymore. Now, I can have my moment of reflection in silence, without disturbance. With things like Zoom and Teams there are even ‘do not disturb’ settings; you literally can’t message me.”</span></p>
+
+<h4>Playing to an introvert’s strengths</h4>
+
+<p>Beyond providing more peace and quiet, the new, introvert-friendly work environment made space for those personalities to stand out in other ways.</p>
+
+<p><span class="quote" id="quote-46">“The physical meeting table disappeared, and with it went the hierarchical structure of the loud people gathered together at the centre and the introverts on the fringes,”</span> says <span class="person etienne" id="person-79">Etienne</span>. And, he adds, those who might have been hesitant to jump into the fray in a conference room were empowered by virtual meeting spaces.</p>
+
+<p><span class="quote" id="quote-47">“If one has a fear of public speaking, working remotely allowed that person to speak to their expertise, maybe even to thousands of people, but they’re just seeing a green light at the top of their laptop screen,”</span> he says.</p>
+
+<p>Virtual meetings also tend to have fewer interruptions and overlapping speakers. <span class="quote" id="quote-48">“The etiquette of the platform is different,” says <span class="person buelow" id="person-80">Buelow</span>. “You’re much more aware of if you’re interrupting or talking on top of someone.”</span></p>
+
+<p>A slightly slower conversational pace gives introverts the time they need to collect their thoughts. <span class="quote" id="quote-49">“They have more time to reflect, and then when they offer something, it’s meaningful,” she says. Plus, virtually, “there are more tools at your disposal to contribute to the conversation. It’s not just whoever can get a word in edgewise; there’s the chat, ‘raising your hand’, reactions you can send”</span>.</p>
+
+<p>Plus, extroverted, louder colleagues are less likely to dominate a virtual space than a physical one. <span class="quote" id="quote-50">“Around the table, some people take up more energy; they occupy more space,” says <span class="person buelow" id="person-81">Buelow</span>. “Virtually, everyone’s occupying the same space. It evens out the energy.”</span></p>
+
+<h4>The lasting impact</h4>
+
+<p>With the return to the office – and all its costly stimulation – <span class="person buelow" id="person-82">Buelow</span> is optimistic that lessons learned from remote work will make leaders and workplaces more accommodating to introverts. The definition of the “star employee”, she says, has changed. <span class="quote" id="quote-51">“Traditionally, we considered ‘contribution’ to mean talking,” she says. “I think we’ve learned that contribution can take many forms, and it’s not necessarily about the person that talks the most.”</span></p>
+
+<p>There are tactics leaders can use to make sure more introverted employees can continue to contribute, even if the team is transitioning back to in-person work. Simple solutions, like having brain-storming sessions or small-group chats prior to discussion with the full group, can go a long way, says <span class="person buelow" id="person-83">Buelow</span>.</p>
+
+<figure>
+	<img src="assets/beard.webp">
+	<figcaption>In some cases, introverted workers were better able to address client needs in a remote-work scenario (Credit: Getty Images)</figcaption>
+</figure>
+
+<p><span class="quote" id="quote-52">“It’s a consideration about how to honour those who would like a few minutes to think quietly before sharing their thoughts,” she says. “As we go back to the office, leaders need to be asking, ‘are we offering a diversity of ways to contribute?’. There’s a ton of ways of doing that – it just requires some creativity.”</span> </p>
+
+<p><span class="person wortman-ploetz" id="person-84">Wortman Ploetz</span> says the lessons learned about how different personality types can best perform is “something we’re bringing back to the office. There’s a couple people on my team who need that quiet time. So, maybe they’ll book a conference room, or put up some visual indicator on their desk or door that says ‘please come back another time’. And it’s not offensive. It’s just that this person doesn’t want to be distracted. I don’t know if we would have understood that before, but we do now.” </p>
+
+<p><span class="person wortman-ploetz" id="person-85">Wortman Ploetz</span> says she’s also maintaining some of the habits that made her so productive at home. “I’m much more diligent about when I will accept meetings on the calendar,” she says, “and I make sure there’s space between them, even if it’s 15 minutes. I think that’s a healthy boundary I wouldn’t have had without thes<span class="event pandemic">pandemic</span>.”</p>
+
+
+</div>
+                </div>
+            <div class="col-4" id="col-num-3">
+                    <div class="row">
+                    <img src="assets/close.png" title="Close" style="height: 10px; width: auto; cursor: pointer;" onclick="closeArticle('#col-num-3');">
+                        <div class="row list" id="metaview-3"><h3>Metaviewer</h3>
+                        <ul id="metadata-list-3"></ul></div> 
+
+                    </div> 
+                    <div class="card overflow" id="article-3">
+
+
+	<meta charset="utf-8">
+	<title>What we learned about wellness while working from home, and how to use those insights</title>
+
+
+	<figure>
+		<img src="assets/offices.webp">
+		<figcaption>Whether workers wind up at home, in offices or in hybrid work systems, mental health experts hope bosses’ decisions will prioritize individual well-being as much as possible. (iStock)
+</figcaption>
+	</figure>
+	<h1>What we learned about wellness while working from home, and how to use those insights</h1>
+ 	<h3 class="auth">By <a href="https://www.washingtonpost.com/people/allyson-chiu/">Allyson Chiu</a></h3>
+ 	<h3 class="pub">June 25, 2021</h3>
+ 	<p>Before the <a href="https://www.washingtonpost.com/coronavirus/?itid=lk_inline_manual_1">coronavirus</a> <span class="event pandemic">pandemic</span>, psychiatrist <span class="person gold" id="person-86"> Jessi Gold</span> could count on one hand the number of times she had conducted an appointment over the phone or computer.</p>
+
+	<p>“When we switched to being home in March, it was like, <span class="quote" id="quote-53">‘Okay, it’s a short-term thing. I can do this short term,’ ”</span> said<span class="person gold" id="person-87">Gold</span>, 33, who sees health-care workers and college students at <span class="institution wusmsl" id="institution-62">Washington University School of Medicine in St. Louis</span>. But as weeks stretched into months,<span class="person gold" id="person-88">Gold</span>, a self-described extrovert, began to feel the strain.</p>
+
+	<p><span class="quote" id="quote-54">“I would burn out a lot easier just staring at the computer all day. I got headaches a lot quicker. I would feel myself needing to get up and walk around and make myself have breaks,”</span> she said.<span class="person gold" id="person-89">Gold</span> also found herself missing her connection with patients, even though she was seeing them virtually.</p>
+
+	<p>When<span class="person gold" id="person-90">Gold</span> returned to in-person sessions once a week last month, <span class="quote" id="quote-55">“it was like night and day for me,” she said. “I was much happier. I left work feeling so much better.”</span></p>
+
+	<p><a href="https://hosted-washpost.submissionplatform.com/sub/hosted/6082eb55360c930024d30657"><i>Tell us about the hardest parts of life after social distancing</i></a></p>
+
+	<p><span class="person swamy" id="person-91">Lakshman Swamy</span>, on the other hand, is in no rush to return to his traditional office setting. <span class="quote" id="quote-56">“Although I feel like I’m working a lot . . . the comfort of doing that work is really increased,”</span> said <span class="person swamy" id="person-92">Swamy</span>, 38, medical director at <span class="institution masshealth" id="institution-63">Masshealth</span> and an ICU doctor in <span class="place boston" id="place-31">Boston</span>, whose current schedule allows him to alternate three-week stretches of remote work with one week at the hospital.</p>
+
+	<p>
+	<span class="person swamy" id="person-93">Swamy</span> said he is more productive at home, largely because he doesn’t have to commute and has a “preserved workspace.” In addition, he said, working remotely has allowed him to spend more time with his family and take better care of himself — attending meetings while walking, for example, and making more nutritious meals. <span class="quote" id="quote-57">“I can bake fresh bread and eat it for breakfast while I’m in a meeting,” he said. “It’s amazing.”</span></p>
+
+	<p><a href="https://www.washingtonpost.com/business/2020/10/14/top-workplaces-2020-working-from-home/?itid=lk_interstitial_manual_11"><i>At work while at home: The new paradigm</i></a></p>
+
+	<p>Across the country, office workers and professionals like<span class="person gold" id="person-94">Gold</span> and <span class="person swamy" id="person-95">Swamy</span> have experienced the pros and cons of working from home, and are considering which elements they would like to incorporate or scrap in their post-<span class="event pandemic">pandemic</span> work lives. Mental health experts are hoping that decisions made by employers will prioritize individual well-being as much as possible.</p>
+
+	<p><span class="quote" id="quote-58">“Before we had these cookie-cutter expectations of working processes,”</span> said <span class="person barber" id="person-96">Lacie Barber</span>, an associate professor of psychology at <span class="institution sdsu" id="institution-64">San Diego State University</span>, who specializes in occupational health psychology. <span class="quote" id="quote-59">“The benefit of covid is it made us change everything.” Rather than “rushing to go back to the way things were,” <span class="person barber" id="person-97">Barber</span> said, organizations should “actually think about how it could be better than where we were.”</span></p>
+
+	<p>	And while much of the country’s workers — front-line and essential employees or those in the service industry — don’t have the option of doing their jobs remotely (according to a May survey <a href="https://www.bls.gov/cps/effects-of-the-coronavirus-covid-19-htm">conducted by the <span class="institution usbls" id="institution-65">U.S. Bureau of Labor Statistics</span></a>, only 17 percent of employed people 16 and older said they had teleworked in the past four weeks), experts say wisdom gained during the <span class="event pandemic">pandemic</span> can be beneficial in any work environment.</p>
+
+	<p><span class="quote" id="quote-60">“Employers are increasingly recognizing the importance of stress management, of setting healthy boundaries, <a href="https://workplacementalhealth.org/Employer-Resources/Working-Remotely-During-COVID-19">of taking care of mental health and well-being</a>,”</span> said <span class="person gruttadaro" id="person-98">Darcy Gruttadaro</span>, director of the <span class="institution cwmh" id="institution-66">Center for Workplace Mental Health</span> at the <span class="institution apa" id="institution-67">American Psychiatric Association</span>.</p>
+
+	<p><a href="https://www.washingtonpost.com/lifestyle/wellness/work-mental-health-day-naomi-osaka/2021/06/03/471847ae-c3cc-11eb-93f5-ee9558eecf4b_story.html?itid=lk_interstitial_manual_18"><i>How to know when you need a mental health break and ways to make the most of it</i></a></p>
+
+	<p>Going forward, experts would like to see bosses create <span class="quote" id="quote-61">“safe avenues for our employees and our team members to be comfortable and confident in disclosing what their needs are and what their mental health challenges are,”</span> said  <span class="person boatwright" id="person-99">Julius Boatwright</span>, founder and chief executive of <a href="https://www.steelsmilingpgh.org/">Steel Smiling</a>, a <span class="place pittsburgh" id="place-32">Pittsburgh</span>-based nonprofit organization that focuses on Black mental health.</p>
+
+	<p>	And they would like to see all employees — even those who don’t have a choice about where they work — advocate for an environment that <span class="quote" id="quote-62">“you believe is better for you, your job and your overall mental health,”</span> said <span class="person benjamin-miller" id="person-100">Benjamin Miller</span>, a mental health expert and president for <a href="https://wellbeingtrust.org/"><span class="insitution wbt">Well Being Trust</span></a>, a national foundation.</p>
+
+	<p>Here are some lessons learned while working from home that experts say bosses and employees should keep in mind — whether work stays remote, returns to an office or becomes a hybrid model.</p>
+
+	<p><a href="https://subscribe.washingtonpost.com/newsletters/#/bundle/abetterweek?method=SURL&amp;location=ART&amp;itid=lk_interstitial_manual_24"><i>Find time you didn’t know you had with A Better Week, a 7-day email course</i></a></p>
+
+	<h4>It can improve well-being</h4>
+	<p>How a person’s well-being was affected by working from home was largely “grounded by privilege” related to job responsibilities, home life, neighborhood and socioeconomic status, among other factors, <span class="person benjamin-miller" id="person-101">Miller</span> said.</p>
+
+	<p>But for some people, the <span class="event pandemic">pandemic</span> proved <span class="quote" id="quote-63">“that we can integrate wellness into our lifestyle and still get work done,”</span> said <span class="person boatwright" id="person-102">Boatwright</span>, who has found time for healthy activities and encourages his staff to schedule at least an hour or two of self-care during the workweek.</p>
+
+	<p>	Even if you have to return to the office, experts say, it’s possible to continue self-care. <span class="person boatwright" id="person-103">Boatwright</span> suggested incorporating simple breathing exercises, which don’t take more than three to five minutes, into your workday.</p>
+
+	<p>Bosses can contribute to employees’ well-being on-site by offering to hold walking meetings outdoors, inviting mindfulness experts to lead guided sessions for staff or sponsoring occasional healthy lunches, <span class="person gruttadaro" id="person-104">Gruttadaro</span> said.</p>
+
+	<h4>It can interfere with boundaries</h4>
+	<p>The past 15 months have shown that one of the main challenges of remote employment is the <span class="quote" id="quote-64">“blurring of boundaries” between work and home, <span class="person benjamin-miller" id="person-105">Miller</span> said. “And that leads to all kinds of problems.”</span></p>
+
+	<p><a href="https://www.washingtonpost.com/lifestyle/wellness/burnout-prevent-recover-work-advice/2021/06/14/d897dc1a-cd4c-11eb-8014-2f3926ca24d9_story.html?itid=lk_interstitial_manual_34"><i>What burnout really means, and what bosses and employees can do about it</i></a></p>
+
+	<p><span class="person gruttadaro" id="person-106">Gruttadaro</span> agreed. <span class="quote" id="quote-65">“If you used to work eight hours and now you’re working 10 to 11 hours, something else is being given up as part of your life,” she said. “If it’s social connectedness, if it’s doing activities you previously loved, if it’s exercise, those are all unfortunate things to give up because that’s what keeps us healthy.”</span></p>
+
+	<p>	The increased reliance on emails and other electronic communications while working remotely also can exacerbate <a href="https://psycnet.apa.org/record/2014-45450-001">“workplace telepressure”</a> (feeling like you have to respond immediately to text-based messages), said <span class="person barber" id="person-107">Barber</span>, who has <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/smi.2864">researched</a> the subject. This in turn can lead to higher levels of work fatigue and sleep problems.</p>
+
+	<p>With more people on flexible schedules, “reestablishing predictability” at work is key to reducing telepressure, <span class="person barber" id="person-108">Barber</span> said. Leaders and subordinates should have discussions about explicit ground rules for communication, including expected response times, and bosses should reinforce those rules by not contacting employees outside those hours. Telling people to simply ignore messages sent at unusual times doesn’t work, she said.</p>
+
+	<p><a href="https://hosted-washpost.submissionplatform.com/sub/hosted/60524dec02ab8605ab77641e"><i>Do you have questions about home improvement or homeownership?</i></a></p>
+
+	<p>Bosses also can model healthy behavior for both at-home and office workers by encouraging employees to use vacation and take time off themselves, experts said. They should also regularly check in on staff, wherever they are.</p>
+
+	<p>Advertisement
+	For at-home employees, experts suggested learning to psychologically detach from their work. Possibilities include creating a <span class="quote" id="quote-66">“<a href="https://www.washingtonpost.com/lifestyle/wellness/fake-commute-home-work-transition-/2021/02/22/49f79d56-6cb7-11eb-9f80-3d7646ce1bc0_story.html?itid=lk_inline_manual_44">fake commute</a>,” taking a walk after work or even just closing the laptop. Such habits can send “a signal that you’re done with work,”</span> <span class="person benjamin-miller" id="person-109">Miller</span> said.</p>
+
+	<p><a href="https://www.washingtonpost.com/lifestyle/wellness/fake-commute-home-work-transition-/2021/02/22/49f79d56-6cb7-11eb-9f80-3d7646ce1bc0_story.html?itid=lk_interstitial_manual_45"><i>Why a fake commute could pave the way to work-from-home balance</i></a></p>
+
+	<h4>It can allow more individualized schedules and settings</h4>
+	<p>While there is a heightened risk of blurred boundaries in remote work, many workers appreciate having more control over when and how they work, <span class="person gruttadaro" id="person-110">Gruttadaro</span> said. Some people have adapted their schedules to suit their natural energy levels; perhaps they feel most productive early in the morning or they may be night owls. Others enjoy being able to <a href="https://www.washingtonpost.com/lifestyle/wellness/nap-pandemic-home-how-sleep/2021/01/29/d2cc6cbe-6015-11eb-9430-e7c77b5b0297_story.html?itid=lk_inline_manual_47">squeeze in a nap</a> in the early afternoon and benefit from a boost in productivity afterward. These advantages can be difficult to replicate in a traditional office setting.</p>
+
+	<p><a href="https://www.washingtonpost.com/lifestyle/wellness/nap-pandemic-home-how-sleep/2021/01/29/d2cc6cbe-6015-11eb-9430-e7c77b5b0297_story.html?itid=lk_interstitial_manual_48"><i>Nap time is the new coffee break. Here’s how to make the most of it.</i></a></p>
+
+	<p>There are some employees, however, who might need a more structured schedule and setting to motivate themselves, and for them, returning to an office environment may be beneficial, experts said.</p>
+
+
+	<p>Personality type matters, too. Introverts may thrive in the quiet and solitude they have at home; extroverts may do better working face-to-face with colleagues.</p>
+
+	<p>Working from home has been a mixed bag for many parents, who enjoyed spending more time with their children but experienced increased stress and strain from juggling work, child care and school. Many of them might have longed for office life during the <span class="event pandemic">pandemic</span>, <span class="person benjamin-miller" id="person-111">Miller</span> said, but when children go back to in-person learning, home offices might become more appealing.</p>
+
+	<p>Experts emphasized that the constantly shifting work landscape reinforces the importance of having open and honest conversations about work expectations.</p>
+
+	<p><a href="https://www.washingtonpost.com/lifestyle/2021/01/25/work-from-home-parenting-distractions/?itid=lk_interstitial_manual_55"><i>6 strategies for parents struggling with work-from-home interruptions</i></a></p>
+
+	<h4>It can challenge social connections</h4>
+	<p>Losing in-person contact with co-workers, family and friends during the <span class="event pandemic">pandemic</span> <span class="quote" id="quote-67">“was a very unnatural thing to happen and that stressed a lot of people out,”</span> leading to increased rates of isolation and loneliness, <span class="person gruttadaro" id="person-112">Gruttadaro</span> said.</p>
+
+	<p>It’s difficult to develop and maintain relationships while fully online, <span class="person barber" id="person-113">Barber</span> said. In offices, there are more opportunities for informal interactions with colleagues or bosses throughout the day <span class="quote" id="quote-68">“that really do build up those relationships.”</span></p>
+
+	<p><a href="https://www.washingtonpost.com/lifestyle/2021/03/03/stanford-zoom-fatigue/?itid=lk_interstitial_manual_61"><i>Four reasons you’re tired of <span class="insitution zoom">Zoom</span> calls — and what to do about it</i></a></p>
+
+	<p>While a return to an office setting or a hybrid work model may ease some of these pressures, there are also options for better maintaining social ties remotely. <span class="person barber" id="person-114">Barber</span> suggests, for example, that managers set aside time during virtual meetings for casual chit chat, rather than diving straight into work matters.</p>
+
+	<p>“<span class="quote" id="quote-69">When it comes to the workplace, there is a difference between speaking to someone on a screen and seeing them in person” <span class="person gruttadaro" id="person-115">Gruttadaro</span> said. “There is just this feeling of closeness that comes with being in the same room and there is more of a likelihood to, perhaps in some cases, share more personal information and just really have a more meaningful conversation.”</span></p>
+
+	
+	
+</div>
+                </div></div>
+			
+			</section>
+	
+		</div>
+		
+		<!--Footer-->
+		<footer>
+	footer
+	</footer>
+	
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+  			<!-- Modal content -->
+  			<div class="modal-content">
+    			<span class="close">×</span>
+				<div class="row">
+					<div class="col-3"><span>Index</span>
+					<ul style="list-style-type:none;">
+					  <li><a href=""></a></li>
+					  <li><a href="#american-newspapers">American Post-Indipendence Newspapers</a></li>
+					  <li><a href=""></a></li>
+					  <li><a href="#future">2050: 2010s-20s Nostalgia</a></li>
+					</ul></div>
+					<div class="col-9" style="overflow: auto;"><p><span>document</span>
+						<!-- Come lo mettiamo? 
+						<p id="american-newspapers">Throughout its existence, the USA relied on newspapers for delivering
+						information to the public and to deliver to it a description of current political events. This was especially important
+						during the 1800s since the American government was slowly defining itself and its practices.
+						<img src="assets/charleston.jpg" style="height: 30px; width: auto;"><br>
+						Newspapers were much different from the ones we have today. Rather than placing emphasis on catchphrases or using an
+						eye-catching layout, they used a sober style with the objective of filling the page with as much information as possible,
+						dividing the magazines in columns with the intent of making reading easier. On this point, we had to make a compromise
+						between our inspiration and how articles on the web appear. Rather than dividing the text into columns and use minimal spacing, that could become so narrow it would be difficult to read articles, we opted to drop this concept. Secondly, we treated images
+						 as an element that floats left, in order to make text go around them, similarly to the pictures for advertisements we can see here.
+						<img src="assets/weak-men.jpg" style="height: 30px; width: auto;"><br>
+						For the fonts used, we used fonts similar to the types in the National Intelligencer, the first newspaper published in the 
+						District of Columbia.
+						<iframe src="assets/NationalIntelligencer.pdf" style="height: 50px; width: 40%;"></iframe>
+						 </p>--></p></div>
+				</div>  
+			</div>	
+		</div>
+		
+		
+		<!--Scripts-->	
+		<script>
+
+
+
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+
+
+//flipping card 
+
+
+document.addEventListener('DOMContentLoaded', function(event) {
+
+  document.getElementById('flip-card-btn-turn-to-back').style.visibility = 'visible';
+  document.getElementById('flip-card-btn-turn-to-front').style.visibility = 'visible';
+
+  document.getElementById('flip-card-btn-turn-to-back').onclick = function() {
+  document.getElementById('flip-card').classList.toggle('do-flip');
+  };
+
+  document.getElementById('flip-card-btn-turn-to-front').onclick = function() {
+  document.getElementById('flip-card').classList.toggle('do-flip');
+  };
+
+});
+
+
+//Modal documentation 
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+$(function(){
+       $("a").each(function(){
+               if ($(this).attr("href") == window.location.pathname){
+                       $(this).addClass("pulsate-fwd");
+               }
+       });
+});
+        $(document).ready(main); //al caricamento del documento esegui main
+        $(document).ready(function(){
+        	$(":checkbox").each(function(){
+        		this.checked = false
+        	})
+        })
+
+
+
+	
+
+</body>
