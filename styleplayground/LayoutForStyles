@@ -1197,9 +1197,4 @@ $(function(){
         		this.checked = false
         	})
         })
-
-
-
-	
-
-</body>
+</script></body></html>
