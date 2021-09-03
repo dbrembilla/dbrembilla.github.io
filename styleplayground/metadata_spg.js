@@ -128,7 +128,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             }
         }
 
-        function filltabs(topic){ //da eliminare
+        function filltabs(topic){ //da eliminare6
             fillInfo("#article-" +columnListener[topic], "#title-" + columnListener[topic], "#auth-" + columnListener[topic],  "#pub-" + columnListener[topic] );                    
             filltab("#file-" + columnListener[topic] + " .person","#person-view-"+columnListener[topic]);
             filltab("#file-" +columnListener[topic] +" .place","#place-view-"+columnListener[topic]);
