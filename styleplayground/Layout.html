@@ -919,13 +919,12 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 						$(classToDelete).remove()
 
 						
-		}} else  {if (this.value == "quote"){
+		}} else  if (this.value == "quote"){
 			if (this.checked){ 
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
 						fillInfo("#article-"+i,"#metadata-list-"+i)
 						
-					}}
-		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
+					}} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
 						var classToDelete = ".article-"+i+"-"+this.value;
 						var whatToDelete = this.value
