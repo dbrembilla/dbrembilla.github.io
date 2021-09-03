@@ -893,17 +893,53 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+$(":checkbox").change(function(){
+	var stringValue = ":checkbox[value='$value']";
+	stringValue = stringValue.sub({ //faccio in modo che anche l'altro checkbox sia checkato
+											value: this.value
+											});
+	console.log('string value: ' + stringValue);
+	$(stringValue).prop("checked", this.checked); //questa funzione dovrebbe checkare ogni checkbox con lo stesso valore
+})
 
 $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è checkato; se sì, esegue la funzione per inserire gli elementi nel viewer
-	if (this.value != "info") {
+	if (this.value == "info") {
 		if (this.checked){ 
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
+						fillInfo("#article-"+i,"#metadata-list-"+i)
+						
+					} 
+		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
+			for (i=1; i <= Object.values(columnListener)[0]; i++){
+						var classToDelete = ".article-"+i+"-"+this.value;
+						var whatToDelete = this.value
+						whatToDelete = whatToDelete.replace(" ", "")
+						console.log("delete:" + whatToDelete);
+						var classToDelete = ".article"+i + whatToDelete
+						$(classToDelete).remove()
 
-						filltab("article-"+i+this.value,"#metadata-list-"+i)
-						var stringValue = ":checkbox[value='$value']"
-						$(stringValue.sub({ //faccio in modo che anche l'altro checkbox sia checkato
-											value: this.value
-												})).each($(this).checked = true)
+						
+		}} else if (this.value == "quote"){
+			if (this.checked){ 
+			for (i=1; i <= Object.values(columnListener)[0]; i++){
+						fillInfo("#article-"+i,"#metadata-list-"+i)
+						
+					} 
+		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
+			for (i=1; i <= Object.values(columnListener)[0]; i++){
+						var classToDelete = ".article-"+i+"-"+this.value;
+						var whatToDelete = this.value
+						whatToDelete = whatToDelete.replace(" ", "")
+						console.log("delete:" + whatToDelete);
+						var classToDelete = ".article"+i + whatToDelete
+						$(classToDelete).remove()
+						
+
+		} else { if (this.checked){ 
+			for (i=1; i <= Object.values(columnListener)[0]; i++){
+
+						filltab("article-"+i+this.value,"#metadata-list-"+i);
+
 					} 
 		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
@@ -913,31 +949,11 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 						console.log("delete:" + whatToDelete);
 						var classToDelete = ".article"+i + whatToDelete
 						$(classToDelete).remove()
-						$(stringValue.sub({
-											value: this.value
-												})).each($(this).checked = false)
-					} 
-		}} else { if (this.checked){ 
-			for (i=1; i <= Object.values(columnListener)[0]; i++){
-						fillInfo("#article-"+i,"#metadata-list-"+i)
-						var stringValue = ":checkbox[value='$value']"
-						$(stringValue.sub({
-											value: this.value
-												})).each($(this).checked = true)
-					} 
-		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
-			for (i=1; i <= Object.values(columnListener)[0]; i++){
-						var classToDelete = ".article-"+i+"-"+this.value;
-						classToDelete = classToDelete.replace(/\s/g, "-");
-						$(stringValue.sub({
-											value: this.value
-												})).each($(this).checked = false)
-
-						$(classToDelete).remove()
+						
 					} 
 
 		}
-}})
+}}
 $(function(){
        $("a").each(function(){
                if ($(this).attr("href") == window.location.pathname){
