@@ -22,8 +22,8 @@ var column = `
             <div class="col$colwidth" id = "col-num$colnum">
                     <div class="card Meta">
                         <div>
-                                <h3>Metaviewer</h3>
-                                <img src="assets/close.png" title="Close" style="height: 1em; width: 1em; cursor: pointer;" onclick="closeArticle('#col-num$colnum');">
+                                <h3 class="cardTitle">Metaviewer</h3>
+                                <img src="assets/close.png" title="Close" style="height: 1em; width: 1em; cursor: pointer;" onclick="closeArticle('#col-num$colnum');" class="closeMeta">
                         </div>            
                         <div class="row list overflow" id="metaview$colnum">
                         <ul id="metadata-list$colnum"></ul></div>                         
@@ -32,6 +32,7 @@ var column = `
                         <h2>Art</h2>
                     </div>
                 </div>`
+
 columnListener = {}
 function columnSetting(topic, ref){
     if (!(topic in columnListener) || columnListener[topic] == "0"){
