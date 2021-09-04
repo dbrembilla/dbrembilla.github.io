@@ -206,7 +206,6 @@ function fillInfo(from, where) { //ritornare a solo 1 where
                 <li class=$from>$pub</li>
                           
                 ` ; //meta con le keyword
-            $(where).empty(); 
             var titlefill = $(from + ' h1').innerText //sceglie elementi h1 nell'elemento indicato
             var authorfill = $(from + ' .auth')[0].innerText //sceglie elemento con byline con autore
             var pubfill = $(from + ' .pub')[0].innerText
@@ -218,10 +217,10 @@ function fillInfo(from, where) { //ritornare a solo 1 where
             $(where).append(pub.sub( {
                 pub: pubfill,
                 from: from}));
-            
+            console.log(titlefill);
              $(where).append(title.sub( {
                 title: titlefill,
                 from: from
-            }))
+            }));
         }
         
