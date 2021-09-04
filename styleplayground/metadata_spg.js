@@ -213,15 +213,15 @@ function fillInfo(from, where) { //ritornare a solo 1 where
 
             $(where).append(auth.sub( {
                 author: authorfill,
-                from: from}));
+                from: from + "-info"}));
             
             $(where).append(pub.sub( {
                 pub: pubfill,
-                from: from}));
+                from: from+ "-info"}));
             console.log(titlefill);
              $(where).append(title.sub( {
                 title: titlefill,
-                from: from
+                from: from+ "-info"
             }));
         }
         
