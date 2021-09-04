@@ -919,7 +919,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 	if (this.value == "info") {
 		if (this.checked){ 
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
-						fillInfo("#article-"+i,"#metadata-list-"+i)
+						fillInfo("article-"+i,"#metadata-list-"+i)
 						
 					} 
 		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
@@ -927,6 +927,8 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 						var classToDelete = ".article-"+i+"-"+this.value;
 						var whatToDelete = this.value
 						whatToDelete = whatToDelete.replace(" ", "")
+						whatToDelete = whatToDelete.replace(".", "")
+
 						console.log("delete:" + whatToDelete);
 						var classToDelete = ".article"+i + whatToDelete
 						$(classToDelete).remove()
@@ -935,7 +937,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 		}}} else if (this.value == "quote"){
 			if (this.checked){ 
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
-						filltab("#article-"+i,"#metadata-list-"+i)
+						filltab("article-"+i,"#metadata-list-"+i)
 						
 					}} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
 			for (i=1; i <= Object.values(columnListener)[0]; i++){
