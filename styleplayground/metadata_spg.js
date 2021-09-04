@@ -207,7 +207,7 @@ function fillInfo(from, where) { //ritornare a solo 1 where
                           
                 ` ; //meta con le keyword
             console.log(from + ' h1');
-            var titlefill = $(from + ' h1').innerText //sceglie elementi h1 nell'elemento indicato
+            var titlefill = $(from + ' h1')[0].innerText //sceglie elementi h1 nell'elemento indicato
             var authorfill = $(from + ' .auth')[0].innerText //sceglie elemento con byline con autore
             var pubfill = $(from + ' .pub')[0].innerText
 
