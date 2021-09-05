@@ -145,7 +145,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
 
         function filltab(what,where) { //questo riempie le tabelle del metadata viewer
             var linkClass = what.replace(/\s/g, "-");
-            linkClass.replaceAll(".", "");
+            linkClass = linkClass.replaceAll(".", "");
             console.log(linkClass);
             var listFirst = `<li class="$classtodelete">$content[$links]</li>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
             var listContent = '<a id="$thisclass" href="$place">$number</a> '; //dal secondo elemento si pone a fianco di quello presente
