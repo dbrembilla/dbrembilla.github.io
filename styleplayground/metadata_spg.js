@@ -139,7 +139,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             linkClass = linkClass.replaceAll(".", "");
             console.log(linkClass);
             var listFirst = `<li class="$classtodelete">$content[$links]</li>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
-            var listContent = '<a class="$thisclass" onclick="highlight"($originalClass) href="$place">$number</a> '; //dal secondo elemento si pone a fianco di quello presente
+            var listContent = `<a class="$thisclass" onclick="highlight('$originalClass')" href="$place">$number</a> `; //dal secondo elemento si pone a fianco di quello presente
             var elements = $("#"+ what); 
             seenClasses = {}; //oggetto che contiene le classi già note
             classNames = {};
@@ -154,7 +154,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                     listContent.sub({
                     place: "#" + elements[i].id, //qui non c'è # perché ha automaticamente id # e quindi veniva ##ref
                     thisclass: referenceClass,
-                    originalClass: "'"+elements[i].className+"'",
+                    originalClass: elements[i].className,
                     number:  len
                 }))
                 }
@@ -163,7 +163,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                     seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
                     place: "#" + elements[i].id,
                     thisclass: referenceClass,
-                    originalClass:  "'"+elements[i].className+"'",
+                    originalClass: elements[i].className,
                     number: 1
                 }) ]
                 }
