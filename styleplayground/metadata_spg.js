@@ -132,16 +132,6 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             }
         }
 
-        function filltabs(topic){ //da eliminare6
-            fillInfo("#article-" +columnListener[topic], "#title-" + columnListener[topic], "#auth-" + columnListener[topic],  "#pub-" + columnListener[topic] );                    
-            filltab("#file-" + columnListener[topic] + " .person","#person-view-"+columnListener[topic]);
-            filltab("#file-" +columnListener[topic] +" .place","#place-view-"+columnListener[topic]);
-            filltab("#file-" +columnListener[topic] +" .institution","#institution-view-"+columnListener[topic]);
-            filltab("#file- "+ columnListener[topic] +" .event","#event-view-" + columnListener[topic]);
-            filltab("#file- " + columnListener[topic] +" .event","#date-view" + columnListener[topic]);
-            basefilltab("#file-"+columnListener[topic] +" .quote","#quotations-" + columnListener[topic]);
-        }
-        
 
 
         function filltab(what,where) { //questo riempie le tabelle del metadata viewer
