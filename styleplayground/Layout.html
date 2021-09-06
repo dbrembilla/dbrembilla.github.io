@@ -911,7 +911,6 @@ $(":checkbox").change(function(){
 	stringValue = stringValue.sub({ //faccio in modo che anche l'altro checkbox sia checkato
 											value: this.value
 											});
-	console.log('string value: ' + stringValue);
 	$(stringValue).prop("checked", this.checked); //questa funzione dovrebbe checkare ogni checkbox con lo stesso valore
 })
 
