@@ -151,7 +151,8 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             var listFirst = `<li class="$classtodelete">$content[$links]</li>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
             var listContent = '<a id="$thisclass" href="$place">$number</a> '; //dal secondo elemento si pone a fianco di quello presente
             var elements = $("#"+ what); 
-            seenClasses = {}; //array che contiene le classi già note
+            seenClasses = {}; //oggetto che contiene le classi già note
+            classNames = {};
             for (var i=0; i<elements.length; i++) {
                 referenceClass = elements[i].getAttribute("class").toString(); //prende le classi dell'elemento e le converte a stringa e poi sostituisce gli spazi con -
                 referenceClass = referenceClass.replace(/\s/g, "-");
@@ -167,6 +168,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 }))
                 }
                 else {
+                    classNames[referenceClass] = $("#" + elements[i].id).text()
                     seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
                     place: "#" + elements[i].id,
                     thisclass: referenceClass,
@@ -178,7 +180,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             } 
             for (const [key, value] of Object.entries(seenClasses)) {
               $(where).append(listFirst.sub({
-                content: key,
+                content: classNames[key],
                 links: value,
                 classtodelete: linkClass
               }));
