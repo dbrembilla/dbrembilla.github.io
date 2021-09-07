@@ -1010,11 +1010,17 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 		for (i=1; i <= Object.values(columnListener)[0]; i++){
 						var whatToDelete = new String
 						if (this.value == 'quote') {
-								whatToDelete = 'list-quote'
+								whatToDelete = '.list-quote'
+								$(whatToDelete).remove()
+								break
 						} else {
 							whatToDelete = this.value
 							whatToDelete = whatToDelete.replace(" ", "")
 						  whatToDelete = whatToDelete.replace(".", "")
+						  var classToDelete = ".article-"+i + "-" + whatToDelete
+							console.log("delete:" + classToDelete);
+
+							$(classToDelete).remove()
 						}
 
 						
