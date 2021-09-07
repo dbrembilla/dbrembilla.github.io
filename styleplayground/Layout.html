@@ -22,10 +22,40 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
     <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-		
+    
 
 <style>
-	
+/*wewe pulseee*/
+.pulse {
+   /* Chrome, Safari, Opera */
+  -webkit-animation: pulse 1s 3s; 
+  
+  /* Internet Explorer */
+  -ms-animation: pulse 1s 3s;
+  
+  /* Standard Syntax */
+  animation: pulse 1.25s 3s; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes pulse{
+   0%{color:rgba(255,0,255);}	
+	110%{color: black;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes pulse{
+  0%{color:rgba(255,255,0);}	
+	110%{color: black;}
+}
+
+/* Standard Syntax */
+@keyframes pulse{
+  0%{color:rgba(0,255,255);}	
+	110%{color: black;}
+}
+
+
 /* Highlight meta*/
 	
 .person.highlight{
