@@ -220,6 +220,7 @@ function fillInfo(from, where) { //ritornare a solo 1 where
 function highlight(originalClass){
             originalClass = "." + originalClass.replace(/\s/g, ".");
             $(originalClass).addClass("highlight");
+            console.log(this.href);
             $(this.href).addClass('pulse');
                
 }
