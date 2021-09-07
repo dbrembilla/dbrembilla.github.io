@@ -182,7 +182,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
         function basefilltab(what,where) { //questo riempie le tabelle del metadata viewer
             var list = `<li class="list-quote"><a href="#$place">$content</a></li>`
             var elements = $(what); 
-            var str = elements[i].innerHTML
+            var str = elements[i].innerText
             str = str.substr(0, 30);
             for (var i=0; i<elements.length; i++) {
                 $(where).append(list.sub({
