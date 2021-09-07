@@ -212,8 +212,13 @@ label { /*diminuisce size di label secondo bootstrap*/
 		}
 	
 		.reset{
+			height: 10%;
 			position:absolute;
 			bottom: 0;
+		}
+	
+		.themes{
+			heigt: 90%;	
 		}
 		/*specifici row articoli*/
 		
@@ -747,30 +752,32 @@ label { /*diminuisce size di label secondo bootstrap*/
 						
 						<!--themes-->
 						<div class="flip-card-front">
-							<ul>
-							<li class="themes">
-								<a class="btn Theme1"  onclick="changeStyle('#1800')">American Post-Indipendence Newspapers</a> 
-							</li>
-							<li class="themes">
-								<a class="btn Theme2" onclick="changeStyle('#future')">The Future</a>
-							</li>
-							
-							<li class="themes">
-								<a class="btn Theme3" onclick="changeStyle('#')">Theme 3</a>
-							</li>
-							
-							<li class="themes">
-								<a class="btn Theme4" onclick="changeStyle('#')">Theme4</a>
-							</li>
-							
-							<li class="themes">
-								<a class="btn Theme5" onclick="changeStyle('#')">Theme 5</a>
-							</li>
-							
-							<li class="themes">
-								<a class="btn Theme6" onclick="changeStyle('#')">Theme6</a>
-							</li>
-							</ul>
+							<div class="themes overflow">
+								<ul>
+									<li >
+										<a class="btn Theme1"  onclick="changeStyle('#1800')">American Post-Indipendence Newspapers</a> 
+									</li>
+									<li >
+										<a class="btn Theme2" onclick="changeStyle('#future')">The Future</a>
+									</li>
+
+									<li>
+										<a class="btn Theme3" onclick="changeStyle('#')">Theme 3</a>
+									</li>
+
+									<li>
+										<a class="btn Theme4" onclick="changeStyle('#')">Theme4</a>
+									</li>
+
+									<li>
+										<a class="btn Theme5" onclick="changeStyle('#')">Theme 5</a>
+									</li>
+
+									<li>
+										<a class="btn Theme6" onclick="changeStyle('#')">Theme6</a>
+									</li>
+								</ul>
+							<div>
 							
 							<div class="reset">
 								<button type="button" class="btn btn-link"  onclick="changeStyle('#none')">Reset</button>
@@ -1022,7 +1029,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 
 							$(classToDelete).remove()}
 					
-	}}}
+	}}})
 	
 $(function(){
        $("a").each(function(){
