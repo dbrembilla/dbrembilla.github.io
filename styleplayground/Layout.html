@@ -992,7 +992,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 			  break
 			case 'quote':
 				for (i=1; i <= Object.values(columnListener)[0]; i++){
-							basefilltab("article-"+i,"#metadata-list-"+i)
+							basefilltab("article-"+i +".quote","#metadata-list-"+i)
 							
 						}
 
@@ -1014,7 +1014,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 						} else {
 							whatToDelete = this.value
 							whatToDelete = whatToDelete.replace(" ", "")
-							whatToDelete = whatToDelete.replace(".", "")
+						  whatToDelete = whatToDelete.replace(".", "")
 						}
 
 						
