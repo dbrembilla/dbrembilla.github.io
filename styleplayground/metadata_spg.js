@@ -138,7 +138,6 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
         function filltab(what,where) { //questo riempie le tabelle del metadata viewer
             var linkClass = what.replace(/\s/g, "-");
             linkClass = linkClass.replaceAll(".", "");
-            console.log(linkClass);
             var listFirst = `<li class="$classtodelete">$content[$links]</li>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
             var listContent = `<a class="$thisclass" onclick="highlight('$originalClass')" href="$place">$number</a> `; //dal secondo elemento si pone a fianco di quello presente
             var elements = $("#"+ what); 
@@ -212,7 +211,6 @@ function fillInfo(from, where) { //ritornare a solo 1 where
             $(where).append(pub.sub( {
                 pub: pubfill,
                 from: from+ "-info"}));
-            console.log(titlefill);
              $(where).append(title.sub( {
                 title: titlefill,
                 from: from+ "-info"
@@ -222,6 +220,7 @@ function fillInfo(from, where) { //ritornare a solo 1 where
 function highlight(originalClass){
             originalClass = "." + originalClass.replace(/\s/g, ".");
             $(originalClass).addClass("highlight");
+            console.log(this.href);
             $(this.href).effect( "pulsate", {times:5}, 3000 );
                
 }
