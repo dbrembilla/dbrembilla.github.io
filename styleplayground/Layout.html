@@ -1008,7 +1008,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 
 	} else {
 		for (i=1; i <= Object.values(columnListener)[0]; i++){
-						var whatToDelete = new String
+						var whatToDelete = new String;
 						if (this.value == 'quote') {
 								whatToDelete = '.list-quote'
 								$(whatToDelete).remove()
@@ -1020,14 +1020,8 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 						  var classToDelete = ".article-"+i + "-" + whatToDelete
 							console.log("delete:" + classToDelete);
 
-							$(classToDelete).remove()
-						}
-
-						
-						var classToDelete = ".article-"+i + "-" + whatToDelete
-						console.log("delete:" + classToDelete);
-
-						$(classToDelete).remove()
+							$(classToDelete).remove()}
+					
 	}}}
 	
 $(function(){
