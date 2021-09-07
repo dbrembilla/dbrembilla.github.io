@@ -982,59 +982,48 @@ $(":checkbox").change(function(){
 })
 
 $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è checkato; se sì, esegue la funzione per inserire gli elementi nel viewer
-	if (this.value == "info") {
-		if (this.checked){ 
-			for (i=1; i <= Object.values(columnListener)[0]; i++){
+	if (this.checked) {
+		switch (this.value) {
+			case 'info':
+				for (i=1; i <= Object.values(columnListener)[0]; i++){
 						fillInfo("article-"+i,"#metadata-list-"+i)
 						
 					} 
-		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
-			for (i=1; i <= Object.values(columnListener)[0]; i++){
-						var whatToDelete = this.value
-						whatToDelete = whatToDelete.replace(" ", "")
-						whatToDelete = whatToDelete.replace(".", "")
-						var classToDelete = ".article-"+i + "-" + whatToDelete
-						console.log("delete:" + classToDelete);
+			  break
+			case 'quote':
+				for (i=1; i <= Object.values(columnListener)[0]; i++){
+							basefilltab("article-"+i,"#metadata-list-"+i)
+							
+						}
 
-						$(classToDelete).remove()
-
-						
-		}}} else if (this.value == "quote"){
-			if (this.checked){ 
-			for (i=1; i <= Object.values(columnListener)[0]; i++){
-						filltab("article-"+i,"#metadata-list-"+i)
-						
-					}} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
-			for (i=1; i <= Object.values(columnListener)[0]; i++){
-						var whatToDelete = this.value
-						whatToDelete = whatToDelete.replace(" ", "")
-						whatToDelete = whatToDelete.replace(".", "")
-						var classToDelete = ".article-"+i + "-" + whatToDelete
-						console.log("delete:" + classToDelete);
-
-						$(classToDelete).remove()
-						
-
-		}}} else { if (this.checked){ 
-			for (i=1; i <= Object.values(columnListener)[0]; i++){
+				break
+			default
+				for (i=1; i <= Object.values(columnListener)[0]; i++){
 
 						filltab("article-"+i+this.value,"#metadata-list-"+i);
 
 					} 
-		} else { //altrimenti, cancella gli elementi inseriti della classe uncheckata
-			for (i=1; i <= Object.values(columnListener)[0]; i++){
-						var whatToDelete = this.value
-						whatToDelete = whatToDelete.replace(" ", "")
-						whatToDelete = whatToDelete.replace(".", "")
+				break
+		}
+
+	} else {
+		for (i=1; i <= Object.values(columnListener)[0]; i++){
+						var whatToDelete = new String
+						if (this.value == 'quote') {
+								whatToDelete = 'list-quote'
+						} else {
+							whatToDelete = this.value
+							whatToDelete = whatToDelete.replace(" ", "")
+							whatToDelete = whatToDelete.replace(".", "")
+						}
+
+						
 						var classToDelete = ".article-"+i + "-" + whatToDelete
 						console.log("delete:" + classToDelete);
 
 						$(classToDelete).remove()
-						
-					} 
-
-		}
-}})
+	}}}
+	
 $(function(){
        $("a").each(function(){
                if ($(this).attr("href") == window.location.pathname){
