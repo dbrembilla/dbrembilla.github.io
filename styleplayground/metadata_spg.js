@@ -139,7 +139,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             var linkClass = what.replace(/\s/g, "-");
             linkClass = linkClass.replaceAll(".", "");
             var listFirst = `<li class="$classtodelete">$content[$links]</li>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
-            var listContent = `<a class="$thisclass" onclick="highlight('$originalClass')" href="$place">$number</a> `; //dal secondo elemento si pone a fianco di quello presente
+            var listContent = `<a class="$thisclass" onclick="highlight('$originalClass', '$place')" href="$place">$number</a> `; //dal secondo elemento si pone a fianco di quello presente
             var elements = $("#"+ what); 
             seenClasses = {}; //oggetto che contiene le classi già note
             classNames = {};
@@ -217,10 +217,9 @@ function fillInfo(from, where) { //ritornare a solo 1 where
             }));
         }
         
-function highlight(originalClass){
+function highlight(originalClass, url){
             originalClass = "." + originalClass.replace(/\s/g, ".");
             $(originalClass).addClass("highlight");
-            console.log(this.href);
-            $(this.href).addClass('pulse');
+            $(url).addClass('pulse');
                
 }
