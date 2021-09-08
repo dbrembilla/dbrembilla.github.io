@@ -7,7 +7,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:trv="https://dbrembilla.github.io/TravelOntology/trv#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://dbrembilla.github.io/TravelOntology/trv#"/>
+    <owl:Ontology rdf:about="https://dbrembilla.github.io/TravelOntology/trv#">
+        <rdfs:comment xml:lang="en">This ontology has the objective of describing historical travels in a deep, all around way. For an in-depth look, please consult https://dbrembilla.github.io/TravelOntology/</rdfs:comment>
+    </owl:Ontology>
     
 
 
@@ -51,6 +53,28 @@
         <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#source"/>
         <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
         <rdfs:comment>Property describing the relation between a source and an event</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#employedInTravel -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#employedInTravel">
+        <owl:inverseOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#isEmployedInTravel"/>
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agentRoleContext"/>
+        <rdfs:comment>Property describing the relationship between an agentRoleContext and an event</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasAgent -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasAgent">
+        <owl:inverseOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#isAgentIn"/>
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agentRoleContext"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agent"/>
+        <rdfs:comment>Class describing the relationship between an agentRoleContext and an agent</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -145,7 +169,22 @@
         <owl:inverseOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#isRoleOf"/>
         <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agent"/>
         <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#role"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasRoleContext"/>
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasAgent"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment>property describing the role of an agent</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#hasRoleContext -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasRoleContext">
+        <owl:inverseOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#isRoleInContext"/>
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agentRoleContext"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#role"/>
+        <rdfs:comment>Property describing the relationship between an agentRoleContext and a role</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -196,7 +235,25 @@
     <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#involves">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#isInvolvedWith"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#employedInTravel"/>
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasAgent"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment>Generic inverse of trv:isInvolvedWith</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#isAgentIn -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isAgentIn">
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agent"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agentRoleContext"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isAgentIn"/>
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#employedInTravel"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>Property describing the relationship of an agent with a trv:agentRoleContext element</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -210,11 +267,25 @@
     
 
 
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#isEmployedInTravel -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isEmployedInTravel">
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agentRoleContext"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <rdfs:comment>Property describing the relationship between an agentRoleContext and an event</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://dbrembilla.github.io/TravelOntology/trv#isInvolvedWith -->
 
     <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isInvolvedWith">
         <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agent"/>
         <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isAgentIn"/>
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#employedInTravel"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment>Generic property describing an involvement of a person with an event</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -230,9 +301,23 @@
     
 
 
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#isRoleInContext -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isRoleInContext">
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#role"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agentRoleContext"/>
+        <rdfs:comment>Property describing the relationship between a role and a agentRoleContext</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://dbrembilla.github.io/TravelOntology/trv#isRoleOf -->
 
     <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isRoleOf">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isAgentIn"/>
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasRoleContext"/>
+        </owl:propertyChainAxiom>
         <rdfs:comment>Property describing the connection from role to agent. Generic inverse of trv:hasRole</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -361,6 +446,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Class defining generic agents.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#agentRoleContext -->
+
+    <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#agentRoleContext">
+        <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#context"/>
+        <rdfs:comment>Class describing a nary relation between an agent and its role in an event</rdfs:comment>
     </owl:Class>
     
 
