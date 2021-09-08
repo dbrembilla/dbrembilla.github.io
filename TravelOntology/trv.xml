@@ -27,8 +27,8 @@
     <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#commissioned">
         <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#isInvolvedWith"/>
         <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agent"/>
-        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#travel"/>
-        <rdfs:comment>Property describing the commission of a travel by a person</rdfs:comment>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <rdfs:comment>Property describing the commission of a travel by an event</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -38,7 +38,7 @@
     <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#contributedToPreparation">
         <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#isInvolvedWith"/>
         <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agent"/>
-        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#preparation"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
         <rdfs:comment>Property describing the involvement of an agent with a preparation</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -133,7 +133,7 @@
     <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasPlace">
         <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#hasContext"/>
         <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#place"/>
-        <rdfs:comment>Property that connecting to a place</rdfs:comment>
+        <rdfs:comment>Property connecting something to a place</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -215,7 +215,6 @@
     <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isInvolvedWith">
         <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agent"/>
         <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
-        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#preparation"/>
         <rdfs:comment>Generic property describing an involvement of a person with an event</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -288,7 +287,7 @@
 
     <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#travelsIn">
         <rdfs:subPropertyOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#isInvolvedWith"/>
-        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#traveller"/>
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agent"/>
         <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#travel"/>
         <rdfs:comment>Property describing in which travel a traveller partecipates</rdfs:comment>
     </owl:ObjectProperty>
@@ -467,7 +466,7 @@
                 <owl:someValuesFrom rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#timespan"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Class defining the historical context in which a travel happened</rdfs:comment>
+        <rdfs:comment>Class defining the historical context in which an event happened</rdfs:comment>
     </owl:Class>
     
 
@@ -598,7 +597,13 @@
 
     <owl:Class rdf:about="https://dbrembilla.github.io/TravelOntology/trv#source">
         <rdfs:subClassOf rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#context"/>
-        <rdfs:comment>Class describing the source of description of a travel</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#describes"/>
+                <owl:someValuesFrom rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Class describing the source of description of an event</rdfs:comment>
     </owl:Class>
     
 
