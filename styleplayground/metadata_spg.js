@@ -225,3 +225,7 @@ function highlight(originalClass, url){
             $(url).addClass('pulse');
                
 }
+function removeHighlight() {
+    $('.highlight').removeClass('highlight')
+    $('.pulse').removeClass('pulse')
+}
