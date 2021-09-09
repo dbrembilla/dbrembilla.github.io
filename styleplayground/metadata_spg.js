@@ -180,8 +180,8 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             //content: elements[i].innerHTML
         }
         function basefilltab(what,where) { //questo riempie le tabelle del metadata viewer
-            var list = `<li class="list-quote"><a href="#$place">$content</a></li>`;
-            
+            var list = `<li class="list-quote"><a href="#$place" onclick = "highlight('quote','#$place')">$content</a></li>`;
+
             var elements = $('#' +what); 
         
             for (var i=0; i<elements.length; i++) {
