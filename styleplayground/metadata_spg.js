@@ -176,7 +176,6 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 content: classNames[key],
                 links: value,
                 classtodelete: linkClass,
-                originalClass: elements[i].getAttribute("class").toString()
               }));
             }
             //content: elements[i].innerHTML
@@ -224,12 +223,17 @@ function fillInfo(from, where) { //ritornare a solo 1 where
         }
         
 function highlight(originalClass, url){
+
             originalClass = "." + originalClass.replace(/\s/g, ".");
-            $(originalClass).addClass("highlight");
-            $(url).addClass('pulse');
-               
+            if ($(originalClass).className.includes('highlight')) {
+                $(originalClass + '.highlight').removeClass('highlight');
+                $('.pulse').removeClass('pulse');
+            } else {
+                        $(originalClass).addClass("highlight");
+                        $(url).addClass('pulse');
+                           }
 }
 function removeHighlight() {
-    $(this.value + '.highlight').removeClass('highlight')
-    $('.pulse').removeClass('pulse')
+    $(this.value + '.highlight').removeClass('highlight');
+    $('.pulse').removeClass('pulse');
 }
