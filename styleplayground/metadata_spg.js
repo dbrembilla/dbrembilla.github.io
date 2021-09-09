@@ -225,7 +225,7 @@ function fillInfo(from, where) { //ritornare a solo 1 where
 function highlight(originalClass, url){
 
             originalClass = "." + originalClass.replace(/\s/g, ".");
-            if ($(originalClass).className.includes('highlight')) {
+            if ($(originalClass).attr('class').includes('highlight')) {
                 $(originalClass + '.highlight').removeClass('highlight');
                 $('.pulse').removeClass('pulse');
             } else {
