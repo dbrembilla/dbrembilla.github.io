@@ -1025,7 +1025,6 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 							whatToDelete = whatToDelete.replace(" ", "")
 						  whatToDelete = whatToDelete.replace(".", "")
 						  var classToDelete = ".article-"+i + "-" + whatToDelete
-							console.log("delete:" + classToDelete);
 
 							$(classToDelete).remove()}
 					
@@ -1115,6 +1114,7 @@ function closeArticle(id){
 }
 function resetArticles(){
 	$("#row-article").empty();
+	$("header").remove();
     thisKey = Object.keys(columnListener)[0]
     columnListener[thisKey] = "0"
     $("#row-article").append(`
