@@ -14,7 +14,6 @@ function topicManager(topic, ref){
 
 }
 function addTopic(topic){
-    $("section").attr("class", 'col-10')
     $("header").replaceWith("<header>" + $("#" + topic + "-title").text() + "</header>");}
 
 
