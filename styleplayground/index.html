@@ -1006,7 +1006,7 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 				break
 			default:
 				for (i=1; i <= Object.values(columnListener)[0]; i++){
-						console.log(this.value);
+						console.log(this.value.includes('person'));
 						if (this.value.includes('person')) {
 								$("#metadata-list"+i).append('<h4 class="article-' + i + '-person">People</h4>')
 						} else if (this.value.includes('institution')) {
