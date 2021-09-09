@@ -154,7 +154,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                     listContent.sub({
                     place: "#" + elements[i].id, //qui non c'è # perché ha automaticamente id # e quindi veniva ##ref
                     thisclass: referenceClass,
-                    originalClass: elements[i].className,
+                    originalClass: elements[i].getAttribute("class").toString(),
                     number:  len
                 }))
                 }
@@ -163,7 +163,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                     seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
                     place: "#" + elements[i].id,
                     thisclass: referenceClass,
-                    originalClass: elements[i].className,
+                    originalClass: elements[i].getAttribute("class").toString(),
                     number: 1
                 }) ]
                 }
@@ -175,7 +175,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 content: classNames[key],
                 links: value,
                 classtodelete: linkClass,
-                originalClass: elements[i].className
+                originalClass: elements[i].getAttribute("class").toString()
               }));
             }
             //content: elements[i].innerHTML
