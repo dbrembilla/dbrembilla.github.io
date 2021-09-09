@@ -226,7 +226,7 @@ activeUrls = {}
 function highlight(originalClass, url){
 
             originalClass = "." + originalClass.replace(/\s/g, ".");
-            if ($(originalClass).attr('class').includes('highlight') && url in activeUrls[originalClass]) {
+            if ($(originalClass).attr('class').includes('highlight') && url == activeUrls[originalClass]) {
                 $(originalClass + '.highlight').removeClass('highlight');
                 $('.pulse').removeClass('pulse');
             } else {
