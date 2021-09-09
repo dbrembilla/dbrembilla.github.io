@@ -1006,17 +1006,16 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 				break
 			default:
 				for (i=1; i <= Object.values(columnListener)[0]; i++){
-						console.log(this.value.includes('person'));
 						if (this.value.includes('person')) {
-								$("#metadata-list"+i).append('<h4 class="article-' + i + '-person">People</h4>')
+								$("#metadata-list-"+i).append('<h4 class="article-' + i + '-person">People</h4>')
 						} else if (this.value.includes('institution')) {
-								$("#metadata-list"+i).append('<h4 class="article-' + i + '-institution">Institutions</h4>')
+								$("#metadata-list-"+i).append('<h4 class="article-' + i + '-institution">Institutions</h4>')
 						} else if (this.value.includes('event')) {
-								$("#metadata-list"+i).append('<h4 class="article-' + i + '-event">Events</h4>')
+								$("#metadata-list-"+i).append('<h4 class="article-' + i + '-event">Events</h4>')
 						} else if (this.value.includes('date')) {
-								$("#metadata-list"+i).append('<h4 class="article-' + i + '-date">Dates</h4>')
+								$("#metadata-list-"+i).append('<h4 class="article-' + i + '-date">Dates</h4>')
 						} else if (this.value.includes('place')) {
-								$("#metadata-list"+i).append('<h4 class="article-' + i + '-place">Places</h4>')
+								$("#metadata-list-"+i).append('<h4 class="article-' + i + '-place">Places</h4>')
 						}
 						filltab("article-"+i+this.value,"#metadata-list-"+i);
 
