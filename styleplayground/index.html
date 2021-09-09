@@ -997,14 +997,14 @@ $(":checkbox").change(function(){ //quando un checkbox cambia, controlla se è c
 		switch (this.value) {
 			case 'info':
 				for (i=1; i <= Object.values(columnListener)[0]; i++){
-						$("#metadata-list"+i).append('<h4 class="' + 'article-' +i + 'info">Article Info</h4>')
+						$("#metadata-list-"+i).append('<h4 class="' + 'article-' +i + 'info">Article Info</h4>')
 						fillInfo("article-"+i,"#metadata-list-"+i)
 						
 					} 
 			  break
 			case 'quote':
 				for (i=1; i <= Object.values(columnListener)[0]; i++){
-						$("#metadata-list"+i).append('<h4 class="list-quote">Quotes</h4>')
+						$("#metadata-list-"+i).append('<h4 class="list-quote">Quotes</h4>')
 						basefilltab("article-"+i +" .quote","#metadata-list-"+i)
 							
 						}
@@ -1097,10 +1097,10 @@ function closeArticle(id){
 
         break
         default:
-        $("#row-article").empty();
+        $("section").empty();
         thisKey = Object.keys(columnListener)[0]
         columnListener[thisKey] = "0"
-        $("#row-article").append(`
+        $("section").append(`
                 <section class="col">        
             
                     <header>
@@ -1129,11 +1129,11 @@ function closeArticle(id){
     }
 }
 function resetArticles(){
-	$("#row-article").empty();
+	$("section").empty();
 	$("header").remove();
     thisKey = Object.keys(columnListener)[0]
     columnListener[thisKey] = "0"
-    $("#row-article").append(`
+    $("section").append(`
                 <section class="col">        
             
                     <header>
