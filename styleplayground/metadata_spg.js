@@ -181,8 +181,8 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
         }
         function basefilltab(what,where) { //questo riempie le tabelle del metadata viewer
             var list = `<li class="list-quote"><a href="#$place">$content</a></li>`;
-            console.log(what);
-            var elements = $(what); 
+            
+            var elements = $('#' +what); 
         
             for (var i=0; i<elements.length; i++) {
                 var str = elements[i].innerText;
