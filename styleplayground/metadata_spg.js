@@ -140,6 +140,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             linkClass = linkClass.replaceAll(".", "");
             var listFirst = `<li class="$classtodelete">$content[$links]</li> <img src="assets/close.png" value = "$originalClass" title="Close" style="height: 1em; width: 1em; cursor: pointer;" onclick="removeHighlight();" class="closeMeta">`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
             var listContent = `<a class="$thisclass" onclick="highlight('$originalClass', '$place')" href="$place">$number</a> `; //dal secondo elemento si pone a fianco di quello presente
+            console.log(what);
             var elements = $("#"+ what); 
             seenClasses = {}; //oggetto che contiene le classi già note
             classNames = {};
