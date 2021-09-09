@@ -222,15 +222,16 @@ function fillInfo(from, where) { //ritornare a solo 1 where
                 from: from+ "-info"
             }));
         }
-        
+activeUrls = {}
 function highlight(originalClass, url){
 
             originalClass = "." + originalClass.replace(/\s/g, ".");
-            if ($(originalClass).attr('class').includes('highlight')) {
+            if ($(originalClass).attr('class').includes('highlight') && url in activeUrls[originalClass]) {
                 $(originalClass + '.highlight').removeClass('highlight');
                 $('.pulse').removeClass('pulse');
             } else {
                         $(originalClass).addClass("highlight");
                         $(url).addClass('pulse');
+                        activeUrls[originalClass] = url
                            }
 }
