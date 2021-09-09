@@ -97,12 +97,3 @@ img {
   margin-right: auto;
   max-width: 75%;
 }
-.person {
-	cursor: url("personicon.cur"), 4, 12, auto ;
-}
-.event {
-	cursor: url("eventicon.cur"), 4, 12, auto;
-}
-.institution {
-	cursor: url("companyicon.cur"), 4, 12, auto;
-}
