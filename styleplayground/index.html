@@ -22,35 +22,76 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
     
-
+	
 <style>
-/*wewe pulseee*/
+/* NUOVO ORDINATO*/
+
+
+	
+/*Import*/
+
+/*Fonts dei temi in aside*/
+	
+		/*Print 1800 DAVIDE*/
+@font-face {
+	font-family: JDCarnivalBlack;
+  src: url("assets/1800/jd-carnival-black/jd_carnival_black.ttf");
+}
+	/*Futuro DAVIDE*/
+@font-face {
+	font-family: Metropolis;
+	src: url("assets/future/metropolis/Metropolis-Bold.otf");
+	font-weight: bold ;
+}
+
+
+
+
+
+
+
+
+
+/*funzionalità sito*/
+
+	/*scroll-bar*/
+.overflow{/*classe creata per fare lo scroll degli aticoli, ecc.*/
+	overflow-y:scroll;
+	overflow-x:hidden;
+	-ms-overflow-style: none;  /* hides woring scrollbar on IE and Edge */
+  	scrollbar-width: none;  /*hides working scrollbar on Firefox */
+}
+.overflow::-webkit-scrollbar {
+    	display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+
+/*Highlight e pulsazioni*/
+
 .pulse {
    /* Chrome, Safari, Opera */
-  -webkit-animation: pulse 1s; 
-  
+  -webkit-animation: pulse 1s;   
   /* Internet Explorer */
   -ms-animation: pulse 1s ;
-  
   /* Standard Syntax */
   animation: pulse 1.25s; 
 }
 
-/* Chrome, Safari, Opera */
+	/* Chrome, Safari, Opera */
 @-webkit-keyframes pulse{
    0%{color:rgba(255,0,255);}	
 	110%{color: black;}
 }
 
-/* Internet Explorer */
+	/* Internet Explorer */
 @-ms-keyframes pulse{
   0%{color:rgba(255,255,0);}	
 	110%{color: black;}
 }
 
-/* Standard Syntax */
+	/* Standard Syntax */
 @keyframes pulse{
-  0%{color:rgba(0,255,255);}	
+	0%{color:rgba(0,255,255);}	
 	110%{color: black;}
 }
 
@@ -58,235 +99,99 @@
 /* Highlight meta*/
 	
 .person.highlight{
-background-color: red;
-	}
+	background-color: red;
+}
 	
 .place.highlight{
-background-color: green;
-	}
+	background-color: green;
+}
 	
 .event.highlight{
-background-color: blue;
-	}
+	background-color: blue;
+}
 	
 .institution.highlight{
-background-color: purple;
-	}
+	background-color: purple;
+}
 		
 .quote.highlight{
-background-color: yellow;
-	}
+	background-color: yellow;
+}
 	
 .date.highlight{
-background-color: orange;
-	}
-	
-/*Import*/
-
-@font-face {
-	font-family: JDCarnivalBlack;
-  src: url("assets/1800/jd-carnival-black/jd_carnival_black.ttf");
+	background-color: orange;
 }
 
-	@font-face {
-	font-family: Metropolis;
-	src: url("assets/future/metropolis/Metropolis-Bold.otf");
-	font-weight: bold ;
-}
-	
-/*Generale*/
 
-body {
-   	height: 100vh;
-   	width: 100vw;
-   	font-size: 20px;
+
+
+
+
+
+/*schermo laptop grande*/
+
+@media (max-width: 1440px) {
+	
+	body {
+   		height: 100vh;
+   		width: 100vw;
+   		font-size: 20px;
 	}
-footer{
-	height: 5%;
-	padding-top: 1%;
-	text-align: center;
-	}
-	
-		
-header{
-	text-align: center;
-	height: 10%;
-	font-size: 2.8em;
-	}
-	
-.container-fluid{
-	height: 100%;
-	padding-left: 20px;
-	}
-	
-a{
-	text-decoration: none;
-	color: black;
-	}
-
-.form-check-inline { /*allinea checkbox e label*/
-    	display: flex;
-	}
-
-label { /*diminuisce size di label secondo bootstrap*/
-	display: inline-block;
-	font-size: .75em;
-	}
-
-.overflow{/*classe creata per fare lo scroll degli aticoli, ecc.*/
-	overflow-y:scroll;
-	overflow-x:hidden;
-	-ms-overflow-style: none;  /* hides woring scrollbar on IE and Edge */
-  	scrollbar-width: none;  /*hides working scrollbar on Firefox */
-		}
-.overflow::-webkit-scrollbar {
-    	display: none; /* Hide scrollbar for Chrome, Safari and Opera */
-}
-
-	
-	/*navbar*/
-	.cover{
-		font-size: 1.25em;	
-		}
-		
-	nav{
-		height: 5%;
-		padding-bottom: 0px!important;
-		padding-top: 0px!important;
-		}
-		
-			
-	.bg-light{ /*fa la navbar bella trasparente*/
-		background-color: unset!important;
-		}
-	
-	
-	/*corpo centrale*/
-	
-	h3.cardTitle{
-	display: inline-flex;
-	}
-	
-	img.closeMeta{
-	display: inline-flex;
-    	float: right;
-	}
-	
-	#metaview-1, #metaview-2, #metaview-3{
-		padding-left:5%;
-		}
-		
-	
-	#main-row{
-		height: 89%;
-		width: 100%;
-		padding-left: 20px;
-		}
-	
-	
-	#aside, section{
-		height: 100%
-		}
-	
-		/*specifici per Aside*/
-		li.form-check{
-			padding-left:0px!important;
-			}	
-	
-		#aside{
-			padding-top: 9px;
-			}
-		
-		
-		a.btn{
-			text-align: left!important;
-		}
-		
-		a.Theme1{
-			font-family: 'JDCarnivalBlack';
-		}
-
-		a.Theme2{
-			font-family: Metropolis;
-			font-style: italic;
-		}
-	
-		.reset{
-			height: 10%;
-			position:absolute;
-			bottom: 0;
-		}
-	
-		.themes{
-			height: 90%;	
-		}
-	
-		.dropdown-menu>li:not(:last-child){
-    			margin-bottom: 10%;
-		}
-		.dropdown-menu{
-			padding-left:0.5em;
-			padding-right:0.5em;
-		}
-
-	
-		/*specifici row articoli*/
-		
-		#row-article{
-			height: 90%;
-			padding-top:1em;
-			}
-		.introduction, .sugg_col{
-			height:100%;
-			}
-
-		#sugg{ /*colonna suggested readings in home*/
-			height:100%;
-			padding: .25em .5em;
-			}
-
-		#desc{/*colonna description in home*/
-			height:100%;
-			padding: .25em .5em;
-			}
-
-		#col-num-1, #col-num-2, #col-num-3{
-			height:100%;
-			}
-
-		div.card.Meta{
-			height: 30%;		
-			}
-
-		#article-1, #article-2, #article-3{
-			height: 70%;
-			}
-
-		#title-1, #title-2, #title-3{
-			margin-bottom: 0px;
-			font-size: 2.5ex;
-			  padding-top: 1ex;
-			} 
-		
-		.card.Meta>ul, .themes>ul{
-			list-style-type: none;
-			}
-		.themes>ul{
-				padding-left:0px;
-				}
-	
-	
-/*max size schermo tablet portrait (toglie aside e suggested readings, trasforma 
-	le colonne in tre blocchi uno sopra l'altro ed attiva il munù a tendina che sostituisce l'aside)*/
-@media (max-width: 970px) { 
 	
 	#topic1-title, #topic2-title, #topic3-title{
-		font-size: medium!important;
+		font-size: medium;
 	}
-		
+}
+
+/*schermo laptop*/
+
+@media (max-width: 1024px) {
+	
+	body {
+   		height: 100vh;
+   		width: 100vw;
+   		font-size: 20px;
+	}
+	
+}
+
+/*schermo tablet*/
+
+@media (max-width: 768px) {
+	
+	body {
+   		height: 100vh;
+   		width: 100vw;
+   		font-size: 20px;
+	}
+	
+	header{
+		height: 15%;
+	}
+	
+	#main-row{
+	    height: 85%;
+	
+	}	
+
+	#row-article{
+		height:85%;
+	}
+	
+	footer{
+		height: 5%;
+
+	}
+	
+	li.form-check{
+		padding-left:0px!important;
+	}	
+	
+			
 	.dropdown {
   		display: inline-block!important;
 	}
+	
 	
 	#aside{
 		display:none!important;
@@ -300,16 +205,25 @@ label { /*diminuisce size di label secondo bootstrap*/
 		display:none!important;
 	}
 	
-	section{
+	.card.overflow{
+		margin:0px;
+	}
+	
+		section{
 		width:100%!important;
 	}
 	
 	#col-num-1, #col-num-2, #col-num-3 {
-   		width: 100%;
+   		padding:1%;
 	}
 	
+	.col-10 {
+    	width: 100%;	/*colonna che contiene tutti e tre gli articoli*/
+    	height: 100%;
+	}
+	
+	
 	.col-6 {
-    		flex: 0 0 auto;
     		width: 100%;
     		height: 50%!important;
 	}
@@ -324,23 +238,14 @@ label { /*diminuisce size di label secondo bootstrap*/
     		width: 70%;
     		float: right;
 	}
-	div.card.Meta{
-    		height: 100%!important;
-    		width: 30%;
-		float: left;
-	}
-	
+
 	#metadata-list-1, #metadata-list-2, #metadata-list-3{
 		margin-left:1em;
 		}
 	
 	}
-
-
-
-	/* Regole dropdown (attenzione che stanno fuori dal selector @840px, ma sono vitali per quello*/
-
-	.dropdown {
+	
+		.dropdown {
 		display: none;
 		}
 
@@ -369,34 +274,222 @@ label { /*diminuisce size di label secondo bootstrap*/
 	.dropdown:hover .dropdown-content {
 		display: block;
 		}
-	.dropend .dropdown-toggle::after {
-    	display: none!important;
-	}
-/*responsiveness testi*/
-@media (max-width: 991.98px) {
-	#topic1-title, #topic2-title, #topic3-title{
-		font-size: x-small;
-	}
-	
-	}
-	
-@media (min-width: 991.98px) and (max-width: 1199.98px) { 
-	#topic1-title, #topic2-title, #topic3-title{
-		font-size: small;
-	}
-	
-	}
-
-@media (min-width:  1199.98px) { 
-	#topic1-title, #topic2-title, #topic3-title{
-		font-size: medium;
-	}
-	
-	}
-	
 
 	
+}
+
+/*schermo mobile grande*/
+
+@media (max-width: 425px) {
 	
+	body {
+   		height: 100vh;
+   		width: 100vw;
+   		font-size: 20px;
+	}
+}
+
+/*schermo mobile medio*/
+
+@media (max-width: 375px) {
+	
+	#body {
+   		height: 100vh;
+   		width: 100vw;
+   		font-size: 20px;
+	}
+}
+
+/*schermo mobile mini*/
+
+@media (max-width: 320px) {
+	
+	body {
+   		height: 100vh;
+   		width: 100vw;
+   		font-size: 20px;
+	}
+}
+
+
+
+/*validi per tutti gli schermi*/
+
+body{
+	
+	
+}
+
+navbar, footer {
+	background-color: #293241;
+	padding: 0 20px;
+	height:10%; /*solo la nav per ora*/
+}
+
+#main-row{
+	margin:0px;
+	height:80%;
+    padding: 20px;
+	margin: 0;
+}
+
+footer {
+	text-align: center; 
+    height: 6%;
+    padding-top: 1%;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+header{
+	text-align: center;
+	font-size: 2.8em;
+}
+
+
+	/*aside semplice, più in basso ci sono le flipcards*/
+	
+#aside, section{
+	height: 100%;
+	width: 20%;
+}
+	
+
+.reset{
+	height: 10%;
+	position:absolute;
+	bottom: 0;
+}
+
+#topics{
+	height: 20%;
+	border: 0!important;
+    border-radius: 0;
+	background-color: transparent!important;
+}
+
+.dropdown-menu.topic>li:not(:last-child){
+    margin-bottom: 10%;		/*sistemano il dropdown dell'aside*/
+}
+
+.dropdown-menu.topic{
+	padding-left:0.5em;
+	padding-right:0.5em;
+}
+
+
+/*corpo articoli cards*/
+
+section{
+	height: 100%;
+	width:80%;
+}
+
+	/*metadati*/
+	
+div.card.Meta{
+    height: 30%;
+	margin-bottom: 2%;
+	    padding: 0.25rem 1rem;
+}
+
+h3.cardTitle{
+	display: inline-flex; /*questo e quello sotto allineano "metadataview" e il bottone che chiude gli articoli*/ 
+	}
+	
+img.closeMeta{
+	display: inline-flex;
+    	float: right;
+	}
+		
+		
+		
+	/*articoli*/	
+		
+#row-article{
+	height: 90%;
+	padding-top:1em;
+}
+
+#article-1, #article-2, #article-3{
+	height: 70%;
+	margin-top:1%;
+}
+
+#col-num-1, #col-num-2, #col-num-3{
+	height:100%;
+}
+
+
+
+	/*home*/
+
+.introduction, #descripton, .sugg_col, #sugg{
+	height:100%;
+}
+			
+#descripton, #sugg{
+	padding: .25em .5em;
+} 
+
+
+/*anchors*/
+	
+a{
+	text-decoration: none; /*regola generale, l'underline andrà a slidare in btn:hoover{}*/
+}
+
+a.cover, navbar-brand{	
+	color: white!important; /*va a modificare le classi bootstrap dei bottoni in navbar, ha important per non rischiare*/
+}	
+
+a.btn{ 
+	text-align: left!important; /*anchor dei temi*/
+	color: white;
+}
+		
+a.Theme1{
+	font-family: 'JDCarnivalBlack';
+}
+
+a.Theme2{
+	font-family: Metropolis;
+	font-style: italic;
+}
+
+.topicBtn{
+	text-align: center; /*bottone dei topics*/
+	color: #98c1d9!important;
+}
+
+.restBtn{
+	color: #e6e6e6;
+}
+
+	
+a.disappear{
+		font-size: 1.25em;	
+		}
+
+
+/*liste*/
+
+
+.card.Meta>ul, .themes>ul{
+	list-style-type: none;
+}
+
+.themes>ul{
+	padding-left:0px;
+}
+
+
+
+
+
+
+
 /*IMPORTANTE PER LA FLIP CARD DELL'ASIDE E I MODALS, NON VANNO TOCCATI PER ORA*/	
 	
 	/*Style flip card*/
@@ -468,18 +561,23 @@ label { /*diminuisce size di label secondo bootstrap*/
   		padding-top: 3em;
 		}
 	
-	#flip-card .flip-card-front {
-		border:1px solid rgba(0,0,0,.125);
+	#flip-card .flip-card-front{
+		background-color: rgba(238, 108, 77, 0.5);
 		border-radius: .25rem;
-		}
+
+	}
+
 	
 	#flip-card .flip-card-back {
-	    	border:1px solid rgba(0,0,0,.125);
-    		border-radius: .25rem;
-    		-o-transform: rotateY(180deg);
-    		-webkit-transform: rotateY(180deg);
-    		-ms-transform: rotateY(180deg);
-    		transform: rotateY(180deg);
+	border:	
+		padding-left:1em;
+		background-color: white;
+		1px solid rgba(0,0,0,.125);
+    	border-radius: .25rem;
+    	-o-transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
+    	-ms-transform: rotateY(180deg);
+    	transform: rotateY(180deg);
     		
 		}
 	
@@ -494,10 +592,7 @@ label { /*diminuisce size di label secondo bootstrap*/
 		.icon{
 		height: 15%;
 		}
-	.flip-card-back{
-		padding-left:1em;
-		background-color: white;
-	}
+
 
 	#themes{
 		height: 80%;
@@ -507,10 +602,7 @@ label { /*diminuisce size di label secondo bootstrap*/
 		height: 80%;
 		}
 	
-	#topics{
-	height: 20%;
-	}
-	
+
 	.btn-group.dropend{
 	height: -webkit-fill-available;
 	}
@@ -562,6 +654,7 @@ label { /*diminuisce size di label secondo bootstrap*/
   		text-decoration: none;
   		cursor: pointer;
 		}
+
 
 </style>
 
