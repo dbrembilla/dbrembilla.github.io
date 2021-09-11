@@ -21,13 +21,13 @@ function addTopic(topic){
 var column = `
             <div class="col$colwidth" id = "col-num$colnum">
                     <div class="card Meta">
-                        <div>
+                        <span>
                                 <h3 class="cardTitle">Metaviewer</h3>
                                 <img src="assets/close.png" title="Close" style="height: 1em; width: 1em; cursor: pointer;" onclick="closeArticle('#col-num$colnum');" class="closeMeta">
                         </div>            
                         <div class="row list overflow" id="metaview$colnum">
                         <ul id="metadata-list$colnum"></ul></div>                         
-                    </div> 
+                    </span> 
                     <div class="card overflow" id="article$colnum">
                         <h2>Art</h2>
                     </div>
