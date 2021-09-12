@@ -28,6 +28,27 @@
 
 /*prova glitch*/
 	
+@import "bourbon";
+@import "neat";
+
+$base-duration: 200ms;
+
+// Colors
+$color-1: #E91E63;
+$color-2: #03A9F4;
+$color-3: #2ecc71;
+$black: #000;
+
+// Breakpoints
+$sm: new-breakpoint(min-width 320px);
+$med: new-breakpoint(min-width 768px);
+$lg: new-breakpoint(min-width 1024px);
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	outline: none;
+}
+	
 .glitch {
 	font-size: 1em;
 	
