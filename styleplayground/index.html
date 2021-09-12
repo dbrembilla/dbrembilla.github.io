@@ -62,6 +62,61 @@
   background: black;
 }
 	
+.glitch::before {
+  clip: rect(44px, 450px, 56px, 0);
+  /*
+    Essentially a box from 0, 44px
+    to 450px, 56px
+  */
+
+  /* clip-path: inset(); needs how far you want to push in from the edges instead */
+}
+	
+@keyframes noise-anim {
+  0% {
+    clip-path: inset(40% 0 61% 0);
+  }
+  20% {
+    clip-path: inset(92% 0 1% 0);
+  }
+  40% {
+    clip-path: inset(43% 0 1% 0);
+  }
+  60% {
+    clip-path: inset(25% 0 58% 0);
+  }
+  80% {
+    clip-path: inset(54% 0 7% 0);
+  }
+  100% {
+    clip-path: inset(58% 0 43% 0);
+  }
+}
+	
+@keyframes noise-anim {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}% 0 #{$bottom}% 0);
+    }
+  }
+}
+
+.glitch::before {
+  ...
+
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  ...
+
+  animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+
+	
 /*Import*/
 
 /*Fonts dei temi in aside*/
