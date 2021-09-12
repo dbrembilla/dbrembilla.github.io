@@ -54,22 +54,22 @@ div.glitch {
 	
 	
 		
-	&:hover {
-		&:before, &:after{
+	div.glitch:hover {
+		div.glitch:before, &:after{
 			position: absolute;
 			content: 'VICELAND';
 			transform: translate(-50%,-50%);
 			z-index: -1;
 		}
 
-		&:before {
+		div.glitch:before {
 			top: 49.5%;
 			left: 49.5%;
 			color: rgba($color-1,0.8);
 			animation: distort1 $base-duration linear infinite;
 		}
 
-		&:after {
+		div,glitch:after {
 			top: 50.5%;
 			left: 50.5%;
 			color: rgba($color-2,0.8);
