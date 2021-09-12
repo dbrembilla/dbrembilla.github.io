@@ -26,7 +26,60 @@
 <style>
 /* NUOVO ORDINATO*/
 
+/*prova glitch*/
+	
+div {
+	font-size: 108px;
+	
+	
+		
+	&:hover {
+		&:before, &:after{
+			position: absolute;
+			content: 'VICELAND';
+			transform: translate(-50%,-50%);
+			z-index: -1;
+		}
 
+		&:before {
+			top: 49.5%;
+			left: 49.5%;
+			color: rgba($color-1,0.8);
+			animation: distort1 $base-duration linear infinite;
+		}
+
+		&:after {
+			top: 50.5%;
+			left: 50.5%;
+			color: rgba($color-2,0.8);
+			animation: distort2 $base-duration linear infinite;
+		}
+	}
+	
+	@keyframes distort1 {
+		0%    { top: 49.5%; left: 49.5%; }
+		12.5% { top: 49.5%; left: 50%; }
+		25%   { top: 49.5%; left: 50.5%; }
+		37.5% { top: 50%; left: 50.5%; }
+		50%   { top: 50.5%; left: 50.5%; }
+		62.5% { top: 50.5%; left: 50%; }
+		75%   { top: 50.5%; left: 49.5%; }
+		87.5% { top: 50%; left: 49.5%; }
+		100%  { top: 49.5%; left: 49.5%; }
+	}
+	
+	@keyframes distort2 {
+		0%    { top: 50.5%; left: 50.5%; }
+		12.5% { top: 50%; left: 50.5%; }
+		25%   { top: 49.5%; left: 50.5%; }
+		37.5% { top: 49.5%; left: 50%; }
+		50%   { top: 49.5%; left: 49.5%; }
+		62.5% { top: 50%; left: 49.5%; }
+		75%   { top: 50.5%; left: 49.5%; }
+		87.5% { top: 50.5%; left: 50%; }
+		100%  { top: 50.5%; left: 50.5%; }
+	}
+}
 	
 /*Import*/
 
@@ -839,7 +892,7 @@ a.disappear{
 					</div>
 				</span>
     			<span>
-				<button>Download our Archive</button>
+				<button class="glitch">Download our Archive</button>
 			</span>	
   		</div>
 	</nav>
