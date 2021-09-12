@@ -28,78 +28,38 @@
 
 /*prova glitch*/
 	
-@import "bourbon";
-@import "neat";
-
-$base-duration: 200ms;
-
-// Colors
-$color-1: #E91E63;
-$color-2: #03A9F4;
-$color-3: #2ecc71;
-$black: #000;
-
-// Breakpoints
-$sm: new-breakpoint(min-width 320px);
-$med: new-breakpoint(min-width 768px);
-$lg: new-breakpoint(min-width 1024px);
-
-*, *:before, *:after {
-	box-sizing: border-box;
-	outline: none;
+.glitch {
+  position: relative;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 	
-div.glitch {
-	font-size: 1em;
-	
-	
-		
-	div.glitch:hover {
-		div.glitch:before, &:after{
-			position: absolute;
-			content: 'VICELAND';
-			transform: translate(-50%,-50%);
-			z-index: -1;
-		}
+.glitch::before {
+  /* ... anything needed to make it identical */
 
-		div.glitch:before {
-			top: 49.5%;
-			left: 49.5%;
-			color: rgba($color-1,0.8);
-			animation: distort1 $base-duration linear infinite;
-		}
+  /* variation */
+  left: 2px;
+  text-shadow: -1px 0 red;
+  
+  /* important: opaque background masks the original */
+  background: black;
+}
+.glitch::after {
+  /* ... anything needed to make it identical */
 
-		div,glitch:after {
-			top: 50.5%;
-			left: 50.5%;
-			color: rgba($color-2,0.8);
-			animation: distort2 $base-duration linear infinite;
-		}
-	}
-	
-	@keyframes distort1 {
-		0%    { top: 49.5%; left: 49.5%; }
-		12.5% { top: 49.5%; left: 50%; }
-		25%   { top: 49.5%; left: 50.5%; }
-		37.5% { top: 50%; left: 50.5%; }
-		50%   { top: 50.5%; left: 50.5%; }
-		62.5% { top: 50.5%; left: 50%; }
-		75%   { top: 50.5%; left: 49.5%; }
-		87.5% { top: 50%; left: 49.5%; }
-		100%  { top: 49.5%; left: 49.5%; }
-	}
-	
-	@keyframes distort2 {
-		0%    { top: 50.5%; left: 50.5%; }
-		12.5% { top: 50%; left: 50.5%; }
-		25%   { top: 49.5%; left: 50.5%; }
-		37.5% { top: 49.5%; left: 50%; }
-		50%   { top: 49.5%; left: 49.5%; }
-		62.5% { top: 50%; left: 49.5%; }
-		75%   { top: 50.5%; left: 49.5%; }
-		87.5% { top: 50.5%; left: 50%; }
-		100%  { top: 50.5%; left: 50.5%; }
-	}
+  /* variation */
+  left: -2px;
+  text-shadow: -1px 0 blue;
+  
+  /* important: opaque background masks the original */
+  background: black;
 }
 	
 /*Import*/
@@ -913,7 +873,7 @@ a.disappear{
 					</div>
 				</span>
     			<span>
-				<div class="glitch">Download our Archive</div>
+				<button><divclass="glitch" data-text="GLITCH">Download our Archive</div></button>
 			</span>	
   		</div>
 	</nav>
