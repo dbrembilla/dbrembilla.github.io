@@ -161,13 +161,14 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 }))
                 }
                 else {
-                    classNames[referenceClass] = $("#" + elements[i].id).text()
-                    seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
-                    place: "#" + elements[i].id,
-                    thisclass: referenceClass,
-                    originalClass: elements[i].getAttribute("class").toString(),
-                    number: 1
-                }) ]
+                    if (elements[i].id != "#"){
+                        classNames[referenceClass] = $("#" + elements[i].id).text()
+                        seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
+                        place: "#" + elements[i].id,
+                        thisclass: referenceClass,
+                        originalClass: elements[i].getAttribute("class").toString(),
+                        number: 1
+                }) ]}
                 }
             
 
