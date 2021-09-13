@@ -1,3 +1,106 @@
+function topicise() {
+    //console.log("analysing "+sentences.length+" sentences...");
+    var documents = new Array();
+    var f = {};
+    var vocab=new Array();
+    var docCount=0;
+    for(var i=0;i<sentences.length;i++) {
+        if (sentences[i]=="") continue;
+        var words = sentences[i].split(/[\s,\"]+/);
+        if(!words) continue;
+        var wordIndices = new Array();
+        for(var wc=0;wc<words.length;wc++) {
+            var w=words[wc].toLowerCase().replace(/[^a-z\'A-Z0-9 ]+/g, '');
+            //TODO: Add stemming
+            if (w=="" || w.length==1 || stopwords[w] || w.indexOf("http")==0) continue;
+            if (f[w]) { 
+                f[w]=f[w]+1;            
+            } 
+            else if(w) { 
+                f[w]=1; 
+                vocab.push(w); 
+            };  
+            wordIndices.push(vocab.indexOf(w));
+        }
+        if (wordIndices && wordIndices.length>0) {
+            documents[docCount++] = wordIndices;
+        }
+    }
+        
+    var V = vocab.length;
+    var M = documents.length;
+    var K = parseInt($( "#slidertopics" ).val());
+    var alpha = 0.1;  // per-document distributions over topics
+    var beta = .01;  // per-topic distributions over words
+
+    lda.configure(documents,V,10000, 2000, 100, 10);
+    lda.gibbs(K, alpha, beta);
+
+    var theta = lda.getTheta();
+    var phi = lda.getPhi();
+
+    var text = '';
+
+    //topics
+    var topTerms=20;
+    var topicText = new Array();
+    for (var k = 0; k < phi.length; k++) {
+        text+='<canvas id="topic-cloud'+k+'" class="topicbox color'+k+'"><ul>';
+        var tuples = new Array();
+        for (var w = 0; w < phi[k].length; w++) {
+             tuples.push(""+phi[k][w].toPrecision(2)+"_"+vocab[w]);
+        }
+        tuples.sort().reverse();
+        if(topTerms>vocab.length) topTerms=vocab.length;
+        topicText[k]='';
+        for (var t = 0; t < topTerms; t++) {
+            var topicTerm=tuples[t].split("_")[1];
+            var prob=parseInt(tuples[t].split("_")[0]*100);
+            if (prob<0.0001) continue;
+            text+=( '<li><a href="javascript:void(0);" data-weight="'+(prob)+'" title="'+prob+'%">'+topicTerm +'</a></li>' );           
+            console.log("topic "+k+": "+ topicTerm+" = " + prob  + "%");
+            topicText[k] += ( topicTerm +" ");
+        }
+        text+='</ul></canvas>';
+    }
+    $('#topiccloud').html(text);
+    
+    
+    
+    for (var k = 0; k < phi.length; k++) {
+        if(!$('#topic-cloud'+k).tagcanvas({
+              textColour: $('#topic-cloud'+k).css('color'),
+              maxSpeed: 0.05,
+             initial: [(Math.random()>0.5 ? 1: -1) *Math.random()/2,(Math.random()>0.5 ? 1: -1) *Math.random()/2],  //[0.1,-0.1],
+              decel: 0.98,
+              reverse: true,
+              weightSize:10,
+              weightMode:'size',
+              weightFrom:'data-weight',
+              weight: true
+            })) 
+        {
+            $('#slidertopics'+k).hide();
+        } else {
+            //TagCanvas.Start('#slidertopics'+k);
+        }
+    }
+}
+
+$(document).ready(function(){
+    var select = $( "#slidertopics" );
+})
+
+function btnTopiciseClicked() {
+    $('#btnTopicise').attr('disabled','disabled');
+    sentences = $('#article-1, #article-2, #article-3').text().split("\n");
+    topicise();
+    $('#btnTopicise').removeAttr('disabled');
+
+    
+}
+
+var sentences;
 function makeArray(x) {
 	var a = new Array();	
 	for (var i=0;i<x;i++)  {
