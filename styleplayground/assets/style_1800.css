@@ -147,13 +147,20 @@ img {
 .fast-flicker, .flicker {
 	animation: none!important;
 }
+button {
+	background-color: #e3ceb9 !important;
+}
 button .sign, .home {
 	font-family: Essays1743!important;
 	font-weight: bold!important;
 	text-align: center!important;
 }
-.sign .title {
+header .sign {
 	font-family: JDCarnivalBlack!important;
 	text-align: center!important;
 	text-transform: uppercase!important;
+	color: black!important;
+	animation: none!important;
+	text-shadow: none!important;
+	color: black!important;
 }
