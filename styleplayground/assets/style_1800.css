@@ -98,14 +98,16 @@ img {
 }
 .flip-card {
 	background-color: #e3ceb9 !important;
-	border-left: solid!important;
-  border-right: solid!important;
-  border-radius: none;
+	border-left: black 1px solid!important;
+  border-right: black 1px solid!important;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 0;
 }
 .card {
 	background-color: #e3ceb9 !important;
-	border-left: solid;
-  border-right: solid;
+	border-left: black 1px solid!important;
+  border-right: black 1px solid!important;
   border-top: none;
   border-bottom: none;
   padding: 0!important;
