@@ -46,9 +46,9 @@ body, div {
 	background-color:  #e3ceb9 !important;
 }
 header {
-	font-family: JDCarnivalBlack;
-	text-align: center;
-	text-transform: uppercase;
+	font-family: JDCarnivalBlack!important;
+	text-align: center!important;
+	text-transform: uppercase!important;
 }
 h1 {
 	font-family: JDCarnivalBlack;
