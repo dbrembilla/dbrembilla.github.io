@@ -96,12 +96,19 @@ img {
   background-position: center;
   filter: saturate(0%) sepia(100%) contrast(150%) saturate(150%);;
 }
-.flip-card {
+.flip-card-front {
 	background-color: #e3ceb9 !important;
 	border-left: black 1px solid!important;
   border-right: black 1px solid!important;
   border-top: none!important;
   border-bottom: none!important;
+  border-radius: 0!important;
+}
+.flip-card-back{
+	font-size: 16px;
+	background-color: #e3ceb9 !important;
+	border-left: black 1px solid!important;
+  border-right: black 1px solid!important;
   border-radius: 0!important;
 }
 .card {
