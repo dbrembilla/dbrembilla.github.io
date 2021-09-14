@@ -102,7 +102,7 @@ img {
   border-right: black 1px solid!important;
   border-top: none!important;
   border-bottom: none!important;
-  border-radius: 0;
+  border-radius: 0!important;
 }
 .card {
 	background-color: #e3ceb9 !important;
