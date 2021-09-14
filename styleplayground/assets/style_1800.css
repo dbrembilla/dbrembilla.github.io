@@ -50,7 +50,7 @@ header {
 	text-align: center;
 	text-transform: uppercase;
 }
-h1 {
+h1, header {
 	font-family: JDCarnivalBlack;
 	text-align: center;
 	text-transform: uppercase;
@@ -128,4 +128,7 @@ img {
   border-bottom: none!important;
   padding: 0!important;
   border-radius: 0!important;
+}
+.themes h3 {
+	border-bottom: 0.5px solid black;
 }
