@@ -171,3 +171,8 @@ header .sign {
 #metaview-1, #metaview-2, #metaview-3{
 	width: 80%;
 }
+.sign {
+	color: black!important;
+	text-shadow: black!important;
+	animation: none!important;
+}
