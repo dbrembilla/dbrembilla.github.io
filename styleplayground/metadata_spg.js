@@ -121,6 +121,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             addId('.person','person')
             addId('.place', 'place')
             addId('.event', 'event')
+            addId('.date', 'date')
             addId('.institution', 'institution')
             addId('.quote', 'quote')
            
