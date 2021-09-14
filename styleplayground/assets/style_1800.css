@@ -74,9 +74,9 @@ p {
 	margin-left: 5px;
 }
 ul, button {
-	font-family: JMHLegajo;
-	margin-right: 5px;
-	margin-left: 5px;
+	font-family: JMHLegajo!important;
+	margin-right: 5px!important;
+	margin-left: 5px!important;
 }
 
 img {
