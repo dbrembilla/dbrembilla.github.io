@@ -1273,7 +1273,7 @@ a.disappear{
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="titleModalTopic">Topic Analysis</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="$('#topiccloud').empty()">
           <span aria-hidden="true"></span>
         </button>
       </div>
@@ -1292,12 +1292,12 @@ a.disappear{
 				</select><br/><input id="btnTopicise" type="button" onclick="btnTopiciseClicked();" value="Analyse"/><br/>
 				</div>
 				<div class="spacer"> </div>
-        <div id= "topiccloud">
+        <div id= "topiccloud" class="overflow hidden">
         	
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" onclick="$('#topiccloud').empty()" data-bs-dismiss="modal">Close</button>
        
       </div>
     </div>
