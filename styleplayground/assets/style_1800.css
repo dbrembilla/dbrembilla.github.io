@@ -78,10 +78,7 @@ ul {
 	margin-right: 5px;
 	margin-left: 5px;
 }
-ul > li:before {
-  content: "-";
-  text-indent: -5px;
-}
+
 img {
   float:  left;
   margin-left: auto;
@@ -104,8 +101,10 @@ img {
 	border-left: solid;
   border-right: solid;
 }
-#topics {
+.card {
 	background-color: #e3ceb9 !important;
 	border-left: solid;
   border-right: solid;
+  border-top: none;
+  border-bottom: none;
 }
