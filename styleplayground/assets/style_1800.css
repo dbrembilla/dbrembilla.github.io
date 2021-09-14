@@ -133,7 +133,7 @@ img {
     box-shadow: none!important;
 }
 .themes h3 {
-	border-bottom: 0.5px thin black!important;
+	border-bottom: 0.5px solid black!important;
 }
 #desc h2, #desc p, #desc ul {
 	color: black!important;
