@@ -100,16 +100,16 @@ img {
 	background-color: #e3ceb9 !important;
 	border-left: black 1px solid!important;
   border-right: black 1px solid!important;
-  border-top: none;
-  border-bottom: none;
+  border-top: none!important;
+  border-bottom: none!important;
   border-radius: 0;
 }
 .card {
 	background-color: #e3ceb9 !important;
 	border-left: black 1px solid!important;
   border-right: black 1px solid!important;
-  border-top: none;
-  border-bottom: none;
+  border-top: none!important;
+  border-bottom: none!important;
   padding: 0!important;
   border-radius: 0!important;
 }
