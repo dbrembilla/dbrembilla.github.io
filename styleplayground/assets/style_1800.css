@@ -65,13 +65,22 @@ h4, figcaption {
 	font-style: italic;
 	text-align: center;
 }
-p, ul {
+p {
 	font-family: JMHLegajo;
 	float: none;
 	text-align: justify;
 	text-justify: inter-word;
 	margin-right: 5px;
 	margin-left: 5px;
+}
+ul {
+	font-family: JMHLegajo;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+ul > li:before {
+  content: "-";
+  text-indent: -5px;
 }
 img {
   float:  left;
@@ -89,4 +98,14 @@ img {
   background-repeat: repeat;
   background-position: center;
   filter: saturate(0%) sepia(100%) contrast(150%) saturate(150%);;
+}
+.flip-card {
+	background-color: #e3ceb9 !important;
+	border-left: solid;
+  border-right: solid;
+}
+#topics {
+	background-color: #e3ceb9 !important;
+	border-left: solid;
+  border-right: solid;
 }
