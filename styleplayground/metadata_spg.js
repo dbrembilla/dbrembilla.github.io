@@ -1,15 +1,19 @@
 
 // Style changer
-activeStyle = {}
-
 function changeStyle(ref){
-            activeStyle[ref]=true
-            for (key in Object.keys(activeStyle)){
-                if(key != ref) {
-                    activeStyle[key] = false
-                }
-            }
             target=$(ref).attr("href");
+            switch ($('#default').attr('href')){
+                case "#1800": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per eliminare elementi
+                console.log('changed to 1800'); 
+                default:
+                console.log('set to default');
+                            }
+            switch (target){
+                case "#1800": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per aggiungere elementi
+                console.log('changed to 1800'); 
+                default:
+                console.log('set to default');}
+
             $("#default").attr("href", target);
 
         }
