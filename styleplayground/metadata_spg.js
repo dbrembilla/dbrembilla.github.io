@@ -1,8 +1,14 @@
 
 // Style changer
-
+activeStyle = {}
 
 function changeStyle(ref){
+            activeStyle[ref]=true
+            for (key in Object.keys(activeStyle)){
+                if(key != ref) {
+                    activeStyle[key] = false
+                }
+            }
             target=$(ref).attr("href");
             $("#default").attr("href", target);
 
