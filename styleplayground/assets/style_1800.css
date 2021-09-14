@@ -120,3 +120,12 @@ img {
   padding: 0!important;
   border-radius: 0!important;
 }
+#desc{
+	background-color: 	background-color: #e3ceb9 !important;
+	border-left: black 1px solid!important;
+  border-right: black 1px solid!important;
+  border-top: none!important;
+  border-bottom: none!important;
+  padding: 0!important;
+  border-radius: 0!important;
+}
