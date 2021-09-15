@@ -162,7 +162,6 @@ header .sign {
 	text-transform: uppercase!important;
 	color: black!important;
 	animation: none!important;
-	text-shadow: none!important;
 	color: black!important;
 }
 .card .Meta {
@@ -174,6 +173,9 @@ header .sign {
 }
 .sign {
 	color: black!important;
-	text-shadow: black!important;
+	text-shadow: none!important;
 	animation: none!important;
+}
+#topics .card {
+	color: #5c5c3d!important;
 }
