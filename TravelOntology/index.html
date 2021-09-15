@@ -165,11 +165,11 @@
   			Who participates in the travel? What role can they have?
   		</th>
   		<td>
-  			Agents could be individuals or groups. All agents act in some event. Agents have a role, which is a distinct class for which individuals can be created to define new roles. Existing ODPs are the <a href="http://ontologydesignpatterns.org/wiki/Submissions:Objectrole">Objectrole</a> and the <a href="http://ontologydesignpatterns.org/wiki/Submissions:ParticipantRole">ParticipationRole</a> ODPs.<br>
-  			Moreover, the relationship of role, event and agent can be linked by <a href="propertyChain">using the relationship with the class <pre>trv:agentRoleContext</pre></a> in order to highlight the role of an agent within an event, using a property chain.
+  			Agents could be individuals or groups. All agents act in some event. Agents have a role, which is a distinct class for which individuals can be created to define new roles. Existing ODPs are the <a href="http://ontologydesignpatterns.org/wiki/Submissions:Objectrole">Objectrole</a> and the <a href="http://ontologydesignpatterns.org/wiki/Submissions:ParticipantRole">ParticipationRole</a> ODPs.
   		</td>
   		<td>
-  			<tt>trv:agent</tt> has <tt>trv:person</tt> and <tt>trv:groupOfPeople</tt> as subclasses to identify different cases for identifying different agents. Agents must have <tt>trv:isInvolvedWith  trv:historicalContext</tt> property and <tt>trv:hasRole a trv:role</tt>; agents are different than their role. <tt>trv:role</tt> are <tt>trv:traveller</tt>, defining the role of a traveller, such as an explorer, or <tt>trv:preparationRole</tt> for other roles, such as commissioner, involved with the organization of the travel.
+  			<tt>trv:agent</tt> has <tt>trv:person</tt> and <tt>trv:groupOfPeople</tt> as subclasses to identify different cases for identifying different agents. Agents must have <tt>trv:isInvolvedWith  trv:historicalContext</tt> property and <tt>trv:hasRole a trv:role</tt>; agents are different than their role. <tt>trv:role</tt> are <tt>trv:traveller</tt>, defining the role of a traveller, such as an explorer, or <tt>trv:preparationRole</tt> for other roles, such as commissioner, involved with the organization of the travel.<br>
+  			Moreover, the relationship of role, event and agent can be linked by <a href="propertyChain">using the relationship with the class <tt>trv:agentRoleContext</tt></a> in order to highlight the role of an agent within an event, using a property chain.
   		</td>
   	</tr>
   	<tr>
