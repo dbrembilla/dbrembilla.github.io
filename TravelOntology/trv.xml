@@ -323,6 +323,20 @@
     
 
 
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#isUsedIn -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isUsedIn">
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#role"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isRoleInContext"/>
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isEmployedInTravel"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>Property describing the relationship between a role in an event</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://dbrembilla.github.io/TravelOntology/trv#isWitnessFor -->
 
     <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#isWitnessFor">
@@ -375,6 +389,20 @@
         <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#agent"/>
         <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#travel"/>
         <rdfs:comment>Property describing in which travel a traveller partecipates</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dbrembilla.github.io/TravelOntology/trv#usesRole -->
+
+    <owl:ObjectProperty rdf:about="https://dbrembilla.github.io/TravelOntology/trv#usesRole">
+        <rdfs:domain rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#role"/>
+        <rdfs:range rdf:resource="https://dbrembilla.github.io/TravelOntology/trv#event"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#employedInTravel"/>
+            <rdf:Description rdf:about="https://dbrembilla.github.io/TravelOntology/trv#hasRoleContext"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>Property describing that an event employs a role</rdfs:comment>
     </owl:ObjectProperty>
     
 
