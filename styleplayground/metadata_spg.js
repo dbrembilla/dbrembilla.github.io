@@ -1,31 +1,37 @@
-$('.person').on('mouseover',
-    function(){
-    $('#class-show').empty();
-        $('#class-show').append('<img src="assets/show/event.png" style="height:100%;width:auto;">');
-        console.log('pass');}
-    )
-$('.event').on('mouseover',
-    function(){
+
+function addHover(){
+    $('.person').attr('onmousehover',
+        function(){
         $('#class-show').empty();
-        $('#class-show').append('<img src="assets/show/event.png" style="height:100%;width:auto;">');
+            $('#class-show').append('<img src="assets/show/event.png" style="height:100%;width:auto;">');
+            console.log('pass');}
+        )
+    $('.event').attr('onmousehover',
+        function(){
+            $('#class-show').empty();
+            $('#class-show').append('<img src="assets/show/event.png" style="height:100%;width:auto;">');
+        }
+        )
+    $('.institution').attr('onmousehover',
+        function(){
+        $('#class-show').empty();
+        $('#class-show').append('<img src="assets/show/institution.png" style="height:100%;width:auto;">');}
+        )
+    $('.quote').attr('onmousehover',
+        function(){
+        $('#class-show').empty();
+        $('#class-show').append('<img src="assets/show/quote.png" style="height:100%;width:auto;">');}
+        )
+    $('.date').attr('onmousehover',
+        function(){
+        $('#class-show').empty()
+        $('#class-show').append('<img src="assets/show/date.png" style="height:100%;width:auto;">');
     }
-    )
-$('.institution').on('mouseover',
-    function(){
-    $('#class-show').empty();
-    $('#class-show').append('<img src="assets/show/institution.png" style="height:100%;width:auto;">');}
-    )
-$('.quote').on('mouseover',
-    function(){
-    $('#class-show').empty();
-    $('#class-show').append('<img src="assets/show/quote.png" style="height:100%;width:auto;">');}
-    )
-$('.date').on('mouseover',
-    function(){
-    $('#class-show').empty()
-    $('#class-show').append('<img src="assets/show/date.png" style="height:100%;width:auto;">');
+        )
 }
-    )
+function removeHover(){
+    $('.person, .event, .institution, .quote, .date').removeAttr('onmousehover')
+}
 // Style changer
 function changeStyle(ref){
             target=$(ref).attr("href");
@@ -43,6 +49,7 @@ function changeStyle(ref){
                             </button> 
                 </span> `
                 $('#class-show').replaceWith(downloadButton)
+                removeHover()
 
                 default:
                 console.log('set to default');
@@ -51,6 +58,7 @@ function changeStyle(ref){
                 case "#future": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per aggiungere elementi
                 console.log('changed to future'); 
                 $('#download-button').replaceWith('<div id="class-show"></div>')
+                addHover()
                 default:
                 console.log('set to default');}
 
