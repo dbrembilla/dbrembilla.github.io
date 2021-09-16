@@ -24,7 +24,7 @@ $('.date').mouseover(function(){
 function changeStyle(ref){
             target=$(ref).attr("href");
             switch ($('#default').attr('href')){
-                case "#future": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per eliminare elementi
+                case "assets/#future": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per eliminare elementi
                 console.log('changed from future'); 
                 var downloadButton = `
                 <span id='download-button'>
