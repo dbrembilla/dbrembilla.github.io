@@ -1,4 +1,4 @@
-
+var future = false
 function addHover(){
     $('.person').attr('onmousehover',
         function(){
@@ -48,6 +48,7 @@ function changeStyle(ref){
                                 
                             </button> 
                 </span> `
+                future = false
                 $('#class-show').replaceWith(downloadButton)
                 removeHover()
 
@@ -59,6 +60,7 @@ function changeStyle(ref){
                 console.log('changed to future'); 
                 $('#download-button').replaceWith('<div id="class-show"></div>')
                 addHover()
+                future = true
                 default:
                 console.log('set to default');}
 
@@ -166,6 +168,9 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                     $('#title-'+ columnListener[topic]).html($("col-num-" + columnListener[topic] + " h1")) //aggiunge un div con id title scegliendo l'elemento h1 nel div con id file
                     //$('.show').prop("checked", false)
                     addIds()
+                    if (future){
+                        addHover()
+                    }
                     //filltabs(topic)
                 },
                 error: function() {
