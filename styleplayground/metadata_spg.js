@@ -1,4 +1,22 @@
-
+$('.person').mouseover(
+    $('#class-show').empty()
+    console.log('pass')
+    )
+$('.event').mouseover(
+    $('#class-show').empty()
+    )
+$('.institution').mouseover(
+    $('#class-show').empty()
+    )
+$('.quote').mouseover(
+    $('#class-show').empty()
+    )
+$('.date').mouseover(
+    $('#class-show').empty()
+    )
+$('person').mouseover(
+    $('#class-show').empty()
+    )
 // Style changer
 function changeStyle(ref){
             target=$(ref).attr("href");

@@ -1,23 +1,3 @@
-$('.person').mouseover(
-    $('#class-show').empty()
-    console.log('pass');
-    )
-$('.event').mouseover(
-    $('#class-show').empty()
-    )
-$('.institution').mouseover(
-    $('#class-show').empty()
-    )
-$('.quote').mouseover(
-    $('#class-show').empty()
-    )
-$('.date').mouseover(
-    $('#class-show').empty()
-    )
-$('person').mouseover(
-    $('#class-show').empty()
-    )
-
 function topicise() {
     //console.log("analysing "+sentences.length+" sentences...");
     var documents = new Array();
