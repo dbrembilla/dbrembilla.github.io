@@ -1,23 +1,24 @@
-$('.person').mouseover(
-    $('#class-show').empty()
-    $('#class-show').append('<img src="assers/show/event.png" style="height:100%;width:auto;">')
-    console.log('pass')
+$('.person').mouseover(function()
+    {$('#class-show').empty()
+        $('#class-show').append('<img src="assers/show/event.png" style="height:100%;width:auto;">')
+        console.log('pass')}
     )
 $('.event').mouseover(
-    $('#class-show').empty()
-    $('#class-show').append('<img src="assers/show/event.png" style="height:100%;width:auto;">')
+    function(){
+        $('#class-show').empty()
+        $('#class-show').append('<img src="assers/show/event.png" style="height:100%;width:auto;">')}
     )
-$('.institution').mouseover(
+$('.institution').mouseover(function(){
     $('#class-show').empty()
-    $('#class-show').append('<img src="assers/show/institution.png" style="height:100%;width:auto;">')
+    $('#class-show').append('<img src="assers/show/institution.png" style="height:100%;width:auto;">')}
     )
-$('.quote').mouseover(
+$('.quote').mouseover(function(){
     $('#class-show').empty()
-    $('#class-show').append('<img src="assers/show/quote.png" style="height:100%;width:auto;">')
+    $('#class-show').append('<img src="assers/show/quote.png" style="height:100%;width:auto;">')}
     )
-$('.date').mouseover(
+$('.date').mouseover(function(){
     $('#class-show').empty()
-    $('#class-show').append('<img src="assers/show/date.png" style="height:100%;width:auto;">')
+    $('#class-show').append('<img src="assers/show/date.png" style="height:100%;width:auto;">')}
     )
 // Style changer
 function changeStyle(ref){
