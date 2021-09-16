@@ -4,7 +4,7 @@ function addHover(){
         function(){
         $('#class-show').empty();
             $('#class-show').append('<img src="assets/show/event.png" style="height:100%;width:auto;">');
-            console.log('pass');}
+           }
         )
     $('.event').attr('onmousehover',
         function(){
