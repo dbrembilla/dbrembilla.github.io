@@ -1,23 +1,27 @@
-$('.person').mouseover(function(){
+$('.person').on('mouseover',
+    function(){
     $('#class-show').empty();
         $('#class-show').append('<img src="assets/show/event.png" style="height:100%;width:auto;">');
         console.log('pass');}
     )
-$('.event').mouseover(
+$('.event').on('mouseover',
     function(){
         $('#class-show').empty();
         $('#class-show').append('<img src="assets/show/event.png" style="height:100%;width:auto;">');
     }
     )
-$('.institution').mouseover(function(){
+$('.institution').on('mouseover',
+    function(){
     $('#class-show').empty();
     $('#class-show').append('<img src="assets/show/institution.png" style="height:100%;width:auto;">');}
     )
-$('.quote').mouseover(function(){
+$('.quote').on('mouseover',
+    function(){
     $('#class-show').empty();
     $('#class-show').append('<img src="assets/show/quote.png" style="height:100%;width:auto;">');}
     )
-$('.date').mouseover(function(){
+$('.date').on('mouseover',
+    function(){
     $('#class-show').empty()
     $('#class-show').append('<img src="assets/show/date.png" style="height:100%;width:auto;">');
 }
