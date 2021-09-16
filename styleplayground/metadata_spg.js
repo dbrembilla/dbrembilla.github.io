@@ -1,34 +1,49 @@
 $('.person').mouseover(
     $('#class-show').empty()
+    $('#class-show').append('<img src="assers/show/event.png" style="height:100%;width:auto;">')
     console.log('pass')
     )
 $('.event').mouseover(
     $('#class-show').empty()
+    $('#class-show').append('<img src="assers/show/event.png" style="height:100%;width:auto;">')
     )
 $('.institution').mouseover(
     $('#class-show').empty()
+    $('#class-show').append('<img src="assers/show/institution.png" style="height:100%;width:auto;">')
     )
 $('.quote').mouseover(
     $('#class-show').empty()
+    $('#class-show').append('<img src="assers/show/quote.png" style="height:100%;width:auto;">')
     )
 $('.date').mouseover(
     $('#class-show').empty()
-    )
-$('person').mouseover(
-    $('#class-show').empty()
+    $('#class-show').append('<img src="assers/show/date.png" style="height:100%;width:auto;">')
     )
 // Style changer
 function changeStyle(ref){
             target=$(ref).attr("href");
             switch ($('#default').attr('href')){
-                case "#1800": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per eliminare elementi
-                console.log('changed to 1800'); 
+                case "#future": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per eliminare elementi
+                console.log('changed from future'); 
+                var downloadButton = `
+                <span id='download-button'>
+                            <button>    
+                                <div class="sign">
+                                        <span class="fast-flicker">D</span>ownl<span class="flicker">oad </span> <span class="fast-flicker">our </span>
+                                    <span class="flicker">Arc</span><span class="fast-flicker">hi</span><span class="flicker">ve</span>
+                                </div>
+                                
+                            </button> 
+                </span> `
+                $('#class-show').replaceWith(downloadButton)
+
                 default:
                 console.log('set to default');
                             }
             switch (target){
-                case "#1800": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per aggiungere elementi
-                console.log('changed to 1800'); 
+                case "#future": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per aggiungere elementi
+                console.log('changed to future'); 
+                $('#download-button').replaceWith('<div id="class-show"></div>')
                 default:
                 console.log('set to default');}
 
