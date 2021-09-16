@@ -24,7 +24,7 @@ $('.date').mouseover(function(){
 function changeStyle(ref){
             target=$(ref).attr("href");
             switch ($('#default').attr('href')){
-                case "assets/#future": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per eliminare elementi
+                case "assets/future_style.css": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per eliminare elementi
                 console.log('changed from future'); 
                 var downloadButton = `
                 <span id='download-button'>
@@ -41,7 +41,7 @@ function changeStyle(ref){
                 default:
                 console.log('set to default');
                             }
-            switch (target){
+            switch (ref){
                 case "#future": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per aggiungere elementi
                 console.log('changed to future'); 
                 $('#download-button').replaceWith('<div id="class-show"></div>')
