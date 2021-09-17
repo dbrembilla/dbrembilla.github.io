@@ -1,32 +1,30 @@
 var future = false
 function addHover(){
     $('.person').attr('onmouseover',
-        `function(){
-        $('#class-show').empty();
+        `$('#class-show').empty();
             $('#class-show').append('<img src="assets/show/person.png" style="height:100%;width:auto;">');
-           }`
+           `
         )
     $('.event').attr('onmouseover',
-        `function(){
-            $('#class-show').empty();
-            $('#class-show').append('<img src="assets/show/event.png" style="height:100%;width:auto;">');
-        }`
+        `$('#class-show').empty();
+        $('#class-show').append('<img src="assets/show/event.png" style="height:100%;width:auto;">');
+        `
         )
     $('.institution').attr('onmouseover',
-        `function(){
+        `
         $('#class-show').empty();
-        $('#class-show').append('<img src="assets/show/institution.png" style="height:100%;width:auto;">');}`
+        $('#class-show').append('<img src="assets/show/institution.png" style="height:100%;width:auto;">');`
         )
     $('.quote').attr('onmouseover',
-        `function(){
+        `
         $('#class-show').empty();
-        $('#class-show').append('<img src="assets/show/quote.png" style="height:100%;width:auto;">');}`
+        $('#class-show').append('<img src="assets/show/quote.png" style="height:100%;width:auto;">');`
         )
     $('.date').attr('onmouseover',
-        `function(){
-        $('#class-show').empty()
+        `
+        $('#class-show').empty();
         $('#class-show').append('<img src="assets/show/date.png" style="height:100%;width:auto;">');
-    }`
+    `
         )
 }
 function removeHover(){
