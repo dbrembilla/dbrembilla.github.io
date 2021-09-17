@@ -183,3 +183,8 @@ header .sign {
 #topics .card {
 	color: #5c5c3d!important;
 }
+.row{
+	margin-top: 0!important;
+  margin-right: 0!important;
+  margin-left: 0!important;
+}
