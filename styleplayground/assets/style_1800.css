@@ -79,7 +79,11 @@ ul, button {
 	margin-right: 5px!important;
 	margin-left: 5px!important;
 }
-
+ul {
+	list-style-type: none!important;
+	padding: 0!important;
+	margin: 0!important;
+}
 img {
   float:  left;
   margin-left: auto;
