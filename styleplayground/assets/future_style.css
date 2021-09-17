@@ -59,10 +59,10 @@
 	font-family: Assistant;
 	src: url("future/assistant/Assistant-VariableFont_wght.ttf");
 }
-h1 {
-	font-family: GlacialIndifference;
-	font-weight: bold;
-	font-size: 3.14em;
+h1, header {
+	font-family: GlacialIndifference!important;
+	font-weight: bold!important;
+	font-size: 3.14em!important;
 }
 
 h2 {
@@ -96,4 +96,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   max-width: 75%;
+}
+.fast-flicker, .flicker {
+	animation: none!important;
 }
