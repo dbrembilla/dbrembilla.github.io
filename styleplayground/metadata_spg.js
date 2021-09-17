@@ -30,7 +30,7 @@ function addHover(){
         )
 }
 function removeHover(){
-    $('.person, .event, .institution, .quote, .date').removeAttr('onmousehover')
+    $('.person, .event, .institution, .quote, .date').removeAttr('onmouseover')
 }
 // Style changer
 function changeStyle(ref){
