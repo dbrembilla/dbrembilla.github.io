@@ -1,6 +1,6 @@
 @font-face {
-	font-family: "UnifrakturCook-Bold";
-  	src: url("fonts/UnifrakturCook-Bold.ttf.ttf");
+	font-family: UnifrakturCook;
+  	src: url("fonts/UnifrakturCook-Bold.ttf");
 }
 
 @font-face {
@@ -10,7 +10,7 @@
 
 p {
   color: #504738;
-  font-family: "UnifrakturCook-Bold";
+  font-family: UnifrakturCook;
   font-variant-ligatures: historical-ligatures;
 }
 
