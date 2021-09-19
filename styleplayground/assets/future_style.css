@@ -112,8 +112,7 @@ h4 {
   border-radius: 0!important;
 }
 .container-fluid {
-	border-left: none;
-	border-bottom: none;
+	border: none!important;
 }
 .navbar {
 	background-color: #ff7f50!important;
