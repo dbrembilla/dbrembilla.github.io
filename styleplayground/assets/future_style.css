@@ -156,6 +156,6 @@ img {
 	background-color: #dfe4ea!Important;
 }
 .sign {
-	  text-shadow: none;
-    animation: none;
+	  text-shadow: none!Important;
+    animation: none!important;
   }
