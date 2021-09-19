@@ -19,8 +19,3 @@ h3 {
   color: #A74640;
 }
 
-.card.overflow {
-	border-bottom: 1px dotted #c03;
-	width: 100%;
-	display: block;
-}
