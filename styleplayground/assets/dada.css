@@ -1,3 +1,44 @@
+@font-face {
+    font-family: 'Academy';
+    src:url('assets/dada/Academy/Academy.ttf.woff') format('woff'),
+        url('assets/dada/Academy/Academy.ttf.svg#Academy') format('svg'),
+        url('assets/dada/Academy/Academy.ttf.eot'),
+        url('assets/dada/Academy/Academy.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	
+    font-family: 'Danley';
+    src:url('assets/dada/Danley/OPTIDanley-ExtraBold.ttf.woff') format('woff'),
+        url('assets/dada/Danley/OPTIDanley-ExtraBold.ttf.svg#OPTIDanley-ExtraBold') format('svg'),
+        url('assets/dada/Danley/OPTIDanley-ExtraBold.ttf.eot'),
+        url('assets/dada/Danley/OPTIDanley-ExtraBold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dreamwalker';
+    src:url('assets/dada/Dreamwalker/Dreamwalker.ttf.woff') format('woff'),
+        url('assets/dada/Dreamwalker/Dreamwalker.ttf.svg#Dreamwalker') format('svg'),
+        url('assets/dada/Dreamwalker/Dreamwalker.ttf.eot'),
+        url('assets/dada/Dreamwalker/Dreamwalker.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fowviel';
+    src:url('assets/dada/Fowviel/Fowviel.ttf.woff') format('woff'),
+        url('assets/dada/Fowviel/Fowviel.ttf.svg#Fowviel') format('svg'),
+        url('assets/dada/Fowviel/Fowviel.ttf.eot'),
+        url('assets/dada/Fowviel/Fowviel.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
 	 background-color: #eee2d0!important;
 }
@@ -5,3 +46,4 @@ body {
 .navbar, footer {
 	 background-color: #eee2d0!important;
 }
+
