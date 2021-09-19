@@ -70,7 +70,7 @@ body{
 	src: url("future/assistant/Assistant-VariableFont_wght.ttf");
 }
 h1, header {
-	text-align: center;
+	text-align: center!important;
 	font-family: GlacialIndifference!important;
 	font-weight: bold!important;
 	font-size: 3.14em!important;
@@ -85,6 +85,7 @@ a.btn{
 h2 {
 	font-family: Metropolis;
 	font-style: italic;
+	text-align: center!important;
 	font-weight: 900;
 	font-size: 2.71em;
 }
