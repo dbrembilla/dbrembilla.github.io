@@ -94,7 +94,7 @@ h3 {
 	font-style: italic;
 	font-weight: bold;
 	font-size: 2.41em;
-	color: #ff7f50;
+	color: #ff7f50!important;
 }
 h4 {
 	font-family: Metropolis;
@@ -159,4 +159,7 @@ img {
 .sign {
 	  text-shadow: none!Important;
     animation: none!important;
+  }
+  .card h2 {
+  	color:  #ff7f50!important;
   }
