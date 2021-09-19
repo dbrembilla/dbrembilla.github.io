@@ -33,10 +33,7 @@ function removeHover(){
 // Style changer
 function changeStyle(ref){
             target=$(ref).attr("href");
-            switch ($('#default').attr('href')){
-                case "assets/future_style.css": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per eliminare elementi
-                console.log('changed from future'); 
-                var downloadButton = `
+            var downloadButton = `
                 <span id='download-button'>
                             <button>    
                                 <div class="sign">
@@ -46,9 +43,17 @@ function changeStyle(ref){
                                 
                             </button> 
                 </span> `
+            switch ($('#default').attr('href')){
+                case "assets/future_style.css": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per eliminare elementi
+                console.log('changed from future'); 
+            
                 future = false
                 $('#class-show').replaceWith(downloadButton)
                 removeHover()
+                case 'assets/style_1800.css':
+                console.log('changed from 1800');
+                $('#bologna-adv').replaceWith(downloadButton)
+
 
                 default:
                 console.log('set to default');
@@ -60,6 +65,9 @@ function changeStyle(ref){
                 $('#download-button').replaceWith('<div id="class-show"></div>')
                 addHover()
                 future = true
+                case '#1800':
+                console.log('Change to 1800');
+                $('#download-button').replaceWith('<h2 id="bologna-adv">Bologna Advertiser</h2>')
                 default:
                 console.log('set to default');}
 
