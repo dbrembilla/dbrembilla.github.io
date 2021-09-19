@@ -18,3 +18,10 @@ h3 {
   font-family: "Duc De Berry Regular";
   color: #A74640;
 }
+
+.card.overflow {
+    background-image:
+      repeating-linear-gradient(#ccc 0 1px, transparent 1px 100%),
+      repeating-linear-gradient(90deg, #ccc 0 1px, transparent 1px 100%);
+    background-size: 71px 71px;
+}
