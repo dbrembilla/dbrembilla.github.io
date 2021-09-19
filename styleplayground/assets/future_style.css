@@ -163,3 +163,9 @@ img {
   .card h2 {
   	color:  #ff7f50!important;
   }
+ .img-responsive {
+    height: auto;
+    width: auto;
+    max-height: 72px;
+    max-width: 250px;
+}
