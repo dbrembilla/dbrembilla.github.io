@@ -120,7 +120,7 @@ img {
 .fast-flicker, .flicker {
 	animation: none!important;
 }
-.flip-card-back {
+.flip-card-front, .flip-card-back {
 	overflow: scroll;
 	margin-right: -5px;
 	background-color: #dfe4ea!Important;
