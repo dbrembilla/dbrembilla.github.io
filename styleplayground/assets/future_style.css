@@ -76,6 +76,9 @@ h1, header {
 
 }
 
+.btn-secondary, #topics {
+    color: #dfe4ea;
+}
 h2 {
 	font-family: Metropolis;
 	font-style: italic;
