@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="" id="default">
 	<link rel="stylesheet alternate" href="assets/style_1800.css" id="1800" >
 	<link rel="stylesheet alternate" href="assets/future_style.css" id="future" >
-	<link rel="stylesheet alternate" href="assets/pizan_style/pizan.css" id="pizan" >
 	<link rel="stylesheet alternate" href="" id="none" >
 
     <!-- Styleshets-->
@@ -343,7 +342,20 @@
    		font-size: 20px;
 	}
 	
-
+	@media (max-height: 580px) {
+		 a.btn, li.form-check, #topics .btn-secondary{
+			font-size: small!important;
+		}
+		
+		#topics {
+		    padding-bottom: 40%!important;
+		}
+		
+		.sign.title {
+		    font-size: 2.25em!important;
+		}
+	}
+	
 }
 
 /*schermo laptop*/
@@ -370,11 +382,11 @@
 		}
 		
 		#topics {
-		    padding-bottom: 40%;
+		    padding-bottom: 40%!important;
 		}
 		
 		.sign.title {
-		    font-size: 2.25em;
+		    font-size: 2.25em!important;
 		}
 	}
 	
