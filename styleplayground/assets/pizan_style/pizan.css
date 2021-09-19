@@ -20,5 +20,7 @@ h3 {
 }
 
 .card.overflow {
-    background: repeating-linear-gradient(#ccc 0 1px, transparent 1px 100%);
+	border-bottom: 1px dotted #c03;
+	width: 100%;
+	display: block;
 }
