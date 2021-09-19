@@ -3,6 +3,11 @@
   	src: url("fonts/AlteSchwabacher.ttf");
 }
 
+@font-face {
+	font-family: "Duc de Berry Regular";
+	src: url("fonts/Duc De Berry Regular.otf");
+}
+
 p {
   color: #504738;
   font-family: "AlteSchwabacher";
@@ -10,6 +15,6 @@ p {
 }
 
 h3 {
-  font-family: "Times New Roman"
-  color: #A74640
+  font-family: "Duc De Berry Regular";
+  color: #A74640;
 }
