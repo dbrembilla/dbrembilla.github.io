@@ -1247,63 +1247,34 @@ a.disappear{
 			
 			</header>
 			<!-- Start section with articles-->
-			<div class="row" id="row-article">
-				<div class="col introduction">
-					<div class="card overflow" id="desc">
-						<h2>Brief description of the magazine</h2>
-						<p> Welcome to <i>The Blink</i>, the newest magazine dedicated to the exploration of typography and how it can affect the exploration of articles. <br>
-							This magazine has three issues, aimed at different topics within the contemporary world: </p>
-						<ul>
-						<li> Working from home</li>
-						 <li> Space Tourism</li>
-						<li> Language Inclusivity</li>
-						</ul>
-						<p>
-						You can open the articles in the dropdown menu from the bottom-left corner if you are using a computer or you can find it in the menu on the top-left corner if you are from mobile. There you can also find the metadata lenses and typographic designs as described below. <br>
-						You experience the newest typographic innovations by clicking on the different styles, each dedicated to a different era. <br>
-						If you wish to explore the metadata of this site, you can click on the circle in the aside on the left; there you will find the different metadata options in the checkbox. Remember to check the options after you open the article. <br>
-						Lastly, if you wish to consult the documentation, contact us or want to copyright strike us, please read the Documentation, the About us section or the Disclaimer above. <br>
-						<i>We at The Blink wish you a pleasant read!</i>
+				<div class="row" id="row-article">
+					<div class="col introduction">
+						<div class="card overflow" id="desc">
+							<h2>Brief description of the magazine</h2>
+							<p> Welcome to <i>The Blink</i>, the newest magazine dedicated to the exploration of typography and how it can affect the exploration of articles. <br>
+								This magazine has three issues, aimed at different topics within the contemporary world: </p>
+							<ul>
+							<li> Working from home</li>
+							 <li> Space Tourism</li>
+							<li> Language Inclusivity</li>
+							</ul>
+							<p>
+							You can open the articles in the dropdown menu from the bottom-left corner if you are using a computer or you can find it in the menu on the top-left corner if you are from mobile. There you can also find the metadata lenses and typographic designs as described below. <br>
+							You experience the newest typographic innovations by clicking on the different styles, each dedicated to a different era. <br>
+							If you wish to explore the metadata of this site, you can click on the circle in the aside on the left; there you will find the different metadata options in the checkbox. Remember to check the options after you open the article. <br>
+							Lastly, if you wish to consult the documentation, contact us or want to copyright strike us, please read the Documentation, the About us section or the Disclaimer above. <br>
+							<i>We at The Blink wish you a pleasant read!</i>
 
-						</p>
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
 			
 			</section>
 	
 		</div>
 		<div class="modal-fullscreen fade" id="topicAnalysis" tabindex="-1" data-bs-keyboard="true" data-bs-backdrop="false" role="dialog" aria-labelledby="titleModalTopic" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="titleModalTopic">Topic Analysis</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="$('#topiccloud').empty()">
-          <span aria-hidden="true"></span>
-        </button>
-      </div>
-      <div class="modal-body">
-      	<label for="slidertopics">Topics:</label>
-				<select name="slidertopics" id="slidertopics">
-					<option>2</option>
-					<option>3</option>
-					<option  selected="selected">4</option>
-					<option>5</option>
-					<option>6</option>
-					<option>7</option>
-					<option>8</option>
-					<option>9</option>
-					<option>10</option>
-				</select><br/><input id="btnTopicise" class="btn" type="button" onclick="btnTopiciseClicked();" value="Analyse"/><br/>
-				 <button type="button" class="btn btn-secondary" onclick="$('#topiccloud').empty()" >Clean</button>
-				</div>
-				<div class="spacer"> </div>
-       
-      </div>
-      
-    </div>
-  </div>
-</div>	
+	
 </div>
 		
 		
@@ -1363,7 +1334,42 @@ a.disappear{
 				</div>	
 			</span>
 		</footer>
-		
+		  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="titleModalTopic">Topic Analysis</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onclick="$('#topiccloud').empty()">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<label for="slidertopics">Topics:</label>
+	<select name="slidertopics" id="slidertopics">
+		<option>2</option>
+		<option>3</option>
+		<option  selected="selected">4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+		<option>10</option>
+	  </select>
+	      
+	   <br/>
+	
+	   <input id="btnTopicise" class="btn" type="button" onclick="btnTopiciseClicked();" value="Analyse"/>
+	
+	   <br/>
+	
+	   <button type="button" class="btn btn-secondary" onclick="$('#topiccloud').empty()" >Clean</button>
+	</div>
+	<div class="spacer"> </div>       
+      </div>
+      
+    </div>
+  </div>
+</div>
 		 <div id= "topiccloud" class="overflow hidden">
         	
         	</div>
