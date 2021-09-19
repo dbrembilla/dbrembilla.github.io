@@ -44,7 +44,7 @@ body {
 }
 
 #desc{
-	font-family: Fowviel;
+	font-family: Fowviel!important;
 }
 
 .navbar, footer {
@@ -52,5 +52,5 @@ body {
 }
 
 h*{
-	font-family: Academy;
+	font-family: Academy!important;
 }
