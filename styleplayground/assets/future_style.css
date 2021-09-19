@@ -141,7 +141,6 @@ img {
 	animation: none!important;
 }
 .flip-card-front, .flip-card-back {
-	overflow: scroll;
 	margin-right: -5px;
 	background-color: #dfe4ea!Important;
 }
