@@ -55,7 +55,7 @@
 	font-weight: bold;
 }
 body{
-	background-image: url('assets/giphy.webp');
+	background-image: url('giphy.webp');
 	background-repeat:repeat;
 }
 .btn-secondary, #topics {
