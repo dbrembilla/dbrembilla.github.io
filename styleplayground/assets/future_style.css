@@ -140,7 +140,7 @@ figcaption {
 	color: #dfe4ea!Important;
 }
 #desc {
-	background: none!Important;
+	background-color: #dfe4ea!important;
 }
 img {
   margin-left: auto;
