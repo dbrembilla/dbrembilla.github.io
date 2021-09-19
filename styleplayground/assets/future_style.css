@@ -54,6 +54,10 @@
 	src: url("future/glacial-indifference/GlacialIndifference-Bold.otf");
 	font-weight: bold;
 }
+body{
+	background-image: url('assets/giphy.webp');
+	background-repeat:repeat;
+}
 
 @font-face {
 	font-family: Assistant;
