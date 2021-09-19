@@ -37,10 +37,7 @@
 
 /*prova glitch*/
 	
-@font-face {
-  font-family: Clip;
-  src: url("https://acupoftee.github.io/fonts/Clip.ttf");
-}
+
 
 .sign.title{
 	font-size: 3em;	
@@ -532,9 +529,12 @@ body{
 	height:10%!important; 
 }
 	
-.container-fluid{
+navbar .container-fluid{
 	border-left: 1px black solid;
 	border-bottom: 1px black solid;
+}
+	
+.container-fluid{
 	height:100%;
 }
 
@@ -672,23 +672,28 @@ img.closeMeta{
 
 			
 #desc {
-    bborder-radius: 3%;
-        background: linear-gradient(0deg, #030506 88%, #c0e8e8 129%);
+    border-radius: 3%;
+    font-family: 'Calculator';
+    background: linear-gradient(0deg, #030506 88%, #c0e8e8 129%);
     padding: 2%;
     height: 100%;
     width: 100%;
-    color: white;
     perspective: 3000px;
 }
 
+#desc h3{
+	font-size: 2em;
+}
+	
 .card#desc {
     box-shadow: 0px 1px 4px 3px rgb(0 0 0 / 80%);
+	font-size: 1.2em;
+
 }
 
 	
 #desc h2, #desc p, #desc ul {
-    color: transparent;
-    background-image: url(https://media4.giphy.com/media/UZ2pAKuzmKUrYmzSrN/giphy.gif?cid=ecf05e475bv6ul0yjwnvwvlb75n81lt8her0vfa4vdj8pt66&rid=giphy.gif&ct=g);
+    color: white;
     -moz-background-clip: text!important;
     -webkit-background-clip: text;
     background-size: cover;
@@ -1293,9 +1298,7 @@ a.disappear{
 				 <button type="button" class="btn btn-secondary" onclick="$('#topiccloud').empty()" >Clean</button>
 				</div>
 				<div class="spacer"> </div>
-        <div id= "topiccloud" class="overflow hidden">
-        	
-        </div>
+       
       </div>
       
     </div>
@@ -1360,7 +1363,10 @@ a.disappear{
 				</div>	
 			</span>
 		</footer>
-	
+		
+		 <div id= "topiccloud" class="overflow hidden">
+        	
+        	</div>
 
 		<!-- The Modal -->
 		<div id="myModal" class="modal">
