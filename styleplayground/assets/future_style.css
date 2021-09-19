@@ -70,6 +70,7 @@ body{
 	src: url("future/assistant/Assistant-VariableFont_wght.ttf");
 }
 h1, header {
+	text-align: center;
 	font-family: GlacialIndifference!important;
 	font-weight: bold!important;
 	font-size: 3.14em!important;
@@ -92,7 +93,7 @@ h3 {
 	font-style: italic;
 	font-weight: bold;
 	font-size: 2.41em;
-	color: #ff7f50!important;
+	color: #ff7f50;
 }
 h4 {
 	font-family: Metropolis;
@@ -102,10 +103,13 @@ h4 {
 .card#desc {
     box-shadow: none!important;
 }
+#desc h2 {
+	color: black!Important;
+}
 .card {
 	background-color: #dfe4ea!Important;
-	border-left: black 1px solid!important;
-  border-right: black 1px solid!important;
+	border-left: none!important;
+  border-right: none!important;
   border-top: none!important;
   border-bottom: none!important;
   padding: 0!important;
@@ -116,6 +120,8 @@ h4 {
 }
 .navbar {
 	background-color: #ff7f50!important;
+	margin-right: 0!Important;
+	margin-left: 0!Important;
 }
 p, ul, .navbar {
 	font-family: Assistant;
@@ -130,7 +136,12 @@ figcaption {
 	font-weight: 200;
 	font-size: 0.618em;
 }
-
+#topics h3 {
+	color: #dfe4ea!Important;
+}
+#desc {
+	background: none!Important;
+}
 img {
   margin-left: auto;
   margin-right: auto;
