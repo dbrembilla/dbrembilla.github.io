@@ -111,6 +111,9 @@ h4 {
   padding: 0!important;
   border-radius: 0!important;
 }
+.navbar {
+	background-color: #ff7f50!important;
+}
 p, ul, .navbar {
 	font-family: Assistant;
 	margin: 10px;
