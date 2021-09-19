@@ -99,6 +99,18 @@ h4 {
 	font-style: italic;
 	font-size: 1.618em;
 }
+.card#desc {
+    box-shadow: none!important;
+}
+.card {
+	background-color: #dfe4ea!Important;
+	border-left: black 1px solid!important;
+  border-right: black 1px solid!important;
+  border-top: none!important;
+  border-bottom: none!important;
+  padding: 0!important;
+  border-radius: 0!important;
+}
 p, ul, .navbar {
 	font-family: Assistant;
 	margin: 10px;
