@@ -1,0 +1,15 @@
+@font-face {
+	font-family: AlteSchwabacher;
+  	src: url("/assets/pizan_style/fonts/AlteSchwabacher.ttf");
+}
+
+p {
+  color: #504738;
+  font-family: "AlteSchwabacher";
+  font-variant-ligatures: historical-ligatures;
+}
+
+h3 {
+  font-family: "Times New Roman"
+  color: #A74640
+}
