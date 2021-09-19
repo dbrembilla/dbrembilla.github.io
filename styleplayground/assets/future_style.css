@@ -58,7 +58,13 @@ body{
 	background-image: url('assets/giphy.webp');
 	background-repeat:repeat;
 }
-
+.btn-secondary, #topics {
+    color: #747d8c!!important;
+    background-color: #ff6348!important;
+}
+.themes, #topics {
+    font-family: 'Assistant'!important;
+}
 @font-face {
 	font-family: Assistant;
 	src: url("future/assistant/Assistant-VariableFont_wght.ttf");
