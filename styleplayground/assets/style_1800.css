@@ -155,7 +155,7 @@ img {
 button {
 	background-color: #e3ceb9 !important;
 }
-button .sign, .home {
+button .sign, .home, footer {
 	font-family: Essays1743!important;
 	font-weight: bold!important;
 	text-align: center!important;
@@ -187,4 +187,7 @@ header .sign {
 	margin-top: 0!important;
   margin-right: 0!important;
   margin-left: 0!important;
+}
+footer {
+	background-color: #e3ceb9 !important;
 }
