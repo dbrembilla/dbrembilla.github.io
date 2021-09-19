@@ -56,6 +56,7 @@ function changeStyle(ref){
             switch (ref){
                 case "#future": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per aggiungere elementi
                 console.log('changed to future'); 
+                alert('This is the style dedicated to our saviour Rick Roll. Please be respectful to him.')
                 $('#download-button').replaceWith('<div id="class-show"></div>')
                 addHover()
                 future = true
