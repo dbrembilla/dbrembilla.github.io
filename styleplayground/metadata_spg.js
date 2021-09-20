@@ -26,9 +26,16 @@ function addHover(){
         $('#class-show').append('<img src="assets/show/date.png" class="img-responsive"  style="height:100%;width:auto;">');
     `
         )
+    $('.place').attr('onmouseover',
+        `
+        $('#class-show').empty();
+        $('#class-show').append('<img src="assets/show/place.png" class="img-responsive"  style="height:100%;width:auto;">');
+    `
+        )
+
 }
 function removeHover(){
-    $('.person, .event, .institution, .quote, .date').removeAttr('onmouseover')
+    $('.person, .event, .institution, .quote, .date, .place').removeAttr('onmouseover')
 }
 // Style changer
 function changeStyle(ref){
