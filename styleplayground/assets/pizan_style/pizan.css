@@ -11,7 +11,7 @@
 p {
   color: #504738;
   font-family: UnifrakturCook;
-  font-variant-ligatures: historical-ligatures; /*probably not going to work/*
+  font-variant-ligatures: historical-ligatures; /*probably not going to work*/
   text-decoration: underline solid grey;
 }
 
