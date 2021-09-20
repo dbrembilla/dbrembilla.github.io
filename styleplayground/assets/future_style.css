@@ -94,7 +94,7 @@ h3 {
 	font-style: italic;
 	font-weight: bold;
 	font-size: 2.41em;
-	color: #ff7f50!important;
+	color: #ff7f50;
 }
 h4 {
 	font-family: Metropolis;
@@ -137,7 +137,7 @@ figcaption {
 	font-weight: 200;
 	font-size: 0.618em;
 }
-#topics h2 {
+#topics h3 {
 	color: #dfe4ea!Important;
 }
 #desc {
