@@ -11,8 +11,12 @@
 p {
   color: #504738;
   font-family: UnifrakturCook;
-  font-variant-ligatures: historical-ligatures;
+  font-variant-ligatures: historical-ligatures; */probably not going to work*/
+  border-bottom: 4px solid #808080 !important;
+  width: 100% !important;
+  display: block !important;
 }
+
 
 h3 {
   font-family: "Duc De Berry Regular";
