@@ -61,7 +61,7 @@ function changeStyle(ref){
             switch (ref){
                 case "#future": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per aggiungere elementi
                 console.log('changed to future'); 
-                alert('This is the style dedicated to our saviour Rick Roll. Please be respectful to him.')
+                alert('This webpage has been approved by the Nostalgia Communist Party of the World. 本网页已得到世界怀旧共产党的批准。 Эта веб-страница была одобрена Коммунистической партией мира "Ностальгия".')
                 $('#download-button').replaceWith('<div id="class-show"></div>')
                 addHover()
                 future = true
