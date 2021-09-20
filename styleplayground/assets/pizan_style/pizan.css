@@ -12,7 +12,9 @@ p {
   color: #504738;
   font-family: UnifrakturCook;
   font-variant-ligatures: historical-ligatures; /*probably not going to work*/
-  text-decoration: underline solid grey;
+  /*text-decoration: underline solid grey;*/
+  background-image: linear-gradient(to top, black 1px, transparent 1px); /* non trovo di meglio: la riga non è sulla baseline e lo spazio tra una riga e l'altra è fisso, di 1.5em; ovviamente è una baseline grid completamente fasulla*/
+  background-size: auto 1.5em;
 }
 
 
