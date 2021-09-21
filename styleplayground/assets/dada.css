@@ -28,12 +28,12 @@ header{
 	    z-index: -2;
 }
 
-#desc{
-	font-family: Serif;
-	background: transparent!important;
-	border-radius: 0px;
-	border: 2px #353535; 
-	box-shadow: 0px;
+.card#desc {
+    font-family: Serif!important;
+    background: transparent!important;
+    border-radius: 0px;
+    /* border: 2px #353535!important; */
+    box-shadow: none!important;
 }
 
 #desc * {
