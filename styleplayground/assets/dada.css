@@ -1,41 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap')
 
-@font-face {
-    font-family: 'Ransom';
-    src:url('dada/Ransom.ttf') format;
-}
 
-
-@font-face {
-	
-    font-family: 'Danley';
-    src:url('dada/Danley/OPTIDanley-ExtraBold.ttf.woff') format('woff'),
-        url('dada/Danley/OPTIDanley-ExtraBold.ttf.svg#OPTIDanley-ExtraBold') format('svg'),
-        url('dada/Danley/OPTIDanley-ExtraBold.ttf.eot'),
-        url('dada/Danley/OPTIDanley-ExtraBold.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Dreamwalker';
-    src:url('dada/Dreamwalker/Dreamwalker.ttf.woff') format('woff'),
-        url('dada/Dreamwalker/Dreamwalker.ttf.svg#Dreamwalker') format('svg'),
-        url('dada/Dreamwalker/Dreamwalker.ttf.eot'),
-        url('dada/Dreamwalker/Dreamwalker.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Fowviel';
-    src:url('dada/Fowviel/Fowviel.ttf.woff') format('woff'),
-        url('dada/Fowviel/Fowviel.ttf.svg#Fowviel') format('svg'),
-        url('dada/Fowviel/Fowviel.ttf.eot'),
-        url('dada/Fowviel/Fowviel.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
 
 body {
 	 background-color: #eee2d0!important;
