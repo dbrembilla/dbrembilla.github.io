@@ -60,3 +60,13 @@ body {
 header{
 	font-family: Ransom;
 }
+
+.card.overflow {
+color: red!important;
+	text-transform: uppercase;
+	font-size: 8em!important;
+	letter-spacing: -12px;
+	font-weight: bold!important;
+ 	position: absolute;
+	z-index: -2;
+}
