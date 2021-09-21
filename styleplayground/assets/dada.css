@@ -1,12 +1,4 @@
-@font-face {
-    font-family: 'Academy';
-    src:url('dada/Academy/Academy.ttf.woff') format('woff'),
-        url('dada/Academy/Academy.ttf.svg#Academy') format('svg'),
-        url('dada/Academy/Academy.ttf.eot'),
-        url('dada/Academy/Academy.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap')
 
 @font-face {
     font-family: 'Ransom';
@@ -59,6 +51,7 @@ header{
 }
 
 .card.overflow h2 {
+	font-family: 'Roboto Slab', serif;
 	    color: red!important;
 	    text-transform: uppercase;
 	    font-size: 7em!important;
