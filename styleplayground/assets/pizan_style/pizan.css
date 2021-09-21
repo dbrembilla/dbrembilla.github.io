@@ -17,8 +17,37 @@ p {
   background-size: auto 1.5em;
 }
 
-
 h3 {
   font-family: "Duc De Berry Regular";
   color: #A74640;
+}
+
+
+/* HIC SUNT LEONES*/
+
+
+
+p, h2, h3, h4 {
+  font-size: 20px;
+  line-height: 1.6; /*unitless values for this property are multiplied with font size*/
+  margin:none;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.6;
+  margin: none;
+}
+
+img {
+  width: auto;
+  height: 10em; /* em are relative to the em of the container <figure>, which inherits the font size from body(??)*/
+  margin: none;
+}
+#article-1, #article-2, #article-3 {
+    padding-top: 20px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    background-image: linear-gradient(to bottom, black 1px, transparent 1px);
+    background-size: auto 20px;
 }
