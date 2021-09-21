@@ -59,7 +59,7 @@ header{
 }
 
 .card.overflow h2 {
-color: red!important;
+	color: red!important;
 	text-transform: uppercase;
 	font-size: 8em!important;
 	letter-spacing: px;
@@ -70,6 +70,7 @@ color: red!important;
 }
 
 #desc{
+	font-family: Serif;
 	background: transparent!important;
 	border-radius: 0px;
 	border: 2px #353535; 
