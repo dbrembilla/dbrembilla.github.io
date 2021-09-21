@@ -9,6 +9,12 @@
 }
 
 @font-face {
+    font-family: 'Ransom';
+    src:url('dada/Ransom.ttf') format;
+}
+
+
+@font-face {
 	
     font-family: 'Danley';
     src:url('dada/Danley/OPTIDanley-ExtraBold.ttf.woff') format('woff'),
@@ -51,6 +57,6 @@ body {
 	 background-color: #eee2d0!important;
 }
 
-h*{
-	font-family: Academy!important;
+header{
+	font-family: Ransom;
 }
