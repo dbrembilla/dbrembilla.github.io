@@ -73,7 +73,7 @@ color: red!important;
 }
 
 #desc{
-	background-color: transparent;
+	background: transparent;
 	border-radius: 0px;
 	boerder: 2px #353535; 
 }
