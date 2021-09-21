@@ -61,7 +61,7 @@ header{
 	font-family: Ransom;
 }
 
-.card.overflow {
+.card.overflow h2 {
 color: red!important;
 	text-transform: uppercase;
 	font-size: 8em!important;
@@ -69,4 +69,16 @@ color: red!important;
 	font-weight: bold!important;
  	position: absolute;
 	z-index: -2;
+
 }
+
+#desc{
+	background-color: transparent;
+}
+
+#desc * {
+	width: 50%;
+	padding: 39px;
+	display: -webkit-box;
+}
+
