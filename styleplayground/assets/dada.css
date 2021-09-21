@@ -70,9 +70,10 @@ color: red!important;
 }
 
 #desc{
-	background: transparent;
+	background: transparent!important;
 	border-radius: 0px;
 	border: 2px #353535; 
+	box-shadow: 0px;
 }
 
 #desc * {
