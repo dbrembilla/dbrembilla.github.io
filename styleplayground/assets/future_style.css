@@ -248,3 +248,6 @@ img {
     max-height: 50px;
     max-width: 50px;
 }
+.d-flex {
+	float: left;
+}
