@@ -48,3 +48,13 @@ header{
 #desc p, #desc ul {
     color: #353535!important;
 		width: 50%;
+	
+element.style {
+}
+.sign.title {
+    font-size: 3em;
+    color: #b32727!important;
+    letter-spacing: 0px;
+    font-size: 4em;
+    animation: none;
+}
