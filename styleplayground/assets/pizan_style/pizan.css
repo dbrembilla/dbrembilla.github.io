@@ -12,31 +12,32 @@ p {
   color: #504738;
   font-family: UnifrakturCook;
   font-variant-ligatures: historical-ligatures; /*probably not going to work*/
+  margin-top: 0; /*-------------serve davvero specificarlo?-----------*/
+  font-size: 20px;
+  line-height: 28px;
+  background-image: linear-gradient(to bottom, black 1px, transparent 1px);
+  background-size: auto 28px;
+  padding-top: 8px;
+	
   /*text-decoration: underline solid grey;*/
   /*background-image: linear-gradient(to top, black 1px, transparent 1px);*/ /* non trovo di meglio: la riga non è sulla baseline e lo spazio tra una riga e l'altra è fisso, di 1.5em; ovviamente è una baseline grid completamente fasulla*/
   /*background-size: auto 1.5em;*/
 }
 
-h3 {
-  font-family: "Duc De Berry Regular";
-  color: #A74640;
-}
-
-
-/* HIC SUNT LEONES*/
-
-
-
-p, h2, h3, h4 {
+h2, h3, h4 {
+  font-family: UnifrakturCook;
   font-size: 20px;
-  line-height: 1.6; /*unitless values for this property are multiplied with font size*/
-  margin:none;
+  line-height: 28px; /*unitless values for this property are multiplied with font size*/
+  color: #A74640; 
+  background-image: linear-gradient(to bottom, black 1px, transparent 1px);
+  background-size: auto 28px;
+  padding-top: 8px;
 }
 
 h1 {
-  font-size: 40px;
-  /*line-height: 1.6;*/
-  margin: none;
+  font-size: 30px;
+  font-family: "Duc De Berry Regular";
+  /* la line-height non la metto: è come se fosse il frontespizio del manoscritto*/
 }
 
 /*img {
@@ -44,7 +45,9 @@ h1 {
   height: 10em; /* em are relative to the em of the container <figure>, which inherits the font size from body(??)*/
   margin: none;
 }*/
-#article-1, #article-2, #article-3 {
+
+
+#article-1, #article-2, #article-3 {   /*---------------questo blocco forse bisogna toglierlo?-------------*/
     padding-top: 20px;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
@@ -52,13 +55,3 @@ h1 {
     background-size: auto 20px;
 }
 
-/*questo aggiunge baseline grid corretta (YEEEEE!!) ai paragrafi*/
-p {
-    margin-top: 0;
-    /* margin-bottom: 1rem; */
-    font-size: 20px;
-    line-height: 28px;
-    background-image: linear-gradient(to bottom, black 1px, transparent 1px);
-    background-size: auto 28px;
-    padding-top: 8px;
-}
