@@ -1588,11 +1588,11 @@ $(function(){
         	})
         })
 function closeArticle(){
-    $(this.target).empty();
-    $(this.target).remove();
+    $(this.attr('target')).empty();
+    $(this.attr('target')).remove();
     switch(Object.values(columnListener)[0]){
         case "2":
-        if(this.target.includes("1")) {
+        if(this.attr('target').includes("1")) {
         	$('#col-num-2.closeMeta').attr('target','col-num-1')
 	        $("#col-num-2").attr("class", "col-12") ;
 	        $("#col-num-2").attr("id", "col-num-1")
@@ -1604,7 +1604,7 @@ function closeArticle(){
 	    	columnListener[thisKey] = "1"}
         break
         case "3":
-        if(this.target.includes("1")) {
+        if(this.attr('target').includes("1")) {
         	$('#col-num-2.closeMeta').attr('target','col-num-1')
 	        $("#col-num-2").attr("class", "col-6")
 	        $("#col-num-2").attr("id", "col-num-1")
@@ -1614,7 +1614,7 @@ function closeArticle(){
 
 	        thisKey = Object.keys(columnListener)[0]
 	        columnListener[thisKey] = "2"
-	    } else if (this.target.includes("3")) {
+	    } else if (this.attr('target').includes("3")) {
 	    	$("#col-num-1").attr("class", "col-6")
 	        $("#col-num-2").attr("class", "col-6")
 	        thisKey = Object.keys(columnListener)[0]
