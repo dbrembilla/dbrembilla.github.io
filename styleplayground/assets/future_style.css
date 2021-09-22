@@ -56,14 +56,13 @@
 }
 body {
   --s: 25vmin;
-  --p: calc(var(--s) / 2);
-  --c1: #dfe4ea;
-  --c2: white;
-  --c3: #ff7f50;
-  --bg: var(--c3);
-  --d: 4000ms;
-  --e: cubic-bezier(0.76, 0, 0.24, 1);
-  
+    --p: calc(var(--s)^2);
+    --c1: #dfe4ea;
+    --c2: black;
+    --c3: white;
+    /* --bg: blue; */
+    --d: 20000ms;
+    --e: cubic-bezier(0.6, 0.44, 0.50, 0.6);
   background-color: var(--bg);
   background-image:
     linear-gradient(45deg, var(--c1) 25%, transparent 25%),
