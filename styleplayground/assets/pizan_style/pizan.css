@@ -39,11 +39,11 @@ h1 {
   margin: none;
 }
 
-img {
+/*img {
   width: auto;
   height: 10em; /* em are relative to the em of the container <figure>, which inherits the font size from body(??)*/
   margin: none;
-}
+}*/
 #article-1, #article-2, #article-3 {
     padding-top: 20px;
     padding-left: 0.25rem;
