@@ -8,7 +8,7 @@
 	src: url("fonts/Duc De Berry Regular.otf");
 }
 
-.card.overflow #article-* p {
+p#article-*.card.overflow {
   color: #504738;
   font-family: UnifrakturCook;
   font-variant-ligatures: historical-ligatures; /*probably not going to work*/
@@ -24,7 +24,7 @@
   /*background-size: auto 1.5em;*/
 }
 
-.card.overflow #article-* h2, h3, h4 {
+h2#article-*.card.overflow, h3#article-*.card.overflow, h4#article-*.card.overflow {
   font-family: UnifrakturCook;
   font-size: 20px;
   line-height: 28px; /*unitless values for this property are multiplied with font size*/
@@ -34,7 +34,7 @@
   padding-top: 8px;
 }
 
-.card.overflow #article-* h1 {
+h1#article-*.card.overflow{
   font-size: 30px;
   font-family: "Duc De Berry Regular";
   /* la line-height non la metto: è come se fosse il frontespizio del manoscritto*/
