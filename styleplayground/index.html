@@ -1588,6 +1588,7 @@ $(function(){
         	})
         })
 function closeArticle(){
+	console.log(this);
     $(this.target).empty();
     $(this.target).remove();
     switch(Object.values(columnListener)[0]){
