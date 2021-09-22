@@ -3,6 +3,10 @@
 	src: url("future/metropolis/Metropolis-Regular.otf");
 }
 @font-face {
+	font-family: Joy Kim;
+	src: url("future/joy-kim/JoyKim-OxWd.ttf") format('ttf');
+}
+@font-face {
 	font-family: Metropolis;
 	src: url("future/metropolis/Metropolis-Bold.otf");
 	font-weight: bold ;
@@ -132,7 +136,9 @@ body {
       calc(var(--p) * -5) calc(var(--p) * 16);
   }
 }
-
+footer {
+	font-family: Joy Kim!important;
+}
 @media (prefers-reduced-motion) {
   body {
     animation: none;
