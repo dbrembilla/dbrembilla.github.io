@@ -1587,9 +1587,9 @@ $(function(){
         		this.checked = false
         	})
         })
-function closeArticle(id){
-    $(id).empty();
-    $(id).remove();
+function closeArticle(){
+    $(this.target).empty();
+    $(this.target).remove();
     switch(Object.values(columnListener)[0]){
         case "2":
         if(id.includes("1")) {
