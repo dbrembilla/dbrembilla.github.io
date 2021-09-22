@@ -51,3 +51,14 @@ h1 {
     background-image: linear-gradient(to bottom, black 1px, transparent 1px);
     background-size: auto 20px;
 }
+
+/*questo aggiunge baseline grid corretta (YEEEEE!!) ai paragrafi*/
+p {
+    margin-top: 0;
+    /* margin-bottom: 1rem; */
+    font-size: 20px;
+    line-height: 28px;
+    background-image: linear-gradient(to bottom, black 1px, transparent 1px);
+    background-size: auto 28px;
+    padding-top: 8px;
+}
