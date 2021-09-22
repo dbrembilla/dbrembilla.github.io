@@ -22,8 +22,7 @@ body {
 header{
 	font-family: Ransom;
 }
-
-.card.overflow h2 {
+.descTitle h2 {
 	font-family: 'Roboto Slab';
 	    color: red!important;
 	    text-transform: uppercase;
@@ -32,6 +31,8 @@ header{
 	    font-weight: bold!important;
 	    position: absolute;
 	    z-index: -2;
+	padding-top: 5%;
+	padding-right: 0%
 }
 
 .card#desc {
@@ -44,8 +45,6 @@ header{
 
 #desc * {
 	width: 50%;
-	padding: 39px;
-	display: -webkit-box;
 }
 
 #desc p, #desc ul {
