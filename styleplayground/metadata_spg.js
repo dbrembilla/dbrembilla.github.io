@@ -100,7 +100,7 @@ var column = `
                     <div class="card Meta">
                         <span>
                                 <h3 class="cardTitle">Metaviewer</h3>
-                                <img src="assets/close.png" title="Close" target = '#col-num$colnum' style="height: 1em; width: 1em; cursor: pointer;" onclick="closeArticle();" class="closeMeta">
+                                <img src="assets/close.png" title="Close" target = '#col-num$colnum' style="height: 1em; width: 1em; cursor: pointer;" onclick="closeArticle(this);" class="closeMeta">
                         </span>            
                         <div class="row list overflow" id="metaview$colnum">
                                     <ul id="metadata-list$colnum"></ul>
