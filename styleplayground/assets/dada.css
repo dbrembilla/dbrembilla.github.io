@@ -45,9 +45,6 @@ header{
     box-shadow: none!important;
 }
 
-#desc * {
-	width: 50%;
-}
-
 #desc p, #desc ul {
     color: #353535!important;
+		width: 50%;
