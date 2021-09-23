@@ -38,7 +38,7 @@ h2, h3, h4 {
 }
 
 
-p#article-*.card.overflow {
+p#article-1.card.overflow, p#article-2.card.overflow, p#article-3.card.overflow, {
   color: #504738;
   font-family: UnifrakturCook;
   font-variant-ligatures: historical-ligatures; /*probably not going to work*/
@@ -48,11 +48,15 @@ p#article-*.card.overflow {
   background-image: linear-gradient(to bottom, black 1px, transparent 1px);
   background-size: auto 28px;
   padding-top: 8px;
-	
+}	
   /*text-decoration: underline solid grey;*/
   /*background-image: linear-gradient(to top, black 1px, transparent 1px);*/ /* non trovo di meglio: la riga non è sulla baseline e lo spazio tra una riga e l'altra è fisso, di 1.5em; ovviamente è una baseline grid completamente fasulla*/
   /*background-size: auto 1.5em;*/
-}
+
+
+
+/* vedi se cambiare anche questo se funziona quello sopra*/
+
 
 h2#article-*.card.overflow, h3#article-*.card.overflow, h4#article-*.card.overflow {
   font-family: UnifrakturCook;
@@ -76,15 +80,15 @@ h1#article-*.card.overflow{
   margin: none;
 }*/
 
-
-#article-1, #article-2, #article-3 {   /*---------------questo blocco forse bisogna toglierlo?-------------*/
+/*---------------questo blocco forse bisogna toglierlo?-------------
+#article-1, #article-2, #article-3 {  
     padding-top: 20px;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
     background-image: linear-gradient(to bottom, black 1px, transparent 1px);
     background-size: auto 20px;
 }
-
+ */
 
 /*-------------------------qui finisce la parte degli articoli, puoi pure specificare cose diverse per le altre sezioni del layout, ovviamente-------------------------------*/
 
