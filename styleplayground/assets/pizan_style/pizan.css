@@ -38,7 +38,7 @@ h2, h3, h4 {
 }
 
 
-#article-* > p {
+#article-1 > p {
   color: #504738;
   font-family: UnifrakturCook;
   font-variant-ligatures: historical-ligatures; /*probably not going to work*/
