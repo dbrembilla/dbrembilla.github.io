@@ -38,7 +38,7 @@ h2, h3, h4 {
 }
 
 
-#article-1 > p {
+.card.overflow > p {
   color: #504738;
   font-family: UnifrakturCook;
   font-variant-ligatures: historical-ligatures; /*probably not going to work*/
@@ -54,11 +54,7 @@ h2, h3, h4 {
   /*background-size: auto 1.5em;*/
 
 
-
-/* vedi se cambiare anche questo se funziona quello sopra*/
-
-
-h2#article-*.card.overflow, h3#article-*.card.overflow, h4#article-*.card.overflow {
+.card.overflow > h2, .card.overflow > h3, .card.overflow > h4 {
   font-family: UnifrakturCook;
   font-size: 20px;
   line-height: 28px; /*unitless values for this property are multiplied with font size*/
@@ -68,7 +64,7 @@ h2#article-*.card.overflow, h3#article-*.card.overflow, h4#article-*.card.overfl
   padding-top: 8px;
 }
 
-h1#article-*.card.overflow{
+h1#article-*.card.overflow{    /*questo selector ovviamente non funziona*/
   font-size: 30px;
   font-family: "Duc De Berry Regular";
   /* la line-height non la metto: è come se fosse il frontespizio del manoscritto*/
