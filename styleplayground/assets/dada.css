@@ -58,6 +58,7 @@ height: 100%!important;
 .text p{
 	background-color: #ffffff3d;
 	border: 1px solid;
+	padding: 1em;
 }
 
 #desc p, #desc ul {
