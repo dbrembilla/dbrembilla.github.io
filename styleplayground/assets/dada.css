@@ -50,13 +50,14 @@ height: 100%!important;
 }
 
 .text{
-		background: rgba(255, 255, 255, 0.25);
-		letter-spacing: .15em;
-		padding-left: 10%
+	background: rgba(255, 255, 255, 0.25);
+	letter-spacing: .15em;
+	padding-left: 10%;
 }
 
 .text p{
-	background: white;
+	background-color: #ffffff3d;
+	border: 1px solid;
 }
 
 #desc p, #desc ul {
