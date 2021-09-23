@@ -72,7 +72,7 @@ h1#article-*.card.overflow{
 
 /*img {
   width: auto;
-  height: 10em; /* em are relative to the em of the container <figure>, which inherits the font size from body(??)*/
+  height: 10em;  em are relative to the em of the container <figure>, which inherits the font size from body(??)
   margin: none;
 }*/
 
