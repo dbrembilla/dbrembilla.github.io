@@ -33,8 +33,7 @@ header{
 	    z-index: -2;
 		padding-top: 5%;
 		padding-right: 0%;
-		transition-delay: 1s; /* delays for 1 second */
-   		-webkit-transition-delay: 1s; /* for Safari & Chrome */
+
 }
 
 .card#desc {
