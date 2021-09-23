@@ -24,7 +24,7 @@ header{
 }
 
 #row-article {
-height: 100%;
+height: 100%!important;
 }
 
 .descTitle h2 {
@@ -46,6 +46,11 @@ height: 100%;
     border-radius: 0px;
 	border: 0px;
     box-shadow: none!important;
+	padding: 0!important;
+}
+
+.text{
+	background: rgba(255, 255, 255, 0.1);
 }
 
 #desc p, #desc ul {
@@ -54,12 +59,7 @@ height: 100%;
 	
 }
 
-.sign.title {
-    font-size: 3em;
-}
-.sign.title {
-    font-size: 3em;
-}
+
 .sign.title {
     bottom: 35%;
     transform: rotate(13deg);
