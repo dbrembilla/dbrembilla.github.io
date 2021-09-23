@@ -61,6 +61,10 @@ height: 100%!important;
 	padding: 1em;
 }
 
+.text li{
+	float: right;
+}
+
 #desc p, #desc ul {
     color: #353535!important;
 	width: 50%;
