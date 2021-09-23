@@ -61,8 +61,12 @@ height: 100%!important;
 	padding: 1em;
 }
 
-.text ul{
+#desc .text ul{
 	float: right;
+}
+
+.text ul li{
+	background: white;
 }
 
 #desc p, #desc ul {
