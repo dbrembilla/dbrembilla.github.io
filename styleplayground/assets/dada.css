@@ -39,7 +39,7 @@ header{
     font-family: Serif!important;
     background: transparent!important;
     border-radius: 0px;
-
+	border: 0px;
     box-shadow: none!important;
 }
 
@@ -50,9 +50,15 @@ header{
 }
 
 .sign.title {
+	font-family: Ransom!important;
+	text-shadow: 0 0 0 black;;
     font-size: 3em;
     color: #b32727!important;
     letter-spacing: 0px;
     font-size: 4em;
     animation: none;
+}
+
+.flicker {
+    animation: none!important;
 }
