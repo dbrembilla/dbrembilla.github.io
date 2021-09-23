@@ -8,6 +8,36 @@
 	src: url("fonts/Duc De Berry Regular.otf");
 }
 
+
+
+p {
+  color: #504738;
+  font-family: UnifrakturCook;
+  font-variant-ligatures: historical-ligatures; /*probably not going to work*/
+  margin-top: 0; /*-------------serve davvero specificarlo?-----------*/
+  font-size: 20px;
+  line-height: 28px;
+  /*background-image: linear-gradient(to bottom, black 1px, transparent 1px);
+  background-size: auto 28px;
+  padding-top: 8px;*/
+
+  /*text-decoration: underline solid grey;*/
+  /*background-image: linear-gradient(to top, black 1px, transparent 1px);*/ /* non trovo di meglio: la riga non è sulla baseline e lo spazio tra una riga e l'altra è fisso, di 1.5em; ovviamente è una baseline grid completamente fasulla*/
+  /*background-size: auto 1.5em;*/
+}
+
+
+h2, h3, h4 {
+  font-family: UnifrakturCook;
+  font-size: 20px;
+  line-height: 28px; /*unitless values for this property are multiplied with font size*/
+  color: #A74640; 
+  /*background-image: linear-gradient(to bottom, black 1px, transparent 1px);
+  background-size: auto 28px;
+  padding-top: 8px;*/
+}
+
+
 p#article-*.card.overflow {
   color: #504738;
   font-family: UnifrakturCook;
@@ -57,34 +87,6 @@ h1#article-*.card.overflow{
 
 
 /*-------------------------qui finisce la parte degli articoli, puoi pure specificare cose diverse per le altre sezioni del layout, ovviamente-------------------------------*/
-
-
-p {
-  color: #504738;
-  font-family: UnifrakturCook;
-  font-variant-ligatures: historical-ligatures; /*probably not going to work*/
-  margin-top: 0; /*-------------serve davvero specificarlo?-----------*/
-  font-size: 20px;
-  line-height: 28px;
-  /*background-image: linear-gradient(to bottom, black 1px, transparent 1px);
-  background-size: auto 28px;
-  padding-top: 8px;*/
-
-  /*text-decoration: underline solid grey;*/
-  /*background-image: linear-gradient(to top, black 1px, transparent 1px);*/ /* non trovo di meglio: la riga non è sulla baseline e lo spazio tra una riga e l'altra è fisso, di 1.5em; ovviamente è una baseline grid completamente fasulla*/
-  /*background-size: auto 1.5em;*/
-}
-
-
-h2, h3, h4 {
-  font-family: UnifrakturCook;
-  font-size: 20px;
-  line-height: 28px; /*unitless values for this property are multiplied with font size*/
-  color: #A74640; 
-  /*background-image: linear-gradient(to bottom, black 1px, transparent 1px);
-  background-size: auto 28px;
-  padding-top: 8px;*/
-}
 
 
 
