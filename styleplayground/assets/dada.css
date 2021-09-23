@@ -59,6 +59,6 @@ header{
     animation: none;
 }
 
-.flicker {
+.flicker, .fast-flicker {
     animation: none!important;
 }
