@@ -52,6 +52,11 @@ height: 100%!important;
 .text{
 		background: rgba(255, 255, 255, 0.25);
 		letter-spacing: .15em;
+		padding-left: 10%
+}
+
+.text p{
+	background: white;
 }
 
 #desc p, #desc ul {
