@@ -50,15 +50,29 @@ header{
 }
 
 .sign.title {
-	font-family: Ransom!important;
-	text-shadow: 0 0 0 black;;
     font-size: 3em;
-    color: #b32727!important;
-    letter-spacing: 0px;
-    font-size: 4em;
+}
+.sign.title {
+    font-size: 3em;
+}
+.sign.title {
+    bottom: 35%;
+    transform: rotate(13deg);
+    position: absolute;
+    font-family: Ransom!important;
+    text-shadow: 0 0 0 black;
+    font-size: 5em!important;
+    color: #462828!important;
     animation: none;
 }
 
 .flicker, .fast-flicker {
     animation: none!important;
 }
+
+
+/*keyframe animation title*/
+
+@keyframes title_appear {
+	
+  }
