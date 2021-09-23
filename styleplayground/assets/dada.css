@@ -22,6 +22,11 @@ body {
 header{
 	font-family: Ransom;
 }
+
+#row-article {
+height: 100%;
+}
+
 .descTitle h2 {
 	font-family: 'Roboto Slab';
 	color: #b32727!important;
