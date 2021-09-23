@@ -38,7 +38,7 @@ h2, h3, h4 {
 }
 
 
-.card.overflow > p {
+.card.overflow p {
   color: #504738;
   font-family: UnifrakturCook;
   font-variant-ligatures: historical-ligatures; /*probably not going to work*/
@@ -54,7 +54,7 @@ h2, h3, h4 {
   /*background-size: auto 1.5em;*/
 
 
-.card.overflow > h2, .card.overflow > h3, .card.overflow > h4 {
+.card.overflow h2, .card.overflow h3, .card.overflow h4 {
   font-family: UnifrakturCook;
   font-size: 20px;
   line-height: 28px; /*unitless values for this property are multiplied with font size*/
@@ -64,13 +64,13 @@ h2, h3, h4 {
   padding-top: 8px;
 }
 
-h1#article-*.card.overflow{    /*questo selector ovviamente non funziona*/
+.card.overflow h1 {
   font-size: 30px;
   font-family: "Duc De Berry Regular";
   /* la line-height non la metto: è come se fosse il frontespizio del manoscritto*/
 }
 
-/*img {
+/*img {  /* per le immagini devi settare dei breakpoints per i vari @media in modo che siano coerenti con la baseline grid */
   width: auto;
   height: 10em;  em are relative to the em of the container <figure>, which inherits the font size from body(??)
   margin: none;
