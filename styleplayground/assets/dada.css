@@ -67,6 +67,7 @@ height: 100%!important;
 
 .text ul li{
 	background: white;
+	width: 50%;
 }
 
 #desc p, #desc ul {
