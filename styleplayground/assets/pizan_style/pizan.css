@@ -38,7 +38,7 @@ h2, h3, h4 {
 }
 
 
-p#article-1.card.overflow, p#article-2.card.overflow, p#article-3.card.overflow, {
+#article-* > p {
   color: #504738;
   font-family: UnifrakturCook;
   font-variant-ligatures: historical-ligatures; /*probably not going to work*/
