@@ -40,12 +40,12 @@ height: 100%!important;
     font-family: 'Durango';
     color: #b32727!important;
     text-transform: uppercase;
-    font-size: 7em!important;
+    font-size: em!important;
     letter-spacing: -.01em!important;
     font-weight: bold!important;
     position: absolute;
     z-index: -2;
-    padding-top: 5%;
+    padding: 5%;
     line-height: 165%;
 }
 
