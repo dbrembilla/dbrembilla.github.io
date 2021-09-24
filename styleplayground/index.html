@@ -1568,12 +1568,11 @@
 						} else if (id.includes("3")) {
 							$("#col-num-1").attr("class", "col-6")
 							$("#col-num-2").attr("class", "col-6")
-							$("#col-num-3").attr("class", "col-6")
+							
 							thisKey = Object.keys(columnListener)[0]
 							columnListener[thisKey] = "2"
 						} else {
 							$("#col-num-1").attr("class", "col-6")
-							$("#col-num-2").attr("class", "col-6")
 							$("#col-num-3").attr("class", "col-6")
 							changedId['col-num-3'] = "col-num-2"
 							changeColumn('3', '2')
