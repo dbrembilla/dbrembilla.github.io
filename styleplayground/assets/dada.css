@@ -98,9 +98,10 @@ height: 100%!important;
     animation: none!important;
 }
 
-footer{
-	border-top: 0px!important;
-	z-index: -1000;
+
+footer, nav{
+	border: 0px!important;
+	background: transparent!important ;
 }
 
 @media (max-width: 1024px) {
