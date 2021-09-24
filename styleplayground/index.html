@@ -1546,7 +1546,7 @@
 						if(id.includes("1")) {
 							$("#col-num-2").attr("class", "col-12") ;
 							changedId['col-num-2'] = "col-num-1"
-							$("#col-num-2").attr("id", "col-num-1")
+							changeColumn('2', '1')
 							thisKey = Object.keys(columnListener)[0]
 							columnListener[thisKey] = "1"
 						} else {
@@ -1558,10 +1558,10 @@
 						if(id.includes("1")) {
 							$("#col-num-2").attr("class", "col-6")
 							changedId['col-num-2'] = "col-num-1"
-							$("#col-num-2").attr("id", "col-num-1")
+							changeColumn('2', '1')
 							$("#col-num-3").attr("class", "col-6")
 							changedId['col-num-3'] = "col-num-2"
-							$("#col-num-3").attr("id", "col-num-2")
+							changeColumn('3', '2')
 
 							thisKey = Object.keys(columnListener)[0]
 							columnListener[thisKey] = "2"
@@ -1574,7 +1574,7 @@
 							$("#col-num-1").attr("class", "col-6")
 							$("#col-num-3").attr("class", "col-6")
 							changedId['col-num-3'] = "col-num-2"
-							$("#col-num-3").attr("id", "col-num-2")
+							changeColumn('3', '2')
 							thisKey = Object.keys(columnListener)[0]
 							columnListener[thisKey] = "2"}
 
