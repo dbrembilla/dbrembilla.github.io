@@ -20,8 +20,8 @@ body {
 }
 
 .container-fluid{
-	border-left:0px;
-	border-bottom: 0px;
+	border-left: 0px !important;;
+	border-bottom: 0px!important;
 }
 header{
 	font-family: Ransom;
