@@ -19,6 +19,10 @@ body {
 	 background-color: #eee2d0!important;
 }
 
+.container-fluid{
+	border-left:0px;
+	border-bottom: 0px;
+}
 header{
 	font-family: Ransom;
 }
