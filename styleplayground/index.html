@@ -1528,16 +1528,21 @@
 								this.checked = false
 							})
 						})
-				function closeArticle(){
-					console.log(this);
-					$(this.target).empty();
-					$(this.target).remove();
+				changedId = {}
+				function closeArticle(id){
+					console.log(id);
+					if (id in changedId){
+						id = changedId[id]
+					}
+					console.log(id);
+					$(id).empty();
+					$(id).remove();
 					switch(Object.values(columnListener)[0]){
 						case "2":
-						if(this.target.includes("1")) {
-							$('#col-num-2.closeMeta').attr('target','col-num-1')
+						if(id.includes("1")) {
 							$("#col-num-2").attr("class", "col-12") ;
-							$("#col-num-2").attr("id", "col-num-1")
+							changedId['col-num-2'] = "col-num-1"
+							changeColumn('2', '1')
 							thisKey = Object.keys(columnListener)[0]
 							columnListener[thisKey] = "1"
 						} else {
@@ -1546,32 +1551,34 @@
 							columnListener[thisKey] = "1"}
 						break
 						case "3":
-						if(this.target.includes("1")) {
-							$('#col-num-2.closeMeta').attr('target','col-num-1')
+						if(id.includes("1")) {
 							$("#col-num-2").attr("class", "col-6")
-							$("#col-num-2").attr("id", "col-num-1")
-							$('#col-num-2.closeMeta').attr('target','col-num-2')
+							changedId['col-num-2'] = "col-num-1"
+							changeColumn('2', '1')
 							$("#col-num-3").attr("class", "col-6")
-							$("#col-num-3").attr("id", "col-num-2")
+							changedId['col-num-3'] = "col-num-2"
+							changeColumn('3', '2')
 
 							thisKey = Object.keys(columnListener)[0]
 							columnListener[thisKey] = "2"
-						} else if (this.target.includes("3")) {
+						} else if (id.includes("3")) {
 							$("#col-num-1").attr("class", "col-6")
 							$("#col-num-2").attr("class", "col-6")
+
 							thisKey = Object.keys(columnListener)[0]
 							columnListener[thisKey] = "2"
 						} else {
 							$("#col-num-1").attr("class", "col-6")
-							$('#col-num-2.closeMeta').attr('target','col-num-2')
 							$("#col-num-3").attr("class", "col-6")
-							$("#col-num-3").attr("id", "col-num-2")
+							changedId['col-num-3'] = "col-num-2"
+							changeColumn('3', '2')
 							thisKey = Object.keys(columnListener)[0]
 							columnListener[thisKey] = "2"}
 
 						break
 						default:
 						$("section").empty();
+						Object.keys(changedId).forEach(key => {delete changedId[key];});
 						thisKey = Object.keys(columnListener)[0]
 						columnListener[thisKey] = "0"
 						$("section").append(`

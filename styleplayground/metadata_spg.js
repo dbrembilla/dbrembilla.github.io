@@ -100,7 +100,7 @@ var column = `
                     <div class="card Meta">
                         <span>
                                 <h3 class="cardTitle">Metaviewer</h3>
-                                <img src="assets/close.png" title="Close" target = '#col-num$colnum' style="height: 1em; width: 1em; cursor: pointer;" onclick="closeArticle(this);" class="closeMeta">
+                                <img src="assets/close.png" title="Close" style="height: 1em; width: 1em; cursor: pointer;" onclick="closeArticle('#col-num$colnum');" class="closeMeta">
                         </span>            
                         <div class="row list overflow" id="metaview$colnum">
                                     <ul id="metadata-list$colnum"></ul>
@@ -181,6 +181,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 method: 'GET',
                 url: file,
                 success: function(d) {
+                    console.log(columnListener[topic]);
                     $("#article-"+columnListener[topic]).html(d) //aggiunge un div con id file (il documento)
                     $('#title-'+ columnListener[topic]).html($("col-num-" + columnListener[topic] + " h1")) //aggiunge un div con id title scegliendo l'elemento h1 nel div con id file
                     //$('.show').prop("checked", false)
@@ -278,6 +279,12 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 }) )
             }
         }
+function changeColumn(from, to){
+    $('#col-num-' + from).attr("id", 'col-num-' + to);
+    $('#article-' + from).attr("id", 'article-' + to);
+    $('#metaview-' + from).attr("id", 'metaview-' + to);
+    $('#metadata-list-' + from).attr("id", 'metadata-list-' + to);
+}
         
 function fillInfo(from, where) { //ritornare a solo 1 where
             var title =`
