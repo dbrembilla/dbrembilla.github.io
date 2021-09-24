@@ -280,10 +280,10 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             }
         }
 function changeColumn(from, to){
-    $('col-num-' + from).attr("id", 'col-num-' + to);
-    $('article-' + from).attr("id", 'article-' + to);
-    $('metaview-' + from).attr("id", 'metaview-' + to);
-    $('metadata-list-' + from).attr("id", 'metadata-list-' + to);
+    $('#col-num-' + from).attr("id", 'col-num-' + to);
+    $('#article-' + from).attr("id", 'article-' + to);
+    $('#metaview-' + from).attr("id", 'metaview-' + to);
+    $('#metadata-list-' + from).attr("id", 'metadata-list-' + to);
 }
         
 function fillInfo(from, where) { //ritornare a solo 1 where
