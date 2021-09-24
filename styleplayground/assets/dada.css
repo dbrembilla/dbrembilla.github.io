@@ -98,6 +98,11 @@ height: 100%!important;
     animation: none!important;
 }
 
+footer{
+	border-top: 0px!important;
+	z-index: -1000;
+}
+
 @media (max-width: 1024px) {
 
 	.descTitle h2 {
