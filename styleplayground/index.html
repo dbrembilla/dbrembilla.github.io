@@ -624,15 +624,19 @@
 
 	.themes{
 		color: #5c5c3d;	
-
+		height: 70%;
 		}
 
 
 		
 	.reset{
-		height: 10%;
-		position:absolute;
-		bottom: 0;
+		height: 15%;
+    	position: absolute;
+    	bottom: 0%;
+    	padding-top: 0%;
+    	background-color: rgb(170 197 199);
+    	width: 100%;
+    	text-align: left!important;
 	}
 
 	#topics{
@@ -767,7 +771,7 @@
 		height: -webkit-fill-available;
 	}
 		
-
+	
 
 		
 	.btn-secondary{
@@ -790,7 +794,8 @@
 		
 	/*liste*/
 
-	.themes h3{
+	.flip-card-front h3{
+		font-family: 'Calculator';
 		padding-left:0.5rem;
 		border-bottom: 1px solid white;
 	}
@@ -882,12 +887,11 @@
 			-webkit-backface-visibility: hidden;
 			-ms-backface-visibility: hidden;
 			backface-visibility: hidden;
-			z-index: 2;
-			padding-top: 1em;
+			
 			}
 		
 		#flip-card .flip-card-front{
-			background-color: rgba(130, 151, 154, 0.7);;
+			background-color: rgb(170 197 199); 
 			border-radius: .5rem;
 			border: white 3px solid;
 		}
@@ -896,7 +900,7 @@
 		#flip-card .flip-card-back {
 		
 			padding-left:1em;
-			background-color: white 1px solid rgba(0,0,0,.125);
+			background-color: rgb(170 197 199); 
 			border-radius: .25rem;
 			-o-transform: rotateY(180deg);
 			-webkit-transform: rotateY(180deg);
@@ -1149,9 +1153,10 @@
 						<div id="flip-card">
 							<!-- flipcard Front-->
 							<div class="flip-card-front">
+								<h3>Programs</h3>
 								<div class="themes overflow">
 									<!--themes-->
-									<h3>Programmes</h3>
+									
 									<ul>
 										<li >
 											<a class="btn"  onclick="changeStyle('#1800')">American Newspapers</a> 
@@ -1178,6 +1183,7 @@
 									</ul>
 								</div>
 								<button class="btn reset"  onclick="changeStyle('#none')">Reset</button>	
+
 								<button id="flip-card-btn-turn-to-back"><script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
 									<lord-icon
 										src="https://cdn.lordicon.com/ulhdumaq.json"
@@ -1192,7 +1198,7 @@
 							<div class="flip-card-back">
 								<!--Lens-->
 								<h3>Lens</h3>
-								<ul>
+								<ul class="overflow">
 									<li class="form-check">
 										<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .place">
 										<label class="form-check-label" for="inlineCheckbox1" onchange="">Places</label>

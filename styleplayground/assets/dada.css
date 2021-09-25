@@ -99,7 +99,7 @@ border-right: 9px #b32727 solid;
     font-family: 'Durango';
     color: #b32727!important;
     text-transform: uppercase;
-    font-size: 4em!important;
+    font-size: 4em;
     letter-spacing: -.01em!important;
     font-weight: bold!important;
     line-height: 150%;
@@ -130,14 +130,11 @@ border-right: 9px #b32727 solid;
 	list-style: none;
 }
 
-#desc p, #desc ul {
+#desc p, #desc ul{
     color: white!important;
 	font-family: serif;
     font-size: 0.5em;
     text-align: justify;
-
-	
-	
 }
 
 .highlight{
@@ -150,10 +147,10 @@ border-right: 9px #b32727 solid;
 	position: absolute;
 	top: 15%;
 	bottom: 42%;
-    right: 3%;
+    right: 2%;
 	transform: rotate(180deg);
 	height: fit-content;
-    width: 30%;
+    width: 31%;
     padding: .5%;
 	font-family: Ransom!important;
 	font-size: 2.5em!important;
@@ -170,10 +167,85 @@ border-right: 9px #b32727 solid;
     animation: none!important;
 }
 
-#flip-card .flip-card-front {
-	background-color: transparent;
+.flip-card-front, .flip-card-back {
+	background-color: #eee2d0!important;
+	border: 0px!important;
+
 }
 
+.themes{
+	
+	color: black!important;
+	letter-spacing: 1em!important ;
+	overflow-wrap: anywhere;
+}
+
+#topics{
+	background-color: rgb(180 39 38)!important;
+	background-color: rgb(180 39 38)!important;
+    width: fit-content;
+    height: fit-content!important;
+    color: #eee2d0!important;
+    border: 0px!important;
+    transform: rotate(270deg);
+    top: -5%;
+    left: 3%;
+}
+
+.themes, #topics {
+    font-family: 'Worksans Medium'!important;
+	
+}
+
+.flip-card-front h3 {
+    font-family: 'Worksans Black'!important;
+	color: black;
+	border-bottom: 0px!important;
+}
+
+#topics h3{
+    margin-bottom: 0;
+    padding: 0.5rem;
+	font-size: 2em!important;
+}
+
+.reset{
+	background-color: #eee2d0!important;
+}
+
+a.btn{
+	color: black!important;
+}
+
+.btn-secondary {
+	font-size: 0.5em!important;
+	color: #eee2d0!important;
+	height: 6em!important;
+}
+
+
+@media (max-width: 1440px) {
+
+	.descTitle h2 {
+		font-size: 3.5em;
+	}
+	a.btn {
+			font-size: 10px!important;
+		
+		}
+
+	@media (max-height: 623px) {
+		
+		.descTitle h2 {
+			font-size: 3em;
+		}
+	
+		
+
+		
+	}
+
+}
 
 @media (max-width: 1024px) {
 
@@ -196,5 +268,4 @@ border-right: 9px #b32727 solid;
 
 
 /*    text-decoration-thickness: 10px;
-    text-decoration-color: black;
-}*/
+    text-decoration-color: black;*/
