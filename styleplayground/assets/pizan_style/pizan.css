@@ -70,7 +70,7 @@ h2, h3, h4 {
   /* la line-height non la metto: è come se fosse il frontespizio del manoscritto*/
 }
 
-/*img {  /* per le immagini devi settare dei breakpoints per i vari @media in modo che siano coerenti con la baseline grid */
+/*img {  /* per le immagini devi settare dei breakpoints per i vari @media in modo che siano coerenti con la baseline grid 
   width: auto;
   height: 10em;  em are relative to the em of the container <figure>, which inherits the font size from body(??)
   margin: none;
@@ -89,4 +89,16 @@ h2, h3, h4 {
 /*-------------------------qui finisce la parte degli articoli, puoi pure specificare cose diverse per le altre sezioni del layout, ovviamente-------------------------------*/
 
 
+figure {
+    font-size: 10px;
+    line-height: 14px;
+    font-family: 'UnifrakturCook';
+    color: #A74640;
+}
+/* non mettiamo la baseline grid anche sulle figcaption, che sono come delle glosse
+figcaption {
+  background-image: linear-gradient(to bottom, black 1px, transparent 1px);
+  background-size: auto 28px;
+}
+*/ 
 
