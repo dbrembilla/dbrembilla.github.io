@@ -220,15 +220,17 @@ a.btn{
 .btn-secondary {
 	font-size: 0.5em!important;
 	color: #eee2d0!important;
-	height: 6em!important;
+	height: 6em;
+	text-align: center;
 }
 
 
 @media (max-width: 1440px) {
 
 	.descTitle h2 {
-		font-size: 3.5em;
+		font-size: 3em;
 	}
+	
 	a.btn {
 			font-size: 10px!important;
 		
@@ -236,11 +238,11 @@ a.btn{
 
 	@media (max-height: 623px) {
 		
-		.descTitle h2 {
-			font-size: 3em;
-		}
-	
 		
+		
+		#topics {
+		top: -15%;
+		}
 
 		
 	}
@@ -248,19 +250,32 @@ a.btn{
 }
 
 @media (max-width: 1024px) {
+	#topics{
+	    transform: rotate(90deg);
+		font-size:1.5em!important;
+	}
 
-	.descTitle h2 {
+		.descTitle h2 {
 		font-size: 2,5em;
 	}
 
 	@media (max-height: 623px) {
 		
+
 		sign.title{
 		font-size: 3em;
 		bottom: 61%;
 		transform: rotate(174deg);
 		}
-	
+		
+		.btn-secondary {
+			height: 2em;
+		}
+
+		#topics {
+			top: -15%;
+			}
+
 	}
 
 }
