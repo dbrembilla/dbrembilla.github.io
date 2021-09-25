@@ -14,6 +14,54 @@
   src: url("dada/Durango.otf");
 }
 
+@font-face {
+	font-family: 'WorkSans Black';
+  src: url("dada/work-sans/WorkSans-Black.otf");
+}
+
+@font-face {
+	font-family: 'WorkSans ExtraBold';
+  src: url("dada/work-sans/WorkSans-ExtraBold.otf");
+}
+
+@font-face {
+	font-family: 'WorkSans Bold';
+  src: url("dada/work-sans/WorkSans-Bold.otf");
+}
+
+@font-face {
+	font-family: 'WorkSans SemiBold';
+  src: url("dada/work-sans/WorkSans-SemiBold.otf");
+}
+
+@font-face {
+	font-family: 'WorkSans Medium';
+  src: url("dada/work-sans/WorkSans-Medium.otf");
+}
+
+@font-face {
+	font-family: 'WorkSans Regular';
+  src: url("dada/work-sans/WorkSans-Regular.otf");
+}
+@font-face {
+	font-family: 'WorkSans Thin';
+  src: url("dada/work-sans/WorkSans-Thin.otf");
+}
+
+@font-face {
+	font-family: 'WorkSans Light';
+  src: url("dada/work-sans/WorkSans-ExtraLight.otf");
+}
+
+@font-face {
+	font-family: 'WorkSans ExtraLight';
+  src: url("dada/work-sans/WorkSans-ExtraLight.otf");
+}
+@font-face {
+	font-family: 'WorkSans Hairline';
+  src: url("dada/work-sans/WorkSans-Hairline.otf");
+}
+
 
 body {
 	 background-color: #eee2d0!important;
@@ -21,7 +69,10 @@ body {
 
 
 .navbar, footer {
-	 background-color: #eee2d0!important;
+	background: transparent!important;
+	border: 0px!important;
+
+
 }
 
 .container-fluid{
@@ -34,19 +85,24 @@ header{
 
 #row-article {
 height: 100%!important;
+width: 60%;
+border-right: 9px #b32727 solid;
 }
 
 .descTitle h2 {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+    column-count: 2;
+   -webkit-column-gap: 20px;
+	-moz-column-gap: 20px;
+    column-gap: 20px;
     font-family: 'Durango';
     color: #b32727!important;
     text-transform: uppercase;
     font-size: 4em!important;
     letter-spacing: -.01em!important;
     font-weight: bold!important;
-    position: absolute;
-    z-index: -2;
-    padding: 5%;
-    line-height: 165%;
+    line-height: 150%;
 }
 
 .card#desc {
@@ -58,56 +114,71 @@ height: 100%!important;
 	padding: 0!important;
 }
 
-.text{
-	background: rgba(255, 255, 255, 0.25);
-	letter-spacing: .15em;
-	padding-left: 10%;
+.descTitle {
+    border-bottom: #b32727 double;
+    border-bottom-width: 35px;
 }
 
-.text p{
-	background-color: #ffffff3d;
-	border: 1px solid;
-	padding: 1em;
+.text{
+
+    letter-spacing: .15em;
+    padding: 1em;
 }
+
 
 .text ul li{
-	background: white;
-	width: 50%;
 	list-style: none;
 }
 
 #desc p, #desc ul {
-    color: #353535!important;
-	width: 50%;
+    color: white!important;
+	font-family: serif;
+    font-size: 0.5em;
+    text-align: justify;
+
 	
+	
+}
+
+.highlight{
+	background-color: rgba(0, 0, 0, 0.432);
+
 }
 
 
 .sign.title {
-	bottom: 50%;
-    transform: rotate(13deg);
-    position: absolute;
-    font-family: Ransom!important;
-    text-shadow: 0 0 0 black;
-    font-size: 5em!important;
-    color: #462828!important;
+	position: absolute;
+	top: 15%;
+	bottom: 42%;
+    right: 3%;
+	transform: rotate(180deg);
+	height: fit-content;
+    width: 30%;
+    padding: .5%;
+	font-family: Ransom!important;
+	font-size: 2.5em!important;
+    text-transform: uppercase;
+	color: #eee2d0;
+    background: #3c4663!important;
     animation: none;
+    text-shadow: 0 0 0 black;
+    letter-spacing: 0.4em;
+
 }
 
 .flicker, .fast-flicker {
     animation: none!important;
 }
 
-
-footer, nav{
-	border: 0px!important;
-	background: transparent!important ;
+#flip-card .flip-card-front {
+	background-color: transparent;
 }
+
 
 @media (max-width: 1024px) {
 
 	.descTitle h2 {
-		font-size: 4em!important;
+		font-size: 2,5em;
 	}
 
 	@media (max-height: 623px) {
@@ -121,3 +192,9 @@ footer, nav{
 	}
 
 }
+
+
+
+/*    text-decoration-thickness: 10px;
+    text-decoration-color: black;
+}*/
