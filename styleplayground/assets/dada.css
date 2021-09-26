@@ -93,7 +93,7 @@ border-right: 9px #b32727 solid;
 	-webkit-column-count: 2;
 	-moz-column-count: 2;
     column-count: 2;
-   -webkit-column-gap: 20px;
+    -webkit-column-gap: 20px;
 	-moz-column-gap: 20px;
     column-gap: 20px;
     font-family: 'Durango';
@@ -182,7 +182,6 @@ border-right: 9px #b32727 solid;
 
 #topics{
 	background-color: rgb(180 39 38)!important;
-	background-color: rgb(180 39 38)!important;
     width: fit-content;
     height: fit-content!important;
     color: #eee2d0!important;
@@ -211,6 +210,8 @@ border-right: 9px #b32727 solid;
 
 .reset{
 	background-color: #eee2d0!important;
+	bottom: unset!important;
+    padding-top: unset!important;
 }
 
 a.btn{
@@ -250,7 +251,7 @@ a.btn{
 }
 
 @media (max-width: 1024px) {
-	#topics{
+	.sign.title{
 	    transform: rotate(90deg);
 		font-size:1.5em!important;
 	}
@@ -261,6 +262,9 @@ a.btn{
 
 	@media (max-height: 623px) {
 		
+		.flip-card-3D-wrapper {
+			height: 65%!important;
+		}
 
 		sign.title{
 		font-size: 3em;
@@ -275,7 +279,22 @@ a.btn{
 		#topics {
 			top: -15%;
 			}
+	
+		#topics h3 {
+			font-size: 1.5em;
+		}
 
+		.descTitle h2 {
+		font-size: 2,5em;
+	}
+
+	}
+
+}
+
+@media (max-width: 768px) {
+	.sign.title{
+		width: 50%;
 	}
 
 }
