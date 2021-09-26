@@ -109,9 +109,5 @@ figcaption {
     background-size: calc(97% - 1rem);
 }
 */
-.card.overflow h1 ~ * {
-    background-image: linear-gradient(to right, black 1px, transparent 1px);
-    background-position-x: 0.99rem;
-    background-size: calc(97% - 1rem);
-}
+
 	
