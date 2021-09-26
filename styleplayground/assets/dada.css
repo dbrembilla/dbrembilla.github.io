@@ -310,6 +310,12 @@ a.btn{
 		width: 90%;
 
 	}
+
+	.sign{
+		color: unset!important;
+		text-shadow: none!important;
+		animation: none!important;
+	}
 }
 
 
