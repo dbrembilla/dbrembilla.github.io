@@ -101,15 +101,17 @@ figcaption {
   background-size: auto 28px;
 }
 */ 
+/*
  .card.overflow {
     background-image: linear-gradient(to right, black 1px, transparent 1px);
     background-position-x: 0.99rem;
     background-position: 0.99rem;
     background-size: calc(97% - 1rem);
 }
-
-.card.overflow h1{
-	background-image:none;
-	background-color:yellow;
+*/
+.card.overflow h1 ~ * {
+    background-image: linear-gradient(to right, black 1px, transparent 1px);
+    background-position-x: 0.99rem;
+    background-size: calc(97% - 1rem);
 }
 	
