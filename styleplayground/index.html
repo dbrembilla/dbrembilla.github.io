@@ -1536,20 +1536,16 @@
 								this.checked = false
 							})
 						})
-				changedId = {}
 				function closeArticle(id){
-					console.log(id);
-					if (id in changedId){
-						id = changedId[id]
-					}
-					console.log(id);
+					
 					$(id).empty();
 					$(id).remove();
 					switch(Object.values(columnListener)[0]){
 						case "2":
 						if(id.includes("1")) {
 							$("#col-num-2").attr("class", "col-12") ;
-							changedId['col-num-2'] = "col-num-1"
+							$('#close-2').attr('onclick', `'closeArticle("col-num-1")'`)
+							$('#close-2').attr('id','close-1')
 							changeColumn('2', '1')
 							thisKey = Object.keys(columnListener)[0]
 							columnListener[thisKey] = "1"
@@ -1561,10 +1557,11 @@
 						case "3":
 						if(id.includes("1")) {
 							$("#col-num-2").attr("class", "col-6")
-							changedId['col-num-2'] = "col-num-1"
+							$('#close-2').attr('onclick', `'closeArticle("col-num-1")'`)
+							$('#close-2').attr('id','close-1')
 							changeColumn('2', '1')
-							$("#col-num-3").attr("class", "col-6")
-							changedId['col-num-3'] = "col-num-2"
+							$('#close-3').attr('onclick', `'closeArticle("col-num-2")'`)
+							$('#close-3').attr('id','close-2')
 							changeColumn('3', '2')
 
 							thisKey = Object.keys(columnListener)[0]
@@ -1578,7 +1575,8 @@
 						} else {
 							$("#col-num-1").attr("class", "col-6")
 							$("#col-num-3").attr("class", "col-6")
-							changedId['col-num-3'] = "col-num-2"
+							$('#close-3').attr('onclick', `'closeArticle("col-num-2")'`)
+							$('#close-3').attr('id','close-2')
 							changeColumn('3', '2')
 							thisKey = Object.keys(columnListener)[0]
 							columnListener[thisKey] = "2"}
@@ -1586,7 +1584,6 @@
 						break
 						default:
 						$("section").empty();
-						Object.keys(changedId).forEach(key => {delete changedId[key];});
 						thisKey = Object.keys(columnListener)[0]
 						columnListener[thisKey] = "0"
 						$("section").append(`
