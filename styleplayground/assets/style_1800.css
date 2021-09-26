@@ -57,7 +57,7 @@ h1 {
 	text-transform: uppercase;
 }
 h2, h3, .home {
-	font-family: Essays1743;
+	font-family: Essays1743!important;
 	font-weight: bold;
 	text-align: center;
 }
