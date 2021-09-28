@@ -143,6 +143,7 @@ img {
 	color: black!important;
 	background-image: none!important;
 }
+
 .navbar {
 	padding: 0px!important;
 	border-left: none!important;
@@ -178,6 +179,9 @@ header .sign {
 	color: black!important;
 	text-shadow: none!important;
 	animation: none!important;
+}
+#topics {
+	color: black!Important;
 }
 #topics .card {
 	color: #5c5c3d!important;
