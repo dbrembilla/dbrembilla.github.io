@@ -122,9 +122,10 @@ figcaption {
 }
 
 #article-1, #article-2, #article-3 {
-	padding: 0;
+	padding: 0; !important
 	border-left: solid 1px;
 	border-right: solid 1px;
+	border-radius: 0rem;
 }
 
 #col-num-1, #col-num-2, #col-num-3 {
