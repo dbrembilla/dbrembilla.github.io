@@ -115,8 +115,9 @@ figcaption {
 }
 */
 
-.card.overflow p::first letter{
-	font-family: GotischeInitialen;
+p::first letter{
+	font-family: GotischeInitialen; !important
 	font-size: 20px;
-	background-color: gold;
+	background-color: gold; !important
+	color: pink;
 }
