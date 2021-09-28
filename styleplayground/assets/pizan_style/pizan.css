@@ -9,6 +9,11 @@
 }
 
 
+@font-face {
+	font-family: GotischeInitialen;
+	src: url("fonts/GotischeInitialen.ttf");
+}
+
 
 p {
   color: #504738;
@@ -110,4 +115,8 @@ figcaption {
 }
 */
 
-	
+.card.overflow p::first letter{
+	font-family: GotischeInitialen;
+	font-size: 20px;
+	background-color: gold;
+}
