@@ -75,6 +75,28 @@ body {
 
 }
 
+nav #download-button button{
+	background: #eee2d0;
+	border: 0px;
+	font-family: serif;
+	font-size: 10px;
+
+	
+} 
+
+nav #download-button button:hover{
+	background-color: rgb(72 72 72);	
+	color: white;
+
+	
+} 
+
+.sign{
+	color: unset!important;
+	text-shadow: none!important;
+	animation: none!important;
+}
+
 .container-fluid{
 	border-left: 0px !important;;
 	border-bottom: 0px!important;
@@ -306,16 +328,38 @@ a.btn{
 		right: 0px;	
 	}
 
-	#row-article{
+	#main-row{
+		height: 90%;
+	}
+
+	#row-article, #desc{
 		width: 90%;
 
 	}
 
-	.sign{
-		color: unset!important;
-		text-shadow: none!important;
-		animation: none!important;
+	#download-button{
+		position: absolute;
+		top: 176%;
+		right: 8%;
+		z-index: 10;
 	}
+
+	footer{
+		width: 50%!important;
+		position: absolute!important;
+		right: -10%;
+		top: 49%;
+		transform: rotate(90deg);
+	
+	}
+
+	#footer-icons{
+		transform: rotate(-90deg);
+		position: absolute;
+		bottom: 74%;
+		right: 71%;
+	}
+	
 }
 
 
