@@ -246,37 +246,36 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 }))
                 }
                 else {
-                    if ( what.includes('date')) {
+                     
                         if (elements[i].id != "#"){
-                            classNames[referenceClass] = $("#" + elements[i].id).text()
-                            seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
-                            place: "#" + elements[i].id,
-                            thisclass: referenceClass,
-                            originalClass: elements[i].getAttribute("class").toString(),
-                            number: 1,
-                            dateValue: elements[i].getAttribute("value").toString() 
-                    }
-                    ) ]
-                    } else {
-                        if (elements[i].id != "#"){
-                            classNames[referenceClass] = $("#" + elements[i].id).text()
+                            classNames[referenceClass] = [$("#" + elements[i].id).text(), elements[i].attr('value')]
                             seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
                             place: "#" + elements[i].id,
                             thisclass: referenceClass,
                             originalClass: elements[i].getAttribute("class").toString(),
                             number: 1
                     }
-                    ) ]}}
+                    ) ]
                 }
             
 
             } 
             for (const [key, value] of Object.entries(seenClasses)) {
-              $(where).append(listFirst.sub({
-                content: classNames[key],
-                links: value,
-                classtodelete: linkClass,
-              }));
+                if (what.includes('date')) {
+                    $(where).append(listFirst.sub({
+                    content: classNames[key],
+                    links: value[0],
+                    classtodelete: linkClass,
+                    dateValue: value[1]
+              }))
+                } else{
+                    $(where).append(listFirst.sub({
+                    content: classNames[key],
+                    links: value,
+                    classtodelete: linkClass,
+              }))
+                }
+              ;
             }
             //content: elements[i].innerHTML
         }}
