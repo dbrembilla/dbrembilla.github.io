@@ -1482,8 +1482,8 @@
 							break
 							case 'quote':
 								for (i=1; i <= Object.values(columnListener)[0]; i++){
-										$("#metadata-list-"+i).append('<h4 class="list-quote">Quotes</h4>')
-										basefilltab("article-"+i +" .quote","#metadata-list-"+i)
+										$("#metadata-list-"+i).append('<h4 class="list-quote">Quotes</h4><ul id="metadata-list-' + i + '-quote"></ul>')
+										basefilltab("article-"+i +" .quote","#metadata-list-"+i +"-quote")
 											
 										}
 
@@ -1491,17 +1491,22 @@
 							default:
 								for (i=1; i <= Object.values(columnListener)[0]; i++){
 										if (this.value.includes('person')) {
-												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-person">People</h4>')
+												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-person">People</h4><ul id="metadata-list-' + i + '-person"></ul>')
+												filltab("article-"+i+this.value,"#metadata-list-"+i + "-person");
 										} else if (this.value.includes('institution')) {
-												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-institution">Institutions</h4>')
+												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-institution">Institutions</h4><ul id="metadata-list-' + i + '-institution"></ul>')
+												filltab("article-"+i+this.value,"#metadata-list-"+i + "-institution");
 										} else if (this.value.includes('event')) {
-												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-event">Events</h4>')
+												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-event">Events</h4><ul id="metadata-list-' + i + '-event"></ul>')
+												filltab("article-"+i+this.value,"#metadata-list-"+i + "-event");
 										} else if (this.value.includes('date')) {
-												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-date">Dates</h4>')
+												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-date">Dates</h4><ul id="metadata-list-' + i + '-date"></ul>')
+												filltab("article-"+i+this.value,"#metadata-list-"+i + "-date");
 										} else if (this.value.includes('place')) {
-												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-place">Places</h4>')
+												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-place">Places</h4><ul id="metadata-list-' + i + '-place"></ul>')
+												filltab("article-"+i+this.value,"#metadata-list-"+i + "-place");
 										}
-										filltab("article-"+i+this.value,"#metadata-list-"+i);
+
 
 									} 
 									
