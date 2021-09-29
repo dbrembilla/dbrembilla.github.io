@@ -222,7 +222,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             var linkClass = what.replace(/\s/g, "-");
             linkClass = linkClass.replaceAll(".", "");
             var listFirst = `<li class="$classtodelete">$content[$links]</li>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
-            if what.includes('date') {
+            if (what.includes('date')) {
                 listFirst = `<li class="$classtodelete" value='$dateValue'>$content[$links]</li>`
             }
             var listContent = `<a class="$thisclass" onclick="highlight('$originalClass', '$place')" href="$place">$number</a> `; //dal secondo elemento si pone a fianco di quello presente
