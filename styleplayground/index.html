@@ -1520,19 +1520,19 @@
 							default:
 								for (i=1; i <= Object.values(columnListener)[0]; i++){
 										if (this.value.includes('person')) {
-												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-person">People</h4><ul id="metadata-list-' + i + '-person"></ul>')
+												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-person">People <a onclick="sortList(`metadata-list-' + i + '-person`)">sort</a> </h4><ul id="metadata-list-' + i + '-person"></ul>')
 												filltab("article-"+i+this.value,"#metadata-list-"+i + "-person");
 										} else if (this.value.includes('institution')) {
-												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-institution">Institutions</h4><ul id="metadata-list-' + i + '-institution"></ul>')
+												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-institution">Institutions <a onclick="sortList(`metadata-list-' + i + '-institution`)">sort alphabetically</a></h4><ul id="metadata-list-' + i + '-institution"></ul>')
 												filltab("article-"+i+this.value,"#metadata-list-"+i + "-institution");
 										} else if (this.value.includes('event')) {
-												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-event">Events</h4><ul id="metadata-list-' + i + '-event"></ul>')
+												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-event">Events<a onclick="sortList(`metadata-list-' + i + '-event`)">sort alphabetically</a></h4><ul id="metadata-list-' + i + '-event"></ul>')
 												filltab("article-"+i+this.value,"#metadata-list-"+i + "-event");
 										} else if (this.value.includes('date')) {
-												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-date">Dates</h4><ul id="metadata-list-' + i + '-date"></ul>')
+												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-date">Dates<a onclick="sortList(`metadata-list-' + i + '-date`)">sort alphabetically</a></h4><ul id="metadata-list-' + i + '-date"></ul>')
 												filltab("article-"+i+this.value,"#metadata-list-"+i + "-date");
 										} else if (this.value.includes('place')) {
-												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-place">Places</h4><ul id="metadata-list-' + i + '-place"></ul>')
+												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-place">Places <a onclick="sortList(`metadata-list-' + i + '-place`)">sort alphabetically</a></h4><ul id="metadata-list-' + i + '-place"></ul>')
 												filltab("article-"+i+this.value,"#metadata-list-"+i + "-place");
 										}
 
