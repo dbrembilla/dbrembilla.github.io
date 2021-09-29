@@ -103,7 +103,7 @@ var column = `
                                 <img src="assets/close.png" id='close$colnum' title="Close" style="height: 1em; width: 1em; cursor: pointer;" onclick="closeArticle('#col-num$colnum');" class="closeMeta">
                         </span>            
                         <div class="row list overflow" id="metaview$colnum">
-                                    <ul id="metadata-list$colnum"></ul>
+                                    <div id="metadata-list$colnum"></div>
                         </div>                         
                     </div> 
                     <div class="card overflow" id="article$colnum">
