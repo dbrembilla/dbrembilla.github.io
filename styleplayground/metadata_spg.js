@@ -326,7 +326,7 @@ function highlight(originalClass, url){
 }
 function sortList(listid) {
   var list, i, switching, b, shouldSwitch;
-  list = document.getElementById("#"+listid);
+  list = document.getElementById(listid);
   switching = true;
   /* Make a loop that will continue until
   no switching has been done: */

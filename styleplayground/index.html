@@ -1544,6 +1544,8 @@
 										var whatToDelete = new String;
 										if (this.value == 'quote') {
 												whatToDelete = '.list-quote'
+												var idToDelete = '#metadata-list-' + i + "-quote"
+												$(idToDelete).remove()
 												$(whatToDelete).remove()
 												break
 										} else {
@@ -1551,8 +1553,9 @@
 											whatToDelete = whatToDelete.replace(" ", "")
 										whatToDelete = whatToDelete.replace(".", "")
 										var classToDelete = ".article-"+i + "-" + whatToDelete
-
-											$(classToDelete).remove()}
+										var idToDelete = '#metadata-list-' + i + "-" + whatToDelete
+										$(idToDelete).remove()
+										$(classToDelete).remove()}
 									
 					}}})
 					
