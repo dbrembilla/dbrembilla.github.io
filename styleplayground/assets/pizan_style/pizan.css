@@ -131,4 +131,19 @@ figcaption {
 #col-num-1, #col-num-2, #col-num-3 {
 	padding: 0.5rem 0.5rem;
 }
-	
+
+/*------------prova così-----------*/
+.card.overflow p::first-letter {
+    font-family: GotischeInitialen;
+    color: #504738;
+    font-size: 57px;
+    float: left;
+    margin-bottom: 5px;
+    padding-top: 6px;
+}
+
+p ::first-letter::after, p ::first-letter::before {
+	content: "";
+	display: block;
+	clear: both;
+}
