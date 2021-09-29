@@ -222,6 +222,9 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             var linkClass = what.replace(/\s/g, "-");
             linkClass = linkClass.replaceAll(".", "");
             var listFirst = `<li class="$classtodelete">$content[$links]</li>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
+            if what.includes('date') {
+                listFirst = `<li class="$classtodelete" value='$dateValue'>$content[$links]</li>`
+            }
             var listContent = `<a class="$thisclass" onclick="highlight('$originalClass', '$place')" href="$place">$number</a> `; //dal secondo elemento si pone a fianco di quello presente
             console.log(what);
             var elements = $("#"+ what); 
@@ -243,14 +246,27 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 }))
                 }
                 else {
-                    if (elements[i].id != "#"){
-                        classNames[referenceClass] = $("#" + elements[i].id).text()
-                        seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
-                        place: "#" + elements[i].id,
-                        thisclass: referenceClass,
-                        originalClass: elements[i].getAttribute("class").toString(),
-                        number: 1
-                }) ]}
+                    if what.includes('date') {
+                        if (elements[i].id != "#"){
+                            classNames[referenceClass] = $("#" + elements[i].id).text()
+                            seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
+                            place: "#" + elements[i].id,
+                            thisclass: referenceClass,
+                            originalClass: elements[i].getAttribute("class").toString(),
+                            number: 1,
+                            dateValue: elements[i].getAttribute("value").toString() 
+                    }
+                    ) ]
+                    } else {
+                        if (elements[i].id != "#"){
+                            classNames[referenceClass] = $("#" + elements[i].id).text()
+                            seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
+                            place: "#" + elements[i].id,
+                            thisclass: referenceClass,
+                            originalClass: elements[i].getAttribute("class").toString(),
+                            number: 1
+                    }
+                    ) ]}}
                 }
             
 
@@ -341,6 +357,39 @@ function sortList(listid) {
       /* Check if the next item should
       switch place with the current item: */
       if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+        /* If next item is alphabetically lower than current item,
+        mark as a switch and break the loop: */
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark the switch as done: */
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
+}
+function sortDate(listid) {
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById(listid);
+  switching = true;
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    // Loop through all list items:
+    for (i = 0; i < (b.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Check if the next item should
+      switch place with the current item: */
+      date1= new Date(b[i].attr('value'))
+      date2= new Date(b[i +1].attr('value'))
+      if (date1 > date2 {
         /* If next item is alphabetically lower than current item,
         mark as a switch and break the loop: */
         shouldSwitch = true;
