@@ -265,10 +265,10 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             for (const [key, value] of Object.entries(seenClasses)) {
                 if (what.includes('date')) {
                     $(where).append(listFirst.sub({
-                    content: classNames[key],
-                    links: value[0],
+                    content: classNames[key][0],
+                    links: value,
                     classtodelete: linkClass,
-                    dateValue: value[1]
+                    dateValue: classNames[key][1]
               }))
                 } else{
                     $(where).append(listFirst.sub({
