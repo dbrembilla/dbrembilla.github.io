@@ -139,6 +139,9 @@ img {
 .themes h3 {
 	border-bottom: 0.5px solid black!important;
 }
+#article-1 h1, #article-2 h1, #article-3 h1,#article-1 h2, #article-2 h2, #article-3 h2 {
+	background-color:  #e3ceb9 !important;
+}
 #desc h2, #desc p, #desc ul {
 	color: black!important;
 	background-image: none!important;
@@ -193,4 +196,7 @@ header .sign {
 }
 footer {
 	background-color: #e3ceb9 !important;
+}
+.btn-secondary, #topics {
+    color: black!important;
 }
