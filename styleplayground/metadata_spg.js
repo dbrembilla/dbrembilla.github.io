@@ -235,7 +235,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 referenceClass = referenceClass.replace(/\s/g, "-");
                 referenceClass =referenceClass.replace("#", "")
                 referenceClass =referenceClass.replace(".", "")
-                console.log(referenceClass);
+                console.log(referenceClass, referenceClass in seenClasses);
                 if (referenceClass in seenClasses) { //questo algoritmo crea un array contenente un elenco di numeri che si riferiscono a quando un elemento è citato
                     len = seenClasses[referenceClass].length + 1;
                     seenClasses[referenceClass].push(
