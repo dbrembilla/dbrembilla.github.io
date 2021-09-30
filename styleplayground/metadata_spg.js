@@ -100,7 +100,7 @@ var column = `
                     <div class="card Meta">
                         <span>
                                 <h3 class="cardTitle">Metaviewer</h3>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#metaSummary" data-bs-whatever="article$colnum">Metadata Summary</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#metaSummary" data-bs-whatever="#article$colnum">Metadata Summary</button>
 
                                 <img src="assets/close.png" id='close$colnum' title="Close" style="height: 1em; width: 1em; cursor: pointer;" onclick="closeArticle('#col-num$colnum');" class="closeMeta">
                         </span>            
