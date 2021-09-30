@@ -100,7 +100,7 @@ var column = `
                     <div class="card Meta">
                         <span>
                                 <h3 class="cardTitle">Metaviewer</h3>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#metaSummary" data-bs-whatever="article$colnum">Open modal for @mdo</button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#metaSummary" data-bs-whatever="article$colnum">Metadata Summary</button>
 
                                 <img src="assets/close.png" id='close$colnum' title="Close" style="height: 1em; width: 1em; cursor: pointer;" onclick="closeArticle('#col-num$colnum');" class="closeMeta">
                         </span>            
@@ -223,7 +223,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
         function filltab(what,where) { //questo riempie le tabelle del metadata viewer
             var linkClass = what.replace(/\s/g, "-");
             linkClass = linkClass.replaceAll(".", "");
-            var listFirst = `<li class="$classtodelete"><a href="#$wikisource">$content</a>[$links]</li>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
+            var listFirst = `<li class="$classtodelete"><a href="$wikisource">$content</a>[$links]</li>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
             if (what.includes('date')) {
                 listFirst = `<li class="$classtodelete" value='$dateValue'>$content[$links]</li>`
             }
