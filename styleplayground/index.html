@@ -1539,7 +1539,7 @@
 												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-event">Events <a onclick="sortList(`metadata-list-' + i + '-event`)">Sort </a></h4><ul id="metadata-list-' + i + '-event"></ul>')
 												filltab("article-"+i+this.value,"#metadata-list-"+i + "-event");
 										} else if (this.value.includes('date')) {
-												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-date">Dates <a onclick="sortList(`metadata-list-' + i + '-date`)">Sort </a> <a onclick="sortList(`metadata-list-' + i + '-date`)">sort temporally</a></h4><ul id="metadata-list-' + i + '-date"></ul>')
+												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-date">Dates <a onclick="sortList(`metadata-list-' + i + '-date`)">Sort </a> <a onclick="sortDate(`metadata-list-' + i + '-date`)">sort temporally</a></h4><ul id="metadata-list-' + i + '-date"></ul>')
 												filltab("article-"+i+this.value,"#metadata-list-"+i + "-date");
 										} else if (this.value.includes('place')) {
 												$("#metadata-list-"+i).append('<h4 class="article-' + i + '-place">Places <a onclick="sortList(`metadata-list-' + i + '-place`)">Sort </a></h4><ul id="metadata-list-' + i + '-place"></ul>')
