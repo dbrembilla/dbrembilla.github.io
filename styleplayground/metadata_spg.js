@@ -223,7 +223,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
         function filltab(what,where) { //questo riempie le tabelle del metadata viewer
             var linkClass = what.replace(/\s/g, "-");
             linkClass = linkClass.replaceAll(".", "");
-            var listFirst = `<li class="$classtodelete">$content[$links]</li>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
+            var listFirst = `<li class="$classtodelete"><a href="#$wikisource">$content</a>[$links]</li>`; //ciascun elemento ha una sua riga, rimanda all'oggetto con href e ha content come l'argomento è chiamato
             if (what.includes('date')) {
                 listFirst = `<li class="$classtodelete" value='$dateValue'>$content[$links]</li>`
             }
@@ -251,7 +251,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 else {
                      
                         if (elements[i].id != "#"){
-                            classNames[referenceClass] = $("#" + elements[i].id).text()
+                            classNames[referenceClass] = [$("#" + elements[i].id).text(), $('#' +elements[i].id).attr('source')]
                             if (what.includes('date')) {
                                 classNames[referenceClass] = [$("#" + elements[i].id).text(), $('#' +elements[i].id).attr('value')]
                             }
@@ -259,6 +259,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                             place: "#" + elements[i].id,
                             thisclass: referenceClass,
                             originalClass: elements[i].getAttribute("class").toString(),
+
                             number: 1
                     }
                     ) ]
@@ -276,9 +277,10 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
               }))
                 } else{
                     $(where).append(listFirst.sub({
-                    content: classNames[key],
+                    content: classNames[key][0],
                     links: value,
                     classtodelete: linkClass,
+                    wikisource: classNames[key][1]
               }))
                 }
               ;
