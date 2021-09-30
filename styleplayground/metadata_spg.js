@@ -249,8 +249,10 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 else {
                      
                         if (elements[i].id != "#"){
-                            classNames[referenceClass] = [$("#" + elements[i].id).text(), $('#' +elements[i].id).attr('value')
-]
+                            classNames[referenceClass] = $("#" + elements[i].id).text()
+                            if (what.includes('date')) {
+                                classNames[referenceClass] = [$("#" + elements[i].id).text(), $('#' +elements[i].id).attr('value')]
+                            }
                             seenClasses[referenceClass] = [listContent.sub({ //crea un array che contiene tutti gli elementi trovati
                             place: "#" + elements[i].id,
                             thisclass: referenceClass,
