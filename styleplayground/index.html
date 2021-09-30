@@ -1490,14 +1490,12 @@
 											'Place':'.place',
 											'Institution':'.institution'
 										}
-										console.log(where);
 
 				  for (const [key, value] of Object.entries(metadata)) {
-				  	console.log('where shearch '+where+" " + value);
 							  $('tbody').append(
 							  	`<tr>
 							      <th scope="row">`+key+`</th>
-							      <td>`+$(where+value).length+`</td>
+							      <td>`+$(where+" "+value).length+`</td>
 							      </tr>`
 							  	)
 							}
