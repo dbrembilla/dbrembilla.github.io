@@ -1445,11 +1445,62 @@
 					</div>  
 				</div>	
 			</div>
+			<!-- Modal for metaSummary -->
+			<div class="modal fade modal-lg" id="metaSummary" tabindex="-1" aria-labelledby="metaName" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h4 class="modal-title" id="metaName">Summary</h4>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick='$("tbody").empty()'></button>
+			      </div>
+			      <div class="modal-body">
+
+
+			            <table class="table">
+									  <thead>
+									    <tr>
+									      <th scope="col">Datum</th>
+									      <th scope="col">Value</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    
+									  </tbody>
+									</table>
+			          </div>
+			         
+
+			    </div>
+			  </div>
+			</div>
 			
 			<!--Scripts-->	
 			<script type="text/javascript" src="metadata_spg.js"></script>
 
 			<script>
+				var targetModal = document.getElementById('metaSummary')
+				targetModal.addEventListener('show.bs.modal', function (where) {
+				  // Button that triggered the modal
+				  var button = event.relatedTarget
+				  // Extract info from data-bs-* attributes
+				  var recipient = button.getAttribute('data-bs-whatever')
+				  metadata = {'Person':'.person',
+											'Event':'.event',
+											'Date':'.date',
+											'Place':'.place',
+											'Institution':'.institution'
+										}
+				  for (const [key, value] of Object.entries(metadata)) {
+							  $('tbody').append(
+							  	`<tr>
+							      <th scope="row">`+key+`</th>
+							      <td>`+$(where+value).length+`</td>
+							      </tr>`
+							  	)
+							}
+				  // Update the modal's content.
+				  
+				})
 				$(document).ready(function(){
 					$('[data-toggle="popover"]').popover();   
 				});
