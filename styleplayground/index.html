@@ -1270,6 +1270,10 @@
 										<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="quote">
 										<label class="form-check-label" for="inlineCheckbox2">Quote</label> <!-- da finire -->
 									</li>
+									<li class="form-check">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="section">
+										<label class="form-check-label" for="inlineCheckbox2">Section</label> <!-- da finire -->
+									</li>
 									<li>
 										<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#topicAnalysis">
 										Topic Analysis
@@ -1489,6 +1493,7 @@
 											'Date':'.date',
 											'Place':'.place',
 											'Institution':'.institution'
+											'Quotes':'.quote'
 										}
 
 				  for (const [key, value] of Object.entries(metadata)) {
@@ -1579,6 +1584,13 @@
 										}
 
 								break
+							case 'section':
+								for (i=1; i <= Object.values(columnListener)[0]; i++){
+										$("#metadata-list-"+i).append('<h4 class="list-section">Sections</h4><ul id="metadata-list-' + i + '-section"></ul>')
+										basefilltab("article-"+i +" h2,article-"+i +" h3,article-"+i +" h4","#metadata-list-"+i +"-section")
+											
+										}
+							break
 							default:
 								for (i=1; i <= Object.values(columnListener)[0]; i++){
 										if (this.value.includes('person')) {
@@ -1612,6 +1624,11 @@
 												$(idToDelete).remove()
 												$(whatToDelete).remove()
 												break
+										}  else if (this.value == 'section') {
+											whatToDelete = '.list-section'
+												var idToDelete = '#metadata-list-' + i + "-secton"
+												$(idToDelete).remove()
+												$(whatToDelete).remove()
 										} else {
 											whatToDelete = this.value
 											whatToDelete = whatToDelete.replace(" ", "")
