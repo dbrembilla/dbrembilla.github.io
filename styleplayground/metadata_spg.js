@@ -394,8 +394,8 @@ function sortDate(listid) {
       shouldSwitch = false;
       /* Check if the next item should
       switch place with the current item: */
-      date1= new Date(b[i].attr('value'))
-      date2= new Date(b[i +1].attr('value'))
+      date1= new Date($('#'+b[i].id).attr('value'))
+      date2= new Date($('#'+b[i].id).attr('value'))
       if (date1 > date2) {
         /* If next item is alphabetically lower than current item,
         mark as a switch and break the loop: */
