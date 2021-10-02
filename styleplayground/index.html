@@ -250,62 +250,58 @@
 		width: 100vw;
 	}
 
-	/*animations*/
-	.sign {
-		color: #b1fff3;
-		text-shadow: 0 0 0.4rem #084298, 0 0 1.5rem #5a9791, -0.2rem 0.1rem 1rem #67c0b4, 0.2rem 0.1rem 1rem #73e8d7, 0 -0.5rem 2rem #95eee0, 0 0.5rem 3rem #b8f4ea;
-		animation: shine 2s forwards, flicker 3s infinite;
-	}
-	.flicker {
-		animation: shine 2s forwards, blink 3s 2s infinite;
-	}
+		/*animations*/
+		.sign {
+			color: #b1fff3;
+			text-shadow: 0 0 0.4rem #084298, 0 0 1.5rem #5a9791, -0.2rem 0.1rem 1rem #67c0b4, 0.2rem 0.1rem 1rem #73e8d7, 0 -0.5rem 2rem #95eee0, 0 0.5rem 3rem #b8f4ea;
+			animation: shine 2s forwards, flicker 3s infinite;
+		}
+		.flicker {
+			animation: shine 2s forwards, blink 3s 2s infinite;
+		}
 
-	.fast-flicker {
-		animation: shine 2s forwards, blink .1s 1s infinite;
-	}
-
-
-
-
-	/*scroll-bar*/
-	.overflow{/*classe creata per fare lo scroll degli aticoli, ecc.*/
-		overflow-y:scroll;
-		overflow-x:hidden;
-		-ms-overflow-style: none;  /* hides woring scrollbar on IE and Edge */
-		scrollbar-width: none;  /*hides working scrollbar on Firefox */
-	}
-	.overflow::-webkit-scrollbar {
-			display: none; /* Hide scrollbar for Chrome, Safari and Opera */
-	}
-	/*Highlight e pulsazioni*/
-	.pulse {
-	/* Chrome, Safari, Opera */
-	-webkit-animation: pulse 1s;   
-	/* Internet Explorer */
-	-ms-animation: pulse 1s ;
-	/* Standard Syntax */
-	animation: pulse 1.25s; 
-	}
-	/* Highlight meta*/
-	
-	.person.highlight{
-		background-color: red;
-	}
-	.place.highlight{
-		background-color: green;
-	}	
-	.event.highlight{
-		background-color: blue;
-	}	
-	.institution.highlight{
-		background-color: purple;
-	}		
-	.quote.highlight{
-		background-color: yellow;
-	}	
-	.date.highlight{
-		background-color: orange;
-	}
+		.fast-flicker {
+			animation: shine 2s forwards, blink .1s 1s infinite;
+		}
+		/*scroll-bar*/
+		.overflow{/*classe creata per fare lo scroll degli aticoli, ecc.*/
+			overflow-y:scroll;
+			overflow-x:hidden;
+			-ms-overflow-style: none;  /* hides woring scrollbar on IE and Edge */
+			scrollbar-width: none;  /*hides working scrollbar on Firefox */
+		}
+		.overflow::-webkit-scrollbar {
+				display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+		}
+		/*Highlight e pulsazioni*/
+		.pulse {
+		/* Chrome, Safari, Opera */
+		-webkit-animation: pulse 1s;   
+		/* Internet Explorer */
+		-ms-animation: pulse 1s ;
+		/* Standard Syntax */
+		animation: pulse 1.25s; 
+		}
+		/* Highlight meta*/
+		
+		.person.highlight{
+			background-color: red;
+		}
+		.place.highlight{
+			background-color: green;
+		}	
+		.event.highlight{
+			background-color: blue;
+		}	
+		.institution.highlight{
+			background-color: purple;
+		}		
+		.quote.highlight{
+			background-color: yellow;
+		}	
+		.date.highlight{
+			background-color: orange;
+		}
 	/*validi per schermi più grandi di 1440px*/
 
 		/*text*/
@@ -1113,8 +1109,7 @@
 					</span>	
 					<button id='download-button'>    
 						<div class="sign">
-									<span class="fast-flicker">D</span>ownl<span class="flicker">oad </span> <span class="fast-flicker">our </span>
-								<span class="flicker">Arc</span><span class="fast-flicker">hi</span><span class="flicker">ve</span>
+									Download our Archive
 						</div>								
 					</button>
 			</nav>
