@@ -304,25 +304,33 @@
 		}
 	
 	/*validi per schermi più grandi di 1440px*/
-
-		/*text*/
 		body{
-			font-size: 20px; /*grandezza standard per schermi*/
-			font-family: 'Calculator';
+				font-size: 20px; /*grandezza standard per schermi*/
+				font-family: 'Calculator';
+			}
+		@media  (max-width: 2560px) {
+			
+		/*text*/
+		p, #desc li {
+			font-size: 2em;
+		}
+
+		.btn, .btn-secondary{
+			font-size: 2em;
 		}
 		h1{
-			font-size: 2.5em;
+			font-size: 3.5em;
 		}		
 		h2{
-			font-size: 2em;
+			font-size: 3em;
 			
 		}
 		h3{
-			font-size: 1.5em;
+			font-size: 3.5em;
 		
 		}		
 		header{
-			font-size: 5em;	
+			font-size: 6em;	
 			letter-spacing: 0.4em;
 			text-align: center;
 			font-family: Hometown;
@@ -332,7 +340,13 @@
 		.btn-secondary, #topics, a.disappear{ /*font arancioni*/
 			color: rgb(199, 79, 14);
 		}
+		a.disappear { /*tasto home*/
+			font-size: 5em;	
+		}
 
+		#download-button .sign{
+			font-size: 4em;	
+		}
 		/*immagini*/
 		.icon{
 			height: 15%;
@@ -352,9 +366,7 @@
 			text-decoration: none; /*regola generale, l'underline andrà a slidare in btn:hoover{}*/
 			color: black;
 		}
-		a.disappear{ /*tasto home*/
-			font-size: 2em;	
-		}
+
 
 		/*buttons*/
 		#download-button{
@@ -364,7 +376,7 @@
 		.reset{
 			position: absolute;
 			bottom: 0px;
-			text-align: left;
+			right: 0px;
 		}
 		img.closeMeta{ /*bottone per chiudere articoli*/
 			display: inline-flex;
@@ -373,12 +385,12 @@
 		.btn-group.dropend{
 			height:25%;
 		}
-			.btn-secondary{ /*bottoni dei topics sia inaside che dropdown*/
-				background: none;
-				border: unset;
-				text-align: left;
-				font-size:large;
-			}
+		.btn-secondary{ /*bottoni dei topics sia inaside che dropdown*/
+			background: none;
+			border: unset;
+			text-align: left;
+	
+		}
 		/*hovers*/
 		.themes li:hover,  #topics btn-secondary:hover{
 		background-color: rgba(255, 255, 255, 0.3);
@@ -595,11 +607,81 @@
 				cursor: pointer;
 				}
 			
+				@media (max-height: 1500px) {
+				a.disappear { /*tasto home*/
+					font-size: 4.5em;	
+				}
 
-			
+				#download-button .sign{
+					font-size: 3.5em;	
+				}
+
+				#download-button{
+					margin-top: 0.5px;
+				}
+			}
+
+			@media (max-height: 1100px) {
+				a.disappear { /*tasto home*/
+					font-size: 3.5em;	
+				}
+
+				#download-button .sign{
+					font-size: 2.5em;	
+				}
+
+				
+			}
+
+			@media (max-height: 920px) {
+				a.disappear { /*tasto home*/
+					font-size: 2.5em;	
+				}
+
+				#download-button .sign{
+					font-size: 1.5em;	
+				}
+
+				.sign.title {
+					font-size: 3em;
+   					letter-spacing: 1em;
+				}
+
+				
+			}
+		
+
+		}
 		/*schermo laptop grande*/
 
-		@media (max-width: 1440px) {
+			@media (max-width: 1440px) {
+
+			
+			/*text*/
+
+			h1{
+				font-size: 2.5em;
+			}		
+			h2{
+				font-size: 2em;
+				
+			}
+			h3{
+				font-size: 1.5em;
+			
+			}		
+			header{
+				font-size: 5em;	
+				
+			}
+			
+			a.disappear { /*tasto home*/
+				font-size: 5em;	
+			}
+
+			#download-button .sign{
+				font-size: 4em;	
+			}
 
 			header{
 			font-size: 3em;	
