@@ -246,6 +246,8 @@
 
 	/*funzionalità sito*/
 	body{
+		font-size: 20px; /*grandezza standard per schermi*/
+		font-family: 'Calculator';
 		height: 100vh;
 		width: 100vw;
 	}
@@ -304,125 +306,122 @@
 		}
 	
 	/*validi per schermi più grandi di 1440px*/
-		body{
-				font-size: 20px; /*grandezza standard per schermi*/
-				font-family: 'Calculator';
-			}
+	
 		@media  (max-width: 2560px) {
 			
-		/*text*/
-		p, #desc li {
-			font-size: 2em;
-		}
+			/*text*/
+			p, #desc li {
+				font-size: 2em;
+			}
 
-		.btn, .btn-secondary{
-			font-size: 2.5em;
-    		text-align: left;
-		}
-		h1{
-			font-size: 3.5em;
-		}		
-		h2{
-			font-size: 3em;
+			.btn, .btn-secondary, .form-check-label{
+				font-size: 2.5em;
+				text-align: left;
+			}
+			h1{
+				font-size: 3.5em;
+			}		
+			h2{
+				font-size: 3em;
+				
+			}
+			h3{
+				font-size: 3.5em;
 			
-		}
-		h3{
-			font-size: 3.5em;
+			}		
+			header{
+				font-size: 6em;	
+				letter-spacing: 0.4em;
+				text-align: center;
+				font-family: Hometown;
+				font-weight: bold;
+				color: #5a9791;
+			}
+			.btn-secondary, #topics, a.disappear{ /*font arancioni*/
+				color: rgb(199, 79, 14);
+			}
+			a.disappear { /*tasto home*/
+				font-size: 5em;	
+			}
+
+			#download-button .sign{
+				font-size: 4em;	
+			}
+			/*immagini*/
+			.icon{
+				height: 15%;
+			}
+			img{
+				width: 100%;
+			}
+
+			/*liste*/
+			ul{
+				list-style-type: none;
+				padding: 0px;
+			}
+
+			/*links*/
+			a{
+				text-decoration: none; /*regola generale, l'underline andrà a slidare in btn:hoover{}*/
+				color: black;
+			}
+
+
+			/*buttons*/
+			#download-button{
+				float: right;
+				margin-top: 1%;
+			}
+			.reset{
+				position: absolute;
+				bottom: 0px;
+				right: 0px;
+			}
+			img.closeMeta{ /*bottone per chiudere articoli*/
+				display: inline-flex;
+				float: right;
+			}
+			.btn-group.dropend{
+				height:25%;
+			}
+			.btn-secondary{ /*bottoni dei topics sia inaside che dropdown*/
+				background: none;
+				border: unset;
+				text-align: left;
 		
-		}		
-		header{
-			font-size: 6em;	
-			letter-spacing: 0.4em;
-			text-align: center;
-			font-family: Hometown;
-			font-weight: bold;
-			color: #5a9791;
-		}
-		.btn-secondary, #topics, a.disappear{ /*font arancioni*/
-			color: rgb(199, 79, 14);
-		}
-		a.disappear { /*tasto home*/
-			font-size: 5em;	
-		}
+			}
+			/*hovers*/
+			.themes li:hover,  #topics btn-secondary:hover{
+			background-color: rgba(255, 255, 255, 0.3);
+			}
 
-		#download-button .sign{
-			font-size: 4em;	
-		}
-		/*immagini*/
-		.icon{
-			height: 15%;
-		}
-		img{
-			width: 100%;
-		}
-
-		/*liste*/
-		ul{
-			list-style-type: none;
-			padding: 0px;
-		}
-
-		/*links*/
-		a{
-			text-decoration: none; /*regola generale, l'underline andrà a slidare in btn:hoover{}*/
-			color: black;
-		}
-
-
-		/*buttons*/
-		#download-button{
-			float: right;
-    		margin-top: 1%;
-		}
-		.reset{
-			position: absolute;
-			bottom: 0px;
-			right: 0px;
-		}
-		img.closeMeta{ /*bottone per chiudere articoli*/
-			display: inline-flex;
-			float: right;
-		}
-		.btn-group.dropend{
-			height:25%;
-		}
-		.btn-secondary{ /*bottoni dei topics sia inaside che dropdown*/
-			background: none;
-			border: unset;
-			text-align: left;
-	
-		}
-		/*hovers*/
-		.themes li:hover,  #topics btn-secondary:hover{
-		background-color: rgba(255, 255, 255, 0.3);
-		}
-
-		/*containers*/
-		nav, footer {
-			z-index: 1;
-			background-color: white;
-			padding: 0 2%;
-			height:10%; 
-			position: relative;
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: space-between;
-		}
-		.container-fluid{
-				height:100%;
-		}
-		nav  .container-fluid{ /*nella navbar e nel footer*/
-			border-left: 1px black solid;
-			border-bottom: 1px black solid;
+			/*containers*/
+			nav, footer {
+				z-index: 1;
+				background-color: white;
+				padding: 0 2%;
+				height:10%; 
+				position: relative;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.container-fluid{
+					height:100%;
+			}
+			nav  .container-fluid{ /*nella navbar e nel footer*/
+				border-left: 1px black solid;
+				border-bottom: 1px black solid;
+				
+				padding: 0% 1%;
+			}	
+			#main-row{ /*contenitore di aside e section*/
+				height: 80%;
+				padding: 1% 3% 0;
 			
-			padding: 0% 1%;
-		}	
-		#main-row{ /*contenitore di aside e section*/
-			height: 80%;
-			padding: 1% 3% 0;
-		
-		}
+			}
 			#aside {
 				width: 20%;
 				padding-left: 0px;
@@ -433,7 +432,6 @@
 				
 					height: 70%;
 				}
-
 			#topics{
 				padding: 0.5em;
 				height: 35%;
@@ -448,7 +446,7 @@
 						width:80%;
 						height: 100%;
 						border-bottom: 1px solid;
-					}
+			}
 				#row-article{
 					height: 80%;
 					margin: 0 10%;	
@@ -608,7 +606,7 @@
 				cursor: pointer;
 				}
 			
-				@media (max-height: 1500px) {
+			@media (max-height: 1500px) {
 				a.disappear { /*tasto home*/
 					font-size: 4.5em;	
 				}
@@ -621,7 +619,7 @@
 					margin-top: 0.5px;
 				}
 
-				.btn-secondary, .btn{
+				.btn-secondary, .btn, .form-check-label{
 					font-size: 2em;
 				}
 			}
@@ -638,7 +636,7 @@
 					font-size: 3.5em;
 					letter-spacing: 0.8em;
 				}
-				.btn-secondary, .btn{
+				.btn-secondary, .btn, .form-check-label{
 					font-size: 1.5em;
 				}
 			}
@@ -660,16 +658,16 @@
 				
 				
 			}
-		
 
 		}
 		/*schermo laptop grande*/
 
 			@media (max-width: 1440px) {
 
-			
+			p, #desc li {
+				font-size: 1em;
+			}
 			/*text*/
-
 			h1{
 				font-size: 2.5em;
 			}		
@@ -678,30 +676,76 @@
 				
 			}
 			h3{
-				font-size: 1.5em;
-			
+				font-size: 2em;
 			}		
 			header{
-				font-size: 5em;	
+				font-size: 4em;
+    			letter-spacing: 0.2em;	
 				
 			}
-			
 			a.disappear { /*tasto home*/
-				font-size: 5em;	
+				font-size: 3.5em;	
 			}
-
 			#download-button .sign{
-				font-size: 4em;	
+				font-size: 3em;	
 			}
 
-			header{
-			font-size: 3em;	
-			}
 			
+			@media (max-height: 1500px) {
+				a.disappear { /*tasto home*/
+					font-size: 4.5em;	
+				}
+				#download-button .sign{
+					font-size: 3.5em;	
+				}
+				#download-button{
+					margin-top: 0.5px;
+				}
+				.btn-secondary, .btn, .form-check-label{
+					font-size: 2em;
+				}
+			}
+
+			@media (max-height: 1100px) {
+				a.disappear { /*tasto home*/
+					font-size: 3.5em;	
+				}
+				#download-button .sign{
+					font-size: 2.5em;	
+				}
+				.sign.title {
+					font-size: 3em;
+					letter-spacing: 0.4em;
+				}
+				.btn-secondary, .btn, .form-check-label{
+					font-size: 1.5em;
+				}
+			}
+
+			@media (max-height: 920px) {
+				a.disappear { /*tasto home*/
+					font-size: 2.5em;	
+				}
+
+				#download-button .sign{
+					font-size: 1.5em;	
+				}
+
+				.sign.title {
+					font-size: 2.5em;
+   					letter-spacing: 0.6em;
+				}
+			}		
 			@media (max-height: 768px) {
+				h3 {
+						font-size: 1.5em;
+					}
 				#row-article{
 					margin-top: 3%;
 					height:76%;
+				}
+				.btn-secondary, .btn, .form-check-label {
+					font-size: 1em;
 				}
 			}
 			
