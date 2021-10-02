@@ -207,7 +207,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             addId('.date', 'date')
             addId('.institution', 'institution')
             addId('.quote', 'quote')
-            addId('#article-1 h2, #article-1 h3, #article-1 h4, #article-2 h2, #article-2 h3, #article-2 h4, #article-3 h2, #article-3 h3, #article-3 h4', 'quote')
+            addId('#article-1 h2, #article-1 h3, #article-1 h4, #article-2 h2, #article-2 h3, #article-2 h4, #article-3 h2, #article-3 h3, #article-3 h4', 'section')
            
         }
         
@@ -389,6 +389,7 @@ function sortDate(listid) {
     // Start by saying: no switching is done:
     switching = false;
     b = list.getElementsByTagName("LI");
+    console.log(b);
     // Loop through all list items:
     for (i = 0; i < (b.length - 1); i++) {
       // Start by saying there should be no switching:
