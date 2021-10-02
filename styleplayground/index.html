@@ -43,20 +43,7 @@
 
 	/* NUOVO ORDINATO*/
 
-	/*prova glitch*/
-		
-
-
-	.sign.title{
-		font-size: 3em;	
-	}
-
-	.sign {
-	
-	color: #b1fff3;
-	text-shadow: 0 0 0.4rem #084298, 0 0 1.5rem #5a9791, -0.2rem 0.1rem 1rem #67c0b4, 0.2rem 0.1rem 1rem #73e8d7, 0 -0.5rem 2rem #95eee0, 0 0.5rem 3rem #b8f4ea;
-	animation: shine 2s forwards, flicker 3s infinite;
-	}
+	/*titolo illuminato*/
 
 	@keyframes blink {
 	0%,
@@ -78,15 +65,6 @@
 	}
 		
 	}
-
-	.flicker {
-	animation: shine 2s forwards, blink 3s 2s infinite;
-	}
-
-	.fast-flicker {
-	animation: shine 2s forwards, blink .1s 1s infinite;
-	}
-
 	@keyframes shine {
 	0% {
 		color: rgb(130, 151, 154);
@@ -97,7 +75,6 @@
 		text-shadow: 0 0 0.4rem #41464b, 0 0 1.5rem #5a9791, -0.2rem 0.1rem 1rem #67c0b4, 0.2rem 0.1rem 1rem #73e8d7, 0 -0.5rem 2rem #95eee0, 0 0.5rem 3rem #b8f4ee;
 	}
 	}
-
 	@keyframes flicker {
 	from {
 		opacity: 1;
@@ -224,6 +201,24 @@
 	}
 	}
 
+	/*pulsazione selezione metadato*/
+	
+	@-webkit-keyframes pulse{ /* Chrome, Safari, Opera */
+		0%{color:rgba(255,0,255);}	
+		110%{color: black;}
+	}
+
+	@-ms-keyframes pulse{ 	/* Internet Explorer */
+		0%{color:rgba(255,255,0);}	
+		110%{color: black;}
+	}
+
+	@keyframes pulse{ 	/* Standard Syntax */
+
+		0%{color:rgba(0,255,255);}	
+		110%{color: black;}
+	}
+
 		
 	/*Import*/
 
@@ -239,8 +234,6 @@
 		font-style: normal;
 	}
 
-
-
 	@font-face {
 		font-family: 'Calculator';
 		src:url('assets/webfonts_PocketCalculator/PocketCalculator.ttf.woff') format('woff'),
@@ -251,12 +244,12 @@
 		font-style: normal;
 	}
 
-
-
-
 	/*funzionalità sito*/
-
-		/*scroll-bar*/
+	body{
+		height: 100vh;
+		width: 100vw;
+	}
+	/*scroll-bar*/
 	.overflow{/*classe creata per fare lo scroll degli aticoli, ecc.*/
 		overflow-y:scroll;
 		overflow-x:hidden;
@@ -266,10 +259,7 @@
 	.overflow::-webkit-scrollbar {
 			display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 	}
-
-
 	/*Highlight e pulsazioni*/
-
 	.pulse {
 	/* Chrome, Safari, Opera */
 	-webkit-animation: pulse 1s;   
@@ -278,99 +268,127 @@
 	/* Standard Syntax */
 	animation: pulse 1.25s; 
 	}
-
-		/* Chrome, Safari, Opera */
-	@-webkit-keyframes pulse{
-	0%{color:rgba(255,0,255);}	
-		110%{color: black;}
-	}
-
-		/* Internet Explorer */
-	@-ms-keyframes pulse{
-	0%{color:rgba(255,255,0);}	
-		110%{color: black;}
-	}
-
-		/* Standard Syntax */
-	@keyframes pulse{
-		0%{color:rgba(0,255,255);}	
-		110%{color: black;}
-	}
-
-
 	/* Highlight meta*/
-		
+	
 	.person.highlight{
 		background-color: red;
 	}
-		
 	.place.highlight{
 		background-color: green;
-	}
-		
+	}	
 	.event.highlight{
 		background-color: blue;
-	}
-		
+	}	
 	.institution.highlight{
 		background-color: purple;
-	}
-			
+	}		
 	.quote.highlight{
 		background-color: yellow;
-	}
-		
+	}	
 	.date.highlight{
 		background-color: orange;
 	}
+	/*validi per schermi più grandi di 1440px*/
 
-
-
-	/* Piccolo test sui topic button*/
-	#topic1-title, #topic2-title, #topic3-title {
-		padding-top: 1px;
-	}
-
-
-
-
-
-
-	/*validi per tutti gli schermi*/
-
-	body{
-		height: 100vh;
-		width: 100vw;
-		font-size: 20px;
-	}
-
-	.navbar, footer {
-		background-color: white;
-		padding: 0 25px;
-		height:10%!important; 
-	}
+		/*text*/
+		body{
+			font-size: 20px; /*grandezza standard per schermi*/
+			font-family: 'Calculator';
+		}
+		h1{
+			font-size: 2.5em;
+		}		
+		h2{
+			font-size: 2em;
+			
+		}
+		h3{
+			font-size: 1.5em;
 		
-	.container-fluid{
-		border-left: 1px black solid;
-		border-bottom: 1px black solid;
-		height:100%;
-	}
+		}		
+		.sign.title{
+			font-size: 4em;	
+		}
 
-	.home{
-		padding: 1.5%;
-		padding-right: 11.5%;
-	}
 
-	#aside, section{
-		height: 100%;
-	}
+		/*buttons*/
+		a.disappear{ /*tasto home*/
+			font-size: 2em;	
+			color:black;
+		}
 
-	#main-row{
-		margin: 0px;
-		height: 80%;
-			padding: 1% 2%;
+		#download-button{
+			float: right;
+    		margin-top: 1%;
+		}
+
+
+		/*containers*/
+		nav, footer {
+			z-index: 1;
+			background-color: white;
+			padding: 0 2%;
+			height:10%; 
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+		}
+	
+		.container-fluid{ /*nella navbar e nel footer*/
+			border-left: 1px black solid;
+			border-bottom: 1px black solid;
+			height:100%;
+		}
 		
+		#main-row{ /*contenitore di aside e section*/
+			height: 80%;
+			padding: 1% 3%;
+		
+		}
+
+			#aside {
+				width: 20%;
+				padding-left: 0px;
+				height: 100%;
+			}
+
+			#topics{
+				border: white 3px solid;
+				padding-left: 0px;
+				padding-top: 3%;
+				height: 30%;
+				border-radius: 0.5rem;
+				background-color: black;
+			}
+
+			section{
+				height: 100%;
+			}
+
+				#row-article{
+					height: 80%;
+					margin: 0 10%;	
+				}
+
+
+	.sign {
+	color: #b1fff3;
+	text-shadow: 0 0 0.4rem #084298, 0 0 1.5rem #5a9791, -0.2rem 0.1rem 1rem #67c0b4, 0.2rem 0.1rem 1rem #73e8d7, 0 -0.5rem 2rem #95eee0, 0 0.5rem 3rem #b8f4ea;
+	animation: shine 2s forwards, flicker 3s infinite;
 	}
+	.flicker {
+	animation: shine 2s forwards, blink 3s 2s infinite;
+	}
+
+	.fast-flicker {
+	animation: shine 2s forwards, blink .1s 1s infinite;
+	}
+
+
+
+
 
 	footer {
 		text-align: center; 
@@ -395,9 +413,7 @@
 
 		/*aside semplice, più in basso ci sono le flipcards*/
 		
-	#aside{
-		width: 20%;
-	}
+
 
 	.themes, #topics {
 	
@@ -405,36 +421,20 @@
 	}
 
 	.themes{
-		color: #5c5c3d;	
 		height: 70%;
 		}
 
 
 		
 	.reset{
-		height: 15%;
-    	position: absolute;
-    	bottom: 0%;
-    	padding-top: 0%;
-    	background-color: rgb(170 197 199);
-    	width: 100%;
-    	text-align: left!important;
+
+		position: absolute;
+    	bottom: 0px;
+		text-align: left;
 	}
 
-	#topics{
-		border: white 3px solid;
-		padding-left: 0px;
-		padding-top: 3%;
-		height: 30%;
-		border-radius: 0.5rem;
-		background-color: black;
-	}
 
-	#topics h3{
-		margin-bottom:0;
-		padding-left: 0.5rem;
-		
-	}	
+	
 	.dropdown-menu.topic>li:not(:last-child){
 		margin-bottom: 10%;		/*sistemano il dropdown dell'aside*/
 	}
@@ -472,10 +472,7 @@
 			
 		/*articoli*/	
 			
-	#row-article{
-		height: 83%;
 
-	}
 
 
 
@@ -533,23 +530,9 @@
 		color: black!important; /*va a modificare le classi bootstrap dei bottoni in navbar, ha important per non rischiare*/
 	}	
 
-	a.btn{ 
-		text-align: left!important; /*anchor dei temi*/
-		color: #5c5c3d;
-		font-size: 1.25rem;
-	}
 			
-
-
-	.restBtn{
-		color: #e6e6e6;
-	}
-
 		
-	a.disappear{
-		font-size: 1.25em;	
-		color:black;
-	}
+
 
 	.btn-group.dropend{
 		height: -webkit-fill-available;
@@ -577,12 +560,6 @@
 
 		
 	/*liste*/
-
-	.flip-card-front h3{
-		font-family: 'Calculator';
-		padding-left:0.5rem;
-		border-bottom: 1px solid white;
-	}
 		
 	.card.Meta>ul, .themes>ul{
 		list-style-type: none;
@@ -615,14 +592,14 @@
 			}
 
 		.flip-card-3D-wrapper {
-			height: 70%;
+			height: 60%;
 			position: relative;
 			-o-perspective: 900px;
 			-webkit-perspective: 900px;
 			-ms-perspective: 900px;
 			perspective: 900px;
-			margin: 0;
-			}
+			margin-bottom: 5%;
+		}
 		
 		#flip-card {
 			width: 100%;
@@ -637,7 +614,7 @@
 			-ms-transform-style: preserve-3d;
 			transform-style: preserve-3d;
 			
-			}
+		}
 		
 		.do-flip {
 			-o-transform: rotateY(-180deg);
@@ -648,44 +625,29 @@
 		
 		#flip-card-btn-turn-to-back, #flip-card-btn-turn-to-front {
 			position: absolute;
-			top: 8px;
-			right: 8px;
+			top: 0px;
+			right: 0.5em;
 			width: 50px;
 			height: 50px;
 			background: none;
-			cursor: pointer;
-			visibility: hidden;
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 600;
-			font-size: .7em;
-			padding: 0;
-			color: grey;
 			border: 0px;
 			}
 		
 		#flip-card .flip-card-front, #flip-card .flip-card-back{
+			background-color: rgb(170 197 199);
 			width: 100%;
 			height: 100%;
 			position: absolute;
 			-o-backface-visibility: hidden;
 			-webkit-backface-visibility: hidden;
 			-ms-backface-visibility: hidden;
-			backface-visibility: hidden;
-			
-			}
-		
-		#flip-card .flip-card-front{
-			background-color: rgb(170 197 199); 
+			backface-visibility: hidden;		
 			border-radius: .5rem;
-			border: white 3px solid;
+			padding: 0.5em;
 		}
-
+	
 		
 		#flip-card .flip-card-back {
-		
-			padding-left:1em;
-			background-color: rgb(170 197 199); 
-			border-radius: .25rem;
 			-o-transform: rotateY(180deg);
 			-webkit-transform: rotateY(180deg);
 			-ms-transform: rotateY(180deg);
@@ -776,12 +738,7 @@
 		/*schermo laptop grande*/
 
 		@media (max-width: 1440px) {
-			
-			body {
-				height: 100vh;
-				width: 100vw;
-				font-size: 20px;
-			}
+
 			
 			@media (max-height: 623px) {
 			
@@ -810,11 +767,7 @@
 				width:75%!important;
 			}
 			
-			body {
-				height: 100vh;
-				width: 100vw;
-				font-size: 20px;
-			}
+
 			
 			@media (max-height: 623px) {
 				a.btn, li.form-check, #topics .btn-secondary{
@@ -840,8 +793,8 @@
 				font-size:1.5em
 			}
 			
-			.sectionsmall{
-				width: 100%!important;
+			section{
+				width: 100%;
 			}
 			
 			body {
@@ -1018,7 +971,7 @@
 	
 	<body>
 			<!-- Navbar-->
-			<nav class="navbar">
+			<nav>
 				<div class="container-fluid">
 					<span class="home">
 						<a class="disappear" onclick="resetArticles();">Home</a>
@@ -1159,19 +1112,17 @@
 								</div>
 						</div>
 					</span>	
-					<span id='download-button'>
-						<button>    
-							<div class="sign">
-										<span class="fast-flicker">D</span>ownl<span class="flicker">oad </span> <span class="fast-flicker">our </span>
-									<span class="flicker">Arc</span><span class="fast-flicker">hi</span><span class="flicker">ve</span>
-							</div>								
-					</button> 
-				</span>	
+					<button id='download-button'>    
+						<div class="sign">
+									<span class="fast-flicker">D</span>ownl<span class="flicker">oad </span> <span class="fast-flicker">our </span>
+								<span class="flicker">Arc</span><span class="fast-flicker">hi</span><span class="flicker">ve</span>
+						</div>								
+					</button>
 			</nav>
 			<!--Central body-->
 			<div class="row" id="main-row">
 				<!--Aside-->
-				<div class="col-md-2" id="aside">
+				<div  id="aside">
 					<!--Flip card-->
 					<div class="flip-card-3D-wrapper">
 						<div id="flip-card">
@@ -1295,7 +1246,7 @@
 				</div>	
 				</div>
 				<!--Section-->
-				<section class="sectionsmall">		
+				<section>		
 					<header class="sign title">
 						<span class="flicker">The </span>Washing Mag<span class="fast-flicker">azi</span>ne		
 					</header>
