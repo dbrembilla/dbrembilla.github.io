@@ -329,6 +329,23 @@
 			font-weight: bold;
 			color: #5a9791;
 		}
+		.btn-secondary, #topics, a.disappear{ /*font arancioni*/
+			color: rgb(199, 79, 14);
+		}
+
+		/*immagini*/
+		.icon{
+			height: 15%;
+		}
+		img{
+			width: 100%;
+		}
+
+		/*liste*/
+		ul{
+			list-style-type: none;
+			padding: 0px;
+		}
 
 		/*links*/
 		a{
@@ -348,6 +365,23 @@
 			position: absolute;
 			bottom: 0px;
 			text-align: left;
+		}
+		img.closeMeta{ /*bottone per chiudere articoli*/
+			display: inline-flex;
+			float: right;
+		}
+		.btn-group.dropend{
+			height:25%;
+		}
+			.btn-secondary{ /*bottoni dei topics sia inaside che dropdown*/
+				background: none;
+				border: unset;
+				text-align: left;
+				font-size:large;
+			}
+		/*hovers*/
+		.themes li:hover,  #topics btn-secondary:hover{
+		background-color: rgba(255, 255, 255, 0.3);
 		}
 
 		/*containers*/
@@ -380,9 +414,13 @@
 				width: 20%;
 				padding-left: 0px;
 				height: 100%;
+				border-bottom: 1px solid;
 			}
 				.themes{
 					height: 70%;
+				}
+				#lens{
+					height: 80%;
 				}
 			#topics{
 				padding: 0.5em;
@@ -394,166 +432,53 @@
 				height: 15%;
 				margin-bottom: 1%;
 			}
-			section{
-				height: 100%;
-			}
+			.row section{ 
+						width:80%;
+						height: 100%;
+						border-bottom: 1px solid;
+					}
 				#row-article{
 					height: 80%;
 					margin: 0 10%;	
 				}	
-					.row section{ /*articles cards*/
-						width:80%;
+				/*home*/
+					#desc {
+						color: white;
+						border-radius: 3%;
+						background: linear-gradient(0deg, #030506 88%, #c0e8e8 129%);
+						padding: 2%;
+						height: 100%;
+						width: 100%;
+						perspective: 3000px;
+						box-shadow: 0px 1px 4px 3px rgb(0 0 0 / 80%);
 					}
+				/*articles cards*/
+					div.card.Meta{ /*metadata*/
+						height: 30%;
+						padding: 0.25rem 1rem;
+					}
+					#article-1, #article-2, #article-3{
+						height: 70%;
+						margin-top:1%;
+						padding: 0.25rem 1rem;
+					}
+
+					#col-num-1, #col-num-2, #col-num-3{
+						height:100%;
+					}
+
 			footer {
 				padding-top: 1%;
 				color: black;
-				border-top: 1px solid;
 				font-size: 12px;
 			}
 
-
-
-		
-
-
-
-
-
-	
-		
-		
-	/*metadata*/
-		
-	div.card.Meta{
-		height: 30%;
-		padding: 0.25rem 1rem;
-	}
-
-	h3.cardTitle{
-		display: inline-flex; /*questo e quello sotto allineano "metadataview" e il bottone che chiude gli articoli*/ 
-	}
-		
-	img.closeMeta{
-		display: inline-flex;
-		float: right;
-	}
-			
-			
-			
-		/*articoli*/	
-			
-
-
-
-
-	#article-1, #article-2, #article-3{
-		height: 70%;
-		margin-top:1%;
-		padding: 0.25rem 1rem;
-	}
-
-	#col-num-1, #col-num-2, #col-num-3{
-		height:100%;
-	}
-
-
-
-		/*home*/
-
-
-				
-	#desc {
-		border-radius: 3%;
-		font-family: 'Calculator';
-		background: linear-gradient(0deg, #030506 88%, #c0e8e8 129%);
-		padding: 2%;
-		height: 100%;
-		width: 100%;
-		perspective: 3000px;
-	}
-
-	#desc h3{
-		font-size: 2em;
-	}
-		
-	.card#desc {
-		box-shadow: 0px 1px 4px 3px rgb(0 0 0 / 80%);
-		font-size: 1.2em;
-
-	}
-
-		
-	#desc h2, #desc p, #desc ul {
-		color: white;
-
-	}
-
-
-
-
-	
-
-			
-		
-
-
-	.btn-group.dropend{
-		height: -webkit-fill-available;
-	}
-		
-	
-
-		
-	.btn-secondary{
-		background: none;
-		Border: 0px!important;
-		text-align: left;
-		font-size:large;
-	}
-		
-	.btn-secondary, #topics{
-		color: rgb(199, 79, 14);
-	}
-
-	.themes a.btn:hover {
-		color: #5c5c3d;
-	
-	}
-
-
-		
-	/*liste*/
-		
-	.card.Meta>ul, .themes>ul{
-		list-style-type: none;
-	}
-
-	.themes>ul{
-		padding-left:0px;
-	}
-
-
-	.themes li:hover,  #topics btn-secondary:hover{
-		background-color: rgba(255, 255, 255, 0.3);
-
-		text-decoration: underline;
-		color: #5c5c3d;
-		cursor: crosshair;
-
-	}
-
-
-
-	/*IMPORTANTE PER LA FLIP CARD DELL'ASIDE E I MODALS, NON VANNO TOCCATI PER ORA*/	
-		
-		/*Style flip card*/
-		
+		/*Sezione speciale solo per style flip card*/		
 		*, *:after, *:before {
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			box-sizing: border-box;
 			}
-
 		.flip-card-3D-wrapper {
 			height: 60%;
 			position: relative;
@@ -562,8 +487,7 @@
 			-ms-perspective: 900px;
 			perspective: 900px;
 			margin-bottom: 5%;
-		}
-		
+		}		
 		#flip-card {
 			width: 100%;
 			height: 100%;
@@ -577,15 +501,13 @@
 			-ms-transform-style: preserve-3d;
 			transform-style: preserve-3d;
 			
-		}
-		
+		}		
 		.do-flip {
 			-o-transform: rotateY(-180deg);
 			-webkit-transform: rotateY(-180deg);
 			-ms-transform: rotateY(-180deg);
 			transform: rotateY(-180deg);
-			}
-		
+			}		
 		#flip-card-btn-turn-to-back, #flip-card-btn-turn-to-front {
 			position: absolute;
 			top: 0px;
@@ -594,8 +516,7 @@
 			height: 50px;
 			background: none;
 			border: 0px;
-			}
-		
+			}	
 		#flip-card .flip-card-front, #flip-card .flip-card-back{
 			background-color: rgb(170 197 199);
 			width: 100%;
@@ -608,94 +529,71 @@
 			border-radius: .5rem;
 			padding: 0.5em;
 		}
-	
-		
 		#flip-card .flip-card-back {
 			-o-transform: rotateY(180deg);
 			-webkit-transform: rotateY(180deg);
 			-ms-transform: rotateY(180deg);
 			transform: rotateY(180deg);
 				
-			}
-		
+			}	
 		#flip-card .flip-card-front p, #flip-card .flip-card-back p {
-			color: grey;
 			display: block;
 			position: absolute;
 			top: 40%;
 			width: 100%;
 			}
 
-			.icon{
-			height: 15%;
-			}
-
-
-		#themes{
-			height: 80%;
-			}
-		
-		#lens{
-			height: 80%;
-			}
-		
-
-		
-		
 		/*MODALI*/
-		
-		/*modal topic analysis*/
-		#topicAnalysis  .modal-dialog-scrollable .modal-body {
-				overflow-y: unset;
-		} 
-		
-		#topicAnalysis .modal-dialog .modal-content{
-			width: 100%;
-		}
-		
-		#topiccloud {
-				text-align: center;
-		}
-
-		/* The Modal (background) */
-		.modal {
-			display: none; /* Hidden by default */
-			position: fixed; /* Stay in place */
-			z-index: 1; /* Sit on top */
-			padding-top: 100px; /* Location of the box */
-			left: 0;
-			top: 0;
-			width: 100%; /* Full width */
-			height: 100%; /* Full height */
-			overflow: auto; /* Enable scroll if needed */
-			background-color: rgb(0,0,0); /* Fallback color */
-			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+			/*modal topic analysis*/
+			#topicAnalysis  .modal-dialog-scrollable .modal-body {
+					overflow-y: unset;
+			} 			
+			#topicAnalysis .modal-dialog .modal-content{
+				width: 100%;
+			}			
+			#topiccloud {
+					text-align: center;
 			}
 
-		/* Modal Content */
-		.modal-content {
-			background-color: #fefefe;
-			margin: auto;
-			padding: 20px;
-			border: 1px solid #888;
-			width: 80%;
-			height: 90%;
-			}
-		
-		/* The Close Button */
-		.close {
-			color: #aaaaaa;
-			float: right;
-			font-size: 28px;
-			font-weight: bold;
-			}
+			/* The Modal (background) */
+			.modal {
+				display: none; /* Hidden by default */
+				position: fixed; /* Stay in place */
+				z-index: 1; /* Sit on top */
+				padding-top: 100px; /* Location of the box */
+				left: 0;
+				top: 0;
+				width: 100%; /* Full width */
+				height: 100%; /* Full height */
+				overflow: auto; /* Enable scroll if needed */
+				background-color: rgb(0,0,0); /* Fallback color */
+				background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+				}
 
-		.close:hover, .close:focus {
-			color: #000;
-			text-decoration: none;
-			cursor: pointer;
-			}
-		
+			/* Modal Content */
+			.modal-content {
+				background-color: #fefefe;
+				margin: auto;
+				padding: 20px;
+				border: 1px solid #888;
+				width: 80%;
+				height: 90%;
+				}
+			
+			/* The Close Button */
+			.close {
+				color: #aaaaaa;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+				}
+
+			.close:hover, .close:focus {
+				color: #000;
+				text-decoration: none;
+				cursor: pointer;
+				}
+			
 
 			
 		/*schermo laptop grande*/
