@@ -302,6 +302,7 @@
 		.date.highlight{
 			background-color: orange;
 		}
+	
 	/*validi per schermi più grandi di 1440px*/
 
 		/*text*/
@@ -329,18 +330,25 @@
 			color: #5a9791;
 		}
 
-
-		/*buttons*/
+		/*links*/
+		a{
+			text-decoration: none; /*regola generale, l'underline andrà a slidare in btn:hoover{}*/
+			color: black;
+		}
 		a.disappear{ /*tasto home*/
 			font-size: 2em;	
-			color:black;
 		}
 
+		/*buttons*/
 		#download-button{
 			float: right;
     		margin-top: 1%;
 		}
-
+		.reset{
+			position: absolute;
+			bottom: 0px;
+			text-align: left;
+		}
 
 		/*containers*/
 		nav, footer {
@@ -354,57 +362,48 @@
 			align-items: center;
 			justify-content: space-between;
 		}
-	
 		.container-fluid{
-			height:100%;
+				height:100%;
 		}
-
 		nav  .container-fluid{ /*nella navbar e nel footer*/
 			border-left: 1px black solid;
 			border-bottom: 1px black solid;
 			
 			padding: 0% 1%;
-		}
-		
+		}	
 		#main-row{ /*contenitore di aside e section*/
 			height: 80%;
-			padding: 1% 3%;
+			padding: 1% 3% 0;
 		
 		}
-
 			#aside {
 				width: 20%;
 				padding-left: 0px;
 				height: 100%;
 			}
-
 				.themes{
 					height: 70%;
 				}
-
-
 			#topics{
 				padding: 0.5em;
 				height: 35%;
 				border-radius: 0.5rem;
 				background-color: black;
 			}
-
-
 			header {
 				height: 15%;
 				margin-bottom: 1%;
 			}
-
 			section{
 				height: 100%;
 			}
-
 				#row-article{
 					height: 80%;
 					margin: 0 10%;	
-				}
-				
+				}	
+					.row section{ /*articles cards*/
+						width:80%;
+					}
 			footer {
 				padding-top: 1%;
 				color: black;
@@ -414,44 +413,19 @@
 
 
 
-
-
-
-		/*aside semplice, più in basso ci sono le flipcards*/
-
-
-
 		
-	.reset{
 
-		position: absolute;
-    	bottom: 0px;
-		text-align: left;
-	}
+
+
 
 
 	
-	.dropdown-menu.topic>li:not(:last-child){
-		margin-bottom: 10%;		/*sistemano il dropdown dell'aside*/
-	}
-
-	.dropdown-menu.topic{
-		padding-left:0.5em;
-		padding-right:0.5em;
-	}
-
-
-	/*corpo articoli cards*/
-
-	.row section{
-		width:80%;
-	}
 		
 		
-		/*metadati*/
+	/*metadata*/
 		
 	div.card.Meta{
-			height: 30%;
+		height: 30%;
 		padding: 0.25rem 1rem;
 	}
 
@@ -461,7 +435,7 @@
 		
 	img.closeMeta{
 		display: inline-flex;
-			float: right;
+		float: right;
 	}
 			
 			
@@ -515,15 +489,9 @@
 	}
 
 
-	/*links*/
-		
-	a{
-		text-decoration: none; /*regola generale, l'underline andrà a slidare in btn:hoover{}*/
-	}
 
-	a.cover, .navbar-brand{	
-		color: black; /*va a modificare le classi bootstrap dei bottoni in navbar, ha important per non rischiare*/
-	}	
+
+	
 
 			
 		
@@ -783,6 +751,11 @@
 		/*schermo tablet*/
 
 		@media (max-width: 768px) {
+
+				
+			.dropdown-menu.topic>li:not(:last-child){
+				margin-bottom: 10%;		/*sistemano il dropdown dell'aside*/
+			}
 
 			#article-1 h1, #article-2 h1, #article-3 h1{
 				font-size:1.5em
