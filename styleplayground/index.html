@@ -305,7 +305,7 @@
 			background-color: orange;
 		}
 	
-	/*validi per schermi più grandi di 1440px*/
+		/*validi per schermi più grandi di 1440px*/
 	
 		@media  (max-width: 2560px) {
 			
@@ -628,7 +628,6 @@
 				a.disappear { /*tasto home*/
 					font-size: 3.5em;	
 				}
-
 				#download-button .sign{
 					font-size: 2.5em;	
 				}
@@ -645,27 +644,21 @@
 				a.disappear { /*tasto home*/
 					font-size: 2.5em;	
 				}
-
 				#download-button .sign{
 					font-size: 1.5em;	
 				}
-
 				.sign.title {
 					font-size: 3em;
    					letter-spacing: 1em;
-				}
-
-				
-				
+				}					
 			}
-
 		}
 		/*schermo laptop grande*/
 
-			@media (max-width: 1440px) {
+		@media (max-width: 1440px) {
 
 			p, #desc li {
-				font-size: 1em;
+				font-size: 1.5em;
 			}
 			/*text*/
 			h1{
@@ -692,33 +685,19 @@
 
 			
 			@media (max-height: 1500px) {
-				a.disappear { /*tasto home*/
-					font-size: 4.5em;	
-				}
-				#download-button .sign{
-					font-size: 3.5em;	
-				}
-				#download-button{
-					margin-top: 0.5px;
-				}
 				.btn-secondary, .btn, .form-check-label{
-					font-size: 2em;
+					font-size: 1.5em;
 				}
 			}
 
 			@media (max-height: 1100px) {
-				a.disappear { /*tasto home*/
-					font-size: 3.5em;	
-				}
-				#download-button .sign{
-					font-size: 2.5em;	
-				}
+				
 				.sign.title {
 					font-size: 3em;
 					letter-spacing: 0.4em;
 				}
 				.btn-secondary, .btn, .form-check-label{
-					font-size: 1.5em;
+					font-size: 1em;
 				}
 			}
 
@@ -737,9 +716,18 @@
 				}
 			}		
 			@media (max-height: 768px) {
+
+				a.disappear { /*tasto home*/
+					font-size: 1.5em;	
+				}
+
+				#download-button .sign{
+					font-size: 1em;	
+				}
 				h3 {
 						font-size: 1.5em;
-					}
+						margin-bottom: 0;
+				}
 				#row-article{
 					margin-top: 3%;
 					height:76%;
@@ -755,28 +743,32 @@
 
 		@media (max-width: 1024px) {
 
+			.sign.title {
+				font-size: 2em;
+				letter-spacing: 0.4em;
+			}
+			h2 {
+				font-size: 1.5em;
+			}
+			p, #desc li {
+				font-size: 1em;
+			}
 			#aside{
 				width:25%!important;
-			}
-			
+			}			
 			section{
 				width:75%!important;
-			}
-			
-
-			
+			}			
 			@media (max-height: 768px) {
+				h3{
+					font-size: 1.2em;
+					height: 20%;
+				}
 				a.btn, li.form-check, #topics .btn-secondary{
-					font-size: small;
+					font-size: 1em;
 				}
 				
-				#topics {
-					padding-bottom: 20%;
-				}
 				
-				.sign.title {
-					font-size: 2.25em;
-				}
 			}
 			
 		}
