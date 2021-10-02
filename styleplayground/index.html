@@ -246,9 +246,18 @@
 
 	/*funzionalità sito*/
 	body{
-		height: 100vh;
-		width: 100vw;
 	}
+		/*animations*/
+	.sign {
+		color: #b1fff3;
+		text-shadow: 0 0 0.4rem #084298, 0 0 1.5rem #5a9791, -0.2rem 0.1rem 1rem #67c0b4, 0.2rem 0.1rem 1rem #73e8d7, 0 -0.5rem 2rem #95eee0, 0 0.5rem 3rem #b8f4ea;
+		animation: shine 2s forwards, flicker 3s infinite;
+	}
+	.flicker {
+		animation: shine 2s forwards, blink 3s 2s infinite;
+	}ì
+	.fast-flicker {
+		animation: shine 2s forwards, blink .1s 1s infinite;
 	/*scroll-bar*/
 	.overflow{/*classe creata per fare lo scroll degli aticoli, ecc.*/
 		overflow-y:scroll;
@@ -306,8 +315,13 @@
 			font-size: 1.5em;
 		
 		}		
-		.sign.title{
+		header{
 			font-size: 4em;	
+			letter-spacing: 0.4em;
+			text-align: center;
+			font-family: Hometown;
+			font-weight: bold;
+			color: #5a9791;
 		}
 
 
@@ -359,11 +373,22 @@
 				height: 100%;
 			}
 
+				.themes{
+					height: 70%;
+				}
+
+
 			#topics{
 				padding: 0.5em;
 				height: 35%;
 				border-radius: 0.5rem;
 				background-color: black;
+			}
+
+
+			header {
+				height: 15%;
+				margin-bottom: 1%;
 			}
 
 			section{
@@ -382,48 +407,13 @@
 				font-size: 12px;
 			}
 
-	.sign {
-	color: #b1fff3;
-	text-shadow: 0 0 0.4rem #084298, 0 0 1.5rem #5a9791, -0.2rem 0.1rem 1rem #67c0b4, 0.2rem 0.1rem 1rem #73e8d7, 0 -0.5rem 2rem #95eee0, 0 0.5rem 3rem #b8f4ea;
-	animation: shine 2s forwards, flicker 3s infinite;
-	}
-	.flicker {
-	animation: shine 2s forwards, blink 3s 2s infinite;
-	}
-
-	.fast-flicker {
-	animation: shine 2s forwards, blink .1s 1s infinite;
-	}
 
 
 
 
-
-
-
-	header {
-		text-align: center;
-		font-size: 2.8em;
-		height: 15%;
-		font-family: Hometown;
-		font-weight: bold;
-		letter-spacing: 0.2em;
-		color: #5a9791;
-		margin-bottom: 1%;
-	}
 
 		/*aside semplice, più in basso ci sono le flipcards*/
-		
 
-
-	.themes, #topics {
-	
-		font-family: Calculator;
-	}
-
-	.themes{
-		height: 70%;
-		}
 
 
 		
