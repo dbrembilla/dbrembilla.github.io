@@ -229,7 +229,6 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 listFirst = `<li class="$classtodelete" value='$dateValue'>$content[$links]</li>`
             }
             var listContent = `<a class="$thisclass" onclick="highlight('$originalClass', '$place')" href="$place">$number</a> `; //dal secondo elemento si pone a fianco di quello presente
-            console.log(what);
             var elements = $("#"+ what); 
             seenClasses = {}; //oggetto che contiene le classi già note
             classNames = {};
@@ -238,7 +237,6 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 referenceClass = referenceClass.replace(/\s/g, "-");
                 referenceClass =referenceClass.replace("#", "")
                 referenceClass =referenceClass.replace(".", "")
-                console.log(referenceClass, referenceClass in seenClasses);
                 if (referenceClass in seenClasses) { //questo algoritmo crea un array contenente un elenco di numeri che si riferiscono a quando un elemento è citato
                     len = seenClasses[referenceClass].length + 1;
                     seenClasses[referenceClass].push(
@@ -289,7 +287,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             //content: elements[i].innerHTML
         }
         function basefilltab(what,where) { //questo riempie le tabelle del metadata viewer
-            var list = `<li class="list-sections"><a href="#$place" onclick = "highlight('quote','#$place')">$content</a></li>`;
+            var list = `<li class="list-sections"><a href="#$place" onclick = "highlight('#','#$place')">$content</a></li>`;
             if (what.includes('quote')){
                 list = `<li class="list-quote"><a href="#$place" onclick = "highlight('quote','#$place')">$content</a></li>`;
             }
