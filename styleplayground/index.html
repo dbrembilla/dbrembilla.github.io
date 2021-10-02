@@ -336,10 +336,15 @@
 			justify-content: space-between;
 		}
 	
-		.container-fluid{ /*nella navbar e nel footer*/
+		.container-fluid{
+			height:100%;
+		}
+		
+		nav  .container-fluid{ /*nella navbar e nel footer*/
 			border-left: 1px black solid;
 			border-bottom: 1px black solid;
-			height:100%;
+			
+			padding: 0% 1%;
 		}
 		
 		#main-row{ /*contenitore di aside e section*/
@@ -356,7 +361,7 @@
 
 			#topics{
 				padding: 0.5em;
-				height: 30%;
+				height: 35%;
 				border-radius: 0.5rem;
 				background-color: black;
 			}
@@ -369,7 +374,13 @@
 					height: 80%;
 					margin: 0 10%;	
 				}
-
+				
+			footer {
+				padding-top: 1%;
+				color: black;
+				border-top: 1px solid;
+				font-size: 12px;
+			}
 
 	.sign {
 	color: #b1fff3;
@@ -388,15 +399,7 @@
 
 
 
-	footer {
-		text-align: center; 
-		padding-top: 1%;
-		position: relative;
-		z-index: 1;
-		color: black;
-		border-top: 1px solid;
-		font-size: 12px;
-	}
+
 
 	header {
 		text-align: center;
@@ -1308,59 +1311,61 @@
 				</div>
 			</div>
 			<!--Footer-->
-			<footer class="container-fluid">
-				<!--div for sponsors' logos-->
-				<span class="d-flex flex-row" id='footer-icons'>
-					Icons
-				</span >
-				<!--row that flexes all items in reverted order on the left ! --to be adjusted..-- ! -->
-				<span class="d-flex flex-row-reverse">
-					<!--Documentation-->
-					<a id="myBtn">Documentation</a>
-					<!--About us toggler offcanvasTop-->     	 		
-					<a  data-bs-toggle="offcanvas" type="button" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">About us</a>
-					<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-						<div class="offcanvas-header">
-							<h5 id="offcanvasTopLabel">The Team</h5>
-							<!--closing button for documentation-->
-							<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-						</div>
-						<div class="offcanvas-body">
-							Eravamo 4 amici al bar, che volevano cambiare il mondo... 
-						</div>
-					</div>	
-					<!--Disclaimer toggler offcanvasBottom--> 
-					<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Disclaimer</a>
-					<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-						<div class="offcanvas-header">
-							<h5 class="offcanvas-title" id="offcanvasBottomLabel">Disclaimer</h5>
-							<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-						</div>
-						<div class="offcanvas-body small">
-							<p>
-								
-							The purpose of this web site is to explore various types of typographic and layout
-							style for text documents, as an end-of-course project for the "Information Modeling
-							and Web technologies" course of the Master Degree in Digital Humanities and
-							Digital Knowledge of the University of Bologna, under prof. Fabio Vitali.
-							The documents contained in this web site have been selected for their length and
-							complexity. Their publication here is not intended to be an alternative or
-							replace their original locations:
+			<footer>
+				<div class="container-fluid">
+					<!--div for sponsors' logos-->
+					<span class="d-flex flex-row" id='footer-icons'>
+						Icons
+					</span >
+					<!--row that flexes all items in reverted order on the left ! --to be adjusted..-- ! -->
+					<span class="d-flex flex-row-reverse">
+						<!--Documentation-->
+						<a id="myBtn">Documentation</a>
+						<!--About us toggler offcanvasTop-->     	 		
+						<a  data-bs-toggle="offcanvas" type="button" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">About us</a>
+						<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+							<div class="offcanvas-header">
+								<h5 id="offcanvasTopLabel">The Team</h5>
+								<!--closing button for documentation-->
+								<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								Eravamo 4 amici al bar, che volevano cambiare il mondo... 
+							</div>
+						</div>	
+						<!--Disclaimer toggler offcanvasBottom--> 
+						<a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Disclaimer</a>
+						<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+							<div class="offcanvas-header">
+								<h5 class="offcanvas-title" id="offcanvasBottomLabel">Disclaimer</h5>
+								<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body small">
+								<p>
 									
-									
-							</p>
-							<ul>
-								<li><a href="https://www.washingtonpost.com/lifestyle/wellness/working-from-home-office-benefits/2021/06/24/d1f92d86-d077-11eb-8014-2f3926ca24d9_story.html">What we learned about wellness while working from home, and how to use those insights</a></li>
-								<li><a href="https://www.theguardian.com/science/2021/jun/03/the-empty-office-what-we-lose-when-we-work-from-home">The empty office: what we lose when we work from home</a></li>
-								<li><a href="https://www.bbc.com/worklife/article/20210713-why-introverts-excelled-at-working-from-home">Why introverts excelled at working from home</a></li>
-								<li><a href=""></a></li>
-							</ul>
-							<p>All copyrights and related rights on the content remain with their original owners.
-							All copyright on the typographic and layout choices are 2021 © Chiara Catizone, Elia Rizzetto, Davide Brembilla
-							</p>
-						</div>
-					</div>	
-				</span>
+								The purpose of this web site is to explore various types of typographic and layout
+								style for text documents, as an end-of-course project for the "Information Modeling
+								and Web technologies" course of the Master Degree in Digital Humanities and
+								Digital Knowledge of the University of Bologna, under prof. Fabio Vitali.
+								The documents contained in this web site have been selected for their length and
+								complexity. Their publication here is not intended to be an alternative or
+								replace their original locations:
+										
+										
+								</p>
+								<ul>
+									<li><a href="https://www.washingtonpost.com/lifestyle/wellness/working-from-home-office-benefits/2021/06/24/d1f92d86-d077-11eb-8014-2f3926ca24d9_story.html">What we learned about wellness while working from home, and how to use those insights</a></li>
+									<li><a href="https://www.theguardian.com/science/2021/jun/03/the-empty-office-what-we-lose-when-we-work-from-home">The empty office: what we lose when we work from home</a></li>
+									<li><a href="https://www.bbc.com/worklife/article/20210713-why-introverts-excelled-at-working-from-home">Why introverts excelled at working from home</a></li>
+									<li><a href=""></a></li>
+								</ul>
+								<p>All copyrights and related rights on the content remain with their original owners.
+								All copyright on the typographic and layout choices are 2021 © Chiara Catizone, Elia Rizzetto, Davide Brembilla
+								</p>
+							</div>
+						</div>	
+					</span>
+				</div>
 			</footer>
 			<!-- Documentation html text-->
 			<div id="myModal" class="modal">
