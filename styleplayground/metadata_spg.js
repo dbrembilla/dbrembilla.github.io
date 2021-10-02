@@ -41,26 +41,26 @@ function removeHover(){
 function changeStyle(ref){
             target=$(ref).attr("href");
             var downloadButton = `
-                <span id='download-button'>
                             <button>    
                                 <div class="sign">
                                         <span class="fast-flicker">D</span>ownl<span class="flicker">oad </span> <span class="fast-flicker">our </span>
                                     <span class="flicker">Arc</span><span class="fast-flicker">hi</span><span class="flicker">ve</span>
                                 </div>
                                 
-                            </button> 
-                </span> `
+                            </button> `
             switch ($('#default').attr('href')){
                 case "assets/future_style.css": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per eliminare elementi
                 console.log('changed from future'); 
             
                 future = false
-                $('#class-show').replaceWith(downloadButton)
+                $('#download-button').empty()
+                $('#download-button').append(downloadButton)
                 $('#footer-icons').empty()
                 removeHover()
                 case 'assets/style_1800.css':
                 console.log('changed from 1800');
-                $('#bologna-adv').replaceWith(downloadButton)
+                $('#download-button').empty()
+                $('#download-button').append(downloadButton)
 
 
                 default:
@@ -70,14 +70,16 @@ function changeStyle(ref){
                 case "#future": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per aggiungere elementi
                 console.log('changed to future'); 
                 alert('This webpage has been approved by the Nostalgia Communist Party of the World. 本网页已得到世界怀旧共产党的批准。 Эта веб-страница была одобрена Всемирной коммунистической партией ностальгии. このウェブページは、「懐かしの世界共産党」が承認したものです。')
-                $('#download-button').replaceWith('<div id="class-show"></div>')
+                $('#download-button').empty()
+                $('#download-button').append('<div id="class-show"></div>')
                 $('#footer-icons').empty()
                 $('#footer-icons').append('<img src="assets/nostalgia-logo.png" style="height:50px!important;width:50px!important;">')
                 addHover()
                 future = true
                 case '#1800':
                 console.log('Change to 1800');
-                $('#download-button').replaceWith('<h2 id="bologna-adv">Bologna Advertiser</h2>')
+                $('#download-button').empty()
+                $('#download-button').append('<h2 id="bologna-adv">Bologna Advertiser</h2>')
                 default:
                 console.log('set to default');}
 
