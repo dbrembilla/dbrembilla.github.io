@@ -417,6 +417,7 @@
 				border-bottom: 1px solid;
 			}
 				.themes, .lens{
+				
 					height: 70%;
 				}
 
@@ -487,6 +488,7 @@
 			margin-bottom: 5%;
 		}		
 		#flip-card {
+
 			width: 100%;
 			height: 100%;
 			position: absolute;
@@ -498,6 +500,7 @@
 			-webkit-transform-style: preserve-3d;
 			-ms-transform-style: preserve-3d;
 			transform-style: preserve-3d;
+			
 			
 		}		
 		.do-flip {
@@ -615,27 +618,23 @@
 
 		@media (max-width: 1024px) {
 
-			#article-1 h1, #article-2 h1, #article-3 h1{
-				font-size:1.5em;
-			}
-			
 			#aside{
-				width:25%!important;
+				width:25%;
 			}
 			
 			section{
-				width:75%!important;
+				width:75%;
 			}
 			
 
 			
-			@media (max-height: 623px) {
+			@media (max-height: 768px) {
 				a.btn, li.form-check, #topics .btn-secondary{
 					font-size: small!important;
 				}
 				
 				#topics {
-					padding-bottom: 40%!important;
+					padding-bottom: 20%!important;
 				}
 				
 				.sign.title {
@@ -993,9 +992,9 @@
 					<div class="flip-card-3D-wrapper">
 						<div id="flip-card">
 							<!-- flipcard Front-->
-							<div class="flip-card-front">
+							<div class="flip-card-front ">
 								<h3>Programs</h3>
-								<div class="themes overflow">
+								<div class="themes overflow ">
 									<!--themes-->
 									
 									<ul>
@@ -1036,11 +1035,11 @@
 								</button>
 							</div> 
 							<!--flicard BACK-->
-							<div class="flip-card-back">
+							<div class="flip-card-back overflow">
 								<!--Lens-->
 								<h3>Lens</h3>
-								<div class="lens overflow">
-									<ul class="overflow">
+								<div class="lens">
+									<ul>
 										<li class="form-check">
 											<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .place">
 											<label class="form-check-label" for="inlineCheckbox1" onchange="">Places</label>
