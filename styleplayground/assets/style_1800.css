@@ -55,18 +55,17 @@ h1 {
 	font-family: JDCarnivalBlack;
 	text-align: center;
 	text-transform: uppercase;
-	font-family: 16px!important;
+	font-family: 22px!important;
 }
 h2, h3, .home {
 	font-family: Essays1743!important;
 	font-weight: bold;
-	text-align: center;
-	font-size: 14px!important;
+	font-size: 20px!important;
 }
 h4, figcaption {
 	font-family: Essays1743;
 	font-style: italic;
-	font-family: 13px!important;
+	font-family: 18px!important;
 }
 p {
 	font-family: JMHLegajo;
@@ -76,7 +75,7 @@ p {
 	margin-right: 0px;
 	margin-left: 0px;
 	margin-bottom: 0px;
-	font-size: 10px!important;
+	font-size: 16px!important;
 }
 ul, button {
 	font-family: JMHLegajo!important;
@@ -187,6 +186,9 @@ header .sign {
 	color: black!important;
 	text-shadow: none!important;
 	animation: none!important;
+}
+.sign.title {
+	font-size: 2em!important;
 }
 #topics {
 	color: black!Important;
