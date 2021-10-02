@@ -207,6 +207,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             addId('.date', 'date')
             addId('.institution', 'institution')
             addId('.quote', 'quote')
+            addId('#article-1 h2, #article-1 h3, #article-1 h4, #article-2 h2, #article-2 h3, #article-2 h4, #article-3 h2, #article-3 h3, #article-3 h4', 'quote')
            
         }
         
