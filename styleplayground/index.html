@@ -1472,9 +1472,9 @@
 											'Institution':'.institution',
 											'Quotes':'.quote'
 										}
-					for (let i = 1, i <= where, i++){
+					for (let a = 1, a <= where, a++){
 						$('#summaryBody').append(`
-							<div class='col' id='summary-`+i+`'>
+							<div class='col' id='summary-`+a+`'>
 								<table class="table">
 									  <thead>
 									    <tr>
@@ -1486,14 +1486,14 @@
 									    
 									  </tbody>
 							</div>
-							`)
+							`);
 							for (const [key, value] of Object.entries(metadata)) {
-								$('summary-'+i+' tbody').append(
+								$('summary-'+a+' tbody').append(
 									`<tr>
 										 <th scope="row">`+key+`</th>
-										<td>`+$(where+" "+value).length+`</td>
+										<td>`+$('article' + a +" "+value).length+`</td>
 										 </tr>`
-										)
+										);
 												}}
 				  // Update the modal's content.
 				  
