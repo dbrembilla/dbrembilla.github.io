@@ -416,12 +416,10 @@
 				height: 100%;
 				border-bottom: 1px solid;
 			}
-				.themes{
+				.themes, .lens{
 					height: 70%;
 				}
-				#lens{
-					height: 80%;
-				}
+
 			#topics{
 				padding: 0.5em;
 				height: 35%;
@@ -1041,48 +1039,50 @@
 							<div class="flip-card-back">
 								<!--Lens-->
 								<h3>Lens</h3>
-								<ul class="overflow">
-									<li class="form-check">
-										<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .place">
-										<label class="form-check-label" for="inlineCheckbox1" onchange="">Places</label>
-									</li>
-							
-									<li class="form-check">
-										<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .date">
-										<label class="form-check-label" for="inlineCheckbox2">Dates</label>
-									</li>
+								<div class="lens overflow">
+									<ul class="overflow">
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .place">
+											<label class="form-check-label" for="inlineCheckbox1" onchange="">Places</label>
+										</li>
 								
-									<li class="form-check">
-										<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .person">
-										<label class="form-check-label" for="inlineCheckbox1">People</label>
-									</li>
-						
-									<li class="form-check">
-										<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .event">
-										<label class="form-check-label" for="inlineCheckbox2">Events</label>
-									</li>
-									<li class="form-check">
-										<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .institution">
-										<label class="form-check-label" for="inlineCheckbox2">Institutions and Companies</label>
-									</li>
-									<li class="form-check">
-										<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="info">
-										<label class="form-check-label" for="inlineCheckbox2">Info</label> <!-- da finire -->
-									</li>
-									<li class="form-check">
-										<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="quote">
-										<label class="form-check-label" for="inlineCheckbox2">Quote</label> <!-- da finire -->
-									</li>
-									<li class="form-check">
-										<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="section">
-										<label class="form-check-label" for="inlineCheckbox2">Section</label> <!-- da finire -->
-									</li>
-									<li>
-										<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#topicAnalysis">
-										Topic Analysis
-										</button>
-									</li>
-								</ul>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .date">
+											<label class="form-check-label" for="inlineCheckbox2">Dates</label>
+										</li>
+									
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .person">
+											<label class="form-check-label" for="inlineCheckbox1">People</label>
+										</li>
+							
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .event">
+											<label class="form-check-label" for="inlineCheckbox2">Events</label>
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .institution">
+											<label class="form-check-label" for="inlineCheckbox2">Institutions and Companies</label>
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="info">
+											<label class="form-check-label" for="inlineCheckbox2">Info</label> <!-- da finire -->
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="quote">
+											<label class="form-check-label" for="inlineCheckbox2">Quote</label> <!-- da finire -->
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="section">
+											<label class="form-check-label" for="inlineCheckbox2">Section</label> <!-- da finire -->
+										</li>
+										<li>
+											<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#topicAnalysis">
+											Topic Analysis
+											</button>
+										</li>
+									</ul>
+								</div>
 								<button id="flip-card-btn-turn-to-front"><lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover" colors="primary:#121331,secondary:#1663c7" stroke="82" style="width:50px;height:50px"></lord-icon></button>
 							</div>
 						</div>
