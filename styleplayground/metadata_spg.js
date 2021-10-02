@@ -207,6 +207,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             addId('.date', 'date')
             addId('.institution', 'institution')
             addId('.quote', 'quote')
+            addId('#article-1 h2, #article-1 h3, #article-1 h4, #article-2 h2, #article-2 h3, #article-2 h4, #article-3 h2, #article-3 h3, #article-3 h4', 'section')
            
         }
         
@@ -228,7 +229,6 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 listFirst = `<li class="$classtodelete" value='$dateValue'>$content[$links]</li>`
             }
             var listContent = `<a class="$thisclass" onclick="highlight('$originalClass', '$place')" href="$place">$number</a> `; //dal secondo elemento si pone a fianco di quello presente
-            console.log(what);
             var elements = $("#"+ what); 
             seenClasses = {}; //oggetto che contiene le classi già note
             classNames = {};
@@ -237,7 +237,6 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
                 referenceClass = referenceClass.replace(/\s/g, "-");
                 referenceClass =referenceClass.replace("#", "")
                 referenceClass =referenceClass.replace(".", "")
-                console.log(referenceClass, referenceClass in seenClasses);
                 if (referenceClass in seenClasses) { //questo algoritmo crea un array contenente un elenco di numeri che si riferiscono a quando un elemento è citato
                     len = seenClasses[referenceClass].length + 1;
                     seenClasses[referenceClass].push(
@@ -288,7 +287,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             //content: elements[i].innerHTML
         }
         function basefilltab(what,where) { //questo riempie le tabelle del metadata viewer
-            var list = `<li class="list-sections"><a href="#$place" onclick = "highlight('quote','#$place')">$content</a></li>`;
+            var list = `<li class="list-sections"><a href="#$place" onclick = "highlight('#','#$place')">$content</a></li>`;
             if (what.includes('quote')){
                 list = `<li class="list-quote"><a href="#$place" onclick = "highlight('quote','#$place')">$content</a></li>`;
             }
@@ -390,14 +389,15 @@ function sortDate(listid) {
     // Start by saying: no switching is done:
     switching = false;
     b = list.getElementsByTagName("LI");
+    console.log(b);
     // Loop through all list items:
     for (i = 0; i < (b.length - 1); i++) {
       // Start by saying there should be no switching:
       shouldSwitch = false;
       /* Check if the next item should
       switch place with the current item: */
-      date1= new Date($('#'+b[i].id).attr('value'))
-      date2= new Date($('#'+b[i].id).attr('value'))
+      date1= new Date(b[i].value)
+      date2= new Date(b[i+1].value)
       if (date1 > date2) {
         /* If next item is alphabetically lower than current item,
         mark as a switch and break the loop: */

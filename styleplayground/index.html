@@ -1368,7 +1368,7 @@
 			<div id="myModal" class="modal">
 				<!-- Modal content -->
 				<div class="modal-content">
-					<span class="close">&times;</span>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
 					<div class="row">
 						<div class="col-3"><span>Index</span>
 						<ul style="list-style-type:none;">
@@ -1393,20 +1393,12 @@
 			      </div>
 			      <div class="modal-body">
 
+			      		<div class='row' id='summaryBody'>
+			            
 
-			            <table class="table">
-									  <thead>
-									    <tr>
-									      <th scope="col">Datum</th>
-									      <th scope="col">Value</th>
-									    </tr>
-									  </thead>
-									  <tbody>
-									    
-									  </tbody>
 									</table>
 			          </div>
-			         
+			         </div>
 
 			    </div>
 			  </div>
@@ -1416,12 +1408,14 @@
 			<script type="text/javascript" src="metadata_spg.js"></script>
 
 			<script>
+				$('#metaSummary').on('hide.bs.modal', function (e) {
+					$('#summaryBody').empty()
+				})
 				var targetModal = document.getElementById('metaSummary')
 				targetModal.addEventListener('show.bs.modal', function (event) {
 				  // Button that triggered the modal
-				  var button = event.relatedTarget
 				  // Extract info from data-bs-* attributes
-				  var where = button.getAttribute('data-bs-whatever')
+				  var where = Object.values(columnListener)[0]
 				  metadata = {'Person':'.person',
 											'Event':'.event',
 											'Date':'.date',
@@ -1429,15 +1423,29 @@
 											'Institution':'.institution',
 											'Quotes':'.quote'
 										}
-
-				  for (const [key, value] of Object.entries(metadata)) {
-							  $('tbody').append(
-							  	`<tr>
-							      <th scope="row">`+key+`</th>
-							      <td>`+$(where+" "+value).length+`</td>
-							      </tr>`
-							  	)
-							}
+					for (let i = 1, i <= where, i++){
+						$('#summaryBody').append(`
+							<div class='col' id='summary-`+i+`'>
+								<table class="table">
+									  <thead>
+									    <tr>
+									      <th scope="col">Datum</th>
+									      <th scope="col">Value</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    
+									  </tbody>
+							</div>
+							`)
+							for (const [key, value] of Object.entries(metadata)) {
+								$('summary-'+i+' tbody').append(
+									`<tr>
+										 <th scope="row">`+key+`</th>
+										<td>`+$(where+" "+value).length+`</td>
+										 </tr>`
+										)
+												}}
 				  // Update the modal's content.
 				  
 				})
@@ -1559,7 +1567,7 @@
 												$(whatToDelete).remove()
 												break
 										}  else if (this.value == 'section') {
-											whatToDelete = '.list-section'
+											whatToDelete = '.list-sections'
 												var idToDelete = '#metadata-list-' + i + "-secton"
 												$(idToDelete).remove()
 												$(whatToDelete).remove()
