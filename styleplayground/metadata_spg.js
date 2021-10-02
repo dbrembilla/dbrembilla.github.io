@@ -289,7 +289,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
         }
         function basefilltab(what,where) { //questo riempie le tabelle del metadata viewer
             var list = `<li class="list-sections"><a href="#$place" onclick = "highlight('quote','#$place')">$content</a></li>`;
-            if (quote in what){
+            if (what.includes('quote')){
                 list = `<li class="list-quote"><a href="#$place" onclick = "highlight('quote','#$place')">$content</a></li>`;
             }
             var elements = $('#' +what); 
