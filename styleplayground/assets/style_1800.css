@@ -189,7 +189,7 @@ header .sign {
 	animation: none!important;
 }
 .sign.title {
-	font-size: 22px;
+	font-size: 2em!important;
 }
 #topics {
 	color: black!Important;
