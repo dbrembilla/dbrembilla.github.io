@@ -274,10 +274,11 @@ h3 {
 	font-family: 'Arvo';
 }
 
-
 .card.Meta {
 	border: 1px double #3c4663;
+	background: unset;
 }
+
 .card.overflow {
     border: 0px;
     background: unset;
