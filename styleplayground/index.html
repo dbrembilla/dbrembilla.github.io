@@ -1446,20 +1446,18 @@
 
 			<script>
 				
-					  $("#buttonAccordion1, #buttonAccordion2, #buttonAccordion3").click(function(e) {
-					    var target = $(this).attr("data-bs-target");
-					    console.log(target);
-					    var isTargetExpanded = $(target).hasClass('in');
-
-					    var buttons= $('.accordion-collapse')
-					    for (i = 0; i < (buttons.length - 1); i++) {
-					    	if ($(buttons[i].id).attr('data-bs-target')!=target) {
-					    		$(buttons[i].id).addClass('collapse').removeClass('show'); // collapse all before expading clicked target
-					    		$(buttons[i].id).attr('aria-expanded', 'false');
-					    	}
-					    }
-					    
-					  });
+					 $(function() {
+			    var activeAccordian = null;
+			    var $accordions = $("#buttonAccordion1, #buttonAccordion2, #buttonAccordion3 ").on('click', function() {
+			        activeAccordian = this;
+			    }).accordion({
+			        collapsible: true,
+			        active: false,
+			        icons: false
+			    }).on('accordionchange', function(event, ui) {
+			        $accordions.not(activeAccordian).accordion('activate', false);
+			    });
+			});
 				
 				$('#metaSummary').on('hide.bs.modal', function (e) {
 					$('#summaryBody').empty()
