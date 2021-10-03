@@ -24,6 +24,11 @@
 	src: url("fonts/Cristina-Regular-SVG.ttf");
 }
 
+@font-face {
+	font-family: JeffNichols;
+	src: url("fonts/JeffNichols.ttf");
+}
+
 p {
   color: #504738;
   font-family: UnifrakturCook;
@@ -124,12 +129,6 @@ figcaption {
 }
 */
 
-.card.overflow p::first-letter {
-	font-family: GotischeInitialen;
-	color: #504738;
-	font-size: 15px;
-}
-
 #article-1, #article-2, #article-3 {
 	padding: 0 !important;
 	border-left: solid 1px;
@@ -143,16 +142,11 @@ figcaption {
 
 /*------------prova così-----------*/
 .card.overflow p::first-letter {
-    font-family: GotischeInitialen;
-    color: #504738;
+    font-family: JeffNichols;
+    color: #FCD642;
     font-size: 57px;
     float: left;
     margin-bottom: 5px;
     padding-top: 6px;
 }
 
-p ::first-letter::after, p ::first-letter::before {
-	content: "";
-	display: block;
-	clear: both;
-}
