@@ -135,6 +135,10 @@ a.disappear, .dropbtn{
 	color: #621616!important;
 	font-size: 3em!important;
 }
+
+a.disappear:hover, .dropbtn:hover{
+	text-decoration: underline white 9px;
+}
 .descTitle h2 {
     position: absolute;
     width: 3em;
@@ -177,20 +181,13 @@ a.disappear, .dropbtn{
     text-align: justify;
 }
 
-.highlight{
-	background-color: rgba(0, 0, 0, 0.432);
-
-}
-
-
 .sign.title {
 	position: absolute;
     /* top: 15%; */
     z-index: -100;
     bottom: 20%;
     /* right: 2%; */
-    transform: rotate(
-351deg);
+    transform: rotate(351deg);
     height: fit-content;
     /* width: 100%; */
     /* padding: .5%; */
@@ -267,6 +264,11 @@ h3 {
 #download-button{
 	border: 0px;
     background: unset;
+}
+#download-button:hover{
+	color: white;
+	background-color: #3c4663;
+	border-radius:15px;
 }
 
 #download-button .sign{
