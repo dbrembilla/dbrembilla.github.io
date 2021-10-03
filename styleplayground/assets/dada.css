@@ -275,7 +275,10 @@ h3 {
 }
 
 
-.card.Meta, .card.overflow {
+.card.Meta {
+	border: 1px double #3c4663;
+}
+.card.overflow {
     border: 0px;
     background: unset;
 }
