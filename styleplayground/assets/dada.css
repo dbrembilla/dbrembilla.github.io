@@ -128,7 +128,6 @@ header{
 #row-article {
 	height: 100%!important;
     width: 80%;
-	margin: 0!important;
 
 }
 a.disappear, .dropbtn{
@@ -211,7 +210,7 @@ a.disappear:hover, .dropbtn:hover{
 
 }
 
-.themes{
+.themes, .lens{
 	
 	color: black!important;
 	letter-spacing: 1em!important ;
@@ -224,12 +223,12 @@ a.disappear:hover, .dropbtn:hover{
     border: double 15px;
 }
 
-.themes, #topics {
+.themes, #topics, .lens {
     font-family: 'Worksans Medium'!important;
 	
 }
 
-.flip-card-front h3 {
+.flip-card-front h3, .flip-card-back h3 {
     font-family: 'Worksans Black'!important;
 	color: black;
 	border-bottom: 0px!important;
@@ -257,17 +256,17 @@ h3 {
 }
 
 
-#download-button{
+#download-button, .btn.btn-primary{
 	border: 0px;
     background: unset;
 }
-#download-button:hover{
+#download-button:hover, .btn.btn-primary:hover{
 	color: white;
 	background-color: #3c4663;
 	border-radius:15px;
 }
 
-#download-button .sign{
+#download-button .sign, .btn.btn-primary {
 	font-family: 'Arvo';
 }
 
