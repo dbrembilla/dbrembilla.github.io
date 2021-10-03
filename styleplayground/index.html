@@ -1438,19 +1438,19 @@
 			<script type="text/javascript" src="metadata_spg.js"></script>
 
 			<script>
-				$(function() {
-					  $("#buttonAccordion1, #buttonAccordion2, #buttonAccordion3").click(function(e) {
+				
+					  $("#buttonAccordion1, #buttonAccordion2, #buttonAccordion3").onclick(function(e) {
 					    var target = $(this).attr("data-bs-target");
 					    var isTargetExpanded = $(target).hasClass('in');
-					    $('.show-in-md').addClass('collapse').removeClass('in'); // collapse all before expading clicked target
+					    $('.accordion-collapse').addClass('collapse').removeClass('in'); // collapse all before expading clicked target
 
 					    if (isTargetExpanded) {
 					      $(target).addClass('collapse').removeClass("in"); // collapse clicked target
 					    } else {
-					      $(target).removeClass('collapse').addClass("in"); // expand clicked target
+					      $(target).removeClass('collapse show').addClass("in"); // expand clicked target
 					    }
 					  });
-					});
+				
 				$('#metaSummary').on('hide.bs.modal', function (e) {
 					$('#summaryBody').empty()
 				})
