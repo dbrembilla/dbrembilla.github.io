@@ -114,8 +114,10 @@ section{
 	border-left: 0px !important;;
 	border-bottom: 0px!important;
 }
+
 header{
-	font-family: Ransom;
+	font-family: Ransom!important;
+	color: #3c466391!important;
 }
 
 #row-article {
@@ -141,6 +143,7 @@ a.disappear, .dropbtn{
     letter-spacing: -.01em!important;
     font-weight: bold!important;
 }
+
 
 .card#desc {
     font-family: Serif!important;
