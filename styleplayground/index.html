@@ -975,10 +975,10 @@
 							<a href="javascript:void(0)" class="dropbtn">Menu</a>
 								<div class="dropdown-content">
 									<!--Themes-->
-									<div class="accordion" id="accordionPanelsStayOpenExample">
+									<div class="accordion" id="accordion1">
 									<div class="accordion-item">
 										<h2 class="accordion-header" id="panelsStayOpen-headingOne">
-											<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+											<button class="accordion-button" type="button" data-bs-toggle="collapse" id='buttonAccordion1' data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
 												Themes
 											</button>
 										</h2>
@@ -1016,10 +1016,10 @@
 										</div>
 									</div>																				
 									<!--Topics-->						
-									<div class="accordion" id="accordionPanelsStayOpenExample">
+									<div class="accordion" id="accordion2">
 										<div class="accordion-item">
 											<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-												<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+												<button class="accordion-button collapsed" type="button" id='buttonAccordion2' data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
 													Topics
 												</button>
 											</h2>
@@ -1054,10 +1054,10 @@
 										</div>
 									</div>
 									<!--Lens-->
-									<div class="accordion" id="accordionPanelsStayOpenExample">
+									<div class="accordion" id="accordion3">
 										<div class="accordion-item">
 											<h2 class="accordion-header" id="panelsStayOpen-headingThree">
-												<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+												<button class="accordion-button collapsed" type="button" id='buttonAccordion3' data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree" >
 													Lens
 												</button>
 											</h2>
@@ -1438,6 +1438,19 @@
 			<script type="text/javascript" src="metadata_spg.js"></script>
 
 			<script>
+				$(function() {
+					  $("#buttonAccordion1, #buttonAccordion2, #buttonAccordion3").click(function(e) {
+					    var target = $(this).attr("data-bs-target");
+					    var isTargetExpanded = $(target).hasClass('in');
+					    $('.show-in-md').addClass('collapse').removeClass('in'); // collapse all before expading clicked target
+
+					    if (isTargetExpanded) {
+					      $(target).addClass('collapse').removeClass("in"); // collapse clicked target
+					    } else {
+					      $(target).removeClass('collapse').addClass("in"); // expand clicked target
+					    }
+					  });
+					});
 				$('#metaSummary').on('hide.bs.modal', function (e) {
 					$('#summaryBody').empty()
 				})
