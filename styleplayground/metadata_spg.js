@@ -56,11 +56,12 @@ function changeStyle(ref){
                 $('#download-button').replaceWith(downloadButton)
                 $('#footer-icons').empty()
                 removeHover()
+                break
                 case 'assets/style_1800.css':
                 console.log('changed from 1800');
                 $('#download-button').empty()
                 $('#download-button').append(downloadButton)
-
+                break
 
                 default:
                 console.log('set to default');
@@ -82,7 +83,8 @@ function changeStyle(ref){
                 $('#download-button').append('<h2 id="bologna-adv">Bologna Advertiser</h2>')
                 break
                 default:
-                console.log('set to default');}
+                console.log('set to default');
+                break}
 
             $("#default").attr("href", target);
 
