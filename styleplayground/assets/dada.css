@@ -1,3 +1,7 @@
+@font-face {
+	font-family: 'Arvo';
+  src: url("dada/Arvo/Arvo.ttf");
+}
 
 @font-face {
 	font-family: 'Ransom';
@@ -169,7 +173,7 @@ a.disappear, .dropbtn{
 #desc p, #desc ul{
 	color: black;
 	font-family: serif;
-    font-size: 1em;
+    font-size: 1em!important;
     text-align: justify;
 }
 
@@ -260,8 +264,13 @@ h3 {
 }
 
 
+#download-button{
+	border: 0px;
+    background: unset;
+}
 
-
-
+#download-button .sign{
+	font-family: 'Arvo';
+}
 /*    text-decoration-thickness: 10px;
     text-decoration-color: black;*/
