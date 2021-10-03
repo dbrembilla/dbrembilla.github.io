@@ -151,7 +151,7 @@ img {
 	background-image: none!important;
 }
 
-.navbar {
+.navbar, nav {
 	padding: 0px!important;
 	border-left: none!important;
 	border-right: none!important;
