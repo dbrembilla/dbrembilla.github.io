@@ -1439,7 +1439,7 @@
 
 			<script>
 				
-					  $("#buttonAccordion1, #buttonAccordion2, #buttonAccordion3").onclick(function(e) {
+					  $("#buttonAccordion1, #buttonAccordion2, #buttonAccordion3").click(function(e) {
 					    var target = $(this).attr("data-bs-target");
 					    var isTargetExpanded = $(target).hasClass('in');
 					    $('.accordion-collapse').addClass('collapse').removeClass('in'); // collapse all before expading clicked target
