@@ -41,7 +41,7 @@ function removeHover(){
 function changeStyle(ref){
             target=$(ref).attr("href");
             var downloadButton = `
-                            <button>    
+                            <button id='download-button'>    
                                 <div class="sign">
                                         <span class="fast-flicker">D</span>ownl<span class="flicker">oad </span> <span class="fast-flicker">our </span>
                                     <span class="flicker">Arc</span><span class="fast-flicker">hi</span><span class="flicker">ve</span>
