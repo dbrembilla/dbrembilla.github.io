@@ -75,10 +75,12 @@ function changeStyle(ref){
                 $('#footer-icons').append('<img src="assets/nostalgia-logo.png" style="height:50px!important;width:50px!important;">')
                 addHover()
                 future = true
+                break
                 case '#1800':
                 console.log('Change to 1800');
                 $('#download-button').empty()
                 $('#download-button').append('<h2 id="bologna-adv">Bologna Advertiser</h2>')
+                break
                 default:
                 console.log('set to default');}
 
