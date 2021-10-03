@@ -134,8 +134,6 @@ a.disappear, .dropbtn{
     width: 3em;
     height: 100%;
     z-index: -50;
-    -moz-column-count: 2;
-    -moz-column-gap: 20px;
     font-family: 'Outbox';
     color: #621616c9!important;
     text-transform: uppercase;
