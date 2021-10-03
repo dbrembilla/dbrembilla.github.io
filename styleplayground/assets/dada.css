@@ -281,7 +281,7 @@ h3 {
 }
 
 .btn-secondary, .btn, .form-check-label {
-	font-size: 1em;
+	font-size: 1em!important;
 }
 
 /*    text-decoration-thickness: 10px;
