@@ -4,6 +4,11 @@
 }
 
 @font-face {
+	font-family: 'Alegreya';
+  src: url("dada/Alegerya/Alegreya.ttf");
+}
+
+@font-face {
 	font-family: 'Ransom';
   src: url("dada/Ransom.ttf");
 }
@@ -69,6 +74,7 @@
 
 body {
 	 background-color: #eee2d0!important;
+	 font-family: 'Alegreya'!important;
 }
 
 
@@ -82,7 +88,6 @@ nav, footer {
 nav #download-button button{
 	background: #eee2d0;
 	border: 0px;
-	font-family: serif;
 	font-size: 10px;
 
 	
@@ -154,7 +159,7 @@ a.disappear:hover, .dropbtn:hover{
 
 
 .card#desc {
-    font-family: Serif!important;
+    
     background: transparent!important;
     border-radius: 0px;
 	border: 0px;
@@ -176,7 +181,6 @@ a.disappear:hover, .dropbtn:hover{
 
 #desc p, #desc ul{
 	color: black;
-	font-family: serif;
     font-size: 1em!important;
     text-align: justify;
 }
