@@ -186,7 +186,7 @@ a.disappear:hover, .dropbtn:hover{
 	position: absolute;
     /* top: 15%; */
     z-index: -100;
-    bottom: 20%;
+    bottom: 50%;
     /* right: 2%; */
     transform: rotate(351deg);
     height: fit-content;
