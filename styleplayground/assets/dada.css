@@ -120,6 +120,7 @@ section{
 }
 
 header{
+	height: 0%;
 	font-family: Ransom!important;
 	color: #3c466391!important;
 }
@@ -274,5 +275,14 @@ h3 {
 #download-button .sign{
 	font-family: 'Arvo';
 }
+
+
+.card .Meta, .card .overflow {
+    border: 0px;
+    background: unset;
+}
+
+
+
 /*    text-decoration-thickness: 10px;
     text-decoration-color: black;*/
