@@ -91,6 +91,19 @@ nav #download-button button:hover{
 	
 } 
 
+#aside{
+	width: 30%;
+}
+
+section{
+	width: 30%;
+}
+
+#aside, section{
+	border-bottom: 0px!important;
+	border-right: 5px #621616 solid;
+}
+
 .sign{
 	color: unset!important;
 	text-shadow: none!important;
@@ -106,30 +119,29 @@ header{
 }
 
 #row-article {
-height: 100%!important;
-width: 60%;
-border-right: 9px #b32727 solid;
-}
+	height: 100%!important;
+    width: 80%;
+	margin: 0!important;
 
+}
 a.disappear, .dropbtn{
 	font-family: 'Outbox';
-	color:  #b32727!important;
+	color: #621616!important;
 	font-size: 3em!important;
 }
 .descTitle h2 {
-	-webkit-column-count: 2;
-	-moz-column-count: 2;
-    column-count: 2;
-    -webkit-column-gap: 20px;
-	-moz-column-gap: 20px;
-    column-gap: 20px;
+    position: absolute;
+    width: 3em;
+    height: 100%;
+    z-index: -50;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
     font-family: 'Outbox';
-    color: #b32727!important;
+    color: #621616c9!important;
     text-transform: uppercase;
-    font-size: 4em;
+    font-size: 4.5em;
     letter-spacing: -.01em!important;
     font-weight: bold!important;
-    line-height: 150%;
 }
 
 .card#desc {
@@ -141,15 +153,11 @@ a.disappear, .dropbtn{
 	padding: 0!important;
 }
 
-.descTitle {
-    border-bottom: #b32727 double;
-    border-bottom-width: 35px;
-}
 
 .text{
 
     letter-spacing: .15em;
-    padding: 1em;
+	padding: 0em 10em;
 }
 
 
@@ -172,20 +180,21 @@ a.disappear, .dropbtn{
 
 .sign.title {
 	position: absolute;
-	top: 15%;
-	bottom: 42%;
-    right: 2%;
-	transform: rotate(180deg);
-	height: fit-content;
-    width: 31%;
-    padding: .5%;
-	font-family: Ransom!important;
-	font-size: xx-large!important;
+    /* top: 15%; */
+    z-index: -100;
+    bottom: 20%;
+    /* right: 2%; */
+    transform: rotate(
+351deg);
+    height: fit-content;
+    /* width: 100%; */
+    /* padding: .5%; */
+    font-family: Ransom!important;
+    font-size: 5em!important;
     text-transform: uppercase;
-    color: #3c4663!important;
+    color: #3c466391!important;
     animation: none;
     text-shadow: 0 0 0 black;
-    letter-spacing: 0.4em;
 
 }
 
@@ -207,14 +216,9 @@ a.disappear, .dropbtn{
 }
 
 #topics{
-	background-color: rgb(180 39 38)!important;
-    width: fit-content;
-    height: fit-content!important;
-    color: #eee2d0!important;
-    border: 0px!important;
-    transform: rotate(270deg);
-    top: -5%;
-    left: 2%;
+	background-color: #eee2d0!important;
+    color: #621616!important;
+    border: double 15px;
 }
 
 .themes, #topics {
@@ -246,125 +250,15 @@ a.btn{
 
 .btn-secondary {
 	font-size: 0.5em!important;
-	color: #eee2d0!important;
-	height: 6em;
+	color: #621616!important;
 	text-align: center;
 }
 
-
-@media (max-width: 1440px) {
-
-	.descTitle h2 {
-		font-size: 3em;
-	}
-	
-	a.btn {
-			font-size: 10px!important;
-		
-		}
-
-	@media (max-height: 623px) {
-		
-		
-		
-		#topics {
-		top: -15%;
-		}
-
-		
-	}
-
+h3 {
+    font-size: 1.5em!important;
 }
 
-@media (max-width: 1024px) {
 
-	.sign.title{
-	    transform: rotate(90deg);
-		font-size:1.5em!important;
-	}
-
-		.descTitle h2 {
-		font-size: 2.5em;
-	}
-
-	#topics {
-		top: -10%;
-		}
-	
-
-	@media (max-height: 623px) {
-		#topics {
-			top: -10%;
-			left: -2%;
-		}
-
-		.flip-card-3D-wrapper {
-			height: 65%!important;
-		}
-
-		sign.title{
-		font-size: 3em;
-		bottom: 61%;
-		transform: rotate(174deg);
-		}
-		
-		.btn-secondary {
-			height: 2em;
-		}
-
-		#topics h3 {
-			font-size: 1em!important;
-		}
-
-		.descTitle h2 {
-		font-size: 2em;
-		}
-
-	}
-
-}
-
-@media (max-width: 768px) {
-	.sign.title{
-		width: 60%;
-		transform: rotate( 0deg);
-		top: 0px;
-		right: 0px;	
-	}
-
-	#main-row{
-		height: 90%;
-	}
-
-	#row-article, #desc{
-		width: 90%;
-
-	}
-
-	#download-button{
-		position: absolute;
-		top: 176%;
-		right: 8%;
-		z-index: 10;
-	}
-
-	footer{
-		width: 50%!important;
-		position: absolute!important;
-		right: -10%;
-		top: 49%;
-		transform: rotate(90deg);
-	
-	}
-
-	#footer-icons{
-		transform: rotate(-90deg);
-		position: absolute;
-		bottom: 74%;
-		right: 71%;
-	}
-	
-}
 
 
 
