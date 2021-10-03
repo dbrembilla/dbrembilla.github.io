@@ -1450,13 +1450,15 @@
 					    var target = $(this).attr("data-bs-target");
 					    console.log(target);
 					    var isTargetExpanded = $(target).hasClass('in');
-					    $('.accordion-collapse').addClass('collapse').removeClass('show'); // collapse all before expading clicked target
 
-					    if (isTargetExpanded) {
-					      $(target).addClass('collapse').removeClass("show"); // collapse clicked target
-					    } else {
-					      $(target).removeClass('collapse').addClass("show"); // expand clicked target
+					    var buttons= $('.accordion-collapse')
+					    for (i = 0; i < (buttons.length - 1); i++) {
+					    	if (buttons[i].attr('data-bs-target')==target) {
+					    		buttons[i].addClass('collapse').removeClass('show'); // collapse all before expading clicked target
+					    		buttons[i].attr('aria-expanded', 'false');
+					    	}
 					    }
+					    
 					  });
 				
 				$('#metaSummary').on('hide.bs.modal', function (e) {
