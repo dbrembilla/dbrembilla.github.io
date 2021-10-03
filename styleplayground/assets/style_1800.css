@@ -205,6 +205,14 @@ header .sign {
 footer {
 	background-color: #e3ceb9 !important;
 }
+.btn-primary{
+	color: black!Important;
+	border-color: black;
+}
 .btn-secondary, #topics {
     color: black!important;
+
+}
+.slot {
+	z-index: 0;
 }
