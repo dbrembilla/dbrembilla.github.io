@@ -120,7 +120,7 @@ section{
 }
 
 header{
-	height: 0%;
+	height: 0%!important;
 	font-family: Ransom!important;
 	color: #3c466391!important;
 }
@@ -235,11 +235,6 @@ a.disappear:hover, .dropbtn:hover{
 	border-bottom: 0px!important;
 }
 
-#topics h3{
-    margin-bottom: 0;
-    padding: 0.5rem;
-	font-size: 2em!important;
-}
 
 .reset{
 	background-color: #eee2d0!important;
@@ -277,7 +272,7 @@ h3 {
 }
 
 
-.card .Meta, .card .overflow {
+.card.Meta, .card.overflow {
     border: 0px;
     background: unset;
 }
