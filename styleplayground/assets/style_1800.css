@@ -59,6 +59,7 @@ h1 {
 }
 h2, h3, .home {
 	font-family: Essays1743!important;
+	color: black;
 	font-weight: bold;
 	font-size: 20px!important;
 }
