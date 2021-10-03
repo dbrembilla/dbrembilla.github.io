@@ -280,7 +280,9 @@ h3 {
     background: unset;
 }
 
-
+.btn-secondary, .btn, .form-check-label {
+	font-size: 1em;
+}
 
 /*    text-decoration-thickness: 10px;
     text-decoration-color: black;*/
