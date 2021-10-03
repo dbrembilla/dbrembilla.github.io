@@ -11,7 +11,7 @@
 
 @font-face {
 	font-family: 'Outbox';
-  src: url("Outbox.tff");
+  src: url("dada/Outbox/Outbox.ttf");
 }
 
 @font-face {
@@ -114,6 +114,7 @@ border-right: 9px #b32727 solid;
 a.disappear, .dropbtn{
 	font-family: 'Outbox';
 	color:  #b32727!important;
+	font-size: 3em!important;
 }
 .descTitle h2 {
 	-webkit-column-count: 2;
@@ -181,8 +182,7 @@ a.disappear, .dropbtn{
 	font-family: Ransom!important;
 	font-size: xx-large!important;
     text-transform: uppercase;
-	color: #eee2d0;
-    background: #3c4663!important;
+    color: #3c4663!important;
     animation: none;
     text-shadow: 0 0 0 black;
     letter-spacing: 0.4em;
