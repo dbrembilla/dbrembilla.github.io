@@ -16,6 +16,11 @@
 
 @font-face {
 	font-family: Cristina;
+	src: url("fonts/Cristina-Regular.ttf");
+}
+
+@font-face {
+	font-family: CristinaSVG;
 	src: url("fonts/Cristina-Regular-SVG.ttf");
 }
 
