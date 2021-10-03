@@ -70,7 +70,7 @@ function changeStyle(ref){
                 console.log('changed to future'); 
                 alert('This webpage has been approved by the Nostalgia Communist Party of the World. 本网页已得到世界怀旧共产党的批准。 Эта веб-страница была одобрена Всемирной коммунистической партией ностальгии. このウェブページは、「懐かしの世界共産党」が承認したものです。')
                 $('#download-button').empty()
-                $('#download-button').replacewith('<div id="download-button"><div id="class-show"></div></div>')
+                $('#download-button').replaceWith('<div id="download-button"><div id="class-show"></div></div>')
                 $('#footer-icons').empty()
                 $('#footer-icons').append('<img src="assets/nostalgia-logo.png" style="height:50px!important;width:50px!important;">')
                 addHover()
