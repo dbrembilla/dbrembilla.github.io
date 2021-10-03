@@ -14,6 +14,10 @@
 	src: url("fonts/GotischeInitialen.ttf");
 }
 
+@font-face {
+	font-family: Cristina;
+	src: url("fonts/Cristina-Regular-SVG.ttf");
+}
 
 p {
   color: #504738;
