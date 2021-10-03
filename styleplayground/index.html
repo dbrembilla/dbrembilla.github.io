@@ -1453,9 +1453,9 @@
 
 					    var buttons= $('.accordion-collapse')
 					    for (i = 0; i < (buttons.length - 1); i++) {
-					    	if (buttons[i].attr('data-bs-target')==target) {
-					    		buttons[i].addClass('collapse').removeClass('show'); // collapse all before expading clicked target
-					    		buttons[i].attr('aria-expanded', 'false');
+					    	if ($(buttons[i].id).attr('data-bs-target')==target) {
+					    		$(buttons[i].id).addClass('collapse').removeClass('show'); // collapse all before expading clicked target
+					    		$(buttons[i].id).attr('aria-expanded', 'false');
 					    	}
 					    }
 					    
