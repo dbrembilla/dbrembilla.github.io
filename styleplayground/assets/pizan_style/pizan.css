@@ -68,10 +68,6 @@ h2, h3, h4 {
   background-size: auto 28px;
   padding-top: 8px;
 }	
-  /*text-decoration: underline solid grey;*/
-  /*background-image: linear-gradient(to top, black 1px, transparent 1px);*/ /* non trovo di meglio: la riga non è sulla baseline e lo spazio tra una riga e l'altra è fisso, di 1.5em; ovviamente è una baseline grid completamente fasulla*/
-  /*background-size: auto 1.5em;*/
-
 
 .card.overflow h2, .card.overflow h3, .card.overflow h4 {
   font-family: UnifrakturCook;
@@ -94,7 +90,6 @@ h2, h3, h4 {
   line-height: 50px;
 }
   /* la line-height non la metto: è come se fosse il frontespizio del manoscritto*/
-}
 
 /*img {  /* per le immagini devi settare dei breakpoints per i vari @media in modo che siano coerenti con la baseline grid 
   width: auto;
@@ -110,7 +105,7 @@ h2, h3, h4 {
     background-image: linear-gradient(to bottom, black 1px, transparent 1px);
     background-size: auto 20px;
 }
- */
+*/
 
 
 
