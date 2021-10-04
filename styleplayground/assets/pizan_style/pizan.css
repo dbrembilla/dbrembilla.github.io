@@ -167,7 +167,7 @@ figcaption {
 }
 
 .card.overflow h2 + h3, .card.overflow h3 + h3 { /* !!ATTENTO!! SOLO per h2, h3, h4 che siano tra loro adjacent siblings; modifica quelli successivi al primo*/
-    height: 28px;
+    height: auto;
     line-height: 28px;
     padding-top: 8px;
     margin-top: -8px;
