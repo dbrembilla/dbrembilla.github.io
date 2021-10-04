@@ -87,6 +87,12 @@ h2, h3, h4 {
 .card.overflow h1 {
   font-size: 30px;
   font-family: "Duc De Berry Regular";
+  font-weight: bold;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  line-height: 50px;
+}
   /* la line-height non la metto: è come se fosse il frontespizio del manoscritto*/
 }
 
