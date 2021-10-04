@@ -113,7 +113,17 @@ figure {
     line-height: 14px;
     font-family: 'UnifrakturCook';
     color: #A74640;
+    width: 99%;
+    margin:auto;
 }
+
+img {
+    width: 100%;
+    border: ridge gold 0.2rem;
+    outline: solid black 0.1rem;
+}
+
+
 /* non mettiamo la baseline grid anche sulle figcaption, che sono come delle glosse
 figcaption {
   background-image: linear-gradient(to bottom, black 1px, transparent 1px);
