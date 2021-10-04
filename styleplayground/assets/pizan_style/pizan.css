@@ -115,16 +115,16 @@ figure {
     font-family: 'UnifrakturCook';
     color: #A74640;
     width: 99%;
-    margin: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
+    margin: 0 0 1rem !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 img {
     width: 100%;
     border: ridge gold 0.2rem;
     outline: solid black 0.1rem;
+    height:auto !important; 
 }
 
 
