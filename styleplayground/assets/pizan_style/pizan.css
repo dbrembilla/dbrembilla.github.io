@@ -112,7 +112,6 @@ h2, h3, h4 {
 }
  */
 
-/*-------------------------qui finisce la parte degli articoli, puoi pure specificare cose diverse per le altre sezioni del layout, ovviamente-------------------------------*/
 
 
 figure {
@@ -121,9 +120,9 @@ figure {
     font-family: 'UnifrakturCook';
     color: #A74640;
     width: 99%;
-    margin:auto;
-    padding-top:20px;
-    padding-bottom:20px;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
 }
 
@@ -168,7 +167,7 @@ figcaption {
     float: left;
     padding-top: 25px;
     padding-bottom: 25px;
-    background-color:inherit;
+    background-color: inherit;
     font-weight: normal;
 }
 
