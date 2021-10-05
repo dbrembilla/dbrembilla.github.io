@@ -104,7 +104,7 @@ function topicManager(topic, ref){
 }
 function addTopic(topic){
     $("header").remove()
-    $("#topicHeader").replaceWith("<div id='topicHeader'><h3>" + $("#" + topic + "-title").text() + "</h3></div>");}
+    $("#topicHeader").replaceWith("<span id='topicHeader'><h3>" + $("#" + topic + "-title").text() + "</h3></span>");}
 
 
 

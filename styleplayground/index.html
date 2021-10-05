@@ -406,6 +406,10 @@
 				align-items: center;
 				justify-content: space-between;
 			}
+
+			span#topicHeader{
+				display: inline-block;
+			}
 			.container-fluid{
 					height:100%;
 			}
@@ -973,11 +977,10 @@
 			<!-- Navbar-->
 			<nav>
 				<div class="container-fluid">
-					<span class="home">
-						<a class="disappear" onclick="resetArticles();">Home <span id='topicHeader'></span>
-</a>
-							
-						</div>
+					<div class="home">
+						<a class="disappear" onclick="resetArticles();">Home</a>
+						<span id='topicHeader'></span>
+					
 						<div class="dropdown">
 							<a href="javascript:void(0)" class="dropbtn">Menu</a>
 								<div class="dropdown-content">
@@ -1117,12 +1120,14 @@
 									</div>			
 								</div>
 						</div>
-					</span>	
-					<button id='download-button'>    
-						<div class="sign">
-									Download our Archive
-						</div>								
-					</button>
+						<button id='download-button'>    
+							<div class="sign">
+										Download our Archive
+							</div>								
+						</button>
+					</div>	
+					
+					
 			</nav>
 			<!--Central body-->
 			<div class="row" id="main-row">
@@ -1235,10 +1240,10 @@
 						<h3> Topics</h3>
 						<!--topic 1-->
 							<div class="overflow">
-								<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="topic1-title">
+								<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal1"  id="topic1-title">
 									Work from Home
 								</button>
-								<div class="modal fade" id="exampleModal" tabindex="1000" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal fade" id="exampleModal1" tabindex="1000" aria-labelledby="exampleModalLabel" aria-hidden="true">
 									<div class="modal-dialog">
 										<div class="modal-content">
 											<div class="modal-body">
@@ -1247,10 +1252,10 @@
 										</div>
 									</div>
 								</div>
-								<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="topic2-title">
+								<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal2"  id="topic2-title">
 									Space Tourism
 								</button>
-								<div class="modal fade" id="exampleModal" tabindex="1000" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal fade" id="exampleModal2" tabindex="1000" aria-labelledby="exampleModalLabel" aria-hidden="true">
 									<div class="modal-dialog">
 										<div class="modal-content">
 											<div class="modal-body">
@@ -1259,10 +1264,10 @@
 										</div>
 									</div>
 								</div>
-								<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="topic3-title">
+								<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal3"  id="topic3-title">
 									Inclusive Language
 								</button>
-								<div class="modal fade" id="exampleModal" tabindex="1000" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal fade" id="exampleModal3" tabindex="1000" aria-labelledby="exampleModalLabel" aria-hidden="true">
 									<div class="modal-dialog">
 										<div class="modal-content">
 											<div class="modal-body">
