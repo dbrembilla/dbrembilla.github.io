@@ -60,7 +60,7 @@ function changeStyle(ref){
                         <img style='width:20px;height: auto;' src="assets/icon/cnbc.png">
                         <img style='width:20px;height: auto;' src="assets/icon/guardian.png"> 
                         <img style='width:20px;height: auto;' src="assets/icon/indipendent.png">
-                        <img style='width:20px;height: auto;' src="nationalgeo.png">
+                        <img style='width:20px;height: auto;' src="assets/icon/nationalgeo.png">
                         <img style='width:20px;height: auto;' src="assets/icon/unibo.png">"`)
                 
                 removeHover()
