@@ -216,6 +216,6 @@ footer {
 .slot {
 	z-index: 0;
 }
-img.documentation {
+.documentation img{
 	 float:  none!important;
 }
