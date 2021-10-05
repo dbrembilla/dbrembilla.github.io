@@ -7,7 +7,7 @@ function addHover(){
         )
     $('.event').attr('onmouseover',
         `$('#class-show').empty();
-        $('#class-show').append('<img src="assets/show/event.png"  class="img-responsive" style="height:100%;width:auto;">');
+        $('#class-show').append('<img src="assets/show/event.ico"  class="img-responsive" style="height:100%;width:auto;">');
         `
         )
     $('.institution').attr('onmouseover',
