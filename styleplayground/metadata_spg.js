@@ -2,7 +2,7 @@ var future = false
 function addHover(){
     $('.person').attr('onmouseover',
         `$('#class-show').empty();
-            $('#class-show').append('<img src="assets/show/person.png"  class="img-responsive" style="height:100%;width:auto;">');
+            $('#class-show').append('<img src="assets/show/person.ico"  class="img-responsive" style="height:100%;width:auto;">');
            `
         )
     $('.event').attr('onmouseover',
