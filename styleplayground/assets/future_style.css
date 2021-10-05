@@ -182,7 +182,7 @@ h3 {
 	font-size: 2.41em;
 	color: #ff7f50;
 }
-h4 {
+h4, a.disappear {
 	font-family: Metropolis;
 	font-style: italic;
 	font-size: 1.618em;
@@ -210,7 +210,7 @@ h4 {
 	margin-right: 0!Important;
 	margin-left: 0!Important;
 }
-p, ul, .navbar {
+p, ul, .navbar, span {
 	font-family: Assistant;
 	margin: 10px;
 	font-size: 24px;
