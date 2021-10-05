@@ -165,6 +165,9 @@ h1, header {
 a.btn{
 	color: #ff7f50!important;
 }
+.documentation{
+	font-family: Assistant;
+}
 .btn-secondary, #topics {
     color: #dfe4ea!important;
 }
