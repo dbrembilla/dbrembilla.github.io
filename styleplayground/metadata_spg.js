@@ -377,7 +377,7 @@ function sortList(listid) {
       shouldSwitch = false;
       /* Check if the next item should
       switch place with the current item: */
-      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+      if (b[i].innerText.toLowerCase() > b[i + 1].innerText.toLowerCase()) {
         /* If next item is alphabetically lower than current item,
         mark as a switch and break the loop: */
         shouldSwitch = true;
