@@ -215,7 +215,7 @@ h5 {
 	margin-right: 0!Important;
 	margin-left: 0!Important;
 }
-p, ul, .navbar, span {
+p, ul, .navbar {
 	font-family: Assistant;
 	font-size: 20px;
 }
