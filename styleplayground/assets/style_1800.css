@@ -57,9 +57,9 @@ h1 {
 	text-transform: uppercase;
 	font-family: 22px!important;
 }
-h2, h3, .home {
+h2, h3, a.disappear {
 	font-family: Essays1743!important;
-	color: black;
+	color: black!important;
 	font-weight: bold;
 	font-size: 20px!important;
 }
@@ -215,4 +215,7 @@ footer {
 }
 .slot {
 	z-index: 0;
+}
+.documentation img{
+	 float:  none!important;
 }

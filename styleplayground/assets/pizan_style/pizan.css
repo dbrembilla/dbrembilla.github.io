@@ -68,10 +68,6 @@ h2, h3, h4 {
   background-size: auto 28px;
   padding-top: 8px;
 }	
-  /*text-decoration: underline solid grey;*/
-  /*background-image: linear-gradient(to top, black 1px, transparent 1px);*/ /* non trovo di meglio: la riga non è sulla baseline e lo spazio tra una riga e l'altra è fisso, di 1.5em; ovviamente è una baseline grid completamente fasulla*/
-  /*background-size: auto 1.5em;*/
-
 
 .card.overflow h2, .card.overflow h3, .card.overflow h4 {
   font-family: UnifrakturCook;
@@ -81,13 +77,19 @@ h2, h3, h4 {
   background-image: linear-gradient(to bottom, black 1px, transparent 1px);
   background-size: auto 28px;
   padding-top: 8px;
+  height: auto;
 }
 
 .card.overflow h1 {
   font-size: 30px;
   font-family: "Duc De Berry Regular";
-  /* la line-height non la metto: è come se fosse il frontespizio del manoscritto*/
+  font-weight: bold;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  line-height: 50px;
 }
+  /* la line-height non la metto: è come se fosse il frontespizio del manoscritto*/
 
 /*img {  /* per le immagini devi settare dei breakpoints per i vari @media in modo che siano coerenti con la baseline grid 
   width: auto;
@@ -103,9 +105,8 @@ h2, h3, h4 {
     background-image: linear-gradient(to bottom, black 1px, transparent 1px);
     background-size: auto 20px;
 }
- */
+*/
 
-/*-------------------------qui finisce la parte degli articoli, puoi pure specificare cose diverse per le altre sezioni del layout, ovviamente-------------------------------*/
 
 
 figure {
@@ -113,7 +114,20 @@ figure {
     line-height: 14px;
     font-family: 'UnifrakturCook';
     color: #A74640;
+    width: 99%;
+    margin: 0 0 1rem !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
+img {
+    width: 100%;
+    border: ridge gold 0.2rem;
+    outline: solid black 0.1rem;
+    height:auto !important; 
+}
+
+
 /* non mettiamo la baseline grid anche sulle figcaption, che sono come delle glosse
 figcaption {
   background-image: linear-gradient(to bottom, black 1px, transparent 1px);
@@ -148,6 +162,14 @@ figcaption {
     float: left;
     padding-top: 25px;
     padding-bottom: 25px;
-    background-color:inherit;
+    background-color: inherit;
+    font-weight: normal;
 }
-
+.card.overflow h2 + h2, .card.overflow h3 + h3, .card.overflow h2 + h3, .card.overflow h3 + h2 { /* !!ATTENTO!! SOLO per h2, h3, che siano tra loro adjacent siblings; modifica quelli successivi al primo*/
+    height: auto; /*necessario, anche se occorrebbe impostare " height: 28px " perché le righe della baseline vengano giuste di numero.  Tuttavia, se si fissa a 28px, nel caso in cui un singolo elemento si ditribuisca su più righe si scombina tutto*/
+    line-height: 28px; /* probabilemente facoltativo */
+    padding-top: 8px;
+    margin-top: -8px;
+    background-image: linear-gradient(to bottom, black 1px, transparent 1px);
+    background-size: auto 28px;
+}

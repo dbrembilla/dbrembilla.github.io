@@ -2,12 +2,12 @@ var future = false
 function addHover(){
     $('.person').attr('onmouseover',
         `$('#class-show').empty();
-            $('#class-show').append('<img src="assets/show/person.png"  class="img-responsive" style="height:100%;width:auto;">');
+            $('#class-show').append('<img src="assets/show/person.ico"  class="img-responsive" style="height:100%;width:auto;">');
            `
         )
     $('.event').attr('onmouseover',
         `$('#class-show').empty();
-        $('#class-show').append('<img src="assets/show/event.png"  class="img-responsive" style="height:100%;width:auto;">');
+        $('#class-show').append('<img src="assets/show/event.ico"  class="img-responsive" style="height:100%;width:auto;">');
         `
         )
     $('.institution').attr('onmouseover',
@@ -55,12 +55,19 @@ function changeStyle(ref){
                 future = false
                 $('#download-button').replaceWith(downloadButton)
                 $('#footer-icons').empty()
+                $('#footer-icons').append(`<img style='width:20px;height: auto;' src="assets/icon/bbc.png">
+                        <img style='width:20px;height: auto;' src="assets/icon/atlantic.png">
+                        <img style='width:20px;height: auto;' src="assets/icon/cnbc.png">
+                        <img style='width:20px;height: auto;' src="assets/icon/guardian.png"> 
+                        <img style='width:20px;height: auto;' src="assets/icon/indipendent.png">
+                        <img style='width:20px;height: auto;' src="assets/icon/nationalgeo.png">
+                        <img style='width:20px;height: auto;' src="assets/icon/unibo.png">"`)
+                
                 removeHover()
                 break
                 case 'assets/style_1800.css':
                 console.log('changed from 1800');
-                $('#download-button').empty()
-                $('#download-button').append(downloadButton)
+                $('#download-button').replaceWith(downloadButton)
                 break
 
                 default:
@@ -357,6 +364,7 @@ function sortList(listid) {
   var list, i, switching, b, shouldSwitch;
   list = document.getElementById(listid);
   switching = true;
+
   /* Make a loop that will continue until
   no switching has been done: */
   while (switching) {
@@ -369,7 +377,7 @@ function sortList(listid) {
       shouldSwitch = false;
       /* Check if the next item should
       switch place with the current item: */
-      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+      if (b[i].innerText.toLowerCase() > b[i + 1].innerText.toLowerCase()) {
         /* If next item is alphabetically lower than current item,
         mark as a switch and break the loop: */
         shouldSwitch = true;
@@ -394,6 +402,7 @@ function sortDate(listid) {
     // Start by saying: no switching is done:
     switching = false;
     b = list.getElementsByTagName("LI");
+    console.log(b);
     // Loop through all list items:
     for (i = 0; i < (b.length - 1); i++) {
       // Start by saying there should be no switching:
