@@ -55,6 +55,14 @@ function changeStyle(ref){
                 future = false
                 $('#download-button').replaceWith(downloadButton)
                 $('#footer-icons').empty()
+                $('#footer-icons').append(`<img style='width:20px;height: auto;' src="assets/icon/bbc.png">
+                        <img style='width:20px;height: auto;' src="assets/icon/atlantic.png">
+                        <img style='width:20px;height: auto;' src="assets/icon/cnbc.png">
+                        <img style='width:20px;height: auto;' src="assets/icon/guardian.png">
+                        <img style='width:20px;height: auto;' src="assets/icon/indipendent.png">
+                        <img style='width:20px;height: auto;' src="nationalgeo.png">
+                        <img style='width:20px;height: auto;' src="assets/icon/unibo.png">"`)
+                
                 removeHover()
                 break
                 case 'assets/style_1800.css':
