@@ -59,8 +59,7 @@ function changeStyle(ref){
                 break
                 case 'assets/style_1800.css':
                 console.log('changed from 1800');
-                $('#download-button').empty()
-                $('#download-button').append(downloadButton)
+                $('#download-button').replaceWith(downloadButton)
                 break
 
                 default:
