@@ -364,6 +364,7 @@ function sortList(listid) {
   var list, i, switching, b, shouldSwitch;
   list = document.getElementById(listid);
   switching = true;
+
   /* Make a loop that will continue until
   no switching has been done: */
   while (switching) {
@@ -401,6 +402,7 @@ function sortDate(listid) {
     // Start by saying: no switching is done:
     switching = false;
     b = list.getElementsByTagName("LI");
+    console.log(b);
     // Loop through all list items:
     for (i = 0; i < (b.length - 1); i++) {
       // Start by saying there should be no switching:
