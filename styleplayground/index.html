@@ -554,6 +554,10 @@
 			}
 
 		/*MODALI*/
+
+		.modal-backdrop {
+			z-index:-2;
+		}
 			/*modal topic analysis*/
 			#topicAnalysis  .modal-dialog-scrollable .modal-body {
 					overflow-y: unset;
@@ -1222,13 +1226,27 @@
 							</div>
 						</div>
 					</div>
+
 					<!--Topics-->		
 					<div class="card" id="topics">  
 						<h3> Topics</h3>
 						<!--topic 1-->
+							<div class="overflow">
+								<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="topic1-title">
+									Work from Home
+								  </button>
+								  <div class="modal fade" id="exampleModal" tabindex="1000" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+									  <div class="modal-content">
+										<div class="modal-body">
+											<ul class="dropdown-menu topic" id="topic1"></ul>
+										</div>
+									  </div>
+									</div>
+								  </div>
+							</div>
 						<div class="btn-group dropend">
 							<button type="button topicBtn" class="btn btn-secondary toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic1-title">
-								Work from Home
 							</button>
 							<ul class="dropdown-menu topic" id="topic1"></ul>
 						</div>
