@@ -1232,30 +1232,48 @@
 						<h3> Topics</h3>
 						<!--topic 1-->
 							<div class="overflow">
-								<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#topicModal1"  id="topic1-title">
+								<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="topic1-title">
 									Work from Home
-								  </button>
-								  
-							</div>
-						<div class="btn-group dropend">
-							<button type="button topicBtn" class="btn btn-secondary toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic1-title">
-							</button>
-						</div>
-						<!--topic 2-->
-						<div class="btn-group dropend">
-							<button type="button" class="btn btn-secondary toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic2-title">
-								Space Tourism
-							</button>
-							<ul class="dropdown-menu topic" id="topic2"></ul>
-						</div>
-						<!--topic 3-->
-						<div class="btn-group dropend" >
-						<button type="button" class="btn btn-secondary toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic3-title">
-							Inclusive Language
-						</button>
-						<ul class="dropdown-menu topic" id="topic3"></ul>
-					</div>			
-				</div>	
+								</button>
+								<div class="modal fade" id="exampleModal" tabindex="1000" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-body">
+												<ul class="dropdown-menu topic" id="topic1"></ul>
+											</div>
+										</div>
+									</div>
+									<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="topic2-title">
+										Space Tourism
+									</button>
+									<div class="modal fade" id="exampleModal" tabindex="1000" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-body">
+													<ul class="dropdown-menu topic" id="topic2"></ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="topic2-title">
+										Inclusive Language
+									</button>
+									<div class="modal fade" id="exampleModal" tabindex="1000" aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-body">
+												</button>
+													<ul class="dropdown-menu topic" id="topic3"></ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+			
+							</div>			
+						</div>	
+				</div>
 				</div>
 				<!--Section-->
 				<section>		
@@ -1276,7 +1294,7 @@
 								</p>
 								<ul>
 									<li> Working from home</li>
-									<li>Space Tourism</li>
+									<li>Space Touris</li>
 									<li>Language Inclusivity</li>
 								</ul>
 								<p>
@@ -1291,7 +1309,7 @@
 				</section>
 			</div>
 			<!--MODAL FOR TOPIC ANALYSIS-->
-			<div class="modal modal-fullscreen" id="topicAnalysis" tabindex="-1" data-bs-keyboard="true" data-bs-backdrop="false" role="dialog" aria-labelledby="titleModalTopic" aria-hidden="true">
+			<div class="modal" id="topicAnalysis" tabindex="-1" data-bs-keyboard="true" data-bs-backdrop="false" role="dialog" aria-labelledby="titleModalTopic" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-scrollable" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -1300,8 +1318,7 @@
 								<span aria-hidden="true"></span>
 							</button>
 						</div>
-					<div class="modal-body overflow">
-						<p>This functionality uses topic modelling to analyse the articles that are opened. It employs Topic Modelling, in particular Latent Dirichlet Allocation (LDA), which discovers the abstract topics inside a collection of documents by clustering similar words together. This can be interesting to discover which topics can be discovered inside the articles opened.</p>
+					<div class="modal-body">
 						<label for="slidertopics">Topics:</label>
 						<select name="slidertopics" id="slidertopics">
 							<option>2</option>
@@ -1327,13 +1344,7 @@
 				<div class="container-fluid">
 					<!--div for sponsors' logos-->
 					<span class="d-flex flex-row" id='footer-icons'>
-						<img style='width:20px;height: auto;' src="assets/icon/bbc.png">
-						<img style='width:20px;height: auto;' src="assets/icon/atlantic.png">
-						<img style='width:20px;height: auto;' src="assets/icon/cnbc.png">
-						<img style='width:20px;height: auto;' src="assets/icon/guardian.png">
-						<img style='width:20px;height: auto;' src="assets/icon/indipendent.png">
-						<img style='width:20px;height: auto;' src="assets/icon/nationalgeo.png">
-						<img style='width:20px;height: auto;' src="assets/icon/unibo.png">
+						Icons
 					</span >
 					<!--row that flexes all items in reverted order on the left ! --to be adjusted..-- ! -->
 					<span class="d-flex flex-row-reverse">
@@ -1348,13 +1359,7 @@
 								<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 							</div>
 							<div class="offcanvas-body">
-								<p>
-									<ul>
-										<li><a href='davide.brembilla(at)studio.unibo.it'>Davide Brembilla</a> - responsible for the Javascript backend functionalities and the American Newspaper and Future styles</li>
-										<li></li>
-										<li></li>
-									</ul>
-								</p>
+								Eravamo 4 amici al bar, che volevano cambiare il mondo... 
 							</div>
 						</div>	
 						<!--Disclaimer toggler offcanvasBottom--> 
@@ -1381,13 +1386,7 @@
 									<li><a href="https://www.washingtonpost.com/lifestyle/wellness/working-from-home-office-benefits/2021/06/24/d1f92d86-d077-11eb-8014-2f3926ca24d9_story.html">What we learned about wellness while working from home, and how to use those insights</a></li>
 									<li><a href="https://www.theguardian.com/science/2021/jun/03/the-empty-office-what-we-lose-when-we-work-from-home">The empty office: what we lose when we work from home</a></li>
 									<li><a href="https://www.bbc.com/worklife/article/20210713-why-introverts-excelled-at-working-from-home">Why introverts excelled at working from home</a></li>
-									<li><a href="https://www.bbc.com/culture/article/20201006-are-some-languages-more-sexist-than-others">The subtle ways language shapes us</a></li>
-									<li><a href="https://www.independent.co.uk/independentpremium/long-reads/gender-neutral-pronouns-sam-smith-non-binary-language-a9181136.html">In a multilingual world, gendered language is the last stronghold of binarism</a></li>
-									<li><a href="https://www.theatlantic.com/ideas/archive/2018/09/the-new-they/568993/">Call Them What They Wants</a></li>
-									<li><a href="https://www.cnbc.com/2020/09/26/space-tourism-how-spacex-virgin-galactic-blue-origin-axiom-compete.html">How SpaceX, Virgin Galactic, Blue Origin and others compete in the growing space tourism market</a></li>
-									
-									<li><a href="https://www.nationalgeographic.com/science/article/fiery-crash-of-spacex-starship-rocket-ignites-dreams-of-future-spaceflight">Fiery crash of SpaceX's Starship rocket ignites dreams of future spaceflight</a></li>
-									<li><a href="https://www.theatlantic.com/science/archive/2021/07/jeff-bezos-blue-origin-successful-flight/619484/">Jeff Bezos Knows Who Paid for Him to Go to Space</a></li>
+									<li><a href=""></a></li>
 								</ul>
 								<p>All copyrights and related rights on the content remain with their original owners.<br>
 								All credits for the Topic Modelling functions go to <a href='http://awaisathar.github.io/lda.js/'>http://awaisathar.github.io/lda.js/</a>.<br>
@@ -1401,8 +1400,8 @@
 			<!-- Documentation html text-->
 			<div id="myModal" class="modal">
 				<!-- Modal content -->
-				<div class="modal-content overflow">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div class="modal-content">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
 					<div class="row">
 						<div class="col-3"><span>Index</span>
 						<ul style="list-style-type:none;">
@@ -1411,10 +1410,9 @@
 						<li><a href=""></a></li>
 						<li><a href="#future-expl">Nostalgia Hypnosis</a></li>
 						</ul></div>
-						<div class="documentation">
+						<div class="documentation overflow">
 							<div>
-								<p id='concept'>
-
+								<span id='concept'>
 									Welcome to The Washing Magazine Documentation!
 									The main inspiration for this Magazine comes from the coffee-laundries from NYC, where people would read magazines while waiting for their automatic washing machines. These, common in metropolitan cities, would see every kind of people and would mix all clothes with each other. This would also represent how different issues are here held together and mixed, compared... In our fictional history, these would held knowledge about the world and represent an archive for the world's knowledge.<br>
 									This project is known as LLLL (Leisurely Luscious Literary Lenses).<br>
@@ -1432,29 +1430,16 @@
 										<li>Language Inclusivity, how binarism affected our perception of language and how can evolve.</li>
 									</ol>
 									For these issues, we opted for metadata that could highlight the differences between their topics, like the people involved, the institutions, dates and so on and so forth. While the articles are manually annotated, the analysis of metadata is dynamic. Information about the topics and which articles are there is kept in a JSON file which is used to link the articles to the page. All metadata use HTML classes, which are used to give unique ID to all instances which are exploited in the href of the numbers. When possible, metadata are linked to respective Wikipedia articles. It is also possible to sort the metadata in alphabetical order and also in order of date for the Date data.
-								</p>
-							<p id='american-newspapers'>This style is dedicated to American Newspapers from the post-indipendence era, such as the National Intelligencer and Washington Advertiser. This style aims at giving the user the experience of reading a newspaper of the time today, thus the color sepia in the background; also, since photos were not a thing, pictures are given properties that would make them similar to what a drawing over a newspaper would be and are treated as advertisement pictures would be in newspapers at the time. <img src="assets/weak-men.jpg"><br>
-							 The text is justified, as paragraphs would be organised to maximise the space efficiency and write as much as possible while breaking the lines of the newspaper to better readibility. <img src="assets/charleston.jpg"> Here the column break is absent as dividing into columns would make reading the articles more difficult. The fonts used mimick the ones of the National Intelligencer (JMH Legajo, JD Carnival Black and Essays 1743).</p>
-							 <p id='future-expl'>This Futuristic style brings us in a distopian future, where humanity is trapped in a continous repetition of the past in the style and content. The government, controlled by the Communist Party of Nostalgia, is interested in keeping the general population into a state of hypnosis, done in not so subtle ways (e.g. the background used in this style). This style aims at establishing the connection with some kind of nostalgia to the 2010s, using a combination of minimalist style website structure and colours, that would make the user both uncomfortable and nostalgic. This style is not supposed to be pleasant; it is supposed to hypnotise.
-							 An important functionality added in the course of time is the empowerment of websites Named Entity Recognition, that allows the user, when hovering entities, to know more about them. In backwards compatibility mode, such with our computers, this has resulted in showing a small icon describing what the element is in the top right of the screen.<br>
-							 Since this website is envisioned in a technocratic society, most font dimensions are dedicated to some constant of the physics or mathematics world.
-							 
-							</p>
+								</span>
+							<span id='american-newspapers'>This style is dedicated to American Newspapers from the post-indipendence era, such as the National Intelligencer and Washington Advertiser. This style aims at giving the user the experience of reading a newspaper of the time today, thus the color sepia in the background; also, since photos were not a thing, pictures are given properties that would make them similar to what a drawing over a newspaper would be and are treated as advertisement pictures would be in newspapers at the time. <img src="assets/weak-men.jpg"><br>
+							 The text is justified, as paragraphs would be organised to maximise the space efficiency and write as much as possible while breaking the lines of the newspaper to better readibility. <img src="assets/charleston.jpg"> Here the column break is absent as dividing into columns would make reading the articles more difficult. The fonts used mimick the ones of the National Intelligencer (JMH Legajo, JD Carnival Black and Essays 1743).</span>
+							 <span id='future-expl'>This Futuristic style brings us in a distopian future, where humanity is trapped in a continous repetition of the past in the style and content. The government, controlled by the Communist Party of Nostalgia, is interested in keeping the general population into a state of hypnosis, done in not so subtle ways (e.g. the background used in this style). This style aims at establishing the connection with some kind of nostalgia to the 2010s, using a combination of minimalist style website structure and colours, that would make the user both uncomfortable and nostalgic. This style is not supposed to be pleasant; it is supposed to hypnotise.
+							 </span>
 							</div>
 						</div>
 					</div>  
 				</div>	
 			</div>
-			<!--Modal for topics-->
-			<div class="modal fade" id="topicModal1" tabindex="1000" role='dialog' aria-labelledby="exampleModalLabel" aria-hidden="true">
-									<div class="modal-dialog" role='document'>
-									  <div class="modal-content">
-										<div class="modal-body">
-											<ul id="topic1"></ul>
-										</div>
-									  </div>
-									</div>
-								  </div>
 			<!-- Modal for metaSummary -->
 			<div class="modal fade" style='z-index: 9999;' id="metaSummary" tabindex="-1" aria-labelledby="metaName" aria-hidden="true">
 			  <div class="modal-dialog">
