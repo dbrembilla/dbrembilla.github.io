@@ -187,6 +187,11 @@ h4, a.disappear {
 	font-style: italic;
 	font-size: 1.618em; /*golden ratio*/
 }
+h5 {
+	font-family: Metropolis;
+	font-style: italic;
+	font-size: 1.32em; /*Plastic number*/
+}
 .card#desc {
     box-shadow: none!important;
 }
