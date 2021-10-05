@@ -58,7 +58,7 @@ function changeStyle(ref){
                 $('#footer-icons').append(`<img style='width:20px;height: auto;' src="assets/icon/bbc.png">
                         <img style='width:20px;height: auto;' src="assets/icon/atlantic.png">
                         <img style='width:20px;height: auto;' src="assets/icon/cnbc.png">
-                        <img style='width:20px;height: auto;' src="assets/icon/guardian.png">
+                        <img style='width:20px;height: auto;' src="assets/icon/guardian.png"> 
                         <img style='width:20px;height: auto;' src="assets/icon/indipendent.png">
                         <img style='width:20px;height: auto;' src="nationalgeo.png">
                         <img style='width:20px;height: auto;' src="assets/icon/unibo.png">"`)

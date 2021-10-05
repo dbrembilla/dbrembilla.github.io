@@ -57,7 +57,7 @@ h1 {
 	text-transform: uppercase;
 	font-family: 22px!important;
 }
-h2, h3, .home {
+h2, h3, a.disappear {
 	font-family: Essays1743!important;
 	color: black;
 	font-weight: bold;
