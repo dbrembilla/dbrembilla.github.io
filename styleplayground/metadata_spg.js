@@ -41,13 +41,13 @@ function removeHover(){
 function changeStyle(ref){
             target=$(ref).attr("href");
             var downloadButton = `
-                            <button id='download-button'>    
-                                <div class="sign">
-                                        <span class="fast-flicker">D</span>ownl<span class="flicker">oad </span> <span class="fast-flicker">our </span>
-                                    <span class="flicker">Arc</span><span class="fast-flicker">hi</span><span class="flicker">ve</span>
-                                </div>
-                                
-                            </button> `
+                            <button id='download-button' data-bs-toggle="modal" data-bs-target="#download-page" onclick="setTimeout(function(){
+                                document.getElementById('archiveDownload').style.display = 'inherit';
+                            }, 5000);" >    <!--Attiva il download dopo 5 secondi-->
+                            <div class="sign">
+                                        Download our Archive
+                            </div>                              
+                        </button>`
             switch ($('#default').attr('href')){
                 case "assets/future_style.css": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per eliminare elementi
                 console.log('changed from future'); 
