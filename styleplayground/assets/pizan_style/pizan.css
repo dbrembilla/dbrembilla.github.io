@@ -173,3 +173,8 @@ figcaption {
     background-image: linear-gradient(to bottom, black 1px, transparent 1px);
     background-size: auto 28px;
 }
+
+.card.overflow p::before {
+	content:url("/miniatures/paraph_blue.png");
+
+}
