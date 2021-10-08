@@ -155,7 +155,7 @@ figcaption {
 }
 
 /*------------prova così-----------*/
-.card.overflow p::first-letter {
+/*.card.overflow p::first-letter {
     font-family: 'Initials';
     color: #FCD642;
     font-size: 100px;
@@ -165,6 +165,7 @@ figcaption {
     background-color: inherit;
     font-weight: normal;
 }
+*/
 .card.overflow h2 + h2, .card.overflow h3 + h3, .card.overflow h2 + h3, .card.overflow h3 + h2 { /* !!ATTENTO!! SOLO per h2, h3, che siano tra loro adjacent siblings; modifica quelli successivi al primo*/
     height: auto; /*necessario, anche se occorrebbe impostare " height: 28px " perché le righe della baseline vengano giuste di numero.  Tuttavia, se si fissa a 28px, nel caso in cui un singolo elemento si ditribuisca su più righe si scombina tutto*/
     line-height: 28px; /* probabilemente facoltativo */
@@ -183,4 +184,22 @@ figcaption {
     content: "";
     float: left;
     margin-bottom: -10px;
+}
+
+.card.overflow li {
+    list-style-type: disclosure-closed;
+    font-family: UnifrakturCook;
+}
+
+.card.overflow ul {
+    padding-left: 28px;
+}
+
+.card.overflow li {
+	    list-style-type: disclosure-closed;
+	    font-family: UnifrakturCook;
+}
+
+.card.overflow ul {
+	padding-left: 28px;
 }
