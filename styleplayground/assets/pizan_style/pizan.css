@@ -175,6 +175,12 @@ figcaption {
 }
 
 .card.overflow p::before {
-	content:url("/miniatures/paraph_blue.png");
-
+    background-image: url(https://dbrembilla.github.io/styleplayground/assets/pizan_style/miniatures/paraph_blue.png);
+    background-size: 28px 28px;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    content: "";
+    float: left;
+    margin-bottom: -10px;
 }
