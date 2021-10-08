@@ -203,3 +203,7 @@ figcaption {
 .card.overflow ul {
 	padding-left: 28px;
 }
+
+.card.overflow ::first-letter::after {  /* per aggiungere uno spazio dopo la prima lettera di ogni p; vedi anche come funziona letter-spacing
+    content:" "	
+}
