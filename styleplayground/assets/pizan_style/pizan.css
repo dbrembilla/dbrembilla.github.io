@@ -170,7 +170,7 @@ figcaption {
 */
 
 
-.card.overflow p::before:not(blockquote p) {
+.card.overflow p::before {
     background-image: url(https://dbrembilla.github.io/styleplayground/assets/pizan_style/miniatures/paraph_blue.png);
     background-size: 28px 28px;
     display: inline-block;
@@ -179,6 +179,11 @@ figcaption {
     content: "";
     float: left;
     margin-bottom: -10px;
+}
+
+.card.overflow blockquote p::before {  /*per le citazioni blockquote: non voglio paraph*/
+    background-image: none !important;
+    content: none !important;
 }
 
 .card.overflow ul {
@@ -197,8 +202,8 @@ figcaption {
 }
 
 
-.card.overflow ::first-letter::after {  /* per aggiungere uno spazio dopo la prima lettera di ogni p; vedi anche come funziona letter-spacing*/
-    content:" "	
+.card.overflow p::first-letter::after {  /* per aggiungere uno spazio dopo la prima lettera di ogni p; vedi anche come funziona letter-spacing*/
+    content:" "	;
 }
 
 .card.overflow figure {
