@@ -125,8 +125,7 @@ var column = `
                         </div>                         
                     </div> 
                     
-                    <div class="card overflow" id="article$colnum">
-                    <div class="scroll-line"></div>
+                    <div class="card overflow scroll-line" id="article$colnum">
                         <h2>Art</h2>
                     </div>
                 </div>`
