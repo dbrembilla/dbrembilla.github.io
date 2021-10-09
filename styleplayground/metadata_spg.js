@@ -124,9 +124,10 @@ var column = `
                                 <div id="metadata-list$colnum"></div>
                     </div>                         
                 </div> 
-                
-                <div class="row scroll-line"></div>
-                <div class="card overflow" id="article$colnum">
+                <header>
+                    <div class="row scroll-line"></div>
+                </header>
+                    <div class="card overflow" id="article$colnum">
                         <h2>Art</h2>
                 </div>
             </div>`
