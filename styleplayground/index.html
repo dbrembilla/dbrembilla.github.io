@@ -416,13 +416,14 @@
 			}
 			nav  .container-fluid{ /*nella navbar e nel footer*/
 				border-left: 1px black solid;
-				border-bottom: 1px black solid;
-				
-				padding: 0% 1%;
+				border-bottom: 1px black solid;				
+				padding:1%;
 			}	
 			#main-row{ /*contenitore di aside e section*/
 				height: 80%;
-				padding: 1% 3% 0;
+				padding-left: 4%;
+				padding-right: 4%;
+				padding-top: 2%;
 			
 			}
 			#aside {
@@ -447,11 +448,12 @@
 			}
 			.row section{ 
 						width:80%;
+						padding:0 3em;
 						height: 100%;
 						border-bottom: 1px solid;
 			}
 				#row-article{
-					height: 80%;
+					height: 97%;
 				}	
 				/*home*/
 					#desc {
@@ -768,10 +770,7 @@
 						font-size: 1.5em;
 						margin-bottom: 0;
 				}
-				#row-article{
-					margin-top: 3%;
-					height:76%;
-				}
+				
 				.btn-secondary, .btn, .form-check-label {
 					font-size: 1em;
 				}
@@ -979,11 +978,14 @@
 			<nav>
 				<div class="container-fluid">
 					<div class="home">
-						<a class="disappear" onclick="resetArticles();">Home</a>
-						<span id='topicHeader'></span>
+						<a class="disappear sign title" onclick="resetArticles();">
+							<span class="flicker">The </span>Washing Mag<span class="fast-flicker">azi</span>ne		
+						</a>
+						
 					
 						<div class="dropdown">
-							<a href="javascript:void(0)" class="dropbtn">Menu</a>
+							<a href="javascript:void(0)" class="dropbtn sign title"><span class="flicker">The </span>Washing Mag<span class="fast-flicker">azi</span>ne		
+							</span></a>
 								<div class="dropdown-content">
 									<!--Themes-->
 									<div class="accordion" id="accordionExample">
@@ -1120,6 +1122,9 @@
 									</div>			
 								</div>
 						</div>
+					
+						<span id='topicHeader'></span>
+
 						<button id='download-button' data-bs-toggle="modal" data-bs-target="#download-page" onclick="setTimeout(function(){
 							    document.getElementById('archiveDownload').style.display = 'inherit';
 							}, 5000);" >    <!--Attiva il download dopo 5 secondi-->
@@ -1302,9 +1307,7 @@
 				</div>
 				<!--Section-->
 				<section>		
-					<header class="sign title">
-						<span class="flicker">The </span>Washing Mag<span class="fast-flicker">azi</span>ne		
-					</header>
+					
 					<!-- Start section with articles-->
 					<div class="row" id="row-article">
 						<!--description-->
