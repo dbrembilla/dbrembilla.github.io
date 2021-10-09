@@ -304,3 +304,9 @@ h3 {
 }
 /*    text-decoration-thickness: 10px;
     text-decoration-color: black;*/
+
+
+@media (max-width:768 px){
+	.sign.title{
+		font-size: 4em!important;}
+}
