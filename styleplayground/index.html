@@ -925,177 +925,172 @@
 					<div class="home">
 						<a class="disappear sign title" onclick="resetArticles();">
 							<span class="flicker">The </span>Washing Mag<span class="fast-flicker">azi</span>ne		
-						</a>
-						
-					
-						<div id='drop-target' class="dropdown">
-							<a href="javascript:void(0)" class="dropbtn sign title"><span class="flicker">The </span>Washing Mag<span class="fast-flicker">azi</span>ne		
-							</span></a>
-									
-									<!--Themes-->
-									<div class="accordion" id="accordionExample">
-										<div class="accordion-item">
-										<h2 class="accordion-header" id="headingOne">
-											<button class="accordion-button" type="button" data-bs-toggle="collapse" id='buttonAccordion1' data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-												Themes
+						</a>					
+						<div class="dropdown">
+							<a href="javascript:void(0)" class="dropdown-toggle sign title" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><span class="flicker">The </span>Washing Mag<span class="fast-flicker">azi</span>ne	</span>
+							</a>
+							<div clas="dropdown-menu">
+								<!--Themes-->
+								<div class="accordion" id="accordionExample">
+									<div class="accordion-item">
+									<h2 class="accordion-header" id="headingOne">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" id='buttonAccordion1' data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+											Themes
+										</button>
+									</h2>
+
+									<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"  data-bs-parent="#accordionExample">
+										<div class="accordion-body">
+											<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+												<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+												<label class="btn" for="btnradio1" onclick="changeStyle('#pizan')">Christine Pizan </label>
+												<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="changeStyle('#1800')">
+												<label class="btn" for="btnradio2">		 					
+													American Newspapers
+												</label>
+											</div>												
+											<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+												<input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+												<label class="btn" for="btnradio3" onclick="changeStyle('#dada')">Dada</label>
+												<input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+												<label class="btn" for="btnradio4" onclick="changeStyle('#')">Theme from 1950-1990</label>
+											</div>        										
+											<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+												<input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+												<label class="btn" for="btnradio5" onclick="changeStyle('#')">1990-2010</label>
+
+												<input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off" onclick="changeStyle('#future')">
+												<label class="btn" for="btnradio6">		 						
+													Future</label>
+											</div>
+											<!--da vedere se tenerlo come radio button-->
+											<input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" checked>
+											<label class="btn btn-link" for="btnradio7" onclick="changeStyle('#none')">Reset</label>
+											</div>
+										</div>
+									</div>
+								</div>																			
+								<!--Topics-->						
+								<div class="accordion" id="accordion2">
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingTwo">
+											<button class="accordion-button collapsed" type="button" id='buttonAccordion2' data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+												Topics
 											</button>
 										</h2>
-
-										<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"  data-bs-parent="#accordionExample">
+										<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"  data-bs-parent="#accordionExample">
 											<div class="accordion-body">
-												<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-													<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-													<label class="btn" for="btnradio1" onclick="changeStyle('#pizan')">Christine Pizan </label>
-													<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="changeStyle('#1800')">
-													<label class="btn" for="btnradio2">		 					
-														American Newspapers
-													</label>
-												</div>												
-												<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-													<input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-													<label class="btn" for="btnradio3" onclick="changeStyle('#dada')">Dada</label>
-													<input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-													<label class="btn" for="btnradio4" onclick="changeStyle('#')">Theme from 1950-1990</label>
-												</div>        										
-												<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-													<input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
-													<label class="btn" for="btnradio5" onclick="changeStyle('#')">1990-2010</label>
-
-													<input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off" onclick="changeStyle('#future')">
-													<label class="btn" for="btnradio6">		 						
-														Future</label>
+												<div class="dropend">
+													<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic1-title">
+														Work from Home
+													</button>
+													<ul class="dropdown-menu" id="topic1s">
+						
+													</ul>
 												</div>
-												<!--da vedere se tenerlo come radio button-->
-												<input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" checked>
-												<label class="btn btn-link" for="btnradio7" onclick="changeStyle('#none')">Reset</label>
+												<div class="dropend">
+													<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic2-title">
+														Space Tourism		
+													</button>
+													<ul class="dropdown-menu" id="topic2s">
+						
+													</ul>
 												</div>
-											</div>
-										</div>
-									</div>																			
-									<!--Topics-->						
-									<div class="accordion" id="accordion2">
-										<div class="accordion-item">
-											<h2 class="accordion-header" id="headingTwo">
-												<button class="accordion-button collapsed" type="button" id='buttonAccordion2' data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-													Topics
-												</button>
-											</h2>
-											<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"  data-bs-parent="#accordionExample">
-												<div class="accordion-body">
-													<div class="dropend">
-														<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic1-title">
-															Work from Home
-														</button>
-														<ul class="dropdown-menu" id="topic1s">
-							
-														</ul>
-													</div>
-													<div class="dropend">
-														<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic2-title">
-															Space Tourism		
-														</button>
-														<ul class="dropdown-menu" id="topic2s">
-							
-														</ul>
-													</div>
-													<div class="dropend" >
-														<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic3-title">
-															Inclusive Language
-														</button>
-														<ul class="dropdown-menu" id="topic3s">
-							
-														</ul>
-													</div>			
-												</div>
+												<div class="dropend" >
+													<button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="topic3-title">
+														Inclusive Language
+													</button>
+													<ul class="dropdown-menu" id="topic3s">
+						
+													</ul>
+												</div>			
 											</div>
 										</div>
 									</div>
-									<!--Lens-->
-									<div class="accordion" id="accordion3">
-										<div class="accordion-item">
-											<h2 class="accordion-header" id="headingThree">
-												<button class="accordion-button collapsed" type="button" id='buttonAccordion3' data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
-													Lens
-												</button>
-											</h2>
-											<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"  data-bs-parent="#accordionExample">
-												<div class="accordion-body">
-												<ul>
-													<li class="form-check">
-														<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .place">
-														<label class="form-check-label" for="inlineCheckbox1" onchange="">Places</label>
-													</li>
+								</div>
+								<!--Lens-->
+								<div class="accordion" id="accordion3">
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingThree">
+											<button class="accordion-button collapsed" type="button" id='buttonAccordion3' data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
+												Lens
+											</button>
+										</h2>
+										<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"  data-bs-parent="#accordionExample">
+											<div class="accordion-body">
+											<ul>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .place">
+													<label class="form-check-label" for="inlineCheckbox1" onchange="">Places</label>
+												</li>
 
-													<li class="form-check">
-														<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .date">
-														<label class="form-check-label" for="inlineCheckbox2">Dates</label>
-													</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .date">
+													<label class="form-check-label" for="inlineCheckbox2">Dates</label>
+												</li>
 
-													<li class="form-check">
-														<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .person">
-														<label class="form-check-label" for="inlineCheckbox1">People</label>
-													</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .person">
+													<label class="form-check-label" for="inlineCheckbox1">People</label>
+												</li>
 
-													<li class="form-check">
-														<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .event">
-														<label class="form-check-label" for="inlineCheckbox2">Events</label>
-													</li>
-													<li class="form-check">
-														<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .institution">
-														<label class="form-check-label" for="inlineCheckbox2">Institutions and Companies</label>
-													</li>
-													<li class="form-check">
-														<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="info">
-														<label class="form-check-label" for="inlineCheckbox2">Info</label> <!-- da finire -->
-													</li>
-													<li class="form-check">
-														<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="quote">
-														<label class="form-check-label" for="inlineCheckbox2">Quote</label> <!-- da finire -->
-													</li>
-													<li>
-														<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#topicAnalysis">
-														Topic Analysis
-														</button>
-													</li>
-													<li>
-														<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#metaSummary">Metadata Summary</button>
-													</li>
-												</ul>
-											</div>
-										</div>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .event">
+													<label class="form-check-label" for="inlineCheckbox2">Events</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .institution">
+													<label class="form-check-label" for="inlineCheckbox2">Institutions and Companies</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="info">
+													<label class="form-check-label" for="inlineCheckbox2">Info</label> <!-- da finire -->
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="quote">
+													<label class="form-check-label" for="inlineCheckbox2">Quote</label> <!-- da finire -->
+												</li>
+												<li>
+													<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#topicAnalysis">
+													Topic Analysis
+													</button>
+												</li>
+												<li>
+													<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#metaSummary">Metadata Summary</button>
+												</li>
+											</ul>
 										</div>
 									</div>
-								</div>			
+									</div>
+								</div>
+							</div>			
 						</div>
 					
 						<span id='topicHeader'></span>
 
-						<button id='download-button' data-bs-toggle="modal" data-bs-target="#download-page" onclick="setTimeout(function(){
-							    document.getElementById('archiveDownload').style.display = 'inherit';
-							}, 5000);" >    <!--Attiva il download dopo 5 secondi-->
+						<button id='download-button' data-bs-toggle="modal" data-bs-target="#download-page" onclick="setTimeout(function(){document.getElementById('archiveDownload').style.display = 'inherit';}, 5000);" >    <!--Attiva il download dopo 5 secondi-->
 							<div class="sign">
-										Download our Archive
+								Download our Archive
 							</div>								
 						</button>
+					
 					</div>	
-			<div class="modal" tabindex="-1" id='download-page'>
-				  <div class="modal-dialog">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title">Archive download</h5>
-				        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				      </div>
-				      <div class="modal-body">
-				      	<img src="assets/washingmachine.gif">
-				        <p>Preparing the download... 
-				        <a href="archive.txt" id='archiveDownload' style="display: none;">Click here for the download!</a></p>
-				      </div>
-				      
-				    </div>
-				  </div>
-				</div>
-					
-					
+					<div class="modal" tabindex="-1" id='download-page'>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">Archive download</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<img src="assets/washingmachine.gif">
+									<p>Preparing the download... 
+									<a href="archive.txt" id='archiveDownload' style="display: none;">Click here for the download!</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>		
 			</nav>
 			<!--Central body-->
 			<div class="row" id="main-row">
