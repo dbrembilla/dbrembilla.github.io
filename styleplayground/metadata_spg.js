@@ -167,7 +167,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             return r 
         }
         
-        var listItemTpl = `<li><a href='#' onclick='if(!loading){topicManager("$topic","$url");}'>$label</a></li>` //elemento che serve ad aggiungere documenti. label è la descrizione del doc e url la cipolla
+        var listItemTpl = `<li><a href='#' onclick='if(!loading){topicManager("$topic","$url");}else{alert("Opening articles too fast!")}'>$label</a></li>` //elemento che serve ad aggiungere documenti. label è la descrizione del doc e url la cipolla
         
 
         function main() { //recupera gli html
