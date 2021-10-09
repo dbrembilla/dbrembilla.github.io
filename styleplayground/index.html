@@ -221,8 +221,6 @@
 
 		
 	/*Import*/
-	@import "compass/css3";
-
 
 	/*Fonts dei temi in aside*/
 		
@@ -633,13 +631,7 @@
 				cursor: pointer;
 				}
 			
-			.scroll-line{
-				height: 2px;
-				margin-bottom: -2px;
-				background: blue;
-				width: 0%;
-				}
-
+				
 			@media (max-height: 768px) {
 				
 				#download-button .sign{
@@ -1299,7 +1291,7 @@
 						<select name="slidertopics" id="slidertopics">
 							<option>2</option>
 							<option>3</option>
-							<option selected="selected">4</option>
+							<option  selected="selected">4</option>
 							<option>5</option>
 							<option>6</option>
 							<option>7</option>
@@ -1749,8 +1741,9 @@
 							
 									
 							
-							`)}
-
+							`)
+					}
+				}
 				function resetArticles(){
 		$("section").empty();
 		$("header").remove();
@@ -1788,16 +1781,6 @@
 					
 				
 					`)}
-
-				//scrolline - captures scroll any percentage
-				$(window).scroll(function(){
-					var wintop = $(window).scrollTop(), docheight = 
-						
-						$(document).height(), winheight = $(window).height();
-								var scrolled = (wintop/(docheight-winheight))*100;
-					
-							$('.scroll-line').css('width', (scrolled + '%'));
-					})}
 
 			</script>
 			<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
