@@ -153,7 +153,7 @@ function columnSetting(topic, ref){
             load(topic, ref);
             break
             default:
-            console.log("No columns or 3 columns; impossible to add more")
+            alert("Impossible to add more columns")
         }
     }
 }
