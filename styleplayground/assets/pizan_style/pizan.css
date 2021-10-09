@@ -168,14 +168,7 @@ figcaption {
     font-weight: normal;
 }
 */
-.card.overflow h2 + h2, .card.overflow h3 + h3, .card.overflow h2 + h3, .card.overflow h3 + h2 { /* !!ATTENTO!! SOLO per h2, h3, che siano tra loro adjacent siblings; modifica quelli successivi al primo*/
-    height: auto; /*necessario, anche se occorrebbe impostare " height: 28px " perché le righe della baseline vengano giuste di numero.  Tuttavia, se si fissa a 28px, nel caso in cui un singolo elemento si ditribuisca su più righe si scombina tutto*/
-    line-height: 28px; /* probabilemente facoltativo */
-    padding-top: 8px;
-    margin-top: -8px;
-    background-image: linear-gradient(to bottom, black 1px, transparent 1px);
-    background-size: auto 28px;
-}
+
 
 .card.overflow p::before {
     background-image: url(https://dbrembilla.github.io/styleplayground/assets/pizan_style/miniatures/paraph_blue.png);
