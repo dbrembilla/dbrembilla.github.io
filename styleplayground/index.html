@@ -631,6 +631,13 @@
 				cursor: pointer;
 				}
 			
+			.scroll-line{
+				height: 2px;
+				margin-bottom: -2px;
+				background: blue;
+				width: 0%;
+				}
+
 			@media (max-height: 768px) {
 				
 				#download-button .sign{
@@ -1060,19 +1067,6 @@
 							</div></li>
 						</ul>
 					  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 					<span id='topicHeader'></span>
@@ -1793,6 +1787,16 @@
 					
 				
 					`)}
+
+				//scrolline - captures scroll any percentage
+				$(window).scroll(function(){
+					var wintop = $(window).scrollTop(), docheight = 
+						
+						$(document).height(), winheight = $(window).height();
+								var scrolled = (wintop/(docheight-winheight))*100;
+					
+							$('.scroll-line').css('width', (scrolled + '%'));
+					});
 
 			</script>
 			<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
