@@ -102,7 +102,7 @@ img {
       background-size: auto, auto, auto, cover;
   background-repeat: repeat;
   background-position: center;
-  filter: saturate(0%) sepia(100%) contrast(150%) saturate(150%);;
+  filter: saturate(0%) sepia(100%) contrast(150%) saturate(150%);
 }
 .flip-card-front {
 	background-color: #e3ceb9 !important;
