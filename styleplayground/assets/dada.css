@@ -238,6 +238,10 @@ a.disappear:hover, .dropbtn:hover{
 	border-bottom: 0px!important;
 }
 
+#article-1, #article-2, #article-3 {
+    height: 60%;
+}
+
 .offcanvas, .accordion-item{
 	background-color:#eee2d0!important;
 }
@@ -295,5 +299,8 @@ h3 {
 	font-size: 1em!important;
 }
 
+.img{
+	filter: grayscale(1);
+}
 /*    text-decoration-thickness: 10px;
     text-decoration-color: black;*/
