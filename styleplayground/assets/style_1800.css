@@ -163,10 +163,14 @@ img {
 button {
 	background-color: #e3ceb9 !important;
 }
-button .sign, .home, footer {
+button .sign, footer {
 	font-family: Essays1743!important;
 	font-weight: bold!important;
 	text-align: center!important;
+}
+.home {
+	font-family: JDCarnivalBlack!important;
+	font-weight: bold!important;
 }
 header .sign {
 	font-family: JDCarnivalBlack!important;
@@ -207,7 +211,7 @@ footer {
 }
 .btn-primary{
 	color: black!Important;
-	border-color: black;
+	border-color: black!important;
 }
 .btn-secondary, #topics {
     color: black!important;
