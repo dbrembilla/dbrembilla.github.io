@@ -238,6 +238,13 @@ a.disappear:hover, .dropbtn:hover{
 	border-bottom: 0px!important;
 }
 
+.offcanvas, .accordion-item{
+	background-color:#eee2d0!important;
+}
+
+.accordion-button{
+	background-color:#d4be9c!important;
+}
 
 .reset{
 	background-color: #eee2d0!important;
