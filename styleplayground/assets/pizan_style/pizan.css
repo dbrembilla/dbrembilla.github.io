@@ -170,7 +170,7 @@ figcaption {
 */
 
 
-.card.overflow p::before {
+.card.overflow p::before:not(blockquote p) {
     background-image: url(https://dbrembilla.github.io/styleplayground/assets/pizan_style/miniatures/paraph_blue.png);
     background-size: 28px 28px;
     display: inline-block;
@@ -201,8 +201,15 @@ figcaption {
     content:" "	
 }
 
-
 .card.overflow figure {
     margin: 0 0 28px 0 !important;
     padding: 28px 0 0 0 !important;
+}
+
+blockquote {
+    margin: 0 0 1rem;
+    margin: 0 0 28px 0;
+    padding: 28px 0px 0 0;
+    font-style: italic;
+    text-align: center;
 }
