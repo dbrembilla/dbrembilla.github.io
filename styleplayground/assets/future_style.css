@@ -212,6 +212,7 @@ h5 {
 }
 .container-fluid {
 	border: none!important;
+	padding: 0!important;
 }
 .navbar {
 	background-color: #ff7f50!important;
