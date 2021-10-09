@@ -67,6 +67,7 @@ h2, h3, h4 {
   background-image: linear-gradient(to bottom, black 1px, transparent 1px);
   background-size: auto 28px;
   padding-top: 8px;
+  margin-bottom: -8px;
 }	
 
 .card.overflow h2, .card.overflow h3, .card.overflow h4 {
@@ -78,6 +79,7 @@ h2, h3, h4 {
   background-size: auto 28px;
   padding-top: 8px;
   height: auto;
+  margin-bottom: -8px;
 }
 
 .card.overflow h1 {
@@ -186,24 +188,28 @@ figcaption {
     margin-bottom: -10px;
 }
 
+.card.overflow ul {
+    background-image: linear-gradient(to bottom, black 1px, transparent 1px);
+    padding-left: 28px;
+    background-size: auto 28px;
+    margin-bottom: -8px;
+}
+
 .card.overflow li {
     list-style-type: disclosure-closed;
     font-family: UnifrakturCook;
+    line-height: 28px;
+    padding-top: 8px;
+    margin-bottom: -8px;
 }
 
-.card.overflow ul {
-    padding-left: 28px;
-}
-
-.card.overflow li {
-	    list-style-type: disclosure-closed;
-	    font-family: UnifrakturCook;
-}
-
-.card.overflow ul {
-	padding-left: 28px;
-}
 
 .card.overflow ::first-letter::after {  /* per aggiungere uno spazio dopo la prima lettera di ogni p; vedi anche come funziona letter-spacing*/
     content:" "	
+}
+
+
+.card.overflow figure {
+    margin: 0 0 28px 0 !important;
+    padding: 28px 0 0 0 !important;
 }
