@@ -1,4 +1,5 @@
 var future = false
+var loading = false
 function addHover(){
     $('.person').attr('onmouseover',
         `$('#class-show').empty();
@@ -98,8 +99,10 @@ function changeStyle(ref){
         }
 // Adding topics and columns
 function topicManager(topic, ref){
+    loading = true;
     addTopic(topic);
     columnSetting(topic, ref);
+    loading = false;
 
 }
 function addTopic(topic){
@@ -164,7 +167,7 @@ String.prototype.sub = function(o) { //funzione che serve a inserire gli element
             return r 
         }
         
-        var listItemTpl = `<li><a href='#' onclick='topicManager("$topic","$url")'>$label</a></li>` //elemento che serve ad aggiungere documenti. label è la descrizione del doc e url la cipolla
+        var listItemTpl = `<li><a href='#' onclick='if(!loading){topicManager("$topic","$url");}'>$label</a></li>` //elemento che serve ad aggiungere documenti. label è la descrizione del doc e url la cipolla
         
 
         function main() { //recupera gli html
