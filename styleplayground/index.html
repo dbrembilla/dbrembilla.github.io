@@ -997,27 +997,26 @@
 										<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"  data-bs-parent="#accordionExample">
 											<div class="accordion-body">
 												<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-													<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" onclick="changeStyle('#future')">
-													<label class="btn" for="btnradio1">		 					
+													<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+													<label class="btn" for="btnradio1" onclick="changeStyle('#pizan')">Christine Pizan </label>
+													<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="changeStyle('#future')">
+													<label class="btn" for="btnradio2">		 					
 														American Newspapers
 													</label>
-
-													<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="changeStyle('#1800')">
-													<label class="btn" for="btnradio2">		 						
-														Future
 												</div>												
 												<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
 													<input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-													<label class="btn" for="btnradio3" onclick="changeStyle('#pizan')">Christine Pizan </label>
+													<label class="btn" for="btnradio3" onclick="changeStyle('#dada')">Dada</label>
 													<input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-													<label class="btn" for="btnradio4">Theme 4</label>
+													<label class="btn" for="btnradio4" onclick="changeStyle('#')">Theme from 1950-1990</label>
 												</div>        										
 												<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
 													<input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
-													<label class="btn" for="btnradio5" onclick="changeStyle('#dada')">Dada</label>
+													<label class="btn" for="btnradio5" onclick="changeStyle('#')">1990-2010</label>
 
-													<input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
-													<label class="btn" for="btnradio6">Theme 6</label>
+													<input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off" onclick="changeStyle('#future')">
+													<label class="btn" for="btnradio6">		 						
+														Future</label>
 												</div>
 												<!--da vedere se tenerlo come radio button-->
 												<input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" checked>
@@ -1163,18 +1162,11 @@
 									
 									<ul>
 										<li >
-											<a class="btn"  onclick="changeStyle('#1800')">American Newspapers</a> 
-										</li>
-										<li >
-											<a class="btn" onclick="changeStyle('#future')">The Future</a>
-										</li>
-
-										<li>
 											<a class="btn" onclick="changeStyle('#pizan')">Christine de Pizan</a>
 										</li>
-
 										<li>
-											<a class="btn" onclick="changeStyle('#')">Theme4</a>
+											<a class="btn"  onclick="changeStyle('#1800')">American Newspapers</a>
+											
 										</li>
 
 										<li>
@@ -1182,7 +1174,15 @@
 										</li>
 
 										<li>
-											<a class="btn" onclick="changeStyle('#')">Theme6</a>
+											<a class="btn" onclick="changeStyle('#')">Theme from 1950-1990</a>
+										</li>
+
+										<li>
+											<a class="btn" onclick="changeStyle('#')">Theme 1990-2010</a>
+										</li>
+
+										<li>
+											<a class="btn" onclick="changeStyle('#future')">The Future</a>
 										</li>
 									</ul>
 								</div>
@@ -1447,13 +1447,27 @@
 				<div class="modal-content overflow">
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					<div class="row">
-						<div class="col-3"><span>Index</span>
+						<div class="dropdown">
+						  <button class="btn btn-secondary dropdown-toggle" type="button" id="doc-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+						    Index
+						  <ul class="dropdown-menu" aria-labelledby="doc-dropdown">
+						    <li><a href="#concept">Concept</a></li>
+						    <li><a href="">Pizan</a></li>
+						    <li><a href=""></a></li>
+						    <li><a href=""></a></li>
+							<li><a href="#american-newspapers">American Newspapers</a></li>
+							<li><a href=""></a></li>
+							<li><a href=""></a></li>
+							<li><a href="#future-expl">Nostalgia Hypnosis</a></li>
+						  </ul>
+						</div>
+						<!--<div class="col-3"><span>Index</span>
 						<ul style="list-style-type:none;">
 						<li><a href="#concept">Concept</a></li>
 						<li><a href="#american-newspapers">American Newspapers</a></li>
 						<li><a href=""></a></li>
 						<li><a href="#future-expl">Nostalgia Hypnosis</a></li>
-						</ul></div>
+						</ul></div>-->
 						<div class="documentation">
 							<p>
 								<span id='concept'>
