@@ -29,6 +29,12 @@
 	src: url("fonts/EichenlaubInitialen-vmDy.ttf");
 }
 
+.card.overflow, #flip-card, #topics, .card.Meta {
+	background-color: #F6EDDE;
+}
+
+
+
 p {
   color: #504738;
   font-family: UnifrakturCook;
@@ -218,4 +224,3 @@ blockquote {
     font-style: italic;
     text-align: center;
 }
-
