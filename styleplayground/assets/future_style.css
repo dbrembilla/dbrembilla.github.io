@@ -185,10 +185,10 @@ h3 {
 	font-size: 1.67em; /*proton mass*/
 	color: #ff7f50;
 }
-h4, a.disappear {
-	font-family: Metropolis;
-	font-style: italic;
-	font-size: 1.618em; /*golden ratio*/
+h4, .sign.title {
+	font-family: Metropolis!important;
+	font-style: italic!important;
+	font-size: 1.618em!important; /*golden ratio*/
 }
 h5 {
 	font-family: Metropolis;
