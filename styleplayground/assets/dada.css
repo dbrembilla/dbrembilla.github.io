@@ -135,10 +135,11 @@ header{
     width: 80%;
 
 }
-a.disappear, .dropbtn{
-	font-family: 'Outbox';
-	color: #621616!important;
-	font-size: 3em!important;
+
+a.disappear{
+	font-size: 1.5em!important;
+    font-family: Ransom!important;
+    color: #3c466391!important;
 }
 
 a.disappear:hover, .dropbtn:hover{
@@ -186,17 +187,8 @@ a.disappear:hover, .dropbtn:hover{
 }
 
 .sign.title {
-	position: absolute;
-    z-index: -100;
-    bottom: 50%;
-    transform: rotate(351deg);
-    height: fit-content;
     font-family: Ransom!important;
-    font-size: 5em!important;
-    text-transform: uppercase;
     color: #3c466391!important;
-    animation: none;
-    text-shadow: 0 0 0 black;
 
 }
 
@@ -291,7 +283,7 @@ h3 {
     background: unset;
 }
 
-.btn-secondary, a.btn, .form-check-label {
+a.btn, .form-check-label {
 	font-size: 1em!important;
 }
 
@@ -303,6 +295,7 @@ h3 {
 
 
 @media (max-width:768 px){
-	.sign.title{
-		font-size: 4em!important;}
+	#dropdownMenuClickableInside{
+		font-size: 1em!important;
+	}
 }

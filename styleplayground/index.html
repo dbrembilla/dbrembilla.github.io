@@ -253,7 +253,7 @@
 	}
 
 		/*animations*/
-		.sign {
+		.sign, a.disappear {
 			color: #b1fff3;
 			text-shadow: 0 0 0.4rem #084298, 0 0 1.5rem #5a9791, -0.2rem 0.1rem 1rem #67c0b4, 0.2rem 0.1rem 1rem #73e8d7, 0 -0.5rem 2rem #95eee0, 0 0.5rem 3rem #b8f4ea;
 			animation: shine 2s forwards, flicker 3s infinite;
@@ -346,7 +346,7 @@
 				font-size: 1.5em;	
 			}
 
-			.sign.title{
+			a.disappear, .sign.title{
 				font-family: Hometown;
 				font-weight: bold;
 				font-size: 2em;
@@ -798,7 +798,7 @@
 				padding-left:0px!important;
 			}		
 			#dropdownMenuClickableInside{
-				display: inline!important;
+				display: inline;
 
 			}
 			#aside{
@@ -907,7 +907,7 @@
 			<nav>
 				<div class="container-fluid">
 					<div class="home">
-						<a class="disappear sign title" onclick="resetArticles();">
+						<a class="disappear" onclick="resetArticles();">
 							<span class="flicker">The </span>Washing Mag<span class="fast-flicker">azi</span>ne		
 						</a>
 					</div>	
