@@ -94,6 +94,10 @@ p{
 	font-size: 0.75em!important;
 }
 
+figcaption{
+	font-size: 0.5em!important;
+}
+
 nav, footer {
 	background: transparent!important;
 	border: 0px!important;
