@@ -254,7 +254,6 @@ a.btn{
 }
 
 .btn-secondary {
-	font-size: 0.5em!important;
 	color: #621616!important;
 	text-align: center;
 }
@@ -282,7 +281,7 @@ div.card.Meta {
 	padding:1rem!important;
 	color:#eee2d0;
 	background-color: #3c4663;
-    border: 4rem double #eee2d0;
+    border: 2rem double #eee2d0;
 }
 
 a{
@@ -299,7 +298,7 @@ a{
 }
 
 a.btn, .form-check-label {
-	font-size: 1em;
+	font-size: 1em!important;
 }
 
 img{
