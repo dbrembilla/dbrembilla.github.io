@@ -632,6 +632,24 @@
 				}
 			
 				
+			/*scroll indicator*/
+
+			.progress-container {
+				width: 100%;
+				height: 8px;
+				background: #ccc;
+				}
+
+				/* The progress bar (scroll indicator) */
+				.progress-bar {
+				height: 8px;
+				background: #04AA6D;
+				width: 0%;
+				}
+
+			
+
+
 			@media (max-height: 768px) {
 				
 				#download-button .sign{
@@ -1467,6 +1485,17 @@
 			<script type="text/javascript" src="metadata_spg.js"></script>
 
 			<script>
+
+				//scroll-indicator function
+				window.onscroll = function() {myFunction()};
+
+				function myFunction() {
+					var winScroll = document.card-overflow.scrollTop || document.documentElement.scrollTop;
+					var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+					var scrolled = (winScroll / height) * 100;
+					document.getElementById("myBar").style.width = scrolled + "%";
+				}
+
 
 				$('#metaSummary').on('hide.bs.modal', function (e) {
 					$('#summaryBody').empty()
