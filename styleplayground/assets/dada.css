@@ -285,8 +285,12 @@ div.card.Meta {
     border: 4rem double #eee2d0;
 }
 
-li{
+a{
 	color: #eee2d0;
+}
+
+.form-check{
+	color: black;
 }
 
 .card.overflow {
