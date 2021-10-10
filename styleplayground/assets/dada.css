@@ -171,7 +171,7 @@ a.disappear:hover, .dropbtn:hover{
     font-family: 'Outbox';
     color: #621616c9!important;
     text-transform: uppercase;
-    font-size: 4.5em;
+    font-size: 5.5em!important;
     letter-spacing: -.01em!important;
     font-weight: bold!important;
 }
