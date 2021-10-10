@@ -116,7 +116,7 @@ figure {
     line-height: 14px;
     font-family: 'UnifrakturCook';
     color: #A74640;
-    width: 99%;
+    width: 100%;
     margin: 0 0 1rem !important;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -203,12 +203,13 @@ figcaption {
 
 
 .card.overflow p::first-letter::after {  /* per aggiungere uno spazio dopo la prima lettera di ogni p; vedi anche come funziona letter-spacing*/
-    content:" "	;
+    content: " ";
+    display: inline;
 }
 
 .card.overflow figure {
     margin: 0 0 28px 0 !important;
-    padding: 28px 0 0 0 !important;
+    padding: 28px 5px 0 !important;
 }
 
 blockquote {
