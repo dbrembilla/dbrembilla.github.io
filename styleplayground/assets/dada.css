@@ -80,6 +80,8 @@ body {
 
 h1 {
     font-size: 1.75em!important;
+	font-family: 'Outbox';
+    color: #621616c9!important;
 }
 
 h2{
@@ -90,7 +92,8 @@ h3{
 }
 
 p{
-	margin-bottom: 10rem!important;
+	text-align: justify;
+	margin-bottom: 7rem!important;
 	font-size: 0.75em!important;
 }
 
