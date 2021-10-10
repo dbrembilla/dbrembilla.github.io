@@ -77,8 +77,21 @@ body {
 	 font-family: 'Alegreya'!important;
 }
 
+
+h1 {
+    font-size: 1.75em!important;
+}
+
+h2{
+	font-size: 1.5em!important;
+}
+h3{
+	font-size: 1.25em!important;
+}
+
 p{
-	margin-bottom: 10rem;
+	margin-bottom: 10rem!important;
+	font-size: 0.75em!important;
 }
 
 nav, footer {
