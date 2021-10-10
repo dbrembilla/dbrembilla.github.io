@@ -630,39 +630,9 @@
 				text-decoration: none;
 				cursor: pointer;
 				}
-			
-				
-			/*scroll indicator*/
 
-			.progress-container {
-				width: 100%;
-				height: 8px;
-				background: #ccc;
-				}
-
-				/* The progress bar (scroll indicator) */
-				.progress-bar {
-				height: 8px;
-				background: #04AA6D;
-				width: 0%;
-				}
 
 			
-
-
-			@media (max-height: 768px) {
-				
-				#download-button .sign{
-				font-size: 1em;	
-				}
-
-				.sign.title{
-					font-size: 1.5em;
-				}
-
-
-			}
-
 		
 			/*dropdown nascorsto*/
 						
@@ -1081,6 +1051,19 @@
 					  </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 					<span id='topicHeader'></span>
 
 					<button id='download-button' data-bs-toggle="modal" data-bs-target="#download-page" onclick="setTimeout(function(){document.getElementById('archiveDownload').style.display = 'inherit';}, 5000);" >    <!--Attiva il download dopo 5 secondi-->
@@ -1269,9 +1252,7 @@
 						<div class="card" id="desc">
 							<div class="descTitle">
 								<h2>Brief description of the magazine</h2>
-								<div class="progress-container">
-									<div class="progress-bar" id="myBar"></div>
-								</div>
+								
 							</div>
 							<!--text-->
 							<div class="text overflow">
@@ -1488,17 +1469,6 @@
 			<script type="text/javascript" src="metadata_spg.js"></script>
 
 			<script>
-
-				//scroll-indicator function
-				window.onscroll = function() {myFunction()};
-
-				function myFunction() {
-					var winScroll = document.card.scrollTop || document.documentElement.scrollTop;
-					var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-					var scrolled = (winScroll / height) * 100;
-					document.getElementById("myBar").style.width = scrolled + "%";
-				}
-
 
 				$('#metaSummary').on('hide.bs.modal', function (e) {
 					$('#summaryBody').empty()
