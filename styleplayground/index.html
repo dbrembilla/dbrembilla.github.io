@@ -1269,6 +1269,9 @@
 						<div class="card" id="desc">
 							<div class="descTitle">
 								<h2>Brief description of the magazine</h2>
+								<div class="progress-container">
+									<div class="progress-bar" id="myBar"></div>
+								</div>
 							</div>
 							<!--text-->
 							<div class="text overflow">
@@ -1490,7 +1493,7 @@
 				window.onscroll = function() {myFunction()};
 
 				function myFunction() {
-					var winScroll = document.card.overflow.scrollTop || document.documentElement.scrollTop;
+					var winScroll = document.card.scrollTop || document.documentElement.scrollTop;
 					var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 					var scrolled = (winScroll / height) * 100;
 					document.getElementById("myBar").style.width = scrolled + "%";
