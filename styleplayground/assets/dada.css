@@ -304,13 +304,11 @@ div.card.Meta {
     border: 2rem double #eee2d0;
 }
 
-a{
+.row.list.overflow div ul li a{
 	color: #eee2d0!important;
 }
 
-.form-check, .topic li a, .flex-row-reverse a, p a, h3 a {
-	color: black!important;
-}
+
 
 .card.overflow {
     border: 0px;
