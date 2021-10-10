@@ -326,7 +326,12 @@ img{
     text-decoration-color: black;*/
 
 
-@media (max-width:768px){
+@media (max-width:880px){
+
+	a.disappear{
+		font-size: 1.25em!important;
+	}
+	
 	.btn-secondary{
 		font-size: 1em!important;
 	}
