@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Vogue';
+    src: url("Vogue.ttf");
+}
+
+
+a.disappear{
+    font-family:'Vogue' ;
+}
