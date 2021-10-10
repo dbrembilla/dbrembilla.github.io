@@ -289,7 +289,7 @@ a{
 	color: #eee2d0!important;
 }
 
-.form-check{
+.form-check, .topic li{
 	color: black;
 }
 
