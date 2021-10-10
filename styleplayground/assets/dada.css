@@ -279,7 +279,8 @@ h3 {
 }
 
 div.card.Meta {
-	padding:1rem;
+	padding:1rem!important;
+	color:#eee2d0;
 	background-color: #3c4663;
     border: 4rem double #eee2d0;
 }
