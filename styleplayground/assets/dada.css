@@ -289,8 +289,8 @@ a.btn, .form-check-label {
 	font-size: 1em!important;
 }
 
-.img{
-	filter: grayscale(1);
+img{
+	filter: grayscale(1)!important;
 }
 /*    text-decoration-thickness: 10px;
     text-decoration-color: black;*/
