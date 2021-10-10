@@ -286,7 +286,7 @@ div.card.Meta {
 }
 
 a{
-	color: #eee2d0;
+	color: #eee2d0!important;
 }
 
 .form-check{
