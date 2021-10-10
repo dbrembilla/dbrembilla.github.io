@@ -289,8 +289,8 @@ a{
 	color: #eee2d0!important;
 }
 
-.form-check, .topic li a, .flex-flow-reverse a {
-	color: black;
+.form-check, .topic li a, .flex-row-reverse a {
+	color: black!important;
 }
 
 .card.overflow {
