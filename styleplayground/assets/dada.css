@@ -301,7 +301,7 @@ a{
 	color: #eee2d0!important;
 }
 
-.form-check, .topic li a, .flex-row-reverse a {
+.form-check, .topic li a, .flex-row-reverse a, p a {
 	color: black!important;
 }
 
