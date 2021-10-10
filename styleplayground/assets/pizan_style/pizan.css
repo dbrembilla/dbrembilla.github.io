@@ -201,11 +201,11 @@ figcaption {
     margin-bottom: -8px;
 }
 
-
-.card.overflow p::first-letter::after {  /* per aggiungere uno spazio dopo la prima lettera di ogni p; vedi anche come funziona letter-spacing*/
-    content: " ";
-    display: inline;
+/* per spaziare [solo] la prima lettera di ogni p, come su Harley 4431; meglio non metterlo: poco coerente con la scelta della griglia
+.card.overflow p::first-letter {  
+    letter-spacing: 0.15em;
 }
+*/
 
 .card.overflow figure {
     margin: 0 0 28px 0 !important;
