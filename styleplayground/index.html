@@ -246,6 +246,7 @@
 
 	/*funzionalità sito*/
 	body{
+		overflow: hidden;
 		font-size: 20px; /*grandezza standard per schermi*/
 		font-family: 'Calculator';
 		height: 100vh;
@@ -310,22 +311,22 @@
 			
 			/*text*/
 			p, #desc li {
-				font-size: 2em;
+				font-size: 1.25em;
 			}
 
 			.btn, .btn-secondary, .form-check-label{
-				font-size: 2.5em;
+				font-size: 1.5em;
 				text-align: left;
 			}
 			h1{
-				font-size: 3.5em;
+				font-size: 2em;
 			}		
 			h2{
-				font-size: 3em;
+				font-size: 1.75em;
 				
 			}
 			h3{
-				font-size: 3.5em;
+				font-size: 1.5em;
 			
 			}		
 			header{
@@ -336,12 +337,10 @@
 				font-weight: bold;
 				color: #5a9791;
 			}
-			.btn-secondary, #topics, a.disappear, .dropbtn{ /*font arancioni*/
+			.btn-secondary, #topics, .dropbtn{ /*font arancioni*/
 				color: rgb(199, 79, 14);
 			}
-			a.disappear { /*tasto home*/
-				font-size: 5em;	
-			}
+			
 			#download-button .sign{
 				font-size: 1.5em;	
 			}
@@ -349,7 +348,15 @@
 			a.disappear, .sign.title{
 				font-family: Hometown;
 				font-weight: bold;
-				font-size: 2em;
+				
+			}
+
+			a.disappear{
+				font-size:2em;
+			}
+
+			.sign.title{
+				font-size: 1.5em;
 			}
 			/*immagini*/
 			.icon{
@@ -690,12 +697,7 @@
     			
 				
 			}
-			a.disappear { /*tasto home*/
-				font-size: 3.5em;	
-			}
 		
-
-			
 			@media (max-height: 1500px) {
 				.btn-secondary, .btn, .form-check-label{
 					font-size: 1.5em;
@@ -709,18 +711,10 @@
 				}
 			}
 
-			@media (max-height: 920px) {
-				a.disappear { /*tasto home*/
-					font-size: 2.5em;	
-				}
-
-
-			}		
+			
 			@media (max-height: 768px) {
 
-				a.disappear { /*tasto home*/
-					font-size: 1.5em;	
-				}
+				
 
 				h3 {
 						font-size: 1.5em;

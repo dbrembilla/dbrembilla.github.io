@@ -132,14 +132,16 @@ header{
 
 #row-article {
 	height: 100%!important;
-    width: 80%;
+    width: 100%;
 
 }
 
 a.disappear{
-	font-size: 1.5em!important;
+	animation: none!important;
+    font-size: 1.5em!important;
     font-family: Ransom!important;
     color: #3c466391!important;
+    text-shadow: none!important;
 }
 
 a.disappear:hover, .dropbtn:hover{
@@ -147,7 +149,7 @@ a.disappear:hover, .dropbtn:hover{
 }
 .descTitle h2 {
     position: absolute;
-    width: 3em;
+    width: 4em;
     height: 100%;
     z-index: -50;
     font-family: 'Outbox';
@@ -172,7 +174,7 @@ a.disappear:hover, .dropbtn:hover{
 .text{
 	height: 100%;
     letter-spacing: .15em;
-	padding: 0em 10em;
+	padding-left: 10em;
 }
 
 
@@ -294,8 +296,8 @@ a.btn, .form-check-label {
     text-decoration-color: black;*/
 
 
-@media (max-width:768 px){
-	#dropdownMenuClickableInside{
+@media (max-width:768px){
+	.btn-secondary{
 		font-size: 1em!important;
 	}
 }
