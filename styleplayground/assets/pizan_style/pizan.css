@@ -29,8 +29,8 @@
 	src: url("fonts/EichenlaubInitialen-vmDy.ttf");
 }
 
-.card.overflow, #flip-card, #topics, .card.Meta {
-	background-color: #F6EDDE;
+.card.overflow, .flip-card-front, .flip-card-back, #topics, .card.Meta {  /*parziale da completare*/
+	background-color: #F6EDDE !important;
 }
 
 
