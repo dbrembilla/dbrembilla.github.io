@@ -285,6 +285,10 @@ div.card.Meta {
     border: 4rem double #eee2d0;
 }
 
+li{
+	color: #eee2d0;
+}
+
 .card.overflow {
     border: 0px;
     background: unset;
