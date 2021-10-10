@@ -181,7 +181,8 @@ header .sign {
 }
 .card .Meta {
 	border-left: black 1px solid !important;
-	border-right: black 1ps solid !important;
+	border-right: black 1px solid !important;
+	border-bottom: black 0.5px solid!important;
 }
 #metaview-1, #metaview-2, #metaview-3{
 	width: 80%;
