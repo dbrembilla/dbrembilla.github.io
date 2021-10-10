@@ -213,9 +213,9 @@ figcaption {
 }
 
 blockquote {
-    margin: 0 0 1rem;
-    margin: 0 0 28px 0;
-    padding: 28px 0px 0 0;
+    margin: 0 0 28px 0 !important;
+    padding: 28px 0 0 0;
     font-style: italic;
     text-align: center;
 }
+
