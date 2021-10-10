@@ -143,6 +143,7 @@ section{
 }
 
 .container-fluid{
+	display: contents!important;
 	border-left: 0px !important;;
 	border-bottom: 0px!important;
 }
@@ -325,13 +326,20 @@ img{
 /*    text-decoration-thickness: 10px;
     text-decoration-color: black;*/
 
-
-@media (max-width:880px){
-
+@media (max-width:1000px){
 	a.disappear{
 		font-size: 1.25em!important;
 	}
+
+	#download-button .sign {
+		font-size: 1.25em;
+	}
+}
+
+@media (max-width:880px){
+
 	
+
 	.btn-secondary{
 		font-size: 1em!important;
 	}
