@@ -145,7 +145,7 @@ footer {
   }
 }
 .btn-secondary, #topics {
-    color: #747d8c!!important;
+    color: #747d8c!important;
     background-color: #ff6348!important;
 }
 .themes, #topics {
@@ -185,10 +185,14 @@ h3 {
 	font-size: 1.67em; /*proton mass*/
 	color: #ff7f50;
 }
-h4, .sign.title, a.disappear {
+h4 {
 	font-family: Metropolis!important;
 	font-style: italic!important;
 	font-size: 1.618em!important; /*golden ratio*/
+}
+.sign.title, a.disappear {
+	font-family: Metropolis!important;
+	font-style: italic!important;
 }
 h5 {
 	font-family: Metropolis;
