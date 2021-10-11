@@ -172,6 +172,11 @@ figcaption{
     background-color:unset!important; 
     border-color: unset!important; 
 }
+
+topic li a {
+    border-bottom: 1px solid black;
+}
+
 @media (max-height: 650px) {
     a.disappear, .sign{
         font-size: 2em!important;
