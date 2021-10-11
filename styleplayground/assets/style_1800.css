@@ -114,6 +114,7 @@ img {
   border-top: none!important;
   border-bottom: none!important;
   border-radius: 0!important;
+  z-index: 3!important;
 }
 .flip-card-back{
 	font-size: 16px;
