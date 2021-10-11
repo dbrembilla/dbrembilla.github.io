@@ -73,12 +73,23 @@ span.flicker {
     border-bottom: none !important;
 }
 
-.flip-card-front, .flip-card-back, #topics, .card.Meta, .card#desc {  /*parziale da completare??*/
+.flip-card-front, #topics, .card.Meta, .card#desc {  /*parziale da completare??*/
     background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
     border-image: linear-gradient(to bottom left, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30) 1 !important;
     border: solid 0.2rem;
     outline: solid 0.1rem #504738;
-    border-radius: unset !important;
+    border-radius: 0rem !important;
+    box-shadow: none;
+    font-family: UnifrakturCook;
+    color: #504738;
+}
+
+.flip-card-back {
+    background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
+    border-image: linear-gradient(to bottom left, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30) 1 !important;
+    border: solid 0.2rem;
+    outline: solid 0.1rem #504738;
+    border-radius: 0.01rem !important; /*non posso togliere border-radius qui, per qualche ragione che non mi spiego*/
     box-shadow: none;
     font-family: UnifrakturCook;
     color: #504738;
