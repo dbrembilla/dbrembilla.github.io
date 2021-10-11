@@ -35,13 +35,22 @@ body, nav, footer {
   background-size: auto;
 }
 
-.card.overflow, .flip-card-front, .flip-card-back, #topics, .card.Meta, .card#desc {  /*parziale da completare*/
-	background: #F6EDDE !important;
+.flip-card-front, .flip-card-back, #topics, .card.Meta, .card#desc {  /*parziale da completare??*/
+	background: #EFE8D8 !important;
 	border-image: linear-gradient(to bottom left, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30) 1 !important;
-        border: solid 4px;
-        outline: solid 1px #504738;
+    border: solid 4px;
+    outline: solid 2px #504738;
 	border-radius: unset !important;
 	box-shadow: none;
+	font-family: UnifrakturCook;
+	color: #504738;
+}
+
+.card.overflow { 
+	background: #EFE8D8 !important;
+	border-radius: unset !important;
+	box-shadow: none;
+	border: solid 1px !important;
 	font-family: UnifrakturCook;
 	color: #504738;
 }
