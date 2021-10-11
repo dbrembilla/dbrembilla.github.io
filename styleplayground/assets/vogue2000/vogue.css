@@ -157,6 +157,17 @@ a.disappear, .sign{
 .col-12 #metaview-1 div ul li, .col-12 #metaview-2 div ul li, .col-12 #metaview-3 div ul li {
     padding: 0.4em;
 }
+
+img{
+    position: absolute;
+}
+
+figcaption{
+    position: relative;
+    width: 50%;
+    padding: 1em;
+}
+
 @media (max-height: 650px) {
     a.disappear, .sign{
         font-size: 2em!important;
