@@ -154,7 +154,7 @@ a.disappear, .sign{
 
 .col-12 #metaview-1 div ul, .col-12 #metaview-2 div ul, .col-12 #metaview-3 div ul {
     width: 100%;
-    column-count: 3;
+    column-count: 2;
 }
 
 .col-12 #metaview-1 div ul li, .col-12 #metaview-2 div ul li, .col-12 #metaview-3 div ul li {
@@ -177,4 +177,8 @@ figcaption{
         column-count: 1;
     }
    
+    .sign {
+        font-size: 2em!important;
+
+    }
 }
