@@ -40,15 +40,21 @@
     src: url("Playfair/Playfair-Regular.ttf");
 }
 
+@font-face {
+    font-family: 'Maven';
+    src: url("MavenPro-Medium.ttf");
+}
 
 
 body{
     font-family: 'Playfair'!important;
     font-size: 16px!important;
 }
-
+h2{
+    font-size: 2em!important;
+}
 h1, h2, h3{
-    font-family: 'Playfair-BoldItalic'!important;
+    font-family: 'Playfair Bold Italic'!important;
 }
 .container-fluid{
     border-left: 0px!important;
@@ -58,10 +64,10 @@ a.disappear, .sign{
     font-family:'Vogue'!important ;
     color: black!important;
     text-shadow: unset!important;
-    font-size: 2em!important;
+    font-size: 3em!important;
 }
 
-#download-button .sign{
+#download-button .sign, .reset{
     font-family: 'Raleway'!important;
     font-size: 1em!important;
    
@@ -82,5 +88,47 @@ a.disappear, .sign{
     color: black!important;
     background: white!important;
     box-shadow: unset!important;
+    text-align: justify!important;
+}
+
+.text p:first-of-type::first-letter{
+    text-transform: capitalize!important;
+    font-size:6em;
+    vertical-align: -webkit-baseline-middle;
+    font-family: 'Maven'!important;
+    color: #e6335e!important;
+}
+
+#flip-card{
+    border-bottom: 1px solid ;
+}
+#flip-card .flip-card-front, #flip-card .flip-card-back {
+    background-color: white!important;
+}
+
+.flip-card-front h3, .flip-card-back h3, .card#topics h3{
+    font-family: 'Maven'!important;
+    color: #e6335e!important;
+    text-transform: uppercase!important;
+}
+
+.card#topics{
+    background-color: white;
+    border: 0px;
+}
+
+.btn-secondary, #topics, .dropbtn {
+    color: black!important;
+}
+
+.text.overflow{
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+@media (max-height: 650px) {
+    a.disappear, .sign{
+        font-size: 2em!important;
+    }
 }
 
