@@ -29,12 +29,15 @@
 	src: url("fonts/EichenlaubInitialen-vmDy.ttf");
 }
 
-.card.overflow, .flip-card-front, .flip-card-back, #topics, .card.Meta {  /*parziale da completare*/
+.card.overflow, .flip-card-front, .flip-card-back, #topics, .card.Meta, .card#desc {  /*parziale da completare*/
 	background-color: #F6EDDE !important;
 	border-image: linear-gradient(to bottom left, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30) 1 !important;
         border: solid 4px;
         outline: solid 1px #504738;
 	border-radius: unset !important;
+	box-shadow: none;
+	font-family: UnifrakturCook;
+	color: #504738;
 }
 
 
