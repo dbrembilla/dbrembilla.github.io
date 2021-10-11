@@ -167,7 +167,7 @@ figcaption{
     width: 40%;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover, a.disappear:hover {
     color: #e6335e!important;
     background-color:unset!important; 
     border-color: unset!important; 
