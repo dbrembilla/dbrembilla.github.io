@@ -214,7 +214,7 @@ a.disappear:hover, .dropbtn:hover{
 
 .sign.title {
     font-family: Ransom!important;
-    color: #3c466391!important;
+    color: #3c4663!important;
 
 }
 
@@ -338,7 +338,9 @@ img{
 
 @media (max-width:880px){
 
-	
+	.container-fluid .btn-group{
+		display: inherit!important;
+	}
 
 	.btn-secondary{
 		font-size: 1em!important;
@@ -346,5 +348,17 @@ img{
 
 	.card.Meta {
 		border: 0;
+	}
+}
+
+@media (max-width:840px) {
+	div.card.Meta {
+		padding: 1rem!important;
+		color: #eee2d0;
+		background-color: #3c4663;
+		border: 0px;
+	}
+	.sign.title {
+		font-size: 1.25em!important;
 	}
 }
