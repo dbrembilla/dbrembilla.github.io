@@ -158,15 +158,8 @@ a.disappear, .sign{
     padding: 0.4em;
 }
 
-
-img{
-    position: relative;
-}
-
 figcaption{
-    position: absolute;
-    top: 0%;
-    right: 0%;
+    font-family: 'Maven'!important;
 }
 @media (max-height: 650px) {
     a.disappear, .sign{
