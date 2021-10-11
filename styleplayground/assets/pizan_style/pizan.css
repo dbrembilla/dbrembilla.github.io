@@ -317,3 +317,7 @@ blockquote {
     background-image: none !important;
     content: none !important;
 }
+
+#flip-card .flip-card-front { 
+	position: unset;  /*altrimenti non scrolla l'overflo2, non so perché*/
+}
