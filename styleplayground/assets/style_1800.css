@@ -224,3 +224,7 @@ div.slot {
 .documentation img{
 	 float:  none!important;
 }
+.d-flex .flex-row-reverse{
+	position: sticky!important;
+	bottom: 20vh!important;
+}
