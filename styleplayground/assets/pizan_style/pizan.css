@@ -89,7 +89,7 @@ span.flicker {
     border-image: linear-gradient(to bottom left, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30) 1 !important;
     border: solid 0.2rem;
     outline: solid 0.1rem #504738;
-    border-radius: 0.01rem !important; /*non posso togliere border-radius qui, per qualche ragione che non mi spiego*/
+    /*border-radius: 0.01rem !important; // non posso specificare niente per border-radius qui, per qualche ragione che non mi spiego*/
     box-shadow: none;
     font-family: UnifrakturCook;
     color: #504738;
