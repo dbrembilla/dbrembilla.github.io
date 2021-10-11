@@ -29,6 +29,10 @@
 	src: url("fonts/EichenlaubInitialen-vmDy.ttf");
 }
 
+html {
+	font-size: 20px;
+}
+
 body, nav, footer {
   background: url("body_background.jpg");
   background-repeat: no-repeat;
@@ -67,8 +71,8 @@ span.flicker {
 .flip-card-front, .flip-card-back, #topics, .card.Meta, .card#desc {  /*parziale da completare??*/
     background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
     border-image: linear-gradient(to bottom left, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30) 1 !important;
-    border: solid 4px;
-    outline: solid 2px #504738;
+    border: solid 0.2rem;
+    outline: solid 0.1rem #504738;
     border-radius: unset !important;
     box-shadow: none;
     font-family: UnifrakturCook;
@@ -76,7 +80,7 @@ span.flicker {
 }
 
 .row.list.overflow img {
-	max-width: 20px;
+	max-width: 1rem;
 	float:left;
 	margin: 0.3rem;
 }
@@ -89,7 +93,7 @@ span.metaTitle {
 	background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
 	border-radius: unset !important;
 	box-shadow: none;
-	border: solid 1px #999791 !important;
+	border: solid 0.05rem #999791 !important;
 	font-family: UnifrakturCook;
 	color: #504738;
 }
@@ -101,8 +105,8 @@ p {
   font-family: UnifrakturCook;
   font-variant-ligatures: historical-ligatures; /*probably not going to work*/
   margin-top: 0; /*-------------serve davvero specificarlo?-----------*/
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.4rem;
   /*background-image: linear-gradient(to bottom, black 1px, transparent 1px);
   background-size: auto 28px;
   padding-top: 8px;*/
@@ -115,8 +119,8 @@ p {
 
 h2, h3, h4 {
   font-family: UnifrakturCook;
-  font-size: 20px;
-  line-height: 28px; /*unitless values for this property are multiplied with font size*/
+  font-size: 1rem;
+  line-height: 1.4rem; /*unitless values for this property are multiplied with font size*/
   color: #A74640; 
   /*background-image: linear-gradient(to bottom, black 1px, transparent 1px);
   background-size: auto 28px;
@@ -129,34 +133,34 @@ h2, h3, h4 {
   font-family: UnifrakturCook;
   font-variant-ligatures: historical-ligatures; /*probably not going to work*/
   margin-top: 0; /*-------------serve davvero specificarlo?-----------*/
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.4rem;
   background-image: linear-gradient(to bottom, #999791 1px, transparent 1px);
-  background-size: auto 28px;
-  padding-top: 8px;
-  margin-bottom: -8px;
+  background-size: auto 1.4rem;
+  padding-top: 0.4rem;
+  margin-bottom: -0.4rem;
 }	
 
 .card.overflow h2, .card.overflow h3, .card.overflow h4 {
   font-family: UnifrakturCook;
-  font-size: 20px;
-  line-height: 28px; /*unitless values for this property are multiplied with font size*/
+  font-size: 1rem;
+  line-height: 1.4rem; /*unitless values for this property are multiplied with font size*/
   color: #A74640; 
   background-image: linear-gradient(to bottom, #999791 1px, transparent 1px);
-  background-size: auto 28px;
-  padding-top: 8px;
+  background-size: auto 1.4rem;
+  padding-top: 0.4rem;
   height: auto;
-  margin-bottom: -8px;
+  margin-bottom: -0.4rem;
 }
 
 .card.overflow h1 {
-  font-size: 30px;
+  font-size: 1.5rem;
   font-family: "Duc De Berry Regular";
   font-weight: bold;
   text-align: center;
   width: 60%;
   margin: auto;
-  line-height: 50px;
+  line-height: 2.5rem;
 }
   /* la line-height non la metto: è come se fosse il frontespizio del manoscritto*/
 
@@ -179,14 +183,14 @@ h2, h3, h4 {
 
 
 figure {
-    font-size: 10px;
-    line-height: 14px;
+    font-size: 0.5rem;
+    line-height: 0.7rem;
     font-family: 'UnifrakturCook';
     color: #A74640;
     width: 100%;
     margin: 0 0 1rem !important;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 img {
@@ -214,8 +218,8 @@ figcaption {
 
 #article-1, #article-2, #article-3 {
 	padding: 0 !important;
-	border-left: solid 1px !important;
-	border-right: solid 1px !important;
+	border-left: solid 0.05rem !important;
+	border-right: solid 0.05rem !important;
 	border-radius: 0rem;
 }
 
@@ -239,13 +243,13 @@ figcaption {
 
 .card.overflow p::before {
     background-image: url(https://dbrembilla.github.io/styleplayground/assets/pizan_style/miniatures/paraph_blue.png);
-    background-size: 28px 28px;
+    background-size: 1.4rem 1.4rem;
     display: inline-block;
-    width: 28px;
-    height: 28px;
+    width: 1.4rem;
+    height: 1.4rem;
     content: "";
     float: left;
-    margin-bottom: -10px;
+    margin-bottom: -0.5rem;
 }
 
 .card.overflow blockquote p::before {  /*per le citazioni blockquote: non voglio paraph*/
@@ -254,18 +258,18 @@ figcaption {
 }
 
 .card.overflow ul {
-    background-image: linear-gradient(to bottom, #999791 1px, transparent 1px);
-    padding-left: 28px;
-    background-size: auto 28px;
-    margin-bottom: -8px;
+    background-image: linear-gradient(to bottom, #999791 0.05rem, transparent 0.05rem);
+    padding-left: 1.4rem;
+    background-size: auto 1.4rem;
+    margin-bottom: -0.4rem;
 }
 
 .card.overflow li {
     list-style-type: disclosure-closed;
     font-family: UnifrakturCook;
-    line-height: 28px;
-    padding-top: 8px;
-    margin-bottom: -8px;
+    line-height: 1.4rem;
+    padding-top: 0.4rem;
+    margin-bottom: -0.4rem;
 }
 
 /* per spaziare [solo] la prima lettera di ogni p, come su Harley 4431; meglio non metterlo: poco coerente con la scelta della griglia
@@ -275,35 +279,35 @@ figcaption {
 */
 
 .card.overflow figure {
-    margin: 0 2px 18px !important;
-    padding-top: 20px !important;
+    margin: 0 0.1rem 0.9rem !important;
+    padding-top: 1rem !important;
     width: 100% !important;
     height: auto !important;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.6rem;
+    line-height: 0.7rem;
     font-family: 'UnifrakturCook';
     color: #A74640;
     width: 100%;
 }
 
 .card.overflow > img {
-	margin: 18px 2px !important;
+	margin: 0.9rem 0.1rem !important;
 	width: auto !important;
 }
 
 blockquote {
-    margin: 0 0 28px 0 !important;
-    padding: 28px 0 0 0;
+    margin: 0 0 1.4rem 0 !important;
+    padding: 1.4rem 0 0 0;
     font-style: italic;
     text-align: center;
 }
 
 .card.overflow > p:first-of-type::first-letter {
     font-family: 'Initials';
-    font-size: 100px;
+    font-size: 5rem;
     float: left;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
     background-color: inherit;
     font-weight: normal;
     background-image: linear-gradient(45deg, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30)!important;
