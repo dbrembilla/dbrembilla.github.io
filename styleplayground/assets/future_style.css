@@ -189,6 +189,7 @@ h4 {
 	font-family: Metropolis!important;
 	font-style: italic!important;
 	font-size: 1.618em!important; /*golden ratio*/
+	padding: 0.7em!Important;
 }
 .sign.title, a.disappear {
 	font-family: Metropolis!important;
