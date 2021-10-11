@@ -177,4 +177,7 @@ figcaption{
         column-count: 1;
     }
     
+    .metaTitle {
+        height: 7%;
+    }
 }
