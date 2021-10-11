@@ -55,7 +55,7 @@ body{
     font-family: 'Playfair Italic'!important;
 }
 
-.card.overflow {
+.card.overflow p {
     text-align: justify!important;
 }
 
