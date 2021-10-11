@@ -35,6 +35,10 @@ body, nav, footer {
   background-size: auto;
 }
 
+nav .container-fluid {
+    border: none !important;
+}
+
 .flip-card-front, .flip-card-back, #topics, .card.Meta, .card#desc {  /*parziale da completare??*/
     background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
     border-image: linear-gradient(to bottom left, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30) 1 !important;
