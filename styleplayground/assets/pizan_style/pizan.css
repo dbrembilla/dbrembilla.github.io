@@ -337,3 +337,11 @@ blockquote {
     background-image: none !important;
     content: none !important;
 }
+
+.btn-primary {
+	border-radius: 0 !important;
+	border: solid #504738 0.2rem !important;
+	margin: 0.1rem;
+	background-color: #EFE8D6 !important;
+	color: black !important;
+}
