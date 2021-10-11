@@ -70,7 +70,6 @@ h4, figcaption {
 }
 p {
 	font-family: JMHLegajo;
-	float: none;
 	text-align: justify;
 	margin-right: 0px;
 	margin-left: 0px;
@@ -110,7 +109,7 @@ img {
 			top: 40%;
 			width: 100%;
 			}
-			
+
 .flip-card-front {
 	background-color: #e3ceb9 !important;
 	border-left: black 1px solid!important;
