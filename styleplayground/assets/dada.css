@@ -91,6 +91,10 @@ h3{
 	font-size: 1.25em!important;
 }
 
+h4{
+	font-size: 1.1em!important;
+}
+
 #topicHeader h3{
 	text-decoration: underline;
 }
@@ -172,7 +176,7 @@ a.disappear{
     text-shadow: none!important;
 }
 
-a.disappear:hover, .dropbtn:hover{
+a.disappear:hover, .dropbtn:hover, .btn-secondary:hover{
 	text-decoration: underline white 9px;
 }
 .descTitle h2 {
@@ -188,6 +192,12 @@ a.disappear:hover, .dropbtn:hover{
     font-weight: bold!important;
 }
 
+.btn-secondary:hover, .btn-secondary::after{
+	
+    background-color: unset!important;
+    border-color: unset!important;
+	box-shadow: 0px;
+}
 
 .card#desc {
     
@@ -301,6 +311,7 @@ h3 {
 #download-button .sign, .btn.btn-primary {
 	font-family: 'Arvo';
 }
+
 
 div.card.Meta {
 	padding:1rem!important;
