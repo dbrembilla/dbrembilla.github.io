@@ -91,6 +91,10 @@ h3{
 	font-size: 1.25em!important;
 }
 
+#topicHeader h3{
+	text-decoration: underline;
+}
+
 p{
 	text-align: justify;
 	margin-bottom: 7rem!important;
