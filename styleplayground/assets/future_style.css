@@ -228,6 +228,9 @@ p, .navbar {
 	font-family: Assistant;
 	font-size: 20px;
 }
+a {
+	font-family: Assistant;
+}
 span {
 	padding-left: 0.2em;
 	padding-top: 0.2em;
