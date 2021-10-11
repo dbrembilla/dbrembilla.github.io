@@ -358,4 +358,7 @@ img{
 		background-color: #3c4663;
 		border: 0px;
 	}
+	.sign.title {
+		font-size: 1.25em!important;
+	}
 }
