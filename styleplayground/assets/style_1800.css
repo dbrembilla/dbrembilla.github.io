@@ -219,7 +219,7 @@ footer {
 
 }
 div.slot {
-	z-index: 0!important;
+	z-index: -1!important;
 }
 .documentation img{
 	 float:  none!important;
