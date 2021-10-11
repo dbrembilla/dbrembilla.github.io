@@ -103,7 +103,7 @@ img {
   background-position: center;
   filter: saturate(0%) sepia(100%) contrast(150%) saturate(150%);
 }
-#flip-card {
+#flip-card-front, #flip-card-back {
 			z-index: 1!important;
 			}
 
