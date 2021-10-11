@@ -114,7 +114,7 @@ function addTopic(topic){
 var column = `
             <div class="col$colwidth" id = "col-num$colnum">
                     <div class="card Meta">
-                        <span class="metaTitle">>
+                        <span class="metaTitle">
                                 <h3 class="cardTitle">Metaviewer</h3>
                                 
 
