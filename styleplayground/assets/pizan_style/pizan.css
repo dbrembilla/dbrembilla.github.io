@@ -75,6 +75,16 @@ span.flicker {
     color: #504738;
 }
 
+.row.list.overflow img {
+	max-width: 20px;
+	float:left;
+	margin: 0.3rem;
+}
+
+span.metaTitle {
+	text-align: center;
+}
+
 .card.overflow { 
 	background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
 	border-radius: unset !important;
