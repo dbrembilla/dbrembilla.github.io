@@ -319,5 +319,5 @@ blockquote {
 }
 
 #flip-card .flip-card-front { 
-	position: unset;  /*altrimenti non scrolla l'overflo2, non so perché*/
+	position: unset !important;  /*altrimenti non scrolla l'overflo2, non so perché*/
 }
