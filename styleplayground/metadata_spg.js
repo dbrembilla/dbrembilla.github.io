@@ -51,7 +51,6 @@ function changeStyle(ref){
                         </button>`
             switch ($('#default').attr('href')){
                 case "assets/future_style.css": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per eliminare elementi
-                console.log('changed from future'); 
             
                 future = false
                 $('#download-button').replaceWith(downloadButton)
@@ -67,16 +66,15 @@ function changeStyle(ref){
                 removeHover()
                 break
                 case 'assets/style_1800.css':
-                console.log('changed from 1800');
                 $('#download-button').replaceWith(downloadButton)
                 break
 
                 default:
-                console.log('set to default');
+                console.log('changed to default');
+                break
                             }
             switch (ref){
                 case "#future": //inserire qui tutti i casi se avete bisogno di eseguire funzioni js. Qui mettere per aggiungere elementi
-                console.log('changed to future'); 
                 alert('This webpage has been approved by the Nostalgia Communist Party of the World. 本网页已得到世界怀旧共产党的批准。 Эта веб-страница была одобрена Всемирной коммунистической партией ностальгии. このウェブページは、「懐かしの世界共産党」が承認したものです。')
                 $('#download-button').empty()
                 $('#download-button').replaceWith('<div id="download-button"><div id="class-show"></div></div>')
@@ -86,12 +84,11 @@ function changeStyle(ref){
                 future = true
                 break
                 case '#1800':
-                console.log('Change to 1800');
                 $('#download-button').empty()
                 $('#download-button').append('<h2 id="bologna-adv">Bologna Advertiser</h2>')
                 break
                 default:
-                console.log('set to default');
+                console.log('change to default');
                 break}
 
             $("#default").attr("href", target);
@@ -406,7 +403,6 @@ function sortDate(listid) {
     // Start by saying: no switching is done:
     switching = false;
     b = list.getElementsByTagName("LI");
-    console.log(b);
     // Loop through all list items:
     for (i = 0; i < (b.length - 1); i++) {
       // Start by saying there should be no switching:
