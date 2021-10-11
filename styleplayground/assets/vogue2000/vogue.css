@@ -50,11 +50,16 @@ body{
     font-family: 'Playfair'!important;
     font-size: 16px!important;
 }
-h2{
-    font-size: 2em!important;
+.card.overflow h2{
+    font-size: 1.5em!important;
+    font-family: 'Playfair Italic'!important;
 }
 h1, h2, h3{
     font-family: 'Playfair Bold Italic'!important;
+}
+
+#desc h2{
+    font-size: 2em!important;
 }
 .container-fluid{
     border-left: 0px!important;
