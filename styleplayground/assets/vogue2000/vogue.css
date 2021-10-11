@@ -136,7 +136,12 @@ a.disappear, .sign{
     padding-right: 4em;
 }
 
+.div.card.Meta{
+    border:0px;
+}
+
 #metaview-1 div ul {
+    border-bottom: 1px solid;
     column-rule: 1px solid;
     margin-top: 4%;
     margin-bottom: 7%;
