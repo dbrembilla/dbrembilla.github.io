@@ -101,7 +101,7 @@ a.disappear, .sign{
     text-align: justify!important;
 }
 
-.text p:first-of-type::first-letter{
+.text p:first-of-type::first-letter, .card.overflow p:first-of-type::first-letter{
     text-transform: capitalize!important;
     font-size:6em;
     vertical-align: -webkit-baseline-middle;
