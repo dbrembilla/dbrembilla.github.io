@@ -166,6 +166,12 @@ figcaption{
     font-size: 0.75em;
     width: 40%;
 }
+
+.btn-secondary:hover {
+    color: #e6335e!important;
+    background-color:unset!important; 
+    border-color: unset!important; 
+}
 @media (max-height: 650px) {
     a.disappear, .sign{
         font-size: 2em!important;
