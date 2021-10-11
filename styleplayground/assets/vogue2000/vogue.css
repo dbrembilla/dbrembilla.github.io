@@ -7,8 +7,58 @@
     font-family: 'Raleway';
     src: url("Raleway.ttf");
 }
+
+@font-face {
+    font-family: 'Playfair Black';
+    src: url("Playfair/Playfair-Black.ttf");
+}
+
+
+@font-face {
+    font-family: 'Playfair BlackItalic';
+    src: url("Playfair/Playfair-BlackItalic.ttf");
+}
+
+
+@font-face {
+    font-family: 'Playfair Bold';
+    src: url("Playfair/Playfair-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Playfair Bold Italic';
+    src: url("Playfair/Playfair-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: 'Playfair Italic';
+    src: url("Playfair/Playfair-Italic.ttf");
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url("Playfair/Playfair-Regular.ttf");
+}
+
+
+
+body{
+    font-family: 'Playfair'!important;
+    font-size: 16px!important;
+}
+
+h1, h2, h3{
+    font-family: 'Playfair-BoldItalic'!important;
+}
 .container-fluid{
     border-left: 0px!important;
+}
+
+a.disappear, .sign{
+    font-family:'Vogue'!important ;
+    color: black!important;
+    text-shadow: unset!important;
+    font-size: 2em!important;
 }
 
 #download-button .sign{
@@ -22,15 +72,15 @@
     border: 0px!important;
 }
 
-a.disappear, .sign{
-    font-family:'Vogue'!important ;
-    color: black!important;
-    text-shadow: unset!important;
-    font-size: 3em!important;
-}
-
 
 .fast-flicker, .flicker, a.disappear, .sign {
     animation: none!important;
+}
+
+#desc{
+    border: 0px!important;
+    color: black!important;
+    background: white!important;
+    box-shadow: unset!important;
 }
 
