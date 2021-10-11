@@ -36,21 +36,21 @@ body, nav, footer {
 }
 
 .flip-card-front, .flip-card-back, #topics, .card.Meta, .card#desc {  /*parziale da completare??*/
-	background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
-	border-image: linear-gradient(to bottom left, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30) 1 !important;
+    background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
+    border-image: linear-gradient(to bottom left, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30) 1 !important;
     border: solid 4px;
     outline: solid 2px #504738;
-	border-radius: unset !important;
-	box-shadow: none;
-	font-family: UnifrakturCook;
-	color: #504738;
+    border-radius: unset !important;
+    box-shadow: none;
+    font-family: UnifrakturCook;
+    color: #504738;
 }
 
 .card.overflow { 
 	background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
 	border-radius: unset !important;
 	box-shadow: none;
-	border: solid 1px !important;
+	border: solid 1px #999791 !important;
 	font-family: UnifrakturCook;
 	color: #504738;
 }
@@ -92,7 +92,7 @@ h2, h3, h4 {
   margin-top: 0; /*-------------serve davvero specificarlo?-----------*/
   font-size: 20px;
   line-height: 28px;
-  background-image: linear-gradient(to bottom, black 1px, transparent 1px);
+  background-image: linear-gradient(to bottom, #999791 1px, transparent 1px);
   background-size: auto 28px;
   padding-top: 8px;
   margin-bottom: -8px;
@@ -103,7 +103,7 @@ h2, h3, h4 {
   font-size: 20px;
   line-height: 28px; /*unitless values for this property are multiplied with font size*/
   color: #A74640; 
-  background-image: linear-gradient(to bottom, black 1px, transparent 1px);
+  background-image: linear-gradient(to bottom, #999791 1px, transparent 1px);
   background-size: auto 28px;
   padding-top: 8px;
   height: auto;
@@ -215,7 +215,7 @@ figcaption {
 }
 
 .card.overflow ul {
-    background-image: linear-gradient(to bottom, black 1px, transparent 1px);
+    background-image: linear-gradient(to bottom, #999791 1px, transparent 1px);
     padding-left: 28px;
     background-size: auto 28px;
     margin-bottom: -8px;
