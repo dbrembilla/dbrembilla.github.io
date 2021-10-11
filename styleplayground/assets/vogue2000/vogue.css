@@ -136,6 +136,18 @@ a.disappear, .sign{
     padding-right: 4em;
 }
 
+#metaview-1 div ul {
+    column-rule: 1px solid;
+    margin-top: 4%;
+    margin-bottom: 7%;
+}
+
+.col-12 #metaview-1 div ul {
+    column-count: 3;
+    column-rule: 1px solid;
+    margin-top: 4%;
+    margin-bottom: 7%;
+}
 @media (max-height: 650px) {
     a.disappear, .sign{
         font-size: 2em!important;
