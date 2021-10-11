@@ -116,7 +116,7 @@ a.disappear, .sign{
     background-color: white!important;
 }
 
-.flip-card-front h3, .flip-card-back h3, .card#topics h3{
+.flip-card-front h3, .flip-card-back h3, .card#topics h3, h3.cardTitle{
     font-family: 'Maven'!important;
     color: #e6335e!important;
     text-transform: uppercase!important;
