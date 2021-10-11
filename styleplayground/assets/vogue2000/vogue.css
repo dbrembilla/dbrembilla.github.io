@@ -163,10 +163,15 @@ figcaption{
     display: none;
 }
 
-img:hover figcaption{
-   display: block;
+img{
+    position: relative;
+}
 
-    }
+figcaption{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
 @media (max-height: 650px) {
     a.disappear, .sign{
         font-size: 2em!important;
