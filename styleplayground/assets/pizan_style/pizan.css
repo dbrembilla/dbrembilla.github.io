@@ -298,7 +298,7 @@ blockquote {
     text-align: center;
 }
 
-.card.overflow p:first-of-type::first-letter {
+.card.overflow > p:first-of-type::first-letter {
     font-family: 'Initials';
     font-size: 100px;
     float: left;
@@ -313,7 +313,7 @@ blockquote {
 
 }
 
-.card.overflow p:first-of-type::before {  /*per le citazioni blockquote: non voglio paraph*/
+.card.overflow > p:first-of-type::before {  /*per le citazioni blockquote: non voglio paraph*/
     background-image: none !important;
     content: none !important;
 }
