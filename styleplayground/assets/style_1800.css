@@ -104,6 +104,13 @@ img {
   background-position: center;
   filter: saturate(0%) sepia(100%) contrast(150%) saturate(150%);
 }
+#flip-card .flip-card-front p, #flip-card .flip-card-back p {
+			display: block;
+			position: absolute;
+			top: 40%;
+			width: 100%;
+			}
+			
 .flip-card-front {
 	background-color: #e3ceb9 !important;
 	border-left: black 1px solid!important;
