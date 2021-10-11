@@ -218,8 +218,8 @@ footer {
     color: black!important;
 
 }
-.slot {
-	z-index: 0!important;
+div.slot {
+	z-index: -1!important;
 }
 .documentation img{
 	 float:  none!important;
