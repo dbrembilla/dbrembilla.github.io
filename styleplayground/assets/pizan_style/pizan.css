@@ -40,6 +40,11 @@ body, nav, footer {
   font-family: UnifrakturCook !important;
 }
 
+.modal-content {
+	background-color: #EFE8D6 !important;
+	border-radius: 0rem !important;
+	border: solid #504738 0.05rem !important;
+}
 
 nav * {
 	font-family: UnifrakturCook !important;
