@@ -73,7 +73,7 @@ h1, h2, h3{
     border-left: 0px!important;
 }
 
-a:hover{
+a:hover, .btn-primary{
     color:#e6335e!important;
 }
 a.disappear, .sign{
@@ -83,17 +83,25 @@ a.disappear, .sign{
     font-size: 3em!important;
 }
 
-#download-button .sign, .reset{
+#download-button .sign, .reset, .btn-primary{
     font-family: 'Raleway'!important;
     font-size: 1em!important;
    
 }
 
-#download-button{
+#download-button, .btn-primary{
     background: unset!important;
     border: 0px!important;
 }
 
+#download-button:hover{
+    background-color: #e6335d54!important;
+    height: 3em;
+}
+
+.btn-primary:hover, .reset:hover {
+    text-decoration: underline;
+}
 
 .fast-flicker, .flicker, a.disappear, .sign {
     animation: none!important;
@@ -176,7 +184,7 @@ figcaption{
     border-color: unset!important; 
 }
 
-topic li a {
+.topic li a {
     border-bottom: 1px solid black;
 }
 
