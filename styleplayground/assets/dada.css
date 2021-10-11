@@ -350,3 +350,12 @@ img{
 		border: 0;
 	}
 }
+
+@media (max-width:840px) {
+	div.card.Meta {
+		padding: 1rem!important;
+		color: #eee2d0;
+		background-color: #3c4663;
+		border: 0px;
+	}
+}
