@@ -1588,8 +1588,8 @@
 						switch (this.value) {
 							case 'info':
 								for (i=1; i <= Object.values(columnListener)[0]; i++){
-										$("#metadata-list-"+i).append('<h4 class="' + 'article-' +i + '-info">Article Info</h4>')
-										fillInfo("article-"+i,"#metadata-list-"+i)
+										$("#metadata-list-"+i).append('<h4 class="' + 'article-' +i + '-info">Article Info</h4><ul id="metadata-list-' + i + '-quote"></ul>')
+										fillInfo("article-"+i,"#metadata-list-"+i+'-info')
 										
 									} 
 							break
