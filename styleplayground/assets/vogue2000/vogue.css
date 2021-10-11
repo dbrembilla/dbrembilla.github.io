@@ -3,11 +3,26 @@
     src: url("Vogue.ttf");
 }
 
+@font-face {
+    font-family: 'Raleway';
+    src: url("Raleway.ttf");
+}
 .container-fluid{
     border-left: 0px!important;
 }
 
-a.disappear{
+#download-button .sign{
+    font-family: 'Raleway'!important;
+    font-size: 1em!important;
+   
+}
+
+#download-button{
+    background: unset!important;
+    border: 0px!important;
+}
+
+a.disappear, .sign{
     font-family:'Vogue'!important ;
     color: black!important;
     text-shadow: unset!important;
@@ -15,7 +30,7 @@ a.disappear{
 }
 
 
-.fast-flicker, .flicker, a.disappear {
+.fast-flicker, .flicker, a.disappear, .sign {
     animation: none!important;
 }
 
