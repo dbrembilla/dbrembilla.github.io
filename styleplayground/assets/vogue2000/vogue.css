@@ -172,9 +172,9 @@ figcaption{
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 840px) {
     .col-12 #metaview-1 div ul, .col-12 #metaview-2 div ul, .col-12 #metaview-3 div ul {
-        column-count: 0;
+        column-count: 1;
     }
     
 }
