@@ -188,6 +188,18 @@ figcaption{
     border-bottom: 1px solid black;
 }
 
+.accordion-item{
+    border: 0px!important;
+}
+
+.accordion-button:not(.collapsed) {
+    color:#e6335e!important;
+    background-color: unset!important;
+    box-shadow: unset!important;
+}
+
+
+
 @media (max-height: 650px) {
     a.disappear, .sign{
         font-size: 2em!important;

@@ -33,10 +33,31 @@ body, nav, footer {
   background: url("body_background.jpg");
   background-repeat: no-repeat;
   background-size: auto;
+  font-family: UnifrakturCook !important;
 }
 
-nav .container-fluid {
-    border: none !important;
+
+nav * {
+	font-family: UnifrakturCook !important;
+	animation: none !important;
+	text-shadow: none !important;
+	border: none !important;
+	background: transparent !important;
+	color: #504738 !important;
+	font-weight: normal !important;
+}
+
+nav h3 {
+	color: #A74640 !important;
+}
+
+a.disappear {
+	font-family: "Duc de Berry Regular" !important;
+	font-weight: bolder !important;
+}
+
+span.flicker {
+    /* fai qualcosa!!!*/
 }
 
 #aside, section {
