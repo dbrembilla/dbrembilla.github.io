@@ -140,20 +140,21 @@ a.disappear, .sign{
     border:0px;
 }
 
-#metaview-1 div ul {
-    width: 30%;
-    border-bottom: 1px solid;
+#metaview-1 div ul, #metaview-2 div ul, #metaview-3 div ul   {
+    width: 50%;
+    border-top: 1px solid;
+    border-bottom: 2.5px solid;
     column-rule: 1px solid;
     margin-top: 4%;
-    margin-bottom: 7%;
+    padding: 3% 0;
 }
 
-.col-12 #metaview-1 div ul {
+.col-12 #metaview-1 div ul, .col-12 #metaview-2 div ul, .col-12 #metaview-3 div ul {
     width: 100%;
     column-count: 3;
 }
 
-.col-12 #metaview-1 div ul li {
+.col-12 #metaview-1 div ul li, .col-12 #metaview-2 div ul li, .col-12 #metaview-3 div ul li {
     padding: 0.4em;
 }
 @media (max-height: 650px) {
