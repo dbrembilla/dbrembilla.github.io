@@ -54,6 +54,11 @@ body{
     font-size: 1.5em!important;
     font-family: 'Playfair Italic'!important;
 }
+
+.card.overflow {
+    text-align: justify!important;
+}
+
 h1, h2, h3{
     font-family: 'Playfair Bold Italic'!important;
 }
