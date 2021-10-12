@@ -157,8 +157,8 @@ a.disappear, .sign{
     padding-right: 4em;
 }
 
-.card.Meta{
-    border:0px;
+div.card.Meta{
+    border:0px!important;
 }
 
 #metaview-1 div ul, #metaview-2 div ul, #metaview-3 div ul   {
