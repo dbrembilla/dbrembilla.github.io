@@ -255,7 +255,7 @@ a.disappear:hover, .dropbtn:hover, .btn-secondary:hover{
     border: double 15px;
 }
 
-.themes, #topics, .lens {
+.themes, #topics, a.btn, .form-check-label, .asideTitle h3, #topics .overflow button {
     font-family: 'WorkSans Medium'!important;
 	
 }
@@ -302,13 +302,13 @@ h3 {
 	border: 0px;
     background: unset;
 }
-#download-button:hover, .btn.btn-primary:hover{
+#download-button:hover, .lens button.btn:hover{
 	color: white;
-	background-color: #3c4663;
+	background-color: #3c4663!important;
 	border-radius:15px;
 }
 
-#download-button .sign, .btn.btn-primary {
+#download-button .sign, .lens button.btn {
 	font-family: 'Arvo'!important;
 }
 
