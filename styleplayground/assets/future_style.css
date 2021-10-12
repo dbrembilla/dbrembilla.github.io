@@ -179,7 +179,7 @@ h2 {
 	font-size: 2.71em; /*square root of 3*/
 }
 h3 {
-	font-family: Metropolis;
+	font-family: Metropolis!Important;
 	font-style: italic;
 	font-weight: bold;
 	font-size: 1.67em; /*proton mass*/
