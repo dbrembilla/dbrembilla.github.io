@@ -51,7 +51,7 @@ body{
     font-size: 16px!important;
 }
 
-.article-1 h1, .article-2 h1, .article-3 h1, .article-1 h2, .article-2 h2, .article-3 h2, .article-1 h3, .article-2 h3, .article-3 h3{
+h1, h2, h3{
     font-family: 'Playfair Bold Italic'!important;
 }
 
@@ -64,14 +64,9 @@ body{
     
     text-align: justify!important;
     margin-top: 4em;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
-
-
-#desc h2{
-    font-size: 2em!important;
-}
 .container-fluid{
     border-left: 0px!important;
 }
@@ -126,9 +121,9 @@ a.disappear, .sign{
     color: #e6335e!important;
 }
 
-.descTitle{
+.descTitle h2{
     text-transform: uppercase!important;
-    font-size: 2em;
+    font-size: 3em;
     font-family: 'Maven'!important;
     color: #e6335e!important;
     text-align: left;
@@ -185,6 +180,7 @@ a.disappear, .sign{
 }
 
 figcaption{
+    font-style: italic;
     font-family: 'Maven'!important;
     font-size: 0.75em;
     width: 40%;
@@ -193,6 +189,7 @@ figcaption{
 .col-4 .card.overflow figcaption{
     width: 100%;
 }
+
 
 button.btn:hover, a.disappear:hover, label.btn:hover {
     color: #e6335e!important;
