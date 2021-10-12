@@ -284,3 +284,6 @@ img {
 .btn.reset{
 	font-family: Assistant!important;
 }
+.flip-card-button-to-front, .flip-card-button-to-back {
+	margin-right: 10px;
+}
