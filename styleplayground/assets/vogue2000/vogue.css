@@ -61,7 +61,7 @@ body{
 }
 
 .card.overflow p {
-    line-height: 3em;
+    
     text-align: justify!important;
     margin-top: 4em;
     margin-bottom: 3rem;
@@ -188,6 +188,10 @@ figcaption{
     font-family: 'Maven'!important;
     font-size: 0.75em;
     width: 40%;
+}
+
+.col-4 .card.overflow figcaption{
+    width: 100%;
 }
 
 button.btn:hover, a.disappear:hover, label.btn:hover {
