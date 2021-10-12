@@ -264,7 +264,8 @@ img {
 	margin-right: -5px;
 	background-color: #dfe4ea!Important;
 }
-.sign {
+.sign, a.disappear {
+	color: #ff7f50!important;
 	  text-shadow: none!Important;
     animation: none!important;
   }
