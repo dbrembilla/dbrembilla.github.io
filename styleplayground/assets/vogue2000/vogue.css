@@ -216,11 +216,8 @@ div.card.Meta{
 
 #metaview-1 div ul, #metaview-2 div ul, #metaview-3 div ul   {
     width: 50%;
-    border-top: 1px solid;
-    border-bottom: 2.5px solid;
-    column-rule: 1px solid;
-    margin-top: 4%;
-    padding: 3% 0;
+    border-bottom: 2px solid;
+    padding: 1rem 0;
 }
 
 .col-12 #metaview-1 div ul, .col-12 #metaview-2 div ul, .col-12 #metaview-3 div ul {
@@ -233,7 +230,8 @@ div.card.Meta{
 }
 
 figcaption{
-    font-style: italic;
+    padding: 1em;
+    border: 1px solid;
     font-family: 'Maven'!important;
     font-size: 0.75em;
     width: 40%;
