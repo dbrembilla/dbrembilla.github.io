@@ -256,7 +256,7 @@
 	body{
 		overflow: hidden;
 		font-size: 20px; /*grandezza standard per schermi*/
-		font-family: 'Calculator';
+		font-family: 'SemiC';
 		height: 100vh;
 		width: 100vw;
 	}
@@ -324,6 +324,10 @@
 				font-size: 1.5em;
 				text-align: left;
 			}
+
+			h3, .btn, #download-button .sign, .form-check-label{
+				font-family: 'Calculator';
+			}
 			h1{
 				font-size: 2em;
 			}		
@@ -352,6 +356,10 @@
 				font-size: 1.5em;	
 			}
 
+			#download-button .sign:hover, a.disappear:hover, .sign.title.btn {
+				animation: shine 2s forwards, blink .5s infinite 
+			}
+
 			a.disappear, .sign.title{
 				font-family: Hometown;
 				font-weight: bold;
@@ -366,6 +374,7 @@
 				font-size:3em;
 			}
 
+			
 			/*immagini*/
 			.icon{
 				height: 15%;
@@ -424,7 +433,7 @@
 			}
 			
 			/*hovers*/
-			.themes li:hover,  #topics btn-secondary:hover{
+			.themes li:hover,  #topics btn-secondary:hover, .lens li .btn:hover, .reset:hover{
 			background-color: rgba(255, 255, 255, 0.3);
 			}
 

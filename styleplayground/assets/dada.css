@@ -256,12 +256,12 @@ a.disappear:hover, .dropbtn:hover, .btn-secondary:hover{
 }
 
 .themes, #topics, .lens {
-    font-family: 'Worksans Medium'!important;
+    font-family: 'WorkSans Medium'!important;
 	
 }
 
 .flip-card-front h3, .flip-card-back h3 {
-    font-family: 'Worksans Black'!important;
+    font-family: 'WorkSans Black'!important;
 	color: black;
 	border-bottom: 0px!important;
 }
@@ -309,7 +309,7 @@ h3 {
 }
 
 #download-button .sign, .btn.btn-primary {
-	font-family: 'Arvo';
+	font-family: 'Arvo'!important;
 }
 
 
