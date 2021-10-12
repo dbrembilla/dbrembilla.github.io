@@ -245,6 +245,13 @@
 		font-style: normal;
 	}
 
+	@font-face {
+		font-family: 'SemiC';
+		src:url('assets/SemiCoder/Semi-Coder-Regular.otf') ;
+	}
+
+	
+
 	/*funzionalità sito*/
 	body{
 		overflow: hidden;
@@ -404,6 +411,13 @@
 				text-align: left;
 		
 			}
+
+
+			.btn-secondary:hover {
+				color:  rgb(255, 123, 52);
+				background-color: unset!important;
+				border-color: unset!important;
+			}
 			
 			.accordion-body .btn-group{
 			    display: grid;
@@ -464,7 +478,7 @@
 			}
 				.themes, .lens{
 				
-					height: 70%;
+					height: 80%;
 				}
 			#topics{
 				padding: 0.5em;
@@ -720,7 +734,12 @@
 				.btn-secondary{
 					font-size: 1em;
 				}
+			
+				.themes, .lens{
+				
+					height: 70%;
 				}
+			}
 		
 		/*schermo laptop grande*/
 		@media (max-width: 1440px) {
