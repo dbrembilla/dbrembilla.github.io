@@ -242,7 +242,7 @@ header, h1, .person, .date, .institution, .event, .quote, .place {
 	color: #ff7f50!important;
 }
 figcaption {
-	font-family: Assistant;
+	font-family: Assistant!important;
 	font-weight: 200;
 	font-size: 0.618em; /*golden ratio*/
 }
@@ -280,4 +280,7 @@ img {
 }
 .d-flex {
 	float: left;
+}
+.btn.reset{
+	font-family: Assistant!important;
 }
