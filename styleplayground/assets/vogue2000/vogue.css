@@ -99,7 +99,7 @@ a.disappear, .sign{
     height: 3em;
 }
 
-.btn-primary:hover, .reset:hover {
+.btn-primary:hover, .reset:hover, button.btn:hover {
     text-decoration: underline;
 }
 
@@ -178,7 +178,7 @@ figcaption{
     width: 40%;
 }
 
-.btn-secondary:hover, a.disappear:hover, label.btn:hover {
+button.btn:hover, a.disappear:hover, label.btn:hover {
     color: #e6335e!important;
     background-color:unset!important; 
     border-color: unset!important; 
@@ -198,6 +198,9 @@ figcaption{
     box-shadow: unset!important;
 }
 
+.btn, .form-check-label {
+    font-family: 'Playfair'!important;
+}
 
 
 @media (max-height: 650px) {
