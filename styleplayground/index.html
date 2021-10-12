@@ -356,7 +356,7 @@
 			}
 
 			a.disappear{
-				font-size:2em;
+				font-size:3em;
 			}
 
 			/*immagini*/
@@ -697,10 +697,27 @@
 				background-color: #f1f1f1;
 				}
 
+			@media (max-height: 1100px) {
+				
+				a.disappear{
+					font-size: 2em;
+				}
+			}
+
+			@media (max-height: 768px){
+				a.disappear {
+					font-size: 1.5em;
+				}
+
+				nav .container-fluid{
+					padding:0.5%;
+				}
+
+				#download-button .sign {
+						font-size: 1em;
+					}
 		
-
-			
-
+				}
 		
 		/*schermo laptop grande*/
 		@media (max-width: 1440px) {
@@ -732,10 +749,7 @@
 			
 			@media (max-height: 768px) {
 
-				a.disappear{
-					font-size: 1.5em;;
-				}
-
+				
 				h3 {
 						font-size: 1.5em;
 						margin-bottom: 0;
@@ -745,6 +759,7 @@
 				.btn-secondary, .btn, .form-check-label {
 					font-size: 1em;
 				}
+				
 				
 			}
 			
@@ -790,7 +805,7 @@
 				font-size:1em;
 			}
 
-			.dropbtn{
+			.sign.title.btn{
 				font-size: 2em;	
 			}
 			#article-1 h1, #article-2 h1, #article-3 h1{
@@ -878,6 +893,13 @@
 			/*toglie modale topic che  in certi casi resta a perto ad 840px e rompe le palle*/
 			#topic .overflow .modal.fade.show{
 				display: none!important ;
+			}
+
+			@media (max-height:780px) {
+
+				.sign.title.btn{
+				font-size: 1.5em;	
+			}
 			}
 
 		}
