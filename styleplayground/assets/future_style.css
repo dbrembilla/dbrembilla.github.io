@@ -287,3 +287,6 @@ img {
 .flip-card-button-to-front, .flip-card-button-to-back {
 	margin-right: 10px;
 }
+p {
+	margin-left: 5px;
+}
