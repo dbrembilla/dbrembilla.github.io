@@ -45,6 +45,64 @@
     src: url("MavenPro-Medium.ttf");
 }
 
+/* highlight metadati*/
+
+.place.highlight{
+    background-color:#9832E6;
+}
+.date.highlight{
+    background-color: #E632D7;
+}	
+.person.highlight{
+    background-color: #E6323E;
+}	
+.event.highlight{
+    background-color: #E64632;
+}		
+.institution.highlight{
+    background-color: #E6A232;
+}	
+.quote.highlight{
+    background-color: #E6E032;
+}
+
+
+h4.article-1-place, h4.article-2-place, h4.article-3-place{
+    background-color: unset!important ;
+    border: dashed 1px #9832E6;
+}
+
+h4.article-1-date, h4.article-2-date, h4.article-3-date{
+    background-color: unset!important;
+    border: dashed 1px #E632D7;
+
+}
+
+h4.article-1-person, h4.article-2-person, h4.article-3-person{
+    background-color:  unset!important;
+    border: dashed 1px #E6323E;
+
+}
+
+h4.article-1-event, h4.article-2-event, h4.article-3-event{
+    background-color:  unset!important;
+    border: dashed 1px #E64632;
+
+}
+
+h4.article-1-institution, h4.article-2-institution, h4.article-3-institution{
+    background-color:  unset!important;
+    border: dashed 1px  #E6A232;
+
+}
+
+h4.list-quote{
+    background-color:  unset!important;
+    border: dashed 1px #E6E032;
+
+}
+
+
 
 body{
     font-family: 'Playfair'!important;
