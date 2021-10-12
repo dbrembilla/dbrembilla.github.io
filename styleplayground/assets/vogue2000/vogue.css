@@ -50,6 +50,11 @@ body{
     font-family: 'Playfair'!important;
     font-size: 16px!important;
 }
+
+.article-1 h1, .article-2 h1, .article-3 h1, .article-1 h2, .article-2 h2, .article-3 h2, .article-1 h3, .article-2 h3, .article-3 h3{
+    font-family: 'Playfair Bold Italic'!important;
+}
+
 .card.overflow h2{
     font-size: 1.5em!important;
     font-family: 'Playfair Italic'!important;
@@ -62,9 +67,7 @@ body{
     margin-bottom: 3rem;
 }
 
-h1, h2, h3{
-    font-family: 'Playfair Bold Italic'!important;
-}
+
 
 #desc h2{
     font-size: 2em!important;
@@ -117,10 +120,19 @@ a.disappear, .sign{
 
 .text p:first-of-type::first-letter, .card.overflow p:first-of-type::first-letter{
     text-transform: capitalize!important;
-    font-size:6em;
+    font-size:7em;
     vertical-align: -webkit-baseline-middle;
     font-family: 'Maven'!important;
     color: #e6335e!important;
+}
+
+.descTitle{
+    text-transform: uppercase!important;
+    font-size: 2em;
+    font-family: 'Maven'!important;
+    color: #e6335e!important;
+    text-align: left;
+
 }
 
 #flip-card{
