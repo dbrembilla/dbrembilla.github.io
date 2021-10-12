@@ -295,23 +295,23 @@
 		}
 		/* Highlight meta*/
 		
-		.person.highlight{
-			background-color: red;
-		}
 		.place.highlight{
-			background-color: green;
+			background-color:#F2C6DE;
+		}
+		.date.highlight{
+			background-color: #DBCDF0;
+		}	
+		.person.highlight{
+			background-color: #C6DEF1;
 		}	
 		.event.highlight{
-			background-color: blue;
-		}	
-		.institution.highlight{
-			background-color: purple;
+			background-color: #C9E4DE;
 		}		
-		.quote.highlight{
-			background-color: yellow;
+		.institution.highlight{
+			background-color: #FAEDCB;
 		}	
-		.date.highlight{
-			background-color: orange;
+		.quote.highlight{
+			background-color: #F7D9C4;
 		}
 	
 		/*validi per schermi più grandi di 1440px*/
@@ -374,7 +374,31 @@
 				font-size:3em;
 			}
 
+
+			h4.article-1-place, h4.article-2-place, h4.article-3-place{
+				background-color: #F2C6DE ;
+			}
+
+			h4.article-1-date, h4.article-2-date, h4.article-3-date{
+				background-color:#DBCDF0;
+			}
 			
+			h4.article-1-person, h4.article-2-person, h4.article-3-person{
+				background-color: #C6DEF1;
+			}
+
+			h4.article-1-event, h4.article-2-event, h4.article-3-event{
+				background-color: #C9E4DE;
+			}
+
+			h4.article-1-institution, h4.article-2-institution, h4.article-3-institution{
+				background-color: #FAEDCB;
+			}
+
+			h4.list-quote{
+				background-color: #F7D9C4;
+			}
+
 			/*immagini*/
 			.icon{
 				height: 15%;
@@ -533,8 +557,10 @@
 				/*articles cards*/
 					div.card.Meta{ /*metadata*/
 						height: 40%;
+    					border: 0px;
+						border-left: 18px solid #aac5c6;
 						padding: 0.25rem 1rem;
-						margin-bottom: 1rem;
+						margin-bottom: 2rem;
 					}
 					#article-1, #article-2, #article-3{
 						height: 57%;
@@ -1117,6 +1143,14 @@
 										<div class="accordion-body">
 											<ul>
 												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="info">
+													<label class="form-check-label" for="inlineCheckbox2">Info</label> <!-- da finire -->
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="section">
+													<label class="form-check-label" for="inlineCheckbox2">Section</label> <!-- da finire -->
+												</li>
+												<li class="form-check">
 													<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .place">
 													<label class="form-check-label" for="inlineCheckbox1" onchange="">Places</label>
 												</li>
@@ -1139,10 +1173,7 @@
 													<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .institution">
 													<label class="form-check-label" for="inlineCheckbox2">Institutions and Companies</label>
 												</li>
-												<li class="form-check">
-													<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="info">
-													<label class="form-check-label" for="inlineCheckbox2">Info</label> <!-- da finire -->
-												</li>
+												
 												<li class="form-check">
 													<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="quote">
 													<label class="form-check-label" for="inlineCheckbox2">Quote</label> <!-- da finire -->
@@ -1251,7 +1282,7 @@
 										trigger="loop-on-hover"
 										colors="primary:black,secondary:black"
 										stroke="30"
-										style="width:2em;height:2em">
+										style="width:3.5em;height:3.5em">
 									</lord-icon>
 								</button>
 							</div> 
@@ -1262,6 +1293,15 @@
 								
 								<div class="lens">
 									<ul>
+									</li>
+									<li class="form-check">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="info">
+										<label class="form-check-label" for="inlineCheckbox2">Info</label> <!-- da finire -->
+									</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="section">
+											<label class="form-check-label" for="inlineCheckbox2">Section</label> <!-- da finire -->
+										</li>
 										<li class="form-check">
 											<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=" .place">
 											<label class="form-check-label" for="inlineCheckbox1" onchange="">Places</label>
@@ -1284,18 +1324,9 @@
 										<li class="form-check">
 											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=" .institution">
 											<label class="form-check-label" for="inlineCheckbox2">Institutions and Companies</label>
-										</li>
-										<li class="form-check">
-											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="info">
-											<label class="form-check-label" for="inlineCheckbox2">Info</label> <!-- da finire -->
-										</li>
 										<li class="form-check">
 											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="quote">
 											<label class="form-check-label" for="inlineCheckbox2">Quote</label> <!-- da finire -->
-										</li>
-										<li class="form-check">
-											<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="section">
-											<label class="form-check-label" for="inlineCheckbox2">Section</label> <!-- da finire -->
 										</li>
 										<li>
 											<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#topicAnalysis">
@@ -1307,7 +1338,7 @@
 											</li>
 									</ul>
 								</div>
-								<button id="flip-card-btn-turn-to-front"><lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover" colors="primary:#121331,secondary:#1663c7" stroke="82" style="width:2em;height:2em"></lord-icon></button>
+								<button id="flip-card-btn-turn-to-front"><lord-icon src="https://cdn.lordicon.com/tyounuzx.json" trigger="hover" colors="primary:#121331,secondary:#1663c7" stroke="82" style="width:3.5em;height: 3.5em"></lord-icon></button>
 							</div>
 						</div>
 					</div>

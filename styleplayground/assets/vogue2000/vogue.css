@@ -45,6 +45,59 @@
     src: url("MavenPro-Medium.ttf");
 }
 
+/* highlight metadati*/
+
+.place.highlight{
+    background: color #9832e6 !important;;
+}
+.date.highlight{
+    background-color: #E632D7 !important;
+}	
+.person.highlight{
+    background-color: #E6323E !important;
+}	
+.event.highlight{
+    background-color: #E64632 !important;
+}		
+.institution.highlight{
+    background-color: #E6A232 !important;
+}	
+.quote.highlight{
+    background-color: #E6E032 !important;
+}
+
+
+h4.article-1-place, h4.article-2-place, h4.article-3-place{
+    background-color: unset!important ;
+}
+
+h4.article-1-date, h4.article-2-date, h4.article-3-date{
+    background-color: unset!important;
+
+}
+
+h4.article-1-person, h4.article-2-person, h4.article-3-person{
+    background-color:  unset!important;
+
+}
+
+h4.article-1-event, h4.article-2-event, h4.article-3-event{
+    background-color:  unset!important;
+
+}
+
+h4.article-1-institution, h4.article-2-institution, h4.article-3-institution{
+    background-color:  unset!important;
+
+}
+
+h4.list-quote{
+    background-color:  unset!important;
+    border: dashed 1px #E6E032;
+
+}
+
+
 
 body{
     font-family: 'Playfair'!important;
@@ -157,17 +210,14 @@ a.disappear, .sign{
     padding-right: 4em;
 }
 
-.card.Meta{
-    border:0px;
+div.card.Meta{
+    border:0px!important;
 }
 
 #metaview-1 div ul, #metaview-2 div ul, #metaview-3 div ul   {
     width: 50%;
-    border-top: 1px solid;
-    border-bottom: 2.5px solid;
-    column-rule: 1px solid;
-    margin-top: 4%;
-    padding: 3% 0;
+    border-bottom: 2px solid;
+    padding: 1rem 0;
 }
 
 .col-12 #metaview-1 div ul, .col-12 #metaview-2 div ul, .col-12 #metaview-3 div ul {
@@ -180,7 +230,8 @@ a.disappear, .sign{
 }
 
 figcaption{
-    font-style: italic;
+    padding: 1em;
+    border: 1px solid;
     font-family: 'Maven'!important;
     font-size: 0.75em;
     width: 40%;
