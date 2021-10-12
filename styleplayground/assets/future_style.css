@@ -228,7 +228,7 @@ p, .navbar {
 	font-family: Assistant;
 	font-size: 20px;
 }
-a, ul, li {
+a, ul, li, .form-check-label {
 	font-family: Assistant!important;
 }
 span {
