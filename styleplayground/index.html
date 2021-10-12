@@ -416,7 +416,7 @@
 
 			/*containers*/
 			nav, footer {
-				z-index: 1;
+				
 				background-color: white;
 				padding: 0 3%;
 				height:10%; 
@@ -671,6 +671,10 @@
 				display: none;
 				}
 
+			.dropdown-menu {
+				padding: 0px;
+			}
+
 			.dropdown-content {
 				width:auto;
 				display: none;
@@ -869,6 +873,11 @@
 			 
 			.col-12.metaTitle, .asideTitle {
 				height: 12%;
+			}
+
+			/*toglie modale topic che  in certi casi resta a perto ad 840px e rompe le palle*/
+			#topic .overflow .modal.fade.show{
+				display: none!important ;
 			}
 
 		}
@@ -1768,12 +1777,13 @@
 						
 							
 							
-					<!-- Start section with articles-->
+						<!-- Start section with articles-->
 					<div class="row" id="row-article">
 						<!--description-->
 						<div class="card" id="desc">
 							<div class="descTitle">
 								<h2>Brief description of the magazine</h2>
+								
 							</div>
 							<!--text-->
 							<div class="text overflow">
@@ -1793,7 +1803,7 @@
 									<i>We at The Washing Magazine wish you a pleasant read!</i>
 							</div>
 						</div>
-					</div>
+					</div>			
 							
 									
 							
@@ -1808,12 +1818,13 @@
 		$("section").append(`
 						
 				
-					<!-- Start section with articles-->
+				<!-- Start section with articles-->
 					<div class="row" id="row-article">
 						<!--description-->
 						<div class="card" id="desc">
 							<div class="descTitle">
 								<h2>Brief description of the magazine</h2>
+								
 							</div>
 							<!--text-->
 							<div class="text overflow">
@@ -1833,7 +1844,7 @@
 									<i>We at The Washing Magazine wish you a pleasant read!</i>
 							</div>
 						</div>
-					</div>
+					</div>			
 					
 				
 					`)}
