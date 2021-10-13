@@ -195,9 +195,13 @@ h4 {
 	font-family: Metropolis!important;
 	font-style: italic!important;
 }
-h5, .btn {
+h5 {
 	font-family: Metropolis!important;
 	font-size: 1.32em!important; /*Plastic number*/
+}
+.btn{
+	font-family: Metropolis!important;
+	font-size: 1.144em!important; /*Log of pi*/
 }
 .card#desc {
     box-shadow: none!important;
