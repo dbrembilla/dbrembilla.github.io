@@ -48,7 +48,7 @@
 /* highlight metadati*/
 
 .place.highlight{
-    background: color #9832e6 !important;;
+    background-color: #9832e6 !important;;
 }
 .date.highlight{
     background-color: #E632D7 !important;
@@ -93,7 +93,6 @@ h4.article-1-institution, h4.article-2-institution, h4.article-3-institution{
 
 h4.list-quote{
     background-color:  unset!important;
-    border: dashed 1px #E6E032;
 
 }
 
