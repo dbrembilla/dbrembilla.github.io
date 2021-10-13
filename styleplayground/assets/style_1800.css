@@ -67,6 +67,7 @@ h4, figcaption {
 	font-family: Essays1743!important;
 	font-style: italic;
 	font-size: 18px!important;
+	background-color: sepia!important;
 }
 h5, .btn, label {
 	font-family: Essays1743!important;
@@ -111,10 +112,6 @@ img {
   background-position: center;
   filter: saturate(0%) sepia(100%) contrast(150%) saturate(150%);
 }
-#flip-card-front, #flip-card-back {
-			z-index: 1!important;
-			}
-
 .flip-card-front {
 	background-color: #e3ceb9 !important;
 	border-left: black 1px solid!important;

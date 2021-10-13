@@ -35,7 +35,7 @@ html {
 
 body, nav, footer {
   background: url("body_background.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: auto;
   font-family: UnifrakturCook !important;
 }
@@ -87,6 +87,13 @@ span.flicker {
     font-family: UnifrakturCook;
     color: #504738;
 }
+
+.card.Meta {
+    border-left: none !important;
+    border: solid 0.1rem #A74640 !important;
+    outline: none;
+}
+
 
 .flip-card-back {
     background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
