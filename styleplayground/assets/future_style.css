@@ -199,7 +199,7 @@ h5 {
 	font-family: Metropolis!important;
 	font-size: 1.32em!important; /*Plastic number*/
 }
-.btn{
+.btn, label {
 	font-family: Metropolis!important;
 	font-size: 1.144em!important; /*Log of pi*/
 }
