@@ -255,7 +255,7 @@ a.disappear:hover, .dropbtn:hover, .btn-secondary:hover{
     border: double 15px;
 }
 
-.themes, #topics, a.btn, .form-check-label, .asideTitle h3, #topics .overflow button {
+.themes, #topics, a.btn, .form-check-label, .asideTitle h3, #topics .overflow button, h3.cardTitle{
     font-family: 'WorkSans Medium'!important;
 	
 }
@@ -317,7 +317,7 @@ div.card.Meta {
 	padding:1rem!important;
 	color:#eee2d0;
 	background-color: #3c4663;
-    border: 2rem double #eee2d0;
+    border: 2rem double #eee2d0!important;
 }
 
 .row.list.overflow div ul li a{
