@@ -185,7 +185,7 @@ h3 {
 	font-size: 1.67em; /*proton mass*/
 	color: #ff7f50;
 }
-h4, .btn {
+h4 {
 	font-family: Metropolis!important;
 	font-style: italic!important;
 	font-size: 1.618em!important; /*golden ratio*/
@@ -195,10 +195,9 @@ h4, .btn {
 	font-family: Metropolis!important;
 	font-style: italic!important;
 }
-h5 {
-	font-family: Metropolis;
-	font-style: italic;
-	font-size: 1.32em; /*Plastic number*/
+h5, .btn {
+	font-family: Metropolis!important;
+	font-size: 1.32em!important; /*Plastic number*/
 }
 .card#desc {
     box-shadow: none!important;
