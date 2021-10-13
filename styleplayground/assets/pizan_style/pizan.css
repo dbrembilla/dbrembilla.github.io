@@ -56,6 +56,10 @@ nav * {
 	font-weight: normal !important;
 }
 
+.btn-group :not(span) {
+	background-color: #EFE8D6 !important;
+}
+
 nav h3 {
 	color: #A74640 !important;
 }
