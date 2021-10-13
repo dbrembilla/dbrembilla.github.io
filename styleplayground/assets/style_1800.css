@@ -64,9 +64,14 @@ h2, h3, a.disappear {
 	font-size: 20px!important;
 }
 h4, figcaption {
-	font-family: Essays1743;
+	font-family: Essays1743!important;
 	font-style: italic;
-	font-family: 18px!important;
+	font-size: 18px!important;
+}
+h5, .btn, label {
+	font-family: Essays1743!important;
+	font-style: italic;
+	font-size: 17px!important;
 }
 p {
 	font-family: JMHLegajo;
