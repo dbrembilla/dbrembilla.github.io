@@ -88,6 +88,13 @@ span.flicker {
     color: #504738;
 }
 
+.card.Meta {
+    border-left: none !important;
+    border: solid 0.1rem #A74640 !important;
+    outline: none;
+}
+
+
 .flip-card-back {
     background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
     border-image: linear-gradient(to bottom left, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30) 1 !important;
