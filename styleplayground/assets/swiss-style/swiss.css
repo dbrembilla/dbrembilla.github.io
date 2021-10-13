@@ -1,25 +1,35 @@
 .card.overflow {
+  font-family: Helvetica;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); /*scritto così non ha senso! non è responsive! se stringi la proporzione rimane la stessa!*/
-  /*grid-template-rows: repeat(auto-fit, minmax(5%, auto-fit));*/
-  grid-gap: 20px;
-  /*grid-auto-flow: dense;  //fai attenzione, questo riempie gli spazi che vengono lasciati vuoti, ma scompone l'ordine degli elementi!!*/
+  grid-auto-columns: minmax(150px, auto);
+  /*grid-auto-rows: minmax(200px, auto);*/
+  grid-gap: 10px;
+  grid-auto-flow: row;
 }
 
 /* Extra-wide grid-posts */
 .card.overflow p {
-  grid-column: 1 / -1;
+  grid-column: span 2;
   font-family: "Times New Roman" !important;
   background-color: yellow;
 }
 
 
 .card.overflow h1 {
-  grid-column: span 2;
+  grid-column: span 1;
+  grid-column-start: 1;
+  margin-bottom: 4rem;
+}
 
+.card.overflow h2 {
+  grid-column-start: 2;
 }
 
 .card.overflow figure {
-  grid-column: 2 / 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
+.card.overflow h3, .card.overflow h4 {
+  grid-column-end: 3;
+}
