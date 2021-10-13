@@ -356,3 +356,15 @@ blockquote {
 	background-color: #EFE8D6 !important;
 	color: black !important;
 }
+
+#topics button {
+	color: #4A6A8D !important;
+	font-family: UnifrakturCook !important;
+}
+
+#topics h3 {
+    color: #A74640 !important;
+	font-family: UnifrakturCook !important;
+   
+}
+
