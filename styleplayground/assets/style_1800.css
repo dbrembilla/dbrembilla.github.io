@@ -81,7 +81,7 @@ p {
 	margin-bottom: 0px;
 	font-size: 16px!important;
 }
-ul, button, ol {
+ul, button, ol, li {
 	font-family: JMHLegajo!important;
 	margin-right: 5px!important;
 	margin-left: 5px!important;
