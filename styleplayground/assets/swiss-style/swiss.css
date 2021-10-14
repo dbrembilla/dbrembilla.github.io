@@ -23,12 +23,12 @@ nav {
   /*grid-auto-rows: minmax(200px, auto);*/
   grid-gap: 10px;
   grid-auto-flow: row;
+  background-color: #f3f3eb;
 }
 
 /* Extra-wide grid-posts */
 .card.overflow p {
   grid-column: span 2;
-  background-color: yellow;
   font-family: "Roboto", Helvetica, sans-serif;
   font-weight: 300;
   margin-bottom: 2.5rem;
@@ -222,3 +222,5 @@ body * {
 .row.list.overflow {
 	font-size: 1rem;
 }
+
+
