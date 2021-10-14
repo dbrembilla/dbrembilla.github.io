@@ -78,6 +78,64 @@ body {
 }
 
 
+/* highlight metadati*/
+
+.place.highlight{
+    background-color: #250902 !important;;
+}
+.date.highlight{
+    background-color: #38040E !important;
+}	
+.person.highlight{
+    background-color: #640D14 !important;
+}	
+.event.highlight{
+    background-color: #800E13 !important;
+}		
+.institution.highlight{
+    background-color: #AD2831 !important;
+}	
+.quote.highlight{
+    background-color: #CC7A7F !important;
+}
+
+
+h4.article-1-place, h4.article-2-place, h4.article-3-place{
+    background-color: #250902 !important;;
+    border-radius: 1em !important;
+}
+
+h4.article-1-date, h4.article-2-date, h4.article-3-date{
+	background-color: #38040E !important;
+    border-radius: 1em !important;
+
+}
+
+h4.article-1-person, h4.article-2-person, h4.article-3-person{
+	background-color: #640D14 !important;
+    border-radius: 1em !important;
+
+}
+
+h4.article-1-event, h4.article-2-event, h4.article-3-event{
+	background-color: #800E13 !important;
+    border-radius: 1em !important;
+
+}
+
+h4.article-1-institution, h4.article-2-institution, h4.article-3-institution{
+	background-color: #AD2831 !important;
+    border-radius: 1em !important;
+
+}
+
+h4.list-quote{
+	background-color: #CC7A7F !important;
+    border-radius: 1em !important;
+
+}
+
+
 h1 {
     font-size: 1.75em!important;
 	font-family: 'Outbox';
