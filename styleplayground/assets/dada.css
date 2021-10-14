@@ -398,14 +398,21 @@ div.card.Meta {
 #article-1 p:nth-of-type(odd), #article-2 p:nth-of-type(odd), #article-3 p:nth-of-type(odd) {
     transform: rotate(21deg);
 	background-color: white;
+	z-index: -1;
+
 }
 
 #article-1 p:nth-of-type(even), #article-2 p:nth-of-type(even), #article-3 p:nth-of-type(even) {
     transform: rotate(
 -62deg);
     font-size: .7em!important;
-	z-index: 3;
-	color: #3c466391!important;
+	color: #3c4663!important;
+}
+
+h4[id^=section] {
+    transform: rotate(
+22deg);
+    color: #81433d;
 }
 
 a.btn, .form-check-label {
