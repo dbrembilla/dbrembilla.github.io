@@ -231,3 +231,21 @@ body * {
 
 
 
+.modal-content, .modal-content h5, .modal-content p, .modal-content a {
+	background-color: #e6c700 !important;
+	font-family: "Space Grotesk", sans-serif !important;
+}
+
+.offcanvas * {	
+    background-color: #e6c700 !important;
+	font-family: "Space Grotesk", sans-serif !important;
+}
+
+
+.accordion-body p {
+	background-color: transparent !important;
+}
+
+.accordion-body, .accordion-button, .accordion-button.collapsed {
+	background-color: #008cbc;
+}
