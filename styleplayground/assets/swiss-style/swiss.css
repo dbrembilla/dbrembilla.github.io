@@ -17,8 +17,10 @@
 /* Extra-wide grid-posts */
 .card.overflow p {
   grid-column: span 2;
-  font-family: "Times New Roman" !important;
   background-color: yellow;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
 }
 
 
@@ -34,6 +36,8 @@
 
 .card.overflow h2 {
   grid-column-start: 2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
 }
 
 .card.overflow figure {
@@ -43,6 +47,9 @@
 
 .card.overflow h3, .card.overflow h4 {
   grid-column-end: 3;
+  font-family: "Sarabun", sans-serif;
+  font-weight: 800;
+  text-transform: lowercase;
 }
 
 #row-article {
@@ -54,4 +61,10 @@
   font-family: "Sarabun", sans-serif;
   font-style: normal;
   font-weight: 100; 
+}
+
+.card.overflow > a {
+  text-transform: lowercase;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600
 }
