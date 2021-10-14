@@ -387,3 +387,22 @@ blockquote {
 .flip-card-3D-wrapper h3 {
     color: #A74640 !important;
 }
+
+body * {
+	box-shadow: none !important;
+}
+
+#desc {
+	background-color: #151515 !important;
+	background-image: none !important;
+    letter-spacing: normal !important;
+    font-family: "Sarabun", sans-serif;
+    font-weight: 100;
+    color: #e4e6dd !important;
+}
+
+#desc h2 {
+	font-family: "Anton", sans-serif;
+	font-size: 2.5rem;
+}
+
