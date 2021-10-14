@@ -99,22 +99,32 @@ nav {
   letter-spacing: 0.01rem;
 }
 
-nav * {
-	font-family: UnifrakturCook !important;
+nav *, footer {
+	font-family: "Sarabun", "Helvetica", sans-serif !important;
 	animation: none !important;
 	text-shadow: none !important;
 	border: none !important;
 	background: transparent !important;
-	color: #e6c700 !important;
+	color: #f3f3eb !important;
 	font-weight: normal !important;
 }
 
-.btn-group :not(span) {
-	background-color: #EFE8D6 !important;
+div.sign {
+	color: #151515 !important;
 }
 
+nav a.disappear, nav span {
+	color: #151515 !important;
+	font-family: "Anton", sans-serif !important;
+}
+
+.btn-group :not(span) {
+	background-color: #f3f3eb !important;
+}
+
+
 nav h3 {
-	color: #fbfbfb !important;
+	color: #f3f3eb !important;
 }
 
 #aside, section {
@@ -138,7 +148,7 @@ body * {
 }
 
 #desc {
-	background-color: #e4e6dd !important;
+	background-color: #f3f3eb !important;
 	background-image: none !important;
     letter-spacing: normal !important;
     font-family: "Sarabun", sans-serif;
@@ -154,7 +164,7 @@ body * {
 
 
 .flip-card-back, .flip-card-front {
-	background-color: #e4e6dd !important;
+	background-color: #f3f3eb !important;
 
 }
 
@@ -179,7 +189,7 @@ body * {
 }
 
 #topics.card {
-	background-color: #e4e6dd
+	background-color: #f3f3eb
 }
 
 .flip-card-front li a, .flip-card-back .btn, .flip-card-front button, .form-check-label  {
@@ -190,4 +200,25 @@ body * {
 	color: #151515 !important;
 	font-family: "Space Grotesk";
 	font-weight: 100;
+}
+
+.card.Meta {
+    border-left: none !important;
+    outline: none;
+    background-color: #f3f3eb;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100
+}
+
+.metaTitle h3 {
+	margin-bottom: 0.7rem !important;
+	font-family: "Space Grotesk", sans-serif !important;
+}
+
+.row.list.overflow h4 {
+	background-color: #e6c700;
+}
+
+.row.list.overflow {
+	font-size: 1rem;
 }
