@@ -234,3 +234,6 @@ div.slot {
 	position: sticky!important;
 	bottom: 20vh!important;
 }
+.modal-header {
+	border-bottom: 1px solid black!important;
+}
