@@ -168,7 +168,7 @@ a.btn{
 .documentation{
 	font-family: Assistant;
 }
-.btn-secondary, #topics {
+.btn-secondary, #topics, #topics h3 {
     color: black!important;
 }
 h2 {
@@ -251,9 +251,6 @@ figcaption {
 	font-family: Assistant!important;
 	font-weight: 200;
 	font-size: 0.618em; /*golden ratio*/
-}
-#topics h3 {
-	color: #dfe4ea!Important;
 }
 #desc {
 	background: #ff7f50!important;
