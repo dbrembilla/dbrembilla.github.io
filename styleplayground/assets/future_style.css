@@ -146,7 +146,7 @@ footer {
 }
 .btn-secondary, #topics {
     color: #747d8c!important;
-    background-color: #ff6348!important;
+    background-color: rgb(151,207,202)!important;
 }
 .themes, #topics {
     font-family: 'Assistant'!important;
