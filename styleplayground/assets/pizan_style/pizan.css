@@ -374,3 +374,18 @@ blockquote {
 .metaTitle h3 {
     font-family: UnifrakturCook !important;
 }
+
+.modal-content *, .flip-card-3D-wrapper * {
+	font-family: UnifrakturCook !important;
+}
+
+
+.flip-card-3D-wrapper * {
+    color: #504738 !important;
+}
+
+.flip-card-3D-wrapper h3 {
+    color: #A74640 !important;
+}
+
+

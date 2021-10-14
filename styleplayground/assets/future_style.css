@@ -176,13 +176,13 @@ h2 {
 	font-style: italic;
 	text-align: center!important;
 	font-weight: 900;
-	font-size: 2.71em; /*square root of 3*/
+	font-size: 1.73em!important; /*square root of 3*/
 }
 h3 {
 	font-family: Metropolis!Important;
 	font-style: italic;
 	font-weight: bold;
-	font-size: 1.67em; /*proton mass*/
+	font-size: 1.67em!important; /*proton mass*/
 	color: #ff7f50;
 }
 h4 {
