@@ -1664,7 +1664,36 @@
 										</button>
 										</h2>
 										<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-										<div class="accordion-body">Stay tuned to see some changes</div>
+										<div class="accordion-body"><p>After World War II, designers in Switzerland and Germany codified Modernist graphic design into a cohesive movement called Swiss Design, or the International Typographic Style. Embracing some of the principles of previous artistic and graphic movement , such as Russian Constructivism and German Bauhaus, represents a very well received attempt at emphasizing cleanness, readability, and objectivity. Since its fast spread in the late 1950s, it has kept being one of the most influential trends in graphic design, including numerous famous <a href="https://commons.wikimedia.org/wiki/Category:International_Typographic_Style"">earlier<a> and <a href="https://theultralinx.com/2014/09/20-brilliant-examples-swiss-style-design/">later</a> contributions.</p>
+											<p>Distinctive features of the ITC are:
+											<ul style="list-style: circle;">
+											  <li>clean lines, balance amongst forms and readability;</li>
+											  <li>a general minimalism, expressed through the use of large portions of whitespace and the rejection of ornaments: "non-semantic" decorations are often restricted to simple geometrical shapes;</li>
+											  <li>the use of a mathematical grid, thought to be a legible and harmonious means for structuring information, resulting in an asymmetrical layout;</li>
+											  <li>flush left, ragged right text;</li>
+											  <li>the use of sans-serif typefaces, such as Akzidenz-Grotesk (later Helvetica);</li>
+											  <li>the tendency to highlight contrast in color, shape, weight and size, in a semantically functional way;
+											  <li>a preference of black and white and/or satured colors over pastel ones.</ul></p>
+											<figure>
+											  <img src="assets/swiss-style/swiss-contrast.jpg">
+											  <figcaption>An example of the use of contrast, whitespace, grid and sans-serif typeface in a poster by Zurich based Emil Ruder (1914-1970). </figcaption>
+											</figure>
+
+											<figure>
+											  <img src="assets/swiss-style/swiss-stadttheater-brockmann-poster.png">
+											  <figcaption>Another work I used as a reference for the CSS implementation:the poster for the 1959 theatre season of Zurich Stadttheater by swiss designer Josef Müller-Brockmann (1914-1996). </figcaption>
+											</figure>
+
+											<p>I tried to implement in a CSS stylesheet the principles and features listed above.</p>
+											<p>For the layout of the articles, I used CSS grids and created an implicit 2 columns grid. This is a compromise between the need to use a proper grid with more columns and rows (which would have been more reference-compliant and would have allowed to make the asymmetry more visible) and the need to mantain legibility on smaller screen. While certain relative values in the CSS grid allow for responsiveness on different devices - therefore making it theoretically possible to create a grid that would switch from, say, 5 columns (for wide screens) to a single column (for small screens). The main problem, though, was to develop a grid that would adapt the number of its columns to the width of the container (not the device), since by requirement it had to be possible to display three articles one juxtapposed to the other, therefore reducing any article up to 1/3 of its initial width.</p>
+											<p>The fontfaces I chose are naturally sans-serif fonts: Helvetica, Roboto (also in its monospaced variant), Space Grotesk, Sarabun and Anton. I tried to give the idea of contrast by putting close to each other text elements styled with visibly different widths, weights and sizes.</p>
+											<p>The colors I used are opponent colors, black and white. I draw inspiration from Fabian Burghardt's Swiss style <a href="https://web.archive.org/web/20151024000243/http://swisscolors.net/">palette</a></p>.
+
+											<figure>
+											  <img src="assets/swiss-style/swiss-neue-grafik.jpg">
+											  <figcaption>Another item I took for reference: pictures of Neue Grafik, the graphic design journal founded in 1958 and aimed at disseminating the tenets of the International Typographic Style. It was published from 1958 to 1965.</figcaption>
+											</figure>
+										</div>
 										</div>
 										
 									</div>
