@@ -206,9 +206,11 @@ h5, select, table {
 }
 .card#desc {
     box-shadow: none!important;
+
 }
 #desc h2 {
 	color: black!Important;
+
 }
 .card {
 	background-color: #dfe4ea!Important;
@@ -255,6 +257,7 @@ figcaption {
 }
 #desc {
 	background: #ff7f50!important;
+	font-family: Metropolis!important;
 }
 img {
   margin-left: auto;
