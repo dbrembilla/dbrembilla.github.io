@@ -196,6 +196,9 @@ header .sign {
 #metaview-1, #metaview-2, #metaview-3{
 	width: 80%;
 }
+.text{
+	font-family: Essays1743!important;
+}
 .sign, a.disappear {
 	color: black!important;
 	text-shadow: none!important;
