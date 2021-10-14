@@ -119,8 +119,9 @@ nav a.disappear, nav span {
 	font-family: "Anton", sans-serif !important;
 }
 
-.btn-group :not(span) {
-	background-color: #f3f3eb !important;
+.accordion-item, .accordion-body, .show  {
+    	background-color: #008cbc !important;
+    	color: #f3f3eb !important;
 }
 
 
@@ -148,7 +149,6 @@ body *:not(.flip-card-back) {  /*fondamentale, altrimenti non scrolla la card, b
 
 body * {
 	box-shadow: none !important;
-
 }
 
 #desc {
@@ -248,4 +248,13 @@ body * {
 
 .accordion-body, .accordion-button, .accordion-button.collapsed {
 	background-color: #008cbc;
+}
+
+.form-check.input {
+	border: solid 1px #151515 !important;
+}
+
+#dropdownMenuClickableInside, #dropdownMenuClickableInside span  {
+	color: #f3f3eb !important;
+	font-family: "Anton", sans-serif !important;
 }
