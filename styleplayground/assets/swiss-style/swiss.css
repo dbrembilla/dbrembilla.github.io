@@ -1,25 +1,129 @@
+/* p font size set to 16px*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  background-color: #db2f27 !important;
+}
+
+nav {
+  background-color: #db2f27 !important;
+
+}
+
 .card.overflow {
+  font-family: Helvetica;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); /*scritto così non ha senso! non è responsive! se stringi la proporzione rimane la stessa!*/
-  /*grid-template-rows: repeat(auto-fit, minmax(5%, auto-fit));*/
-  grid-gap: 20px;
-  /*grid-auto-flow: dense;  //fai attenzione, questo riempie gli spazi che vengono lasciati vuoti, ma scompone l'ordine degli elementi!!*/
+  grid-auto-columns: minmax(150px, auto);
+  /*grid-auto-rows: minmax(200px, auto);*/
+  grid-gap: 10px;
+  grid-auto-flow: row;
 }
 
 /* Extra-wide grid-posts */
 .card.overflow p {
-  grid-column: 1 / -1;
-  font-family: "Times New Roman" !important;
+  grid-column: span 2;
   background-color: yellow;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
 }
 
 
 .card.overflow h1 {
-  grid-column: span 2;
+  grid-column: span 1;
+  grid-column-start: 1;
+  margin-bottom: 4rem;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 900;
+  line-height: 1.5;
+  font-size: 3.5rem;
+}
 
+.card.overflow h2 {
+  grid-column-start: 2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
 }
 
 .card.overflow figure {
-  grid-column: 2 / 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.card.overflow h3, .card.overflow h4 {
+  grid-column-end: 3;
+  font-family: "Sarabun", sans-serif;
+  font-weight: 800;
+  text-transform: lowercase;
+}
+
+#row-article {
+  padding: 0 1% !important;
+}
+
+.card.overflow figure {
+  font-size: 0.75rem!important;
+  font-family: "Sarabun", sans-serif;
+  font-style: normal;
+  font-weight: 100; 
+}
+
+.card.overflow > a {
+  text-transform: lowercase;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600
+}
+
+.card.overflow li {
+    list-style-type: circle;
+    font-family: "Sarabun", sans-serif;
+    text-transform: lowercase;
+    font-weight: 100;
+}
+
+.card.overflow ul {
+  padding-left: 1rem;
+}
+
+.card.overflow blockquote p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: "Sarabun";
+  letter-spacing: 0.01rem;
+}
+
+nav * {
+	font-family: UnifrakturCook !important;
+	animation: none !important;
+	text-shadow: none !important;
+	border: none !important;
+	background: transparent !important;
+	color: #e6c700 !important;
+	font-weight: normal !important;
+}
+
+.btn-group :not(span) {
+	background-color: #EFE8D6 !important;
+}
+
+nav h3 {
+	color: #fbfbfb !important;
+}
+
+#aside, section {
+    border-bottom: none !important;
+}
+
+footer {
+  background-color: #db2f27 !important;
+}
+
+body *:not(.flip-card-back) {  /*fondamentale, altrimenti non scrolla la card, boh*/
+  border-radius: 0 !important;
 }
 

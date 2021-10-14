@@ -707,6 +707,10 @@
     			position: absolute;
 				top: 1rem;
 			}
+
+			.documentation ul{
+				list-style: circle;
+			}
 				/*links modali titoli topics*/
 			.topic li a{
 				padding: .5rem;
@@ -761,7 +765,7 @@
 			.dropdown-content a:hover {
 				background-color: #f1f1f1;
 				}
-
+			
 			@media (max-height: 1100px) {
 				
 				a.disappear{
@@ -1556,102 +1560,123 @@
 				<div class="modal-content">
 					<div class="row">
 						<div class="col-3">
-						  <p>
-						    Index</p>
+						  
+						  <h2>Index</h2>
 						  <ul>
 						    <li><a href="#concept">Concept</a></li>
 							<li><a href="#LLLL">LLLL</a></li>
 							<li><a href="#meta">Metadata</a></li>
 							<li><a href="#themes">Themes</a></li>
-						    <li><a href="">Pizan</a></li>
-						    <li><a href=""></a></li>
-						    <li><a href=""></a></li>
-							<li><a href="#american-newspapers">American Newspapers</a></li>
-							<li><a href="dada-desc">Dada</a></li>
-							<li><a href=""></a></li>
-							<li><a href="#future-expl">Nostalgia Hypnosis</a></li>
+						    
 						  </ul>
 						</div>
 						
 						<div class="col-7 documentation overflow" style="font-size: 18px!important;">
-							<p>
-								<h1>Documentation</h1>
-								<h2  id='concept'>Concept</h2>
-									
-									<p>The main inspiration for this Magazine comes from <em>laundry-lounges</em>, i.e, places in which people can grab a coffee, work, 
-									study or have an interesting reading while waiting for their laudry to be clean and ready.</p>
-									<figure>
-										<img src="assets/coffee-laundry.jpeg" alt="coffee-laundry">
-									</figure>
-									<p>
-									We choose this kind of place as our starting concept, mainly for two reasons: 
-									<ol>
-										<li> the idea of a place in which people, clothes and why not?! also data and information 
-									mix up creating everytime something new and original</li>
-										<li> since clothes have been washed since the birth of our civilization (or at least we hope so) it is very easy to costruct a fictional History of our magazine, in order to contextualize the various historically accurate stylesheets used in the Lens</li>
-									</ol>
-									
-									Finally the laundry-lounge is metaphore of how different issues can be	held together, mixed, compared... 
-									In our fictional history, these would held knowledge about the world and represent an archive for the world's knowledge.</p>
-									
-									<h2  id='LLLL'>LLLL</h2>
-									This project follows the LLLL (Leisurely Luscious Literary Lenses) framework.<br>
-									We want to deploy literary and linguistic tools that allow for an interesting exploration and comparison of articles of similar topics.</span></p>
-									<ul>
-										<li>Lens: Side by side comparison of diggerent articles on the same topics. These are repeatble, parametrised and allow for an interesting metadata analysis.</li>
-										<li>Literary: Analysis of different articles. Readers can have, at a glance, the general information used in the articles thanks to metadata comparison, to the summary functionality and to the Topic Modelling functionality, which would allow to locate the different information clusters inside the articles.</li>
-										<li>Luscious: This page allows for an enriching experience. The metadata is shown in a simple format, connect to the location (the articles scrolls dynamically to the place selected) and highlight the similar ones. One can compare up to 3 articles at the same time, both from a computer and from smaller screens. Metadata are generated dynamically -making the addition of new issues easier and the exploration more pleasant.</li>
-										<li>Leisure: When starting the project, we thought: in which kind of situation our magazine would be read? A requirement to enjoy a product like ours is the availability of time to read, explore, understand and compare not just the articles, but the data mined from them. From this we chose a coffee-house-like situation. Another possible concept was revolving around the human eye and the experience of looking around. We combined these ideas and thought: what about watching something that rotates over itself, like the inside of a washing machine?</li>
-									</ul>
-									<p>
-									About the issues, we decided to go with topics that would be talked about in opinion circles and magazines. Thus, we opted for three topics that have polarised the opinions in the public: </p>
-									<ol>
-										<li>Working from Home, its effects on our lives and its sustainability;</li>
-										<li>Space Tourism, ethics related to it and how it could change lives today;</li>
-										<li>Language Inclusivity, how binarism affected our perception of language and how can evolve.</li>
-									</ol>
-									<h2  id='meta'>Metadata</h2>
-									<p>For these issues, we opted for metadata that could highlight the differences between their topics, like the people involved, the institutions, dates and so on and so forth. While the articles are manually annotated, the analysis of metadata is dynamic. Information about the topics and which articles are there is kept in a JSON file which is used to link the articles to the page. All metadata use HTML classes, which are used to give unique ID to all instances which are exploited in the href of the numbers. When possible, metadata are linked to respective Wikipedia articles. It is also possible to sort the metadata in alphabetical order and also in order of date for the Date data.</p>
-									<h2  id='themes'>Themes</h2>
-									<div class="accordion accordion-flush" id="accordionFlushExample">
-										<div class="accordion-item">
-										  	<h2 class="accordion-header" id="flush-headingOne">
-											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-												Christine de Pizan
-											</button>
-										  	</h2>
-											<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-											<div class="accordion-body">Stay tuned to see some changes</div>
-											</div>
+						
+							<h1>Documentation</h1>
+							<h2  id='concept'>Concept</h2>
+								
+								<p>The main inspiration for this Magazine comes from <em>laundry-lounges</em>, i.e, places in which people can grab a coffee, work, 
+								study or have an interesting reading while waiting for their laudry to be clean and ready.</p>
+								<figure>
+									<img src="assets/coffee-laundry.jpeg" alt="coffee-laundry">
+								</figure>
+								<p>
+								We choose this kind of place as our starting concept, mainly for two reasons: 
+								<ol>
+									<li> the idea of a place in which people, clothes and why not?! also data and information 
+								mix up creating everytime something new and original</li>
+									<li>  clothes have been washed since the birth of our civilization (or at least we hope so) it is very easy to costruct a fictional History of our magazine, in order to contextualize the various historically accurate stylesheets used in the Lens</li>
+								</ol>
+								
+								Finally the laundry-lounge is metaphore of how different issues can be	held together, mixed, compared... 
+								In our fictional history, these would held knowledge about the world and represent an archive for the world's knowledge.</p>
+								
+								<h2  id='LLLL'>LLLL</h2>
+								This project follows the LLLL (Leisurely Luscious Literary Lenses) framework.<br>
+								We want to deploy literary and linguistic tools that allow for an interesting exploration and comparison of articles of similar topics.</span></p>
+								<ul>
+									<li>Lens: Side by side comparison of diggerent articles on the same topics. These are repeatble, parametrised and allow for an interesting metadata analysis.</li>
+									<li>Literary: Analysis of different articles. Readers can have, at a glance, the general information used in the articles thanks to metadata comparison, to the summary functionality and to the Topic Modelling functionality, which would allow to locate the different information clusters inside the articles.</li>
+									<li>Luscious: This page allows for an enriching experience. The metadata is shown in a simple format, connect to the location (the articles scrolls dynamically to the place selected) and highlight the similar ones. One can compare up to 3 articles at the same time, both from a computer and from smaller screens. Metadata are generated dynamically -making the addition of new issues easier and the exploration more pleasant.</li>
+									<li>Leisure: When starting the project, we thought: in which kind of situation our magazine would be read? A requirement to enjoy a product like ours is the availability of time to read, explore, understand and compare not just the articles, but the data mined from them. From this we chose a coffee-house-like situation. Another possible concept was revolving around the human eye and the experience of looking around. We combined these ideas and thought: what about watching something that rotates over itself, like the inside of a washing machine?</li>
+								</ul>
+								<p>
+								About the issues, we decided to go with topics that would be talked about in opinion circles and magazines. Thus, we opted for three topics that have polarised the opinions in the public: </p>
+								<ol>
+									<li>Working from Home, its effects on our lives and its sustainability;</li>
+									<li>Space Tourism, ethics related to it and how it could change lives today;</li>
+									<li>Language Inclusivity, how binarism affected our perception of language and how can evolve.</li>
+								</ol>
+								<h2  id='meta'>Metadata</h2>
+								<p>For these issues, we opted for metadata that could highlight the differences between their topics, like the people involved, the institutions, dates and so on and so forth. While the articles are manually annotated, the analysis of metadata is dynamic. Information about the topics and which articles are there is kept in a JSON file which is used to link the articles to the page. All metadata use HTML classes, which are used to give unique ID to all instances which are exploited in the href of the numbers. When possible, metadata are linked to respective Wikipedia articles. It is also possible to sort the metadata in alphabetical order and also in order of date for the Date data.</p>
+								<h2  id='themes'>Themes</h2>
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="flush-headingOne">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+											Christine de Pizan
+										</button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">Stay tuned to see some changes</div>
 										</div>
-										<div class="accordion-item">
-										  <h2 class="accordion-header" id="flush-headingTwo">
-											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-											  Accordion Item #2
-											</button>
-										  </h2>
-										  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-											<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-										  </div>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="flush-headingTwo">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+											American Newspapers
+										</button>
+										</h2>
+										<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">This style is dedicated to American Newspapers from the post-indipendence era, such as the National Intelligencer and Washington Advertiser. This style aims at giving the user the experience of reading a newspaper of the time today, thus the color sepia in the background; also, since photos were not a thing, pictures are given properties that would make them similar to what a drawing over a newspaper would be and are treated as advertisement pictures would be in newspapers at the time. <img src="assets/weak-men.jpg"><br>The text is justified, as paragraphs would be organised to maximise the space efficiency and write as much as possible while breaking the lines of the newspaper to better readibility. <img src="assets/charleston.jpg"> Here the column break is absent as dividing into columns would make reading the articles more difficult. The fonts used mimick the ones of the National Intelligencer (JMH Legajo, JD Carnival Black and Essays 1743).</span>
 										</div>
-										<div class="accordion-item">
-										  <h2 class="accordion-header" id="flush-headingThree">
-											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-											  Accordion Item #3
-											</button>
-										  </h2>
-										  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-											<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-										  </div>
 										</div>
-									  </div>
-							<p><span id='american-newspapers'>This style is dedicated to American Newspapers from the post-indipendence era, such as the National Intelligencer and Washington Advertiser. This style aims at giving the user the experience of reading a newspaper of the time today, thus the color sepia in the background; also, since photos were not a thing, pictures are given properties that would make them similar to what a drawing over a newspaper would be and are treated as advertisement pictures would be in newspapers at the time. <img src="assets/weak-men.jpg"><br>
-							 The text is justified, as paragraphs would be organised to maximise the space efficiency and write as much as possible while breaking the lines of the newspaper to better readibility. <img src="assets/charleston.jpg"> Here the column break is absent as dividing into columns would make reading the articles more difficult. The fonts used mimick the ones of the National Intelligencer (JMH Legajo, JD Carnival Black and Essays 1743).</span></p>
-							 <p><span id='future-expl'>This Futuristic style brings us in a distopian future, where humanity is trapped in a continous repetition of the past in the style and content. The government, controlled by the Communist Party of Nostalgia, is interested in keeping the general population into a state of hypnosis, done in not so subtle ways (e.g. the background used in this style). This style aims at establishing the connection with some kind of nostalgia to the 2010s, using a combination of minimalist style website structure and colours, that would make the user both uncomfortable and nostalgic. This style is not supposed to be pleasant; it is supposed to hypnotise.
-							 An important functionality added in the course of time is the empowerment of websites Named Entity Recognition, that allows the user, when hovering entities, to know more about them. In backwards compatibility mode, such with our computers, this has resulted in showing a small icon describing what the element is in the top right of the screen.
-							 </span>
-							</p>
-							</div>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="flush-headingThree">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+											Dada
+										</button>
+										</h2>
+										<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">Stay tuned to see some changes</div>
+										</div>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="flush-headingFour">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+											Swiss Style
+										</button>
+										</h2>
+										<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">Stay tuned to see some changes</div>
+										</div>
+										
+									</div>
+
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="flush-headingFive">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+											Vogue 2000 
+										</button>
+										</h2>
+										<div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">Stay tuned to see some changes</div>
+										</div>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="flush-headingSiv">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+											Nostalgia Hypnosis
+										</button>
+										</h2>
+										<div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body"><span id='future-expl'>This Futuristic style brings us in a distopian future, where humanity is trapped in a continous repetition of the past in the style and content. The government, controlled by the Communist Party of Nostalgia, is interested in keeping the general population into a state of hypnosis, done in not so subtle ways (e.g. the background used in this style). This style aims at establishing the connection with some kind of nostalgia to the 2010s, using a combination of minimalist style website structure and colours, that would make the user both uncomfortable and nostalgic. This style is not supposed to be pleasant; it is supposed to hypnotise. An important functionality added in the course of time is the empowerment of websites Named Entity Recognition, that allows the user, when hovering entities, to know more about them. In backwards compatibility mode, such with our computers, this has resulted in showing a small icon describing what the element is in the top right of the screen.</span>
+										</div>
+										</div>
+									</div>
+								</div>
 						</div>
 					</div>  
 				</div>	
