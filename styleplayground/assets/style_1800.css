@@ -199,9 +199,10 @@ header .sign {
 	text-shadow: none!important;
 	animation: none!important;
 }
-.sign.title {
-	font-size: 1.5em!important;
-}
+	@media (min-width: 800px){
+	.sign.title {
+		font-size: 1.5em!important;
+	}}
 #topics {
 	color: black!Important;
 }
