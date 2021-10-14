@@ -415,7 +415,7 @@ h4[id^=section] {
     color: #81433d;
 }
 
-.div[id^=article-] p:first-of-type {
+#article-1 p:first-of-type, #article-2 p:first-of-type, #article-3 p:first-of-type {
     margin-top: 30%;
 }
 
