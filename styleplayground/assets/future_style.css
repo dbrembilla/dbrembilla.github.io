@@ -196,7 +196,7 @@ h4 {
 	font-family: Metropolis!important;
 	font-style: italic!important;
 }
-h5, select {
+h5, select, table {
 	font-family: Metropolis!important;
 	font-size: 1.32em!important; /*Plastic number*/
 }
