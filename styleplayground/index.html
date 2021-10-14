@@ -1627,7 +1627,28 @@
 										</button>
 										</h2>
 										<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-										<div class="accordion-body">Stay tuned to see some changes</div>
+										<div class="accordion-body"><p>Christine de Pizan (1364 - 1430), was an Italian poet and author at the court of King Charles VI of France. After the death of her husband, she started serving as a court writer and became famous as the first professional woman of letters.</p>
+											<p>Her literary endovors include ballads, educational books of advice to royalty members and political and moral treatise. Her most important works are "The Book of the City of Ladies", a moral treatise on the virtues of women, and "The treasure of the City of Ladies", a manual of education targeted to women of all estates.</p>
+											<p>Besides being the mind behind her works, in some cases she was also "the hand". Some passages of the manuscripts from we can read her art, in fact, are thought to be handwritten by Christine herself: this is the reason why the style theme is dedicated to her.</p>
+											<p>For simulating the graphical style of medieval manuscript, I took as a reference mainly two manuscripts containg her works, namely <a href="https://gallica.bnf.fr/ark:/12148/btv1b84514768/f1.item">Paris, Arsenal 2686</a> and <a href="http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Harley_MS_4431">Harley 4431</a>.</p>
+											<figure>
+											  <img src="assets/pizan_style/pizan-harley4431-detail.jpg">
+											  <figcaption>Detail of an initial in Harley 4431.</figcaption>
+											</figure>
+											<p>I tried to reproduce a sort of rudimental "baseline grid" that medieval copists used to layout the text: making use of CSS linear gradient I drew a background image that resembles the light grid drawn on the manuscript page. I specified such background-image for each textual element inside the article container (except images, lists and the title, which would correspond to the grid-less frontispice page) and then I adjusted the text content position using padding, margins and regulating line-height. I chose a single column layout over the more "philological" 2 columns layout for obvious legibility reasons. Some hints I have taken from <a href="https://open.nytimes.com/how-we-implemented-a-baseline-grid-using-css-cb13cac45201">this article</a>.</p>
+											<p>I created some empty content with ::before pseudo element and applied to it a background image of a paraph, to mark the beginning of each paragraph as in Paris 2686.</p>
+											<p>"Unifraktur Cook" and "Duc de Berry" are the two fonts, among the license-free ones I could find, that get closest to the original handwriting of Paris, Arsenal 2686 (the blackletter bastarda, known as Schwabacher as a typeface, in use in France in the XIV and XV centuries): besides clear differences, such as the missing long s (ſ) of the original script, it suits fairly well. The more refined Harley 4431 presents a calligraphic cursive, very far from any fontface I could find on the web.</p>
+											<p>For the illuminated initials of Harley 4431 I recurred to a framed fontface for dropcaps and styled it so as to mimic the glossy effect of gold leaf: the first letter of each article is set to "color:transparent;" and has a linear-gradient background image: I couldn't find a way to reproduce the beautiful polychromy of the model's initials.</p>
+											<p>For what concerns the use of colors inside the articles, I tried to be coherent with the semantics of the manuscripts: subtitles and captions in the article are regarded as similar in nature to the glossae or short summaries in the model, and therefore are marked in red.</p>
+											<figure>
+											  <img src="assets/pizan_style/pizan-harley4431-page.png">
+											  <figcaption>A page from Harley 4431.</figcaption>
+											</figure>
+											<figure>
+											  <img src="assets/pizan_style/pizan-paris2686.png">
+											  <figcaption>A page from ms. Paris, Arsenal 2686: the 2 column layout, a brief summary in red, a decorated initial and two paraphs.</figcaption>
+											</figure>
+										</div>
 										</div>
 									</div>
 									<div class="accordion-item">
