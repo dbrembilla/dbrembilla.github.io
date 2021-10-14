@@ -160,7 +160,7 @@ h4{
 
 .card.Meta h4{
 	width: 30%;
-	padding: .25 em;
+	padding: .25em;
 }
 
 p{
@@ -393,6 +393,18 @@ div.card.Meta {
 .card.overflow {
     border: 0px;
     background: unset;
+}
+
+#article-1 p:nth-of-type(odd), #article-2 p:nth-of-type(odd), #article-3 p:nth-of-type(odd) {
+    transform: rotate(21deg);
+	background-color: white;
+}
+
+#article-1 p:nth-of-type(even), #article-2 p:nth-of-type(even), #article-3 p:nth-of-type(even) {
+    transform: rotate(
+-62deg);
+    font-size: .7em!important;
+	z-index: 3;
 }
 
 a.btn, .form-check-label {
