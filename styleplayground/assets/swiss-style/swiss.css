@@ -250,11 +250,21 @@ body * {
 	background-color: #008cbc;
 }
 
-.form-check.input {
-	border: solid 1px #151515 !important;
-}
+
 
 #dropdownMenuClickableInside, #dropdownMenuClickableInside span  {
 	color: #f3f3eb !important;
 	font-family: "Anton", sans-serif !important;
+}
+
+.form-check-input {
+    width: 1em;
+    height: 1em;
+    margin-top: .25em;
+    vertical-align: top;
+    background-color: #f3f3eb !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid #151515 !important;
 }
