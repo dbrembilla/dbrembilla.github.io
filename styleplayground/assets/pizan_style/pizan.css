@@ -1,377 +1,82 @@
-@font-face {
-	font-family: UnifrakturCook;
-  	src: url("fonts/UnifrakturCook-Bold.ttf");
+/* p font size set to 16px*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.card.overflow {
+  font-family: Helvetica;
+  display: grid;
+  grid-auto-columns: minmax(150px, auto);
+  /*grid-auto-rows: minmax(200px, auto);*/
+  grid-gap: 10px;
+  grid-auto-flow: row;
 }
 
-@font-face {
-	font-family: "Duc de Berry Regular";
-	src: url("fonts/Duc De Berry Regular.otf");
-}
-
-
-@font-face {
-	font-family: GotischeInitialen;
-	src: url("fonts/GotischeInitialen.ttf");
-}
-
-@font-face {
-	font-family: Cristina;
-	src: url("fonts/Cristina-Regular.ttf");
-}
-
-@font-face {
-	font-family: CristinaSVG;
-	src: url("fonts/Cristina-Regular-SVG.ttf");
-}
-
-@font-face {
-	font-family: Initials;
-	src: url("fonts/EichenlaubInitialen-vmDy.ttf");
-}
-
-html {
-	font-size: 20px;
-}
-
-body, nav, footer {
-  background: url("body_background.jpg");
-  background-repeat: repeat;
-  background-size: auto;
-  font-family: UnifrakturCook !important;
-}
-
-.modal-content {
-	background-color: #EFE8D6 !important;
-	border-radius: 0rem !important;
-	border: solid #504738 0.05rem !important;
-}
-
-nav * {
-	font-family: UnifrakturCook !important;
-	animation: none !important;
-	text-shadow: none !important;
-	border: none !important;
-	background: transparent !important;
-	color: #504738 !important;
-	font-weight: normal !important;
-}
-
-.btn-group :not(span) {
-	background-color: #EFE8D6 !important;
-}
-
-nav h3 {
-	color: #A74640 !important;
-}
-
-a.disappear {
-	font-family: "Duc de Berry Regular" !important;
-	font-weight: bolder !important;
-}
-
-span.flicker {
-    /* fai qualcosa!!!*/
-}
-
-#aside, section {
-    border-bottom: none !important;
-}
-
-.flip-card-front, #topics, .card.Meta, .card#desc {  /*parziale da completare??*/
-    background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
-    border-image: linear-gradient(to bottom left, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30) 1 !important;
-    border: solid 0.2rem;
-    outline: solid 0.1rem #504738;
-    border-radius: 0rem !important;
-    box-shadow: none;
-    font-family: UnifrakturCook;
-    color: #504738;
-}
-
-.card.Meta {
-    border-left: none !important;
-    border: solid 0.1rem #A74640 !important;
-    outline: none;
-}
-
-
-.flip-card-back {
-    background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
-    border-image: linear-gradient(to bottom left, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30) 1 !important;
-    border: solid 0.2rem;
-    outline: solid 0.1rem #504738;
-    /*border-radius: 0.01rem !important; // non posso specificare niente per border-radius qui, per qualche ragione che non mi spiego*/
-    box-shadow: none;
-    font-family: UnifrakturCook;
-    color: #504738;
-}
-
-.row.list.overflow img {
-	max-width: 1rem;
-	float:left;
-	margin: 0.3rem;
-}
-
-span.metaTitle {
-	text-align: center;
-}
-
-.card.overflow { 
-	background: linear-gradient(to right, #E7DEC6, #EFE8D6)!important;
-	border-radius: unset !important;
-	box-shadow: none;
-	border: solid 0.05rem #999791 !important;
-	font-family: UnifrakturCook;
-	color: #504738;
-}
-
-
-
-p {
-  color: #504738;
-  font-family: UnifrakturCook;
-  font-variant-ligatures: historical-ligatures; /*probably not going to work*/
-  margin-top: 0; /*-------------serve davvero specificarlo?-----------*/
-  font-size: 1rem;
-  line-height: 1.4rem;
-  /*background-image: linear-gradient(to bottom, black 1px, transparent 1px);
-  background-size: auto 28px;
-  padding-top: 8px;*/
-
-  /*text-decoration: underline solid grey;*/
-  /*background-image: linear-gradient(to top, black 1px, transparent 1px);*/ /* non trovo di meglio: la riga non è sulla baseline e lo spazio tra una riga e l'altra è fisso, di 1.5em; ovviamente è una baseline grid completamente fasulla*/
-  /*background-size: auto 1.5em;*/
-}
-
-
-h2, h3, h4 {
-  font-family: UnifrakturCook;
-  font-size: 1rem;
-  line-height: 1.4rem; /*unitless values for this property are multiplied with font size*/
-  color: #A74640; 
-  /*background-image: linear-gradient(to bottom, black 1px, transparent 1px);
-  background-size: auto 28px;
-  padding-top: 8px;*/
-}
-
-
+/* Extra-wide grid-posts */
 .card.overflow p {
-  color: #504738;
-  font-family: UnifrakturCook;
-  font-variant-ligatures: historical-ligatures; /*probably not going to work*/
-  margin-top: 0; /*-------------serve davvero specificarlo?-----------*/
+  grid-column: span 2;
+  background-color: yellow;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
   font-size: 1rem;
-  line-height: 1.4rem;
-  background-image: linear-gradient(to bottom, #999791 1px, transparent 1px);
-  background-size: auto 1.4rem;
-  padding-top: 0.4rem;
-  margin-bottom: -0.4rem;
-}	
-
-.card.overflow h2, .card.overflow h3, .card.overflow h4 {
-  font-family: UnifrakturCook;
-  font-size: 1rem;
-  line-height: 1.4rem; /*unitless values for this property are multiplied with font size*/
-  color: #A74640; 
-  background-image: linear-gradient(to bottom, #999791 1px, transparent 1px);
-  background-size: auto 1.4rem;
-  padding-top: 0.4rem;
-  height: auto;
-  margin-bottom: -0.4rem;
 }
+
 
 .card.overflow h1 {
-  font-size: 1.5rem;
-  font-family: "Duc De Berry Regular";
-  font-weight: bold;
-  text-align: center;
-  width: 60%;
-  margin: auto;
-  line-height: 2.5rem;
-}
-  /* la line-height non la metto: è come se fosse il frontespizio del manoscritto*/
-
-/*img {  /* per le immagini devi settare dei breakpoints per i vari @media in modo che siano coerenti con la baseline grid 
-  width: auto;
-  height: 10em;  em are relative to the em of the container <figure>, which inherits the font size from body(??)
-  margin: none;
-}*/
-
-/*---------------questo blocco forse bisogna toglierlo?-------------
-#article-1, #article-2, #article-3 {  
-    padding-top: 20px;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-    background-image: linear-gradient(to bottom, black 1px, transparent 1px);
-    background-size: auto 20px;
-}
-*/
-
-
-
-figure {
-    font-size: 0.5rem;
-    line-height: 0.7rem;
-    font-family: 'UnifrakturCook';
-    color: #A74640;
-    width: 100%;
-    margin: 0 0 1rem !important;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+  grid-column: span 1;
+  grid-column-start: 1;
+  margin-bottom: 4rem;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 900;
+  line-height: 1.5;
+  font-size: 3.5rem;
 }
 
-img {
-    width: 100%;
-    border: ridge gold 0.2rem;
-    outline: solid black 0.1rem;
-    height:auto !important; 
+.card.overflow h2 {
+  grid-column-start: 2;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
 }
 
-
-/* non mettiamo la baseline grid anche sulle figcaption, che sono come delle glosse
-figcaption {
-  background-image: linear-gradient(to bottom, black 1px, transparent 1px);
-  background-size: auto 28px;
-}
-*/ 
-/*
- .card.overflow {
-    background-image: linear-gradient(to right, black 1px, transparent 1px);
-    background-position-x: 0.99rem;
-    background-position: 0.99rem;
-    background-size: calc(97% - 1rem);
-}
-*/
-
-#article-1, #article-2, #article-3 {
-	padding: 0 !important;
-	border-left: solid 0.05rem !important;
-	border-right: solid 0.05rem !important;
-	border-radius: 0rem;
+.card.overflow figure {
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
-#col-num-1, #col-num-2, #col-num-3 {
-	padding: 0.5rem 0.5rem;
+.card.overflow h3, .card.overflow h4 {
+  grid-column-end: 3;
+  font-family: "Sarabun", sans-serif;
+  font-weight: 800;
+  text-transform: lowercase;
 }
 
-/*------------prova così-----------*/
-/*.card.overflow p::first-letter {
-    font-family: 'Initials';
-    color: #FCD642;
-    font-size: 100px;
-    float: left;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    background-color: inherit;
-    font-weight: normal;
-}
-*/
-
-
-.card.overflow p::before {
-    background-image: url(https://dbrembilla.github.io/styleplayground/assets/pizan_style/miniatures/paraph_blue.png);
-    background-size: 1.4rem 1.4rem;
-    display: inline-block;
-    width: 1.4rem;
-    height: 1.4rem;
-    content: "";
-    float: left;
-    margin-bottom: -0.5rem;
+#row-article {
+  padding: 0 1% !important;
 }
 
-.card.overflow blockquote p::before {  /*per le citazioni blockquote: non voglio paraph*/
-    background-image: none !important;
-    content: none !important;
+.card.overflow figure {
+  font-size: 0.75rem!important;
+  font-family: "Sarabun", sans-serif;
+  font-style: normal;
+  font-weight: 100; 
 }
 
-.card.overflow ul {
-    background-image: linear-gradient(to bottom, #999791 0.05rem, transparent 0.05rem);
-    padding-left: 1.4rem;
-    background-size: auto 1.4rem;
-    margin-bottom: -0.4rem;
+.card.overflow > a {
+  text-transform: lowercase;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600
 }
 
 .card.overflow li {
-    list-style-type: disclosure-closed;
-    font-family: UnifrakturCook;
-    line-height: 1.4rem;
-    padding-top: 0.4rem;
-    margin-bottom: -0.4rem;
+    list-style-type: circle;
+    font-family: "Sarabun", sans-serif;
+    text-transform: lowercase;
+    font-weight: 100;
 }
 
-/* per spaziare [solo] la prima lettera di ogni p, come su Harley 4431; meglio non metterlo: poco coerente con la scelta della griglia
-.card.overflow p::first-letter {  
-    letter-spacing: 0.15em;
+.card.overflow ul {
+  padding-left: 1rem;
 }
-*/
-
-.card.overflow figure {
-    margin: 0 0.1rem 0.9rem !important;
-    padding-top: 1rem !important;
-    width: 100% !important;
-    height: auto !important;
-    font-size: 0.6rem;
-    line-height: 0.7rem;
-    font-family: 'UnifrakturCook';
-    color: #A74640;
-    width: 100%;
-}
-
-.card.overflow > img {
-	margin: 0.9rem 0.1rem !important;
-	width: auto !important;
-}
-
-blockquote {
-    margin: 0 0 1.4rem 0 !important;
-    padding: 1.4rem 0 0 0;
-    font-style: italic;
-    text-align: center;
-}
-
-.card.overflow > p:first-of-type::first-letter {
-    font-family: 'Initials';
-    font-size: 5rem;
-    float: left;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    background-color: inherit;
-    font-weight: normal;
-    background-image: linear-gradient(45deg, #ae7f30, #b0863c, #f5ed6e, #ae7f30, #ae7f30)!important;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-
-}
-
-.card.overflow > p:first-of-type::before {  /*per le citazioni blockquote: non voglio paraph*/
-    background-image: none !important;
-    content: none !important;
-}
-
-.btn-primary {
-	border-radius: 0 !important;
-	border: solid #504738 0.2rem !important;
-	margin: 0.1rem;
-	background-color: #EFE8D6 !important;
-	color: black !important;
-}
-
-#topics button {
-	color: #4A6A8D !important;
-	font-family: UnifrakturCook !important;
-}
-
-#topics h3 {
-    color: #A74640 !important;
-    font-family: UnifrakturCook !important;
-}
-
-#metadata-list-1 h4, #metadata-list-2 h4, #metadata-list-3 h4 {
-    background-color: unset !important;
-}
-
-.metaTitle h3 {
-    font-family: UnifrakturCook !important;
-}
-
