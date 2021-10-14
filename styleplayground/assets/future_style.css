@@ -172,7 +172,7 @@ a.btn{
     color: #dfe4ea!important;
 }
 h2 {
-	font-family: Metropolis;
+	font-family: Metropolis!Important;
 	font-style: italic;
 	text-align: center!important;
 	font-weight: 900;
@@ -200,7 +200,7 @@ h5 {
 	font-size: 1.32em!important; /*Plastic number*/
 }
 .btn, label {
-	font-family: Metropolis!important;
+	font-family: JoyKim!important;
 	font-size: 1.144em!important; /*Log of pi*/
 }
 .card#desc {
