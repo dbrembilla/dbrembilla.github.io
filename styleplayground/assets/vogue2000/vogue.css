@@ -215,7 +215,7 @@ div.card.Meta{
 
 #metaview-1 div ul, #metaview-2 div ul, #metaview-3 div ul   {
     width: 50%;
-    border-bottom: 2px solid;
+    border-bottom: 1px solid;
     padding: 1rem 0;
 }
 
