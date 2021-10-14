@@ -21,6 +21,7 @@
   font-family: "Roboto", Helvetica, sans-serif;
   font-weight: 300;
   margin-bottom: 2.5rem;
+  font-size: 1rem;
 }
 
 
@@ -67,4 +68,22 @@
   text-transform: lowercase;
   font-family: "Roboto Mono", monospace;
   font-weight: 600
+}
+
+.card.overflow li {
+    list-style-type: circle;
+    font-family: "Sarabun", sans-serif;
+    text-transform: lowercase;
+    font-weight: 100;
+}
+
+.card.overflow ul {
+  padding-left: 1rem;
+}
+
+.card.overflow blockquote p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: "Sarabun";
+  letter-spacing: 0.01rem;
 }
