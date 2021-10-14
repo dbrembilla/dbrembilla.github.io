@@ -319,7 +319,7 @@ a.disappear:hover, .dropbtn:hover, .btn-secondary:hover{
     border: double 15px;
 }
 
-.themes, #topics, a.btn, .form-check-label, .asideTitle h3, #topics .overflow button, h3.cardTitle{
+.themes, #topics, a.btn, .form-check-label, .asideTitle h3, #topics .overflow button, h3.cardTitle, .reset{
     font-family: 'WorkSans Medium'!important;
 	
 }
@@ -406,7 +406,7 @@ div.card.Meta {
 	transform: rotate( 
 		338deg);		
     font-size: .7em!important;
-	color: #3c4663!important;
+	color: red!important;
 }
 
 h4[id^=section] {
