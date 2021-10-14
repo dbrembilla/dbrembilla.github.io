@@ -237,3 +237,6 @@ div.slot {
 .modal-header {
 	border-bottom: 1px solid black!important;
 }
+.table>:not(caption)>*>* {
+	border-bottom-color: black!important;
+}
