@@ -139,6 +139,7 @@ img {
   border-radius: 0!important;
 }
 #desc{
+	color: black!Important;
 	background: none!important;
 	border-left: black 1px solid!important;
   border-right: black 1px solid!important;
