@@ -403,8 +403,8 @@ div.card.Meta {
 }
 
 #article-1 p:nth-of-type(even), #article-2 p:nth-of-type(even), #article-3 p:nth-of-type(even) {
-    transform: rotate(
--62deg);
+	transform: rotate( 
+		338deg);		
     font-size: .7em!important;
 	color: #3c4663!important;
 }
@@ -413,6 +413,10 @@ h4[id^=section] {
     transform: rotate(
 22deg);
     color: #81433d;
+}
+
+.div[id^=article-] p:first-of-type {
+    margin-top: 30%;
 }
 
 a.btn, .form-check-label {
