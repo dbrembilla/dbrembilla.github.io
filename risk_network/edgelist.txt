@@ -1,0 +1,77 @@
+Alaska Kamchatka {}
+Alaska Alberta {}
+Alaska Northwest Territory {}
+Alberta Northwest Territory {}
+Alberta Ontario {}
+Alberta Western US {}
+Central America Western US {}
+Central America Venezuela {}
+Eastern US Ontario {}
+Eastern US Western US {}
+Eastern US Quebec {}
+Greenland Northwest Territory {}
+Greenland Ontario {}
+Greenland Quebec {}
+Greenland Iceland {}
+Northwest Territory Ontario {}
+Ontario Western US {}
+Ontario Quebec {}
+Argentina Peru {}
+Argentina Brazil {}
+Brazil Venezuela {}
+Brazil North Africa {}
+Venezuela Peru {}
+Congo North Africa {}
+Congo East Africa {}
+Congo South Africa {}
+East Africa North Africa {}
+East Africa Egypt {}
+East Africa South Africa {}
+East Africa Madagascar {}
+Egypt North Africa {}
+Egypt Southern Europe {}
+Egypt Middle East {}
+Madagascar South Africa {}
+North Africa Southern Europe {}
+North Africa Western Europe {}
+Great Britain Iceland {}
+Great Britain Western Europe {}
+Great Britain Northern Europe {}
+Great Britain Scandinavia {}
+Iceland Scandinavia {}
+Northern Europe Western Europe {}
+Northern Europe Southern Europe {}
+Northern Europe Scandinavia {}
+Northern Europe Ukraine {}
+Scandinavia Ukraine {}
+Southern Europe Western Europe {}
+Southern Europe Middle East {}
+Southern Europe Ukraine {}
+Ukraine Middle East {}
+Ukraine Afghanistan {}
+Afghanistan Middle East {}
+Afghanistan Ural {}
+Afghanistan China {}
+Afghanistan India {}
+China Ural {}
+China Siberia {}
+China Mongolia {}
+China India {}
+China Siam {}
+India Middle East {}
+Irkutsk Siberia {}
+Irkutsk Yakursk {}
+Irkutsk Kamchatka {}
+Irkutsk Mongolia {}
+Japan Kamchatka {}
+Japan Mongolia {}
+Kamchatka Yakursk {}
+Kamchatka Mongolia {}
+Mongolia Siberia {}
+Siam Indonesia {}
+Siberia Ural {}
+Siberia Yakursk {}
+Eastern Australia New Guinea {}
+Eastern Australia Western Australia {}
+New Guinea Indonesia {}
+Indonesia Western Australia {}
