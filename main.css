@@ -1,11 +1,39 @@
-.accordion-toggle {
-    display: block;
+/* # The Rotating Marker # */
+details summary::-webkit-details-marker { display: none; }
+summary::before {
+  font-family: "Hiragino Mincho ProN", "Open Sans", sans-serif;
+  content: "▶";
+  position: absolute;
+  top: 1rem;
+  left: 0.8rem;
+  transform: rotate(0);
+  transform-origin: center;
+  transition: 0.2s transform ease;
+}
+details[open] > summary:before {
+  transform: rotate(90deg);
+  transition: 0.45s transform ease;
+}
+
+/* # The Sliding Summary # */
+details { overflow: hidden; }
+details summary {
+  position: relative;
+  z-index: 10;
+}
+@keyframes details-show {
+  from {
+    margin-bottom: -80%;
+    opacity: 0;
+    transform: translateY(-100%);
   }
-  
-.accordion-content {
-    display: none;
-  }
-  
-.accordion-content.active {
-    display: block;
-  }
+}
+details > *:not(summary) {
+  animation: details-show 500ms ease-in-out;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  color: transparent;
+  overflow: hidden;
+}
+details[open] > *:not(summary) { color: inherit; }
