@@ -1,0 +1,11 @@
+.accordion-toggle {
+    display: block;
+  }
+  
+.accordion-content {
+    display: none;
+  }
+  
+.accordion-content.active {
+    display: block;
+  }
