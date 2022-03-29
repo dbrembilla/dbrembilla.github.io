@@ -71,16 +71,16 @@
         </summary>
         <div class="content">
             <ul>
-                <li>Sto iniziando a creare le funzioni per validare un MetaID, per ora inviare richieste ma lavorando solo per verificare che riconosca se a Croci arriva un DOI o un MetaID. Per ora farò solo in locale lavorando sulla stringa, in futuro vorrei aggiungere anche via API un controllo se questo esiste. </li>
+                <li>Sto iniziando a creare le funzioni per validare un MetaID, per ora inviare richieste ma lavorando solo per verificare che riconosca se a Croci arriva un DOI o un MetaID. Per ora farò solo in locale lavorando sulla stringa, in futuro vorrei aggiungere anche via API un controllo se questo esiste. <b>Ci vuole un validate, che sarà una query ask su meta. se è cancellato, trova quello nuovo. Funzione esiste già: idmanager restituisce in output il metaid della risorsa, o il metaid stesso se è riconosciuto come valido. </b> </li>
                 <li>Volevo chiedere, per gestire questa molteplicità, immagino dovrò cambiare le funzioni su più livelli. Croci dovrà funzionare a contatto con Meta per pescare gli articoli già presenti, quindi:
                     <ol>
                         <li>Se MetaID-to-MetaID, valida i MetaID; se non ci sono, invalida la citazione.</li>
                         <li>Se DOI-to-DOI, fa quello che fa ora + verifica su Meta per arricchire di informazioni</li>
-                        <li>Se MetaID-to-DOI o viceversa, controlla su Meta e trasforma in MetaID-to-MetaID/DOI-to-DOI</li>
+                        <li>Se MetaID-to-DOI o viceversa, controlla su Meta e trasforma in MetaID-to-MetaID</li>
                     </ol>
-                    Quindi, stavo riflettendo che crowdsourcecitationsource, che ora come ora va a lavorare direttamente sui DOI, dovrà probabilmente essere diviso tra una parte doicrowdsourcecitationsource e un metaidcrosourcecitationsource. Non so se ha senso questa cosa.
+                    Quindi, stavo riflettendo che crowdsourcecitationsource, che ora come ora va a lavorare direttamente sui DOI, dovrà probabilmente essere diviso tra una parte doicrowdsourcecitationsource e un metaidcrosourcecitationsource. Non so se ha senso questa cosa. <b>Più identificativi!!!! A fine processo: risorse nuove. Problema: bisogna cacciare a forza le informazioni sulla tabella arricchita. Conflitto tra due DOI e MetaID. </b>
                 </li>
-                <li>In generale, sto avendo problemi ad importare le funzioni, spesso se lancio qualcosa anche da commandline mi dà ModuleNotFoundError perché non trova l'index. Non sto ben capendo come risolvere questa cosa.</li>
+                <li>In generale, sto avendo problemi ad importare le funzioni, spesso se lancio qualcosa anche da commandline mi dà ModuleNotFoundError perché non trova l'index. Non sto ben capendo come risolvere questa cosa.<b>vedi .env vscode. Bisogna lanciare con py -m e le dir separate da punti es. py -m index.my_test.01_test_metaid_identifier </b></li>
             </ul>
         </div>
     </details>
