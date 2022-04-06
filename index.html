@@ -90,7 +90,7 @@
         </summary>
         <ul>
             <li>
-                Ora che riesco a far girare i test, ho iniziato a creare il MetaIDManager per validare in locale i MetaID (per ora riferiti solo a bibliographic resources) validi. Per ora non verifica l'esistenza di MetaID.
+                Ora che riesco a far girare i test, ho iniziato a creare il MetaIDManager per validare in locale i MetaID (per ora riferiti solo a bibliographic resources) validi. Per ora non verifica l'esistenza di MetaID; in seguito dovrà lavorare a fianco di una instance di Creator da Meta e fare il giochino con l'id worker, verificando che l'id esiste in Meta se è un metaid o recuperandolo/creandolo se è dato un doi
             </li>
             <li>
                 Ho preparato una funzione ausiliaria per gestire più id. Non so se ha senso tenerla distinta dalle altre funzioni per normalizzare gli id.
@@ -117,6 +117,9 @@
                                     normalised_citing['metaid'] = id
                         return normalised_ids
                     </code></pre>
+            </li>
+            <li>
+                Per la parte di Ramose, ho iniziato a guardare gli elementi necessari per caricare su pypi, oltre che ovviamente agli script.
             </li>
         </ul>
     </details>
