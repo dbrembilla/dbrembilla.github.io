@@ -93,7 +93,7 @@
                 Ora che riesco a far girare i test, ho iniziato a creare il MetaIDManager per validare in locale i MetaID (per ora riferiti solo a bibliographic resources) validi. Per ora non verifica l'esistenza di MetaID; in seguito dovrà lavorare a fianco di una instance di Creator da Meta e fare il giochino con l'id worker, verificando che l'id esiste in Meta se è un metaid o recuperandolo/creandolo se è dato un doi
             </li>
             <li>
-                Ho preparato una funzione ausiliaria per gestire più id. Non so se ha senso tenerla distinta dalle altre funzioni per normalizzare gli id.
+                Ho preparato una funzione ausiliaria per gestire più id. Non so se ha senso tenerla distinta dalle altre funzioni per normalizzare gli id.<b>Partiamo dal presupposto che il prefisso è presente. L'aggiunta potrebbe cvvenire in reprocess. DA IDWORKER: se input =/= output il metaid non esiste.</b>
                 <pre><code>
                     from re import match
 
@@ -109,7 +109,7 @@
                                 elif 'doi' not in normalised_citing:
                                     normalised_citing['doi'] = id
                     
-                            elif match('^060|^br\/060|meta:br\/060'):
+                            elif match('^060|^br\/060|meta:br\/060'): <b>Importante: c'è 06 all'inizio, 0 alla fine NO 0 in mezzo</b>
                                 if not normalised_citing:
                                     id = metaid.normalise(id)
                                     normalised_citing = {'metaid':id}
@@ -119,7 +119,7 @@
                     </code></pre>
             </li>
             <li>
-                Per la parte di Ramose, ho iniziato a guardare gli elementi necessari per caricare su pypi, oltre che ovviamente agli script.
+                Per la parte di Ramose, ho iniziato a guardare gli elementi necessari per caricare su pypi, oltre che ovviamente agli script.<b>Account su pypi per pubblicarci. readthedoc.io</b>
             </li>
         </ul>
     </details>
