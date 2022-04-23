@@ -173,14 +173,27 @@
     </details>
     <details>
         <summary>
-            <p>18 aprile</p>
+            <p>25 aprile</p>
         </summary>
         <div class="content">
             <ul>
                 <li>
-                    Per CROCI, su suggerimento di Arcangelo, ne ho ripensato il funzionamento. Al posto di partire da una tabella con id multipli, partirà con una tabella solo MetaID-to-MetaID. Per fare questo, dovrebbe interfacciarsi con Meta; a questo fine, deve avvenire un preprocess che trasformi la tabella in input.
+                    Per CROCI, su suggerimento di Arcangelo, ne ho ripensato il funzionamento. Al posto di partire da una tabella con id multipli, partirà con una tabella solo MetaID-to-MetaID. Per fare questo, dovrebbe interfacciarsi con Meta; a questo fine, deve avvenire un preprocess che trasformi la tabella in input compatibile con Meta, in modo da successivamente arricchirla.
+                    A questo punto, però, si pone il problema di legare il processo di Croci a Meta, quindi all'azione di qualcuno che faccia partire Meta. Quindi:
+                    <ol>
+                        <li>
+                            Potremmo legare l'upload delle citazioni su Croci al primo processo Meta che parte? Avrebbe senso / come si potrebbe fare?
+                        </li>
+                        <li>
+                            Il processo CROCI in origine si occupava della normalizzazione dei DOI. In questo caso, pensavo si potrebbe collegare semplicemente a Meta, che già di questo si occupa. 
+                        </li>
+                        <li>
+                            Per ora non ho inserito uno script che faccia mapping, ma ho fatto un procedimento 'stupido' che assegna i file in ordine row-first in modo da ricollegarsi con questo all'ordine di output e input di meta. In alternativa, potrebbe avere senso usare un pointer che indichi a che riga si trova l'informazione nella tabella di meta. In ogni caso, questi metodi seguono l'assunto che l'output di meta segua l'ordine dell'input. 
+                        </li>
+                    </ol>
                 </li>
-                <li><img src='Croci_Preprocess.png'></li>
+                <img src='CROCI Preprocess.png'>
+                <li>Un'altra cosa che ho notato che è da implementare sono le self citations. Anche qui può essere d'aiuto Meta.</li>
             </ul>
         </div>
     </details>
