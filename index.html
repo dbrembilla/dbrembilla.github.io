@@ -178,7 +178,7 @@
         <div class="content">
             <ul>
                 <li>
-                    Per CROCI, su suggerimento di Arcangelo, ne ho ripensato il funzionamento. Al posto di partire da una tabella con id multipli, partirà con una tabella solo MetaID-to-MetaID. Per fare questo, dovrebbe interfacciarsi con Meta; a questo fine, deve avvenire un preprocess che trasformi la tabella in input compatibile con Meta, in modo da successivamente arricchirla.
+                    Per CROCI, su suggerimento di Arcangelo, ne ho ripensato il funzionamento. Al posto di partire da una tabella con id multipli, partirà con una tabella solo MetaID-to-MetaID. Per fare questo, dovrebbe interfacciarsi con Meta; a questo fine, deve avvenire un preprocess che trasformi la tabella in input compatibile con Meta, in modo da successivamente arricchirla. <b>DA META CI PASSIAMO SOLO CON DOI VALIDI. METADATI: RECUPERA DA SERVIZI ESTERNI. ID ENRICHER. vedi opencitations/oc_graphenricher. copia repo di meta in croci</b>
                     A questo punto, però, si pone il problema di legare il processo di Croci a Meta, quindi all'azione di qualcuno che faccia partire Meta. Quindi:
                     <ol>
                         <li>
@@ -193,8 +193,8 @@
                     </ol>
                 </li>
                 <img src='CROCI Preprocess.png'>
-                <li>Un'altra cosa che ho notato che è da implementare sono le self citations. Anche qui può essere d'aiuto Meta.</li>
-                <li>Rispetto a Ramose, ho provato a collegare ReadTheDocs alla libreria, ma mi dà degli errori tra i requirements. Sto provando a testarlo in locale cambiando alcune impostazioni, ma devo anche cambiare alcune cose perché i test sono pensate non per Windows e quindi mi sta facendo dei capricci.  Per questo ho creato un test_windows.sh per lanciarlo con più facilità da Windows.</li>
+                <li>Un'altra cosa che ho notato che è da implementare sono le self citations. Anche qui può essere d'aiuto Meta.<b>LO FA AUTOMATICAMENTE INDEX; non te ne proccupare. </b></li>
+                <li>Rispetto a Ramose, ho provato a collegare ReadTheDocs alla libreria, ma mi dà degli errori tra i requirements. Sto provando a testarlo in locale cambiando alcune impostazioni, ma devo anche cambiare alcune cose perché i test sono pensate non per Windows e quindi mi sta facendo dei capricci.  Per questo ho creato un test_windows.sh per lanciarlo con più facilità da Windows.<b>Dopo croci cerca se cit c'è già</b></li>
             </ul>
         </div>
     </details>
