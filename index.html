@@ -200,6 +200,29 @@
     </details>
     <details>
         <summary>
+            <p>2 maggio</p>
+        </summary>
+        <div class="content">
+            <ul>
+                <li>Ho iniziato a guardare oc_graphenrcher. Ho provato ad usare le funzioni già presenti per usare le API, ma richiedono alcuni parametri che dalla tabella di CROCI non sarebbero presenti. In particolare, in origine usa: DOI, autori (opzionale) e titolo.
+                    Quindi, ho pensato a questo ordine di query:
+                    <ol>
+                        <li>
+                            Crossref/Wikidata: Recupera dati su pubblicazione da DOI/Wikidata. Questa parte richiede una propria funzione.
+                        </li>
+                        <li>
+                            Se così facendo è stato recuperato un autore: popolare con ORCID e VIAF.
+                        </li>
+                    </ol>
+                    In questo modo dovrei poter estrarre gli elementi che necessita Meta, cioè <code>id,title,author,pub_date,venue,volume,issue,page,type,publisher,editor
+                    </code>
+
+                </li>
+            </ul>
+        </div>
+    </details>
+    <details>
+        <summary>
             <p></p>
         </summary>
         <div class="content">
