@@ -251,6 +251,40 @@
     </details>
     <details>
         <summary>
+            <p>31 maggio</p>
+        </summary>
+        <div class="content">
+            <ul>
+                <li>Questa settimana ho lavorato sullo script per popolare le righe da poi dare in feed a Meta. per fare questo ho creato uno script che:
+                </li>
+                <ol>
+                    <li>
+                        Dato un identificativo in input, lo valida sui servizi dati.
+                    </li>
+                    <li>
+                        Se valido, cerca tra tutti i servizi (per ora  WikiData e Crossref) se esiste una corrispondenza. Se sì, ritorna gli identificativi.
+                </ol>
+                <li>
+                    Problemi:
+                    <ol>
+                        <li>
+                            Che User Agent uso per wikidata? per ora sto usando abusivamente quello di oc_graphenrcher
+                        </li>
+                        <li>
+                            Dovrei selezionare le entity su Wikidata che sono articoli scientifici e libri, ma Wikidata è un po' balorda. Devo tenere conto del fatto che l'utente può specificare una cosa a caso come identificativo? c'è anche il problema che scholarly aticles sono segnati come cose a caso (e.g. https://www.wikidata.org/wiki/Q2640 sarebbe un articolo per wikidata). cosa faccio? tengo wikidata solo come lookup? Values che mantengo per ora: wd:Q13442814 wd:Q571 wd:Q88392887 wd:Q1143604 wd:Q7318358
+                            Una soluzione che mi è venuta in mente è di verificare la presenza di altri id per confermarla
+                        </li>
+                        <li>
+                            Dato che CROCI dovrà essere, in conclusione, any-to-any, potrebbe avere senso utilizzare altri identificativi che WikiData dà come connessione? (Fatcat, ResearchGate, Publons, arxiv etc.). Tra questi c'è spesso anche l'OC corpus id; per ora non l'ho inserito.
+                        </li>
+                        <li></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </details>
+    <details>
+        <summary>
             <p></p>
         </summary>
         <div class="content">
