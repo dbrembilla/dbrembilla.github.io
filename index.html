@@ -300,9 +300,25 @@
         <div class="content">
             <ul>
                 <h3>CROCI</h3>
-                <li>Iniziamo da una cosa divertente: l'articolo-asteroide di cui parlavo settimana scorsa ha pure un DOI su wikidata. Magia. <a href="https://www.wikidata.org/wiki/Q2640">Hygiea</a>
+                <li>Azioni: Cambiamento dello script per wdid; Inserimento di Wikidata Pipeline; Aggiunta di Meta al processo.</li>
+                <li>Iniziamo da una cosa divertente: l'articolo-asteroide di cui parlavo settimana scorsa ha pure un DOI su wikidata. Magia. <a href="https://www.wikidata.org/wiki/Q2640">Hygiea</a>. Questo perché è associato anche un articolo allo stesso wikidata id.
+                </li>
+                <li>
+                    Per creare Meta: 
+                    <ol>
+                        <li>
+                            Crea file config.yml come <a href="https://github.com/opencitations/oc_meta/blob/master/test/meta_process/meta_config_2.yaml">qui</a>                            
+                        </li>
+                        <li>
+                            C'è da lanciare il grafo come <a href="https://github.com/opencitations/oc_meta/blob/master/test/run_all_tests.py">qui</a>
+                        </li>
+                        <li>
+                            C'è da lanciare i test come <a href="https://github.com/opencitations/oc_meta/blob/master/test/meta_process_test.py">qui</a>
+                        </li>
+                    </ol>
                 </li>
                 <h3>RAMOSE</h3>
+                <li>Azioni: Risolto bug (encoding, dependencies, coverage)</li>
                 <li>
                     Per quanto riguarda RAMOSE, ho creato altri test per la documentazione e ho trovato dei problemi nei metodi per fare store e nella parte di writing per quanto riguarda l'encoding.
                 </li>
@@ -313,7 +329,7 @@
                     Ho risolto un bug che c'era con la versione di isodate e python 3.10 che leggeva i timestamp come decimali.
                   </li>
                 <li>
-                    Ho quindi inserito la coverage (90%; mancherebbe solo di controllare le exceptions). Ho fatto la pull request e caricato tutto su pypi. Manca solo la documentazione.
+                    Ho quindi inserito la coverage (90%; mancherebbe solo di controllare le exceptions). Ho fatto la pull request e caricato tutto su pypi. è quindi installabile con pip da command line. Manca solo la documentazione.
                 </li>
                 <li>
                     Domande:
@@ -331,8 +347,7 @@
             <p></p>
         </summary>
         <div class="content">
-            <ul>
-                <li>
+            <ul>                <li>
                 </li>
             </ul>
         </div>
