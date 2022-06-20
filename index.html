@@ -295,27 +295,43 @@
     </details>
     <details>
         <summary>
-            <p>13 giugnoo/20giugno</p>
+            <p>13 giugno / 20 giugno</p>
         </summary>
         <div class="content">
             <ul>
                 <h3>CROCI</h3>
-                <li>Azioni: Cambiamento dello script per wdid; Inserimento di Wikidata Pipeline; Aggiunta di Meta al processo.</li>
+                <li>Azioni: Cambiamento dello script per wdid, ora esige la presenza di almeno un altro identificatore nella colonna; Aggiunta di Meta al processo.</li>
                 <li>Iniziamo da una cosa divertente: l'articolo-asteroide di cui parlavo settimana scorsa ha pure un DOI su wikidata. Magia. <a href="https://www.wikidata.org/wiki/Q2640">Hygiea</a>. Questo perché è associato anche un articolo allo stesso wikidata id.
                 </li>
                 <li>
-                    Per creare CROCI combinato con Meta: 
+                    Ho iniziato a combinare CROCI con Meta. Per fare questo, ho modificato ampiamente il funzionamento di _get_next_citation data e annessi. In particolare, nel momento in cui viene lanciato CROCI il file in input viene preprocessato, lanciato a meta e poi viene utilizzato il risultato del processo di meta per attribuire il corretto metaid. Per quanto riguarda la data, viene considerata la data inserita <b>solo se</b> non viene trovata una data dalle pipeline. In ogni caso, la data trovata o la data dell'utente viene inserita nel csv con da dare a meta. A questo punto, meta prende la decisione e la data risultante viene utilizzata nella citazione.
+                </li>
+                <li>
+                    Questo è un esempio del risultato di una serie di citazioni. C'è qualche problema con le date e con il fatto che non ho fatto ancora la pipeline per wikidata.
+                </li>
+                <li>
+                    <img src="start_croci.png">
+                    <img src="finish_croci.png">
+
+                </li>
+                <li>
+                    Domande:
                     <ol>
                         <li>
-                            Ora che si riesce a lanciare: fare test per vedere i possibili risultati
+                            C'è qualche cosa che posso fare per ottimizzare blazegraph?
                         </li>
                         <li>
-                            Sistemare il principio dei pointer e l'organizzazione in cartelle in modo che abbia senso e non prenda cose a caso
+                            Quando faccio andare due file su meta in locale, riprende dall'inizio ad assegnare i metaid per ciascun file. Ha senso che sia così?
                         </li>
                         <li>
-                            Traslare utilizzo Meta su CROCI
+                            Va bene il funzionamento delle date com'è fatto?
                         </li>
+                        <li>
+                            Va bene che in citing e cited ci sia solo br/0601?
+                        </li>
+
                     </ol>
+                    <li>Da fare: Aggiungi Wikidata pipeline; rivedi funzionamento date e blazegraph.</li>
                 </li>
                 <h3>RAMOSE</h3>
                 <li>Azioni: Risolto bug (encoding, dependencies, coverage)</li>
@@ -329,16 +345,19 @@
                     Ho risolto un bug che c'era con la versione di isodate e python 3.10 che leggeva i timestamp come decimali.
                   </li>
                 <li>
-                    Ho quindi inserito la coverage (90%; mancherebbe solo di controllare le exceptions). Ho fatto la pull request e caricato tutto su pypi. è quindi installabile con pip da command line. Manca solo la documentazione.
+                    Ho quindi inserito la coverage (90%; mancherebbe solo di controllare le exceptions). Ho fatto la pull request e caricato tutto su pypi. è quindi installabile con pip da command line.
                 </li>
                 <li>
-                    Ho creato una documentazione che spiega come usare RAMOSE. <a href="https://ramose.readthedocs.io/">La trovate qui</a>; ho inserito una descrizione di come lanciare ramose dalla CL, una descrizione di come craere
+                    Ho creato una documentazione che spiega come usare RAMOSE. <a href="https://ramose.readthedocs.io/">La trovate qui</a>; ho inserito una descrizione di come lanciare ramose dalla CL, una descrizione di come craere il file .hf di configurazione e la descrizione degli script.
                 </li>
                 <li>
                     Domande:
                     <ol>
                         <li>
                             La documentazione va bene così com'è? è necssario scendere in più dettagli sulle classi?
+                        </li>
+                        <li>
+                            Tra i test, rimangono escluse le exceptions. Ha senso testare anche quelle?
                         </li>
                     </ol>
                 </li>
@@ -355,5 +374,6 @@
             </ul>
         </div>
     </details>
+    
 </body>
 </html>
