@@ -374,18 +374,51 @@
                     CROCI
                 </li>
                 <li>Azioni: Creazione pipeline - Risoluzione Problema Performance</li>
+                <li>Con Arcangelo ho sistemato il problema della performance di blazegraph. Non gli piace la cmd, con powershell funziona bene. Anche la questione metaid sembra funzionare.</li>
+                <li>Ho cambiato le citazioni in modo che l'output sia con meta:metaid</li>
+                <li>Sto quindi facendo la pipeline con wikidata, e ci sono tantissimi prevedibili problemi  di coerenza all'interno di wikidata stessa.
+                    Per ora la chiamata che sto facendo è questa: <br>
+                    <pre><code>SELECT (GROUP_CONCAT( ?author_group; separator = '; ') as ?author) ?venue ?pub_date ?title ?volume ?issue ?page ?type_id ?publisher {
+                        {
+                      
+                        OPTIONAL { wd:Q41194190 wdt:P1476 ?title } filter langMatches(lang(?title), "EN")
+                        OPTIONAL {
+                          wd:Q41194190 wdt:P577 ?date
+                          BIND(SUBSTR(str(?date), 0, 5) as ?pub_date)
+                        }
+                        OPTIONAL { wd:Q41194190 wdt:P1433 ?venue_id .
+                          ?venue_id rdfs:label ?venue} filter langMatches(lang(?venue), "EN")
+                        OPTIONAL { wd:Q41194190 wdt:P478 ?volume }
+                        OPTIONAL { wd:Q41194190 wdt:P433 ?issue }
+                        OPTIONAL { wd:Q41194190 wdt:P304 ?page }
+                        OPTIONAL { wd:Q41194190 wdt:P31 ?type_id . }
+                        OPTIONAL {
+                                  wd:Q41194190 wdt:P50 ?author_res .
+                                  ?author_res wdt:P735/wdt:P1705 ?g_name ;
+                                              wdt:P734/wdt:P1705 ?f_name .
+                                  BIND(CONCAT(?f_name, ", ",?g_name) as ?a) }
+                                OPTIONAL { wd:Q41194190 wdt:P2093 ?author_str .
+                        }
+                        bind (COALESCE (?a, ?author_str) as ?author_group ) } } group by ?author ?venue ?pub_date ?title ?volume ?issue ?page ?publisher ?type_id</code></pre>
+                </li>
+                <li>type_id lo userò per recuperare il nome del tipo di pubblicazione che allineerò a Crossref.</li>
+                <li>Il casino è ovviamente con gli autori</li>
                 <li>Domande:
                     <ol>
                         <li>
-                        
+                            Qualche consiglio sulla query sparql? In particolare per gli autori. Ho visto che wikidata usa due strategie diverse, a volte insieme, per collegare autori e opere; a volte p2093 (author name string), a volte p50. anche nel caso di p50 per ora sto considerando che ci viene fornito given e family name, ma non è detto che questo avvenga.
+                        </li>
+                        <li>
+                            Per recuperare ORCID e VIAF; meglio passare direttamente da wikidata? o meglio gestirli con il graphenricher?
                         </li>
                 </li>
                 <li>
                     RAMOSE
                 </li>
                 <li>
-                    Azioni: test sulle exceptions - sistemare la documentazione - creazione della release - chiusura tirocinio
+                    Azioni: test sulle exceptions - sistemare la documentazione  - chiusura tirocinio
                 </li>
+                
             </ul>
         </div>
     </details>
