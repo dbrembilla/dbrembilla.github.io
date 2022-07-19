@@ -425,16 +425,23 @@
     </details>
     <details>
         <summary>
-            <p>4 luglio - etc</p>
+            <p>18 luglio</p>
         </summary>
         <div class="content">
             <ul><li>CROCI</li>
-                <li>Azioni: Datacite pipeline, Wikidata pipeline, allineamento a farm, api v2</li>
+                <li>Azioni: Datacite pipeline, Wikidata pipeline, allineamento a farm</li>
+                <li>In queste settimane ho fatto diverse cose, tra cui il passaggio dello script a farm, fatto un refactoring generale per separare le funzioni, ultimato (credo?) la pipeline su wikidata, creato la pipeline su datacite per i doi che non sono su crossref.</li>
+                <li>Per quanto riguarda l'allineamento su farm, ho diviso lo script per come era. Ho creato un finder per wikidata che fosse allineato con gli altri finder. Ho adattato il wikidata identifier.</li>
+                <li>Ho pensato anche di cambiare significativamente la logica di come lanciavo CROCI. Prima, Populator (ora MetaFeeder) creava sia il csv da dare a meta che pointers, ai quali andavo poi a sostituire i metaid recuperati dai csv che Meta ritorna. Ho pensato però che potrebbe andare in conflitto se index usa multiprocessing e quindi con le race conditions magari l'ordine tra i file lanciati si scambia, oltre al fatto che unire questi due passaggi può essere un po' di difficile comprensione.</li>
+                <li>Ho quindi pensato di dividere il procedimento di 'meta feeding' e di 'metaid gathering'. Dopo aver preprocessato un file di croci per poi passarlo a meta (processo del metafeeder), durante il parsing riga per riga che avviene in CrowdsourcedParser al posto di fare un normalise con il metaididentifier lancio un altro metodo con cui chiamo l'api di blazegraph per recuperare il metaid (se c'è) associato agli id inseriti nel file di input. Significa passare due volte i file di input, però evitare conflitti nel recuperare i file di output di meta.</li>
                 <li>Domande:
                     <ol>
                         <li>Il passaggio da Datacite dovrebbe avvenir solo se non c'è un record su Crossref?</li>
                         <li>Problema: per i libri su wikidata solitamente non ci sono altri identificativi oltre al wikidata id, che abbiamo detto non essere sufficiente da solo per essere inserito in CROCI. Come facciamo? è poco saggio inserire id come l'isbn per i libri?</li>
-                        <li>Ho avuto altri problemi di efficienza con meta</li>
+                        <li>Sto facendo un mapping tra i tipi di wikidata e quelli accettati su meta. Sto avendo alcuni dubbi: <a href="https://www.wikidata.org/wiki/Q1148359">Q1148359</a> va bene per descrivere i documenti di archivio? <a href="https://www.wikidata.org/wiki/Q1310239">Q1310239</a> per component? <a href="https://www.wikidata.org/wiki/Q121769">Q121769</a> per reference entry?</li>
+                    <li>Index si accorge se c'è un duplicato di citazioni? Inoltre, non sto trovando se datacite ha una lista di tipi di risorse.</li>
+                    <li>Qual è la differenza tra meta:id e meta:br? es. https://w3id.org/oc/meta/id/060107 e https://w3id.org/oc/meta/br/06077?</li>
+                    <li>Come si dovrebbe comportare croci nel caso di id conflittuali? Es. doi di una risorsa e wd di un'altra. Do priorità a quello che mi viene dato in input?</li>
                     </ol>
                 </li>
             </ul>
