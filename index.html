@@ -437,11 +437,11 @@
                 <li>Domande:
                     <ol>
                         <li>Il passaggio da Datacite dovrebbe avvenir solo se non c'è un record su Crossref?</li>
-                        <li>Problema: per i libri su wikidata solitamente non ci sono altri identificativi oltre al wikidata id, che abbiamo detto non essere sufficiente da solo per essere inserito in CROCI. Come facciamo? è poco saggio inserire id come l'isbn per i libri?</li>
-                        <li>Sto facendo un mapping tra i tipi di wikidata e quelli accettati su meta. Sto avendo alcuni dubbi: <a href="https://www.wikidata.org/wiki/Q1148359">Q1148359</a> va bene per descrivere i documenti di archivio? <a href="https://www.wikidata.org/wiki/Q1310239">Q1310239</a> per component? <a href="https://www.wikidata.org/wiki/Q121769">Q121769</a> per reference entry?</li>
+                        <li>Problema: per i libri su wikidata solitamente non ci sono altri identificativi oltre al wikidata id, che abbiamo detto non essere sufficiente da solo per essere inserito in CROCI. Come facciamo? è poco saggio inserire id come l'isbn per i libri? <b>Sì inseriscilo</b></li>
+                        <li>Sto facendo un mapping tra i tipi di wikidata e quelli accettati su meta. Sto avendo alcuni dubbi: <a href="https://www.wikidata.org/wiki/Q1148359">Q1148359</a> va bene per descrivere i documenti di archivio? <b>NO!</b> <a href="https://www.wikidata.org/wiki/Q1310239">Q1310239</a> per component? <b>NO!</b><a href="https://www.wikidata.org/wiki/Q121769">Q121769</a> per reference entry?</li>
                     <li>Index si accorge se c'è un duplicato di citazioni? Inoltre, non sto trovando se datacite ha una lista di tipi di risorse.</li>
-                    <li>Qual è la differenza tra meta:id e meta:br? es. https://w3id.org/oc/meta/id/060107 e https://w3id.org/oc/meta/br/06077?</li>
-                    <li>Come si dovrebbe comportare croci nel caso di id conflittuali? Es. doi di una risorsa e wd di un'altra. Do priorità a quello che mi viene dato in input?</li>
+                    <li>Qual è la differenza tra meta:id e meta:br? es. https://w3id.org/oc/meta/id/060107 e https://w3id.org/oc/meta/br/06077? <b>id è un identifier, br si riferisce alle bibliographic resources</b></li>
+                    <li>Come si dovrebbe comportare croci nel caso di id conflittuali? Es. doi di una risorsa e wd di un'altra. Do priorità a quello che mi viene dato in input?<b>FA META</b></li>
                     </ol>
                 </li>
             </ul>
