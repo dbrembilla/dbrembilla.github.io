@@ -1,8 +1,0 @@
-nodes with highest centralities:
-betweenness = China
-closeness = Ukraine
-eigenvector = Southern Europe
-degree = Ontario
-number of cliques = 47
-omega = -0,1
-sigma = 4,3 Small world

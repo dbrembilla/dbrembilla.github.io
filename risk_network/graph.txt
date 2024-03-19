@@ -1,7 +1,0 @@
-#c:\Users\User\Desktop\Digital Humanities\Web Science\Project\network\main.py
-# GMT Wed Nov  3 15:39:04 2021
-# 
-Argentina Peru Brazil
-Peru Venezuela Brazil
-Brazil Venezuela
-Venezuela
